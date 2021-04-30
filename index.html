@@ -71,6 +71,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-数组过滤undefined" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" class="article-date">
+  <time class="dt-published" datetime="2021-04-30T13:12:04.000Z" itemprop="datePublished">2021-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>我们在传递数据的时候，很多时候数据是一个数组，而又有些时候我们并不需要将整个数组传递过去，而是传递数组中的前几个对象；</p>
+<p>这时就可以现在这样： method([list[0],list[1],list[2,list[3]])；</p>
+<p>(调用父组件传递过来的函数，发送一个数组)；</p>
+<p><strong>问题：数据都是调用后端接口得来的，而数据这个东西，有时候多，有时候少，多的时候就不说了，反正我们时以下标这样取得，怎么传也只有三条数据，但是数据少的时候问题就来了；</strong></p>
+<p>什么问题呢？ 通过像这样传递的数据 method([list[0],list[1],list[2,list[3]])，<strong>如果数据一旦少于三条。也就是说如果调接口之得到一条数据</strong>，但是你这样通过下标传递数据, 那么发送过去的这个数组后两个必定是undefined!</p>
+<p>将undefined发送给其他需要的组件，那么是极有可能出问题的，因此我们需要对数据进行处理：<strong>在数据为undefined时不发送数据！</strong></p>
+<p>哪怕我只发送过去一条实际存在的数据，也不发送undefined,可以少传，可以不传，但不可以发undefined!</p>
+<p>试了很多种方法，例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// list是我们要发送的数组</span></span><br><span class="line"><span class="comment">// 将list 遍历</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">const</span> [datas, setDatas] = useState([])</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> res = <span class="keyword">await</span> mydatas()</span><br><span class="line"><span class="keyword">const</span> list = res.data</span><br><span class="line">...</span><br><span class="line"><span class="keyword">let</span> newArr = []</span><br><span class="line">list.map( <span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(item &amp;&amp; item!== <span class="literal">undefined</span> || item !== <span class="literal">null</span> || item !== <span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line">        newArr.push(item)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(newArr) <span class="comment">// [&#123;item&#125;,undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span></span><br><span class="line">    setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]])</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解决：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))</span><br><span class="line"> <span class="built_in">console</span>.log([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))  <span class="comment">// 返回的新数组种没有undefined！！！</span></span><br><span class="line"><span class="comment">// success</span></span><br></pre></td></tr></table></figure>
+
+<p>原因：经过filter后会自动去掉undefined、null,空字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="literal">undefined</span>, <span class="string">&#x27;3.jpg&#x27;</span>,<span class="literal">undefined</span>, <span class="literal">null</span>、, <span class="string">&quot;&quot;</span>]</span><br><span class="line"><span class="keyword">var</span> newArr = arr.filter(<span class="function"><span class="params">item</span> =&gt;</span> item)</span><br><span class="line"><span class="built_in">console</span>.log(newArr)</span><br><span class="line">VM23:<span class="number">3</span> (<span class="number">3</span>) [<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3.jpg&quot;</span>] <span class="comment">// 可以看到undefined、null、&quot;&quot; 被去除了</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" data-id="cko4depp60005gwwc8dzu3fnp" data-title="数组过滤undefined" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-事件冒泡的影响，两种hook" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" class="article-date">
@@ -94,18 +150,18 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h5 id="1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"><a href="#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。" class="headerlink" title="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"></a>1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。</h5><p>关于冒泡带来的问题，例如：    </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        e.stopPropagation()<span class="comment">// 阻止事件冒泡  ，好像不对，再修改！</span></span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> closeStatus()&#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        e.stopPropagation()<span class="comment">// 阻止事件冒泡  ，好像不对，再修改！</span></span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> closeStatus()&#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>2 . 补充：   useEffect</p>
+<p>2 . 补充：   useEffect 、useState</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useEffect 函数在  函数组件时可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新盗用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 而定义的  </span><br><span class="line">const [content, setContnet] = useState(0) // 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 而定义的  </span></span><br><span class="line"><span class="keyword">const</span> [content, setContnet] = useState(<span class="number">0</span>) <span class="comment">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" data-id="cko1n9rg80006mkwceru3985e" data-title="事件冒泡的影响，两种hook" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" data-id="cko4depp50004gwwc6sjnax0n" data-title="事件冒泡的影响，两种hook" class="article-share-link">Share</a>
       
       
       
@@ -148,10 +204,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/" data-id="cko1n9rg70005mkwca5x7927a" data-title="解决OpenSSL报错" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/" data-id="cko4depp10001gwwc5fou0mp4" data-title="解决OpenSSL报错" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li></ul>
+
     </footer>
   </div>
   
@@ -194,52 +252,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/" data-id="cko1n9rfx0000mkwcfslt6266" data-title="css磨砂效果，模糊效果" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/" data-id="cko4depox0000gwwcc09kb8e7" data-title="css磨砂效果，模糊效果" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-test-my-site" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/25/test-my-site/" class="article-date">
-  <time class="dt-published" datetime="2021-04-25T15:47:28.000Z" itemprop="datePublished">2021-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/25/test-my-site/">test_my_site</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>牛恒    拒掉</p>
-<p>好难啊</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/25/test-my-site/" data-id="cko1n9rg00001mkwc67h0hanh" data-title="test_my_site" class="article-share-link">Share</a>
-      
-      
-      
     </footer>
   </div>
   
@@ -287,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/25/hello-world/" data-id="cko1n9rg70004mkwc0fva3ghj" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/25/hello-world/" data-id="cko4depp40003gwwcasas9eg6" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -312,7 +330,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li></ul>
     </div>
   </div>
 
@@ -322,7 +340,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a>
+      <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">Git报错解决</a> <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a> <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" style="font-size: 10px;">数组过滤undefined、null，''</a>
     </div>
   </div>
 
@@ -344,6 +362,10 @@
       <ul>
         
           <li>
+            <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/">事件冒泡的影响，两种hook</a>
           </li>
         
@@ -353,10 +375,6 @@
         
           <li>
             <a href="/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/">css磨砂效果，模糊效果</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/25/test-my-site/">test_my_site</a>
           </li>
         
           <li>

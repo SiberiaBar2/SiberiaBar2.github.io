@@ -14,7 +14,7 @@
 <meta property="og:description" content="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。关于冒泡带来的问题，例如：     12345678910111213141516171819202122232425262728293031323334353637383940&#x2F;&#x2F; 在一个元素的父级 定义一个点击事件    &#x2F;&#x2F; 在这个事件中定义一种状态或者是下标，function Cool()&amp;#123;    ..">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-28T15:54:59.000Z">
-<meta property="article:modified_time" content="2021-04-28T15:59:30.702Z">
+<meta property="article:modified_time" content="2021-04-28T16:10:25.957Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="事件冒泡、hook">
 <meta name="twitter:card" content="summary">
@@ -97,18 +97,18 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h5 id="1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"><a href="#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。" class="headerlink" title="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"></a>1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。</h5><p>关于冒泡带来的问题，例如：    </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        e.stopPropagation()<span class="comment">// 阻止事件冒泡  ，好像不对，再修改！</span></span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> closeStatus()&#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        e.stopPropagation()<span class="comment">// 阻止事件冒泡  ，好像不对，再修改！</span></span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> closeStatus()&#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>2 . 补充：   useEffect</p>
+<p>2 . 补充：   useEffect 、useState</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useEffect 函数在  函数组件时可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新盗用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 而定义的  </span><br><span class="line">const [content, setContnet] = useState(0) // 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 而定义的  </span></span><br><span class="line"><span class="keyword">const</span> [content, setContnet] = useState(<span class="number">0</span>) <span class="comment">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" data-id="cko1n9rg80006mkwceru3985e" data-title="事件冒泡的影响，两种hook" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" data-id="cko4depp50004gwwc6sjnax0n" data-title="事件冒泡的影响，两种hook" class="article-share-link">Share</a>
       
       
       
@@ -119,6 +119,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          数组过滤undefined
+        
+      </div>
+    </a>
   
   
     <a href="/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/" id="article-nav-older" class="article-nav-link-wrap">
@@ -143,7 +152,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li></ul>
     </div>
   </div>
 
@@ -153,7 +162,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a>
+      <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">Git报错解决</a> <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a> <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" style="font-size: 10px;">数组过滤undefined、null，''</a>
     </div>
   </div>
 
@@ -175,6 +184,10 @@
       <ul>
         
           <li>
+            <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/">事件冒泡的影响，两种hook</a>
           </li>
         
@@ -184,10 +197,6 @@
         
           <li>
             <a href="/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/">css磨砂效果，模糊效果</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/25/test-my-site/">test_my_site</a>
           </li>
         
           <li>
