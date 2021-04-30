@@ -71,6 +71,128 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-随笔" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/" class="article-date">
+  <time class="dt-published" datetime="2021-04-30T14:02:42.000Z" itemprop="datePublished">2021-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/30/%E9%9A%8F%E7%AC%94/">随笔</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="4-10-4-16-report"><a href="#4-10-4-16-report" class="headerlink" title="4.10-4.16 report"></a>4.10-4.16 report</h4><h5 id="1-Object-keys-obj-传入对象，返回属性名"><a href="#1-Object-keys-obj-传入对象，返回属性名" class="headerlink" title="1) Object.keys(obj)  // 传入对象，返回属性名"></a>1) Object.keys(obj)  // 传入对象，返回属性名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">type</span>: <span class="string">&quot;上午&quot;</span>,<span class="attr">list</span>:<span class="string">&quot;333&quot;</span>, <span class="attr">dance</span>:<span class="string">&quot;巴克勒&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj)) <span class="comment">// (3) [&quot;type&quot;, &quot;list&quot;, &quot;dance&quot;]  返回键名，但并没有吃掉属性值</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-classList添加类名"><a href="#2-classList添加类名" class="headerlink" title="2) classList添加类名"></a>2) classList添加类名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bot = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;bot&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bot.classList.add(<span class="string">&#x27;niuheng&#x27;</span>) </span><br><span class="line">	<span class="comment">// console.log(bot.classList.contains(&#x27;niuheng&#x27;)) // true</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3）-map的参数"><a href="#3）-map的参数" class="headerlink" title="3） map的参数"></a>3） map的参数</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="string">&quot;类型&quot;</span>, <span class="string">&quot;影响&quot;</span>, <span class="string">&quot;距离&quot;</span>, <span class="string">&quot;推荐&quot;</span>, <span class="string">&quot;预计&quot;</span>]</span><br><span class="line">	 array.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>)</span>&#123;</span><br><span class="line">		 <span class="comment">// console.log(item+&#x27;x&#x27;, index, arr)</span></span><br><span class="line">        <span class="comment">// 类型x 0 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 影响x 1 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 距离x 2 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 推荐x 3 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 预计x 4 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">		 <span class="keyword">return</span> item+<span class="string">&#x27;x&#x27;</span></span><br><span class="line">	 &#125;)</span><br><span class="line"><span class="comment">// (5) [&quot;类型x&quot;, &quot;影响x&quot;, &quot;距离x&quot;, &quot;推荐x&quot;, &quot;预计x&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-Array-from"><a href="#4-Array-from" class="headerlink" title="4) Array.from()"></a>4) Array.from()</h5><h6 id="Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组"><a href="#Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组" class="headerlink" title="Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组"></a>Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">12</span>,<span class="number">45</span>,<span class="number">97</span>,<span class="number">9797</span>,<span class="number">564</span>,<span class="number">134</span>,<span class="number">45642</span>,<span class="number">12</span>]</span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(arr1)</span><br><span class="line"><span class="comment">// [[Entries]]</span></span><br><span class="line">		<span class="comment">// 0: 12</span></span><br><span class="line">		<span class="comment">// 1: 45</span></span><br><span class="line">		<span class="comment">// 2: 97</span></span><br><span class="line">		<span class="comment">// 3: 9797</span></span><br><span class="line">		<span class="comment">// 4: 564</span></span><br><span class="line">		<span class="comment">// 5: 134</span></span><br><span class="line">		<span class="comment">// 6: 45642</span></span><br><span class="line">		<span class="comment">// size: 7,</span></span><br><span class="line"><span class="comment">// 可以看到set不是一个数组，它看起来想一个对象，却又不是一个对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log( Array.from(set))  // [12, 45, 97, 9797, 564, 134, 45642]</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="Array-from-还可将NodeList-转为真正的数组。"><a href="#Array-from-还可将NodeList-转为真正的数组。" class="headerlink" title="Array.from()还可将NodeList  转为真正的数组。"></a>Array.from()还可将NodeList  转为真正的数组。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">var</span> abc = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;a&#x27;</span>)<span class="comment">// 通过getElementsByTagName获取的元素不是一个数组，而是nodeList</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(abc),abc)  </span><br><span class="line"><span class="comment">// 使用Array.from()</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;Array.form&#x27;</span>,<span class="built_in">Array</span>.from(abc)) <span class="comment">//[a, a, a, a, a, a, a, a]</span></span><br><span class="line"><span class="comment">//第二种方法转化</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>()  <span class="comment">// 这种方式新建数组很新颖</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; abc.length; i++)&#123;</span><br><span class="line">		<span class="keyword">var</span> ele = abc[i]</span><br><span class="line">		arr.push(ele)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(arr)  <span class="comment">// [a, a, a, a, a, a, a, a]</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="5-合并对象-assign"><a href="#5-合并对象-assign" class="headerlink" title="5) 合并对象 assign"></a>5) 合并对象 assign</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> newObj = (&#123;&#125; ,config, &#123; <span class="attr">key</span>:<span class="built_in">Math</span>.random()&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="6）writing-mode"><a href="#6）writing-mode" class="headerlink" title="6）writing-mode"></a>6）writing-mode</h5><p>文字垂直显示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;writing-mode: vertical-lr&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="7）getAttribute-setAttribute"><a href="#7）getAttribute-setAttribute" class="headerlink" title="7）getAttribute\setAttribute"></a>7）getAttribute\setAttribute</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pp = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;input&#x27;</span>)</span><br><span class="line"></span><br><span class="line">pp.setAttribute(<span class="string">&#x27;data-event&#x27;</span>, <span class="literal">true</span>)  <span class="comment">// 添加属性</span></span><br><span class="line"><span class="keyword">let</span> hasEvent = pp.getAttribute(<span class="string">&#x27;data-event&#x27;</span>) <span class="comment">// 获取对应键名对应的属性值</span></span><br><span class="line"><span class="built_in">console</span>.log(hasEvent)  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="8）Object-prototype-toString-call"><a href="#8）Object-prototype-toString-call" class="headerlink" title="8）Object.prototype.toString.call()"></a>8）Object.prototype.toString.call()</h5><h6 id="用Object-prototype-toString-call-obj-检测对象类型"><a href="#用Object-prototype-toString-call-obj-检测对象类型" class="headerlink" title="用Object.prototype.toString.call(obj)检测对象类型"></a>用Object.prototype.toString.call(obj)检测对象类型</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;Eric&#x27;</span>,<span class="string">&#x27;Mary&#x27;</span>,<span class="string">&#x27;Rose&#x27;</span>]</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr))  <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="string">&#x27;Eric&#x27;</span>))  <span class="comment">// [object String]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">0</span>))   <span class="comment">// [object Number]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>))    <span class="comment">// [object Boolean]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>))  <span class="comment">// [object Undefined]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>))  <span class="comment">// [object Null]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(&#123;<span class="attr">name</span>:<span class="string">&quot;julius&quot;</span>&#125;))  <span class="comment">// [object Object]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;))  <span class="comment">// [object Function]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([]))   <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>))  <span class="comment">// [object Date]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="regexp">/^\[.*\]$/</span>))  <span class="comment">// [object RegExp]</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="判断数据类型-gt-函数调用"><a href="#判断数据类型-gt-函数调用" class="headerlink" title="判断数据类型====&gt;函数调用"></a>判断数据类型====&gt;函数调用</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isNumber</span> (<span class="params">number</span>) </span>&#123;</span><br><span class="line">	    <span class="keyword">return</span>  <span class="built_in">Object</span>.prototype.toString.call(number) === <span class="string">&#x27;[object Number]&#x27;</span>  <span class="comment">// 字符串怎么能是true呢？</span></span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="built_in">console</span>.log(isNumber(<span class="number">12</span>))  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="9）引入iconfont字体图标"><a href="#9）引入iconfont字体图标" class="headerlink" title="9）引入iconfont字体图标"></a>9）引入iconfont字体图标</h5><p>下载好并放入，import ‘./iconfont/iconfont.css’</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 使用：第一种方法 =&gt;  <span class="tag">&lt;<span class="name">i</span> *<span class="attr">className</span>*=<span class="string">&quot;iconfont icon-zanting&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 第二种方法 =&gt; <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon iconfont&quot;</span>&gt;</span><span class="symbol">&amp;#xe635;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/30/%E9%9A%8F%E7%AC%94/" data-id="cko4ebc39000gcwwc0u16gifa" data-title="随笔" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-git操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time class="dt-published" datetime="2021-04-30T13:58:38.000Z" itemprop="datePublished">2021-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">git操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="git-操作"><a href="#git-操作" class="headerlink" title="git 操作"></a>git 操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push (若从远程上来下来，并切换了分支，那么可直接git push 就能将本地最新代码push到远程对应的这个分支上去)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名 (已在远程对应的分支上，可使用此命令切换到其他远程分支)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名 (创建本地分支)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a (查看所有分支，本地and远程)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (查看本地分支)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin 本地分支名</span><br><span class="line">(将本地分支推到远程仓库，使远程仓库下有该分支名)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/30/git%E6%93%8D%E4%BD%9C/" data-id="cko4ebc320004cwwc1v2kbn21" data-title="git操作" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git%E5%91%BD%E4%BB%A4/" rel="tag">git命令</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-数组过滤undefined" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" class="article-date">
@@ -113,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" data-id="cko4dh7t70003j4wchtccemt0" data-title="数组过滤undefined" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" data-id="cko4ebc2z0001cwwc79va5fhf" data-title="数组过滤undefined" class="article-share-link">Share</a>
       
       
       
@@ -149,11 +271,13 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h5 id="1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"><a href="#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。" class="headerlink" title="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"></a>1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。</h5><p>关于冒泡带来的问题，例如：    </p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        e.stopPropagation()<span class="comment">// 阻止事件冒泡  ，好像不对，再修改！</span></span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> closeStatus()&#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h5 id="1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"><a href="#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。" class="headerlink" title="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"></a>1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。</h5><p><strong>冒泡</strong>：点击子元素的  点击事件， 会同时触发父组件的点击事件；</p>
+<p><strong>在多个嵌套元素设置多个点击事件，极有可能发生此类问题！</strong></p>
+<p>关于冒泡带来的问题，例如：    </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">                e.stopPropagation()<span class="comment">// 阻止事件冒泡</span></span><br><span class="line">                closeStatus()&#125;</span><br><span class="line">         &#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>2 . 补充：   useEffect 、useState</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useEffect 函数在  函数组件时可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新盗用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useEffect 函数在  函数组件是可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新调用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 而定义的  </span></span><br><span class="line"><span class="keyword">const</span> [content, setContnet] = useState(<span class="number">0</span>) <span class="comment">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span></span><br></pre></td></tr></table></figure>
 
@@ -161,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" data-id="cko4dh7t50001j4wc8zt5da30" data-title="事件冒泡的影响，两种hook" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" data-id="cko4ebc310003cwwc0pii5djd" data-title="事件冒泡的影响，两种hook" class="article-share-link">Share</a>
       
       
       
@@ -204,7 +328,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/" data-id="cko4dh7te000aj4wc7haab2lm" data-title="解决OpenSSL报错" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/" data-id="cko4ebc330005cwwc5qk599pe" data-title="解决OpenSSL报错" class="article-share-link">Share</a>
       
       
       
@@ -252,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/" data-id="cko4dh7t10000j4wc49q6akf2" data-title="css磨砂效果，模糊效果" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/" data-id="cko4ebc2v0000cwwc5cnzclrp" data-title="css磨砂效果，模糊效果" class="article-share-link">Share</a>
       
       
       
@@ -305,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/25/hello-world/" data-id="cko4dh7td0009j4wc0vszdqty" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/25/hello-world/" data-id="cko4ebc340008cwwcfw8jbs1c" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -330,7 +454,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E5%91%BD%E4%BB%A4/" rel="tag">git命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
     </div>
   </div>
 
@@ -340,7 +464,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">Git报错解决</a> <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a> <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" style="font-size: 10px;">数组过滤undefined、null，''</a>
+      <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">Git报错解决</a> <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/git%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">git命令</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a> <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" style="font-size: 10px;">数组过滤undefined、null，''</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
     </div>
   </div>
 
@@ -362,6 +486,14 @@
       <ul>
         
           <li>
+            <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/">随笔</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">git操作</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
           </li>
         
@@ -371,14 +503,6 @@
         
           <li>
             <a href="/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/">解决OpenSSL报错</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/">css磨砂效果，模糊效果</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/25/hello-world/">Hello World</a>
           </li>
         
       </ul>

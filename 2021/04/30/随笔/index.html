@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>随笔 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="4.10-4.16 report1) Object.keys(obj)  &#x2F;&#x2F; 传入对象，返回属性名123let obj &#x3D; &amp;#123;type: &quot;上午&quot;,list:&quot;333&quot;, dance:&quot;巴克勒&quot;&amp;#125; console.log(Object.keys(obj)) &#x2F;&#x2F; (3) [&quot;type&quot;, &amp;quo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随笔">
+<meta property="og:url" content="http://example.com/2021/04/30/%E9%9A%8F%E7%AC%94/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="4.10-4.16 report1) Object.keys(obj)  &#x2F;&#x2F; 传入对象，返回属性名123let obj &#x3D; &amp;#123;type: &quot;上午&quot;,list:&quot;333&quot;, dance:&quot;巴克勒&quot;&amp;#125; console.log(Object.keys(obj)) &#x2F;&#x2F; (3) [&quot;type&quot;, &amp;quo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-30T14:02:42.000Z">
+<meta property="article:modified_time" content="2021-04-30T14:10:54.035Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="随笔">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-随笔" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/" class="article-date">
+  <time class="dt-published" datetime="2021-04-30T14:02:42.000Z" itemprop="datePublished">2021-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      随笔
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="4-10-4-16-report"><a href="#4-10-4-16-report" class="headerlink" title="4.10-4.16 report"></a>4.10-4.16 report</h4><h5 id="1-Object-keys-obj-传入对象，返回属性名"><a href="#1-Object-keys-obj-传入对象，返回属性名" class="headerlink" title="1) Object.keys(obj)  // 传入对象，返回属性名"></a>1) Object.keys(obj)  // 传入对象，返回属性名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">type</span>: <span class="string">&quot;上午&quot;</span>,<span class="attr">list</span>:<span class="string">&quot;333&quot;</span>, <span class="attr">dance</span>:<span class="string">&quot;巴克勒&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj)) <span class="comment">// (3) [&quot;type&quot;, &quot;list&quot;, &quot;dance&quot;]  返回键名，但并没有吃掉属性值</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-classList添加类名"><a href="#2-classList添加类名" class="headerlink" title="2) classList添加类名"></a>2) classList添加类名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bot = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;bot&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bot.classList.add(<span class="string">&#x27;niuheng&#x27;</span>) </span><br><span class="line">	<span class="comment">// console.log(bot.classList.contains(&#x27;niuheng&#x27;)) // true</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3）-map的参数"><a href="#3）-map的参数" class="headerlink" title="3） map的参数"></a>3） map的参数</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="string">&quot;类型&quot;</span>, <span class="string">&quot;影响&quot;</span>, <span class="string">&quot;距离&quot;</span>, <span class="string">&quot;推荐&quot;</span>, <span class="string">&quot;预计&quot;</span>]</span><br><span class="line">	 array.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>)</span>&#123;</span><br><span class="line">		 <span class="comment">// console.log(item+&#x27;x&#x27;, index, arr)</span></span><br><span class="line">        <span class="comment">// 类型x 0 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 影响x 1 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 距离x 2 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 推荐x 3 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 预计x 4 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">		 <span class="keyword">return</span> item+<span class="string">&#x27;x&#x27;</span></span><br><span class="line">	 &#125;)</span><br><span class="line"><span class="comment">// (5) [&quot;类型x&quot;, &quot;影响x&quot;, &quot;距离x&quot;, &quot;推荐x&quot;, &quot;预计x&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-Array-from"><a href="#4-Array-from" class="headerlink" title="4) Array.from()"></a>4) Array.from()</h5><h6 id="Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组"><a href="#Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组" class="headerlink" title="Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组"></a>Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">12</span>,<span class="number">45</span>,<span class="number">97</span>,<span class="number">9797</span>,<span class="number">564</span>,<span class="number">134</span>,<span class="number">45642</span>,<span class="number">12</span>]</span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(arr1)</span><br><span class="line"><span class="comment">// [[Entries]]</span></span><br><span class="line">		<span class="comment">// 0: 12</span></span><br><span class="line">		<span class="comment">// 1: 45</span></span><br><span class="line">		<span class="comment">// 2: 97</span></span><br><span class="line">		<span class="comment">// 3: 9797</span></span><br><span class="line">		<span class="comment">// 4: 564</span></span><br><span class="line">		<span class="comment">// 5: 134</span></span><br><span class="line">		<span class="comment">// 6: 45642</span></span><br><span class="line">		<span class="comment">// size: 7,</span></span><br><span class="line"><span class="comment">// 可以看到set不是一个数组，它看起来想一个对象，却又不是一个对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log( Array.from(set))  // [12, 45, 97, 9797, 564, 134, 45642]</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="Array-from-还可将NodeList-转为真正的数组。"><a href="#Array-from-还可将NodeList-转为真正的数组。" class="headerlink" title="Array.from()还可将NodeList  转为真正的数组。"></a>Array.from()还可将NodeList  转为真正的数组。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">var</span> abc = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;a&#x27;</span>)<span class="comment">// 通过getElementsByTagName获取的元素不是一个数组，而是nodeList</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(abc),abc)  </span><br><span class="line"><span class="comment">// 使用Array.from()</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;Array.form&#x27;</span>,<span class="built_in">Array</span>.from(abc)) <span class="comment">//[a, a, a, a, a, a, a, a]</span></span><br><span class="line"><span class="comment">//第二种方法转化</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>()  <span class="comment">// 这种方式新建数组很新颖</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; abc.length; i++)&#123;</span><br><span class="line">		<span class="keyword">var</span> ele = abc[i]</span><br><span class="line">		arr.push(ele)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(arr)  <span class="comment">// [a, a, a, a, a, a, a, a]</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="5-合并对象-assign"><a href="#5-合并对象-assign" class="headerlink" title="5) 合并对象 assign"></a>5) 合并对象 assign</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> newObj = (&#123;&#125; ,config, &#123; <span class="attr">key</span>:<span class="built_in">Math</span>.random()&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="6）writing-mode"><a href="#6）writing-mode" class="headerlink" title="6）writing-mode"></a>6）writing-mode</h5><p>文字垂直显示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;writing-mode: vertical-lr&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="7）getAttribute-setAttribute"><a href="#7）getAttribute-setAttribute" class="headerlink" title="7）getAttribute\setAttribute"></a>7）getAttribute\setAttribute</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pp = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;input&#x27;</span>)</span><br><span class="line"></span><br><span class="line">pp.setAttribute(<span class="string">&#x27;data-event&#x27;</span>, <span class="literal">true</span>)  <span class="comment">// 添加属性</span></span><br><span class="line"><span class="keyword">let</span> hasEvent = pp.getAttribute(<span class="string">&#x27;data-event&#x27;</span>) <span class="comment">// 获取对应键名对应的属性值</span></span><br><span class="line"><span class="built_in">console</span>.log(hasEvent)  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="8）Object-prototype-toString-call"><a href="#8）Object-prototype-toString-call" class="headerlink" title="8）Object.prototype.toString.call()"></a>8）Object.prototype.toString.call()</h5><h6 id="用Object-prototype-toString-call-obj-检测对象类型"><a href="#用Object-prototype-toString-call-obj-检测对象类型" class="headerlink" title="用Object.prototype.toString.call(obj)检测对象类型"></a>用Object.prototype.toString.call(obj)检测对象类型</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;Eric&#x27;</span>,<span class="string">&#x27;Mary&#x27;</span>,<span class="string">&#x27;Rose&#x27;</span>]</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr))  <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="string">&#x27;Eric&#x27;</span>))  <span class="comment">// [object String]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">0</span>))   <span class="comment">// [object Number]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>))    <span class="comment">// [object Boolean]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>))  <span class="comment">// [object Undefined]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>))  <span class="comment">// [object Null]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(&#123;<span class="attr">name</span>:<span class="string">&quot;julius&quot;</span>&#125;))  <span class="comment">// [object Object]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;))  <span class="comment">// [object Function]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([]))   <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>))  <span class="comment">// [object Date]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="regexp">/^\[.*\]$/</span>))  <span class="comment">// [object RegExp]</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="判断数据类型-gt-函数调用"><a href="#判断数据类型-gt-函数调用" class="headerlink" title="判断数据类型====&gt;函数调用"></a>判断数据类型====&gt;函数调用</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isNumber</span> (<span class="params">number</span>) </span>&#123;</span><br><span class="line">	    <span class="keyword">return</span>  <span class="built_in">Object</span>.prototype.toString.call(number) === <span class="string">&#x27;[object Number]&#x27;</span>  <span class="comment">// 字符串怎么能是true呢？</span></span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="built_in">console</span>.log(isNumber(<span class="number">12</span>))  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="9）引入iconfont字体图标"><a href="#9）引入iconfont字体图标" class="headerlink" title="9）引入iconfont字体图标"></a>9）引入iconfont字体图标</h5><p>下载好并放入，import ‘./iconfont/iconfont.css’</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 使用：第一种方法 =&gt;  <span class="tag">&lt;<span class="name">i</span> *<span class="attr">className</span>*=<span class="string">&quot;iconfont icon-zanting&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 第二种方法 =&gt; <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon iconfont&quot;</span>&gt;</span><span class="symbol">&amp;#xe635;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/30/%E9%9A%8F%E7%AC%94/" data-id="cko4ebc39000gcwwc0u16gifa" data-title="随笔" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git操作</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E5%91%BD%E4%BB%A4/" rel="tag">git命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">Git报错解决</a> <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/git%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">git命令</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a> <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" style="font-size: 10px;">数组过滤undefined、null，''</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/">随笔</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">git操作</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/">事件冒泡的影响，两种hook</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/">解决OpenSSL报错</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
