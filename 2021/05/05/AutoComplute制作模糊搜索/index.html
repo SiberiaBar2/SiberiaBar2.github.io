@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>AutoComplute制作模糊搜索 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1. 引入React, useState classnames插件，引出Option12345import React, &amp;#123; useState &amp;#125; from &amp;#x27;react&amp;#x27;;import cxs from &amp;#x27;classnames&amp;#x27;import &amp;#123; AutoComplete &amp;#125; from &amp;#x27;antd&amp;#x27;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AutoComplute制作模糊搜索">
+<meta property="og:url" content="http://example.com/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. 引入React, useState classnames插件，引出Option12345import React, &amp;#123; useState &amp;#125; from &amp;#x27;react&amp;#x27;;import cxs from &amp;#x27;classnames&amp;#x27;import &amp;#123; AutoComplete &amp;#125; from &amp;#x27;antd&amp;#x27;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-05T04:00:18.000Z">
+<meta property="article:modified_time" content="2021-05-05T04:55:51.337Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="模糊搜索">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="使用antd-AutoComplute制作模糊搜索" class="h-entry article article-type-使用antd" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" class="article-date">
+  <time class="dt-published" datetime="2021-05-05T04:00:18.000Z" itemprop="datePublished">2021-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      AutoComplute制作模糊搜索
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> cxs <span class="keyword">from</span> <span class="string">&#x27;classnames&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; AutoComplete &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./dimserch.css&#x27;</span></span><br><span class="line"><span class="keyword">const</span> &#123; Option &#125; = AutoComplete</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong> ：</p>
+<p>将一份数据存两遍，一份用于渲染，一份用于查找。</p>
+<p>由于传入的  搜索值(serch)或是 变化值(onChange)的值若是空字符串，那么只需在另一份保存的数据中查找就可以了；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">filter，用list.filter( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">   <span class="comment">// 第一种写法  1</span></span><br><span class="line">	<span class="keyword">if</span>(item.includes.val) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">   <span class="comment">// 若item包含传入值，返回此对象</span></span><br><span class="line">    </span><br><span class="line">  <span class="comment">//第二种写法   2</span></span><br><span class="line">  <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">  <span class="comment">// if(regex.test(item)) return true</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span> 其他情况不返回！</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DimSerch</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> list =</span><br><span class="line">    [</span><br><span class="line">      <span class="string">&quot;双皮奶&quot;</span>, <span class="string">&quot;狮子头&quot;</span>, <span class="string">&quot;擀面皮&quot;</span>, <span class="string">&quot;巧克力蛋糕&quot;</span>, <span class="string">&quot;热米皮&quot;</span>, <span class="string">&quot;牛肉面&quot;</span>, <span class="string">&quot;二细牛肉面&quot;</span>, <span class="string">&quot;三细牛肉面&quot;</span>,</span><br><span class="line">      <span class="string">&quot;扬州炒饭&quot;</span>, <span class="string">&quot;蛋炒饭&quot;</span>, <span class="string">&quot;蛋炒土豆丝&quot;</span>, <span class="string">&quot;巧克力饼&quot;</span>, <span class="string">&quot;狮子头拌奶酪&quot;</span>, <span class="string">&quot;火腿擀面皮&quot;</span>, <span class="string">&quot;加量擀面皮&quot;</span>,</span><br><span class="line">      <span class="string">&quot;热米皮拌青椒&quot;</span>, <span class="string">&quot;双皮奶加量&quot;</span>, <span class="string">&quot;海之言&quot;</span>, <span class="string">&quot;蓝色海之言&quot;</span>, <span class="string">&quot;紫色海之言&quot;</span>, <span class="string">&quot;橘黄海之言&quot;</span>, <span class="string">&quot;绿色海之言&quot;</span>,</span><br><span class="line">      <span class="string">&quot;百吉猫锅巴&quot;</span>, <span class="string">&quot;三元锅巴&quot;</span>, <span class="string">&quot;酥锅巴&quot;</span>, <span class="string">&quot;AD钙&quot;</span>, <span class="string">&quot;乳酸菌AD钙&quot;</span>, <span class="string">&quot;草莓AD钙&quot;</span>, <span class="string">&quot;香辣火腿肠&quot;</span>, <span class="string">&quot;玉米火腿肠&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  <span class="keyword">const</span> [realyDatas, setRealyDatas] = useState(list)</span><br><span class="line">  <span class="keyword">const</span> [originList, setoriginList] = useState(list)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleSearch = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含&#x27;&#x27;，</span></span><br><span class="line">      <span class="comment">// 也就是说，此时返回被遍历对象的所有（每一项）;</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；</span></span><br><span class="line">      <span class="comment">//   return true                // 就返回这个对象</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span> <span class="comment">// item包含输入的值，返回此对象；其他情况false不返回</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)          <span class="comment">// 更新渲染数组； 重新渲染</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> autoChange = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;</span></span><br><span class="line">      <span class="comment">//   return true</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div id=<span class="string">&#x27;wrap&#x27;</span>&gt;</span><br><span class="line">      &lt;AutoComplete</span><br><span class="line">        getPopupContainer=&#123;<span class="function">() =&gt;</span> <span class="built_in">document</span>.getElementById(<span class="string">&quot;wrap&quot;</span>)&#125;</span><br><span class="line">        onSearch=&#123;handleSearch&#125;</span><br><span class="line">        onChange=&#123;autoChange&#125;</span><br><span class="line">        placeholder=<span class="string">&quot;请输入&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">        &#123;realyDatas.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">          &lt;Option value=&#123;item&#125; key=&#123;item&#125;&gt;</span><br><span class="line">            &#123;item&#125;</span><br><span class="line">          &lt;/Option&gt;</span><br><span class="line">        ))&#125;</span><br><span class="line">      &lt;/AutoComplete&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> DimSerch</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" data-id="ckoaznc910000vowcd5xe5d62" data-title="AutoComplute制作模糊搜索" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" rel="tag">模糊搜索</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          antdPopover的动态变色和动态visable
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">随笔</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aned-Popover/" rel="tag">aned Popover</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E5%91%BD%E4%BB%A4/" rel="tag">git命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" rel="tag">模糊搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">Git报错解决</a> <a href="/tags/aned-Popover/" style="font-size: 10px;">aned Popover</a> <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/git%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">git命令</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a> <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" style="font-size: 10px;">数组过滤undefined、null，''</a> <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" style="font-size: 10px;">模糊搜索</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/">antdPopover的动态变色和动态visable</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">AutoComplute制作模糊搜索</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/">随笔</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">git操作</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
