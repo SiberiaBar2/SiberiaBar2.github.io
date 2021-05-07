@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="antdPopover的动态变色和动态visable, 李晓飞Blog">
+    <meta name="keywords" content="随笔, 李晓飞Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>antdPopover的动态变色和动态visable | 李晓飞Blog</title>
+    <title>随笔 | 李晓飞Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">antdPopover的动态变色和动态visable</h1>
+                    <h1 class="description center-align post-title">随笔</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/aned-Popover/">
-                                <span class="chip bg-color">aned Popover</span>
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
                             </a>
                         
                     </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-05
+                    2021-04-30
                 </div>
                 
 
@@ -468,17 +468,89 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="目的：-使用Popover制作动态的变色和控制Visable"><a href="#目的：-使用Popover制作动态的变色和控制Visable" class="headerlink" title="目的： 使用Popover制作动态的变色和控制Visable"></a>目的： 使用Popover制作动态的变色和控制Visable</h5><p>引入相关文件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> cxs <span class="keyword">from</span> <span class="string">&#x27;classnames&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Popover &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../../iconfont/iconfont.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./popovers.css&quot;</span>;</span><br></pre></td></tr></table></figure>
+                <h4 id="4-10-4-16-report"><a href="#4-10-4-16-report" class="headerlink" title="4.10-4.16 report"></a>4.10-4.16 report</h4><h5 id="1-Object-keys-obj-传入对象，返回属性名"><a href="#1-Object-keys-obj-传入对象，返回属性名" class="headerlink" title="1) Object.keys(obj)  // 传入对象，返回属性名"></a>1) Object.keys(obj)  // 传入对象，返回属性名</h5><pre><code class="js">let obj = &#123;type: &quot;上午&quot;,list:&quot;333&quot;, dance:&quot;巴克勒&quot;&#125;
 
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Popovers</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">  <span class="keyword">const</span> list = [</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Rose&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">22</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Eric&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">18</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Mary&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Lucy&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">28</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">21</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Jack&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">29</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Bruce&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">27</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Tian&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;JuDiao&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">24</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Niuheng&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">31</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;KaiDi&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Haohao&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Wind&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">23</span> &#125;</span><br><span class="line">  ]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> closeList = <span class="function">(<span class="params">index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;close&#x27;</span>)</span><br><span class="line">    setChooseIndex()  <span class="comment">// 每次关闭也会重新return？ 渲染的是全部视图还是局部视图</span></span><br><span class="line">    <span class="comment">// stopPropagation 阻止事件冒泡</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 函数组件的函数，还必须const</span></span><br><span class="line">    <span class="built_in">console</span>.log(item)</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;cxs(</span>&#x27;<span class="attr">content-wrap</span>&#x27;)&#125;&gt;</span></span></span><br><span class="line">      &lt;div className=&#123;cxs(&quot;content-top&quot;)&#125;&gt;</span><br><span class="line">        &lt;div className=&#123;cxs(&#x27;content-top-left&#x27;)&#125;&gt;&lt;h1&gt;Name:&lt;/h1&gt;&lt;p&gt;&#123;item.name&#125;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div </span><br><span class="line">        onClick=&#123;(e) =&gt; &#123;</span><br><span class="line">          e.stopPropagation()   // 此处必须阻止冒泡事件，否则会触发父元素的点击事件，导致子元素的点击事件点击了但是没效果</span><br><span class="line">          closeList(index)      // ***这是因为事件冒泡触发父元素点击对值重新赋值了***</span><br><span class="line">        &#125;&#125;</span><br><span class="line">        className=&#123;cxs(&#x27;content-top-right&#x27;)&#125;&gt;</span><br><span class="line">          &lt;i className=&quot;icon iconfont&quot;&gt;&amp;#xe607;&lt;/i&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      &lt;div className=&#123;cxs(&quot;content-bottom&quot;)&#125;&gt;</span><br><span class="line">        &lt;h2&gt;Have a good nice Day !&lt;/h2&gt;</span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> changeColorAndIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// console.log(item, index)</span></span><br><span class="line">    <span class="comment">// console.log(&#x27;changeIndex&#x27;)</span></span><br><span class="line">    setChooseIndex(index)   <span class="comment">// 中间值与下标相等了 ，完成了两件事，被点击元素变色，被点击元素的pop显示，其他不显示！</span></span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=&#123;cxs(<span class="string">&#x27;wrap&#x27;</span>)&#125;&gt;</span><br><span class="line">      &lt;header&gt;点名&lt;/header&gt;</span><br><span class="line">      &#123;list.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> </span></span></span><br><span class="line"><span class="xml">        key=&#123;index&#125;</span></span><br><span class="line"><span class="xml">        id=&#x27;item-info&#x27;    </span></span><br><span class="line"><span class="xml">        className=&#123;cxs(&#123;&quot;activeIndex&quot;: chooseIndex === index&#125;)&#125;  //1. 若类名与中间值相等，就出现变化的背景色</span></span><br><span class="line"><span class="xml">        onClick=&#123;() =&gt; &#123;changeColorAndIndex(item, index)&#125;&#125;    //3.  使中间值和下标相等的事件。触发器</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line">        &lt;Popover</span><br><span class="line">          content=&#123;renderContent(item, index)&#125;</span><br><span class="line">          trigger=&quot;click&quot;</span><br><span class="line">          getPopupContainer=&#123;() =&gt; document.getElementById(&quot;item-info&quot;)&#125;  // 绑定渲染父级</span><br><span class="line">          visible=&#123;chooseIndex === index&#125;     //2. 同理，若下标和中间值相同就显示</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;div className=&#123;cxs(&quot;item-onfo1&quot;)&#125;&gt;</span><br><span class="line">            &lt;div className=&#123;cxs(&#x27;item-info-left&#x27;)&#125;&gt;&#123;item.name&#125;&lt;/div&gt;</span><br><span class="line">            &lt;div className=&#123;cxs(&#x27;item-info-right&#x27;)&#125;&gt;&#123;item.age&#125;&lt;/div&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">Popover</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      &#125;)&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Popovers</span><br></pre></td></tr></table></figure>
+ console.log(Object.keys(obj)) // (3) [&quot;type&quot;, &quot;list&quot;, &quot;dance&quot;]  返回键名，但并没有吃掉属性值
+</code></pre>
+<h5 id="2-classList添加类名"><a href="#2-classList添加类名" class="headerlink" title="2) classList添加类名"></a>2) classList添加类名</h5><pre><code class="js">var bot = document.getElementById(&#39;bot&#39;)
 
-<h5 id="关于为什么popover要绑定父级"><a href="#关于为什么popover要绑定父级" class="headerlink" title="关于为什么popover要绑定父级"></a>关于为什么popover要绑定父级</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// popover的默认渲染父级是body ，这在有些时候会出问题，例如元素错位(当然在目前看来是没有问题的，为了严谨)</span></span><br><span class="line">getPopupContainer=&#123;<span class="function">() =&gt;</span> <span class="built_in">document</span>.getElementById(<span class="string">&quot;item-info&quot;</span>)&#125;</span><br></pre></td></tr></table></figure>
+bot.classList.add(&#39;niuheng&#39;) 
+    // console.log(bot.classList.contains(&#39;niuheng&#39;)) // true
+</code></pre>
+<h5 id="3）-map的参数"><a href="#3）-map的参数" class="headerlink" title="3） map的参数"></a>3） map的参数</h5><pre><code class="js">let array = [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]
+     array.map(function(item, index, arr)&#123;
+         // console.log(item+&#39;x&#39;, index, arr)
+        // 类型x 0 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]
+        // VM22:3 影响x 1 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]
+        // VM22:3 距离x 2 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]
+        // VM22:3 推荐x 3 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]
+        // VM22:3 预计x 4 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]
+         return item+&#39;x&#39;
+     &#125;)
+// (5) [&quot;类型x&quot;, &quot;影响x&quot;, &quot;距离x&quot;, &quot;推荐x&quot;, &quot;预计x&quot;]
+</code></pre>
+<h5 id="4-Array-from"><a href="#4-Array-from" class="headerlink" title="4) Array.from()"></a>4) Array.from()</h5><h6 id="Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组"><a href="#Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组" class="headerlink" title="Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组"></a>Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组</h6><pre><code class="js">let arr1 = [12,45,97,9797,564,134,45642,12]
+let set = new Set(arr1)
+// [[Entries]]
+        // 0: 12
+        // 1: 45
+        // 2: 97
+        // 3: 9797
+        // 4: 564
+        // 5: 134
+        // 6: 45642
+        // size: 7,
+// 可以看到set不是一个数组，它看起来想一个对象，却又不是一个对象
 
-<h5 id="css"><a href="#css" class="headerlink" title="css:"></a>css:</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 给父级元素相对定位，高度</span><br><span class="line">// 给子元素向左的距离</span><br><span class="line"><span class="selector-class">.ant-popover</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">415px</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ant-popover-arrow</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none  <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover-inner-content</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">270px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+// console.log( Array.from(set))  // [12, 45, 97, 9797, 564, 134, 45642]
+</code></pre>
+<h6 id="Array-from-还可将NodeList-转为真正的数组。"><a href="#Array-from-还可将NodeList-转为真正的数组。" class="headerlink" title="Array.from()还可将NodeList  转为真正的数组。"></a>Array.from()还可将NodeList  转为真正的数组。</h6><pre><code class="js">    var abc = document.getElementsByTagName(&#39;a&#39;)// 通过getElementsByTagName获取的元素不是一个数组，而是nodeList
+    console.log(typeof(abc),abc)  
+// 使用Array.from()
+    console.log(&#39;Array.form&#39;,Array.from(abc)) //[a, a, a, a, a, a, a, a]
+//第二种方法转化
+var arr = new Array()  // 这种方式新建数组很新颖
+    for(var i = 0; i &lt; abc.length; i++)&#123;
+        var ele = abc[i]
+        arr.push(ele)
+    &#125;
+    console.log(arr)  // [a, a, a, a, a, a, a, a]
+</code></pre>
+<h5 id="5-合并对象-assign"><a href="#5-合并对象-assign" class="headerlink" title="5) 合并对象 assign"></a>5) 合并对象 assign</h5><pre><code class="js">let newObj = (&#123;&#125; ,config, &#123; key:Math.random()&#125;)
+</code></pre>
+<h5 id="6）writing-mode"><a href="#6）writing-mode" class="headerlink" title="6）writing-mode"></a>6）writing-mode</h5><p>文字垂直显示</p>
+<pre><code class="css">p&#123;writing-mode: vertical-lr&#125;
+</code></pre>
+<h5 id="7）getAttribute-setAttribute"><a href="#7）getAttribute-setAttribute" class="headerlink" title="7）getAttribute\setAttribute"></a>7）getAttribute\setAttribute</h5><pre><code class="js">let pp = document.querySelector(&#39;input&#39;)
 
-<h6 id="完整css"><a href="#完整css" class="headerlink" title="完整css"></a>完整css</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">900px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">6</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="comment">/* text-align: center; */</span></span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    <span class="attribute">color</span>: seagreen;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#item-info</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.activeIndex</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#cccccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-onfo1</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">11px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#cccccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-info-left</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: blueviolet;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-info-right</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">415px</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ant-popover-arrow</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none  <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover-inner-content</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">270px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* content */</span></span><br><span class="line"><span class="selector-class">.content-wrap</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">14px</span> <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-bottom</span>&#123;</span><br><span class="line">    <span class="comment">/* less 预编译  要  calc(~&quot;100% - 50px&quot;) */</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">50px</span>);  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-top-left</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-left</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-left</span> <span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: crimson;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-right</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-top-right</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: lightseagreen;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">800</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-bottom</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: dodgerblue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+pp.setAttribute(&#39;data-event&#39;, true)  // 添加属性
+let hasEvent = pp.getAttribute(&#39;data-event&#39;) // 获取对应键名对应的属性值
+console.log(hasEvent)  // true
+</code></pre>
+<h5 id="8）Object-prototype-toString-call"><a href="#8）Object-prototype-toString-call" class="headerlink" title="8）Object.prototype.toString.call()"></a>8）Object.prototype.toString.call()</h5><h6 id="用Object-prototype-toString-call-obj-检测对象类型"><a href="#用Object-prototype-toString-call-obj-检测对象类型" class="headerlink" title="用Object.prototype.toString.call(obj)检测对象类型"></a>用Object.prototype.toString.call(obj)检测对象类型</h6><pre><code class="js">let arr = [&#39;Eric&#39;,&#39;Mary&#39;,&#39;Rose&#39;]
+    console.log(Object.prototype.toString.call(arr))  // [object Array]
+    console.log(Object.prototype.toString.call(&#39;Eric&#39;))  // [object String]
+    console.log(Object.prototype.toString.call(0))   // [object Number]
+    console.log(Object.prototype.toString.call(true))    // [object Boolean]
+    console.log(Object.prototype.toString.call(undefined))  // [object Undefined]
+    console.log(Object.prototype.toString.call(null))  // [object Null]
+    console.log(Object.prototype.toString.call(&#123;name:&quot;julius&quot;&#125;))  // [object Object]
+    console.log(Object.prototype.toString.call(function () &#123;&#125;))  // [object Function]
+    console.log(Object.prototype.toString.call([]))   // [object Array]
+    console.log(Object.prototype.toString.call(new Date))  // [object Date]
+    console.log(Object.prototype.toString.call(/^\[.*\]$/))  // [object RegExp]
+</code></pre>
+<h6 id="判断数据类型-gt-函数调用"><a href="#判断数据类型-gt-函数调用" class="headerlink" title="判断数据类型====&gt;函数调用"></a>判断数据类型====&gt;函数调用</h6><pre><code class="js">function isNumber (number) &#123;
+        return  Object.prototype.toString.call(number) === &#39;[object Number]&#39;  // 字符串怎么能是true呢？
+    &#125;
+    
+    console.log(isNumber(12))  // true
+</code></pre>
+<h5 id="9）引入iconfont字体图标"><a href="#9）引入iconfont字体图标" class="headerlink" title="9）引入iconfont字体图标"></a>9）引入iconfont字体图标</h5><p>下载好并放入，import ‘./iconfont/iconfont.css’</p>
+<pre><code class="html">// 使用：第一种方法 =&gt;  &lt;i *className*=&quot;iconfont icon-zanting&quot;&gt;&lt;/i&gt;
+</code></pre>
+<pre><code class="html">// 第二种方法 =&gt; &lt;span class=&quot;icon iconfont&quot;&gt;&amp;#xe635;&lt;/span&gt;
+</code></pre>
 
                 
             </div>
@@ -505,7 +577,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/">http://siberiabar2.github.io/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/</a>
+                    <a href="http://siberiabar2.github.io/2021/04/30/sui-bi/">http://siberiabar2.github.io/2021/04/30/sui-bi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,8 +615,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/aned-Popover/">
-                                    <span class="chip bg-color">aned Popover</span>
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
                                 </a>
                             
                         </div>
@@ -720,52 +792,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/06/%E7%AE%97%E6%B3%95java%E5%88%9D%E8%AF%86/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="算法java初识">
-                        
-                        <span class="card-title">算法java初识</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            李晓飞
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95%E3%80%81java/">
-                        <span class="chip bg-color">算法、java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
+                <a href="/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/">
                     <div class="card-image">
                         
                         
@@ -781,9 +808,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -797,6 +824,51 @@
                     
                     <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
                         <span class="chip bg-color">模糊搜索</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/30/git-cao-zuo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git操作">
+                        
+                        <span class="card-title">git操作</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            李晓飞
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/git%E5%91%BD%E4%BB%A4/">
+                        <span class="chip bg-color">git命令</span>
                     </a>
                     
                 </div>

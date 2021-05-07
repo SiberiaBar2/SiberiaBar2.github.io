@@ -468,15 +468,83 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> cxs <span class="keyword">from</span> <span class="string">&#x27;classnames&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; AutoComplete &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./dimserch.css&#x27;</span></span><br><span class="line"><span class="keyword">const</span> &#123; Option &#125; = AutoComplete</span><br></pre></td></tr></table></figure>
-
+                <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><pre><code class="jsx">import React, &#123; useState &#125; from &#39;react&#39;;
+import cxs from &#39;classnames&#39;
+import &#123; AutoComplete &#125; from &#39;antd&#39;;
+import &#39;./dimserch.css&#39;
+const &#123; Option &#125; = AutoComplete
+</code></pre>
 <p><strong>思路</strong> ：</p>
 <p>将一份数据存两遍，一份用于渲染，一份用于查找。</p>
 <p>由于传入的  搜索值(serch)或是 变化值(onChange)的值若是空字符串，那么只需在另一份保存的数据中查找就可以了；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">filter，用list.filter( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">   <span class="comment">// 第一种写法  1</span></span><br><span class="line">	<span class="keyword">if</span>(item.includes.val) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">   <span class="comment">// 若item包含传入值，返回此对象</span></span><br><span class="line">    </span><br><span class="line">  <span class="comment">//第二种写法   2</span></span><br><span class="line">  <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">  <span class="comment">// if(regex.test(item)) return true</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span> 其他情况不返回！</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code class="js">filter，用list.filter( item =&gt; &#123;
+   // 第一种写法  1
+    if(item.includes.val) return true
+   // 若item包含传入值，返回此对象
+    
+  //第二种写法   2
+  // const regex = new RegExp(val)
+  // if(regex.test(item)) return true
+  return false 其他情况不返回！
+&#125;)
+</code></pre>
+<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><pre><code class="jsx">function DimSerch() &#123;
+  const list =
+    [
+      &quot;双皮奶&quot;, &quot;狮子头&quot;, &quot;擀面皮&quot;, &quot;巧克力蛋糕&quot;, &quot;热米皮&quot;, &quot;牛肉面&quot;, &quot;二细牛肉面&quot;, &quot;三细牛肉面&quot;,
+      &quot;扬州炒饭&quot;, &quot;蛋炒饭&quot;, &quot;蛋炒土豆丝&quot;, &quot;巧克力饼&quot;, &quot;狮子头拌奶酪&quot;, &quot;火腿擀面皮&quot;, &quot;加量擀面皮&quot;,
+      &quot;热米皮拌青椒&quot;, &quot;双皮奶加量&quot;, &quot;海之言&quot;, &quot;蓝色海之言&quot;, &quot;紫色海之言&quot;, &quot;橘黄海之言&quot;, &quot;绿色海之言&quot;,
+      &quot;百吉猫锅巴&quot;, &quot;三元锅巴&quot;, &quot;酥锅巴&quot;, &quot;AD钙&quot;, &quot;乳酸菌AD钙&quot;, &quot;草莓AD钙&quot;, &quot;香辣火腿肠&quot;, &quot;玉米火腿肠&quot;
+    ]
+  const [realyDatas, setRealyDatas] = useState(list)
+  const [originList, setoriginList] = useState(list)
 
-<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DimSerch</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> list =</span><br><span class="line">    [</span><br><span class="line">      <span class="string">&quot;双皮奶&quot;</span>, <span class="string">&quot;狮子头&quot;</span>, <span class="string">&quot;擀面皮&quot;</span>, <span class="string">&quot;巧克力蛋糕&quot;</span>, <span class="string">&quot;热米皮&quot;</span>, <span class="string">&quot;牛肉面&quot;</span>, <span class="string">&quot;二细牛肉面&quot;</span>, <span class="string">&quot;三细牛肉面&quot;</span>,</span><br><span class="line">      <span class="string">&quot;扬州炒饭&quot;</span>, <span class="string">&quot;蛋炒饭&quot;</span>, <span class="string">&quot;蛋炒土豆丝&quot;</span>, <span class="string">&quot;巧克力饼&quot;</span>, <span class="string">&quot;狮子头拌奶酪&quot;</span>, <span class="string">&quot;火腿擀面皮&quot;</span>, <span class="string">&quot;加量擀面皮&quot;</span>,</span><br><span class="line">      <span class="string">&quot;热米皮拌青椒&quot;</span>, <span class="string">&quot;双皮奶加量&quot;</span>, <span class="string">&quot;海之言&quot;</span>, <span class="string">&quot;蓝色海之言&quot;</span>, <span class="string">&quot;紫色海之言&quot;</span>, <span class="string">&quot;橘黄海之言&quot;</span>, <span class="string">&quot;绿色海之言&quot;</span>,</span><br><span class="line">      <span class="string">&quot;百吉猫锅巴&quot;</span>, <span class="string">&quot;三元锅巴&quot;</span>, <span class="string">&quot;酥锅巴&quot;</span>, <span class="string">&quot;AD钙&quot;</span>, <span class="string">&quot;乳酸菌AD钙&quot;</span>, <span class="string">&quot;草莓AD钙&quot;</span>, <span class="string">&quot;香辣火腿肠&quot;</span>, <span class="string">&quot;玉米火腿肠&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  <span class="keyword">const</span> [realyDatas, setRealyDatas] = useState(list)</span><br><span class="line">  <span class="keyword">const</span> [originList, setoriginList] = useState(list)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleSearch = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含&#x27;&#x27;，</span></span><br><span class="line">      <span class="comment">// 也就是说，此时返回被遍历对象的所有（每一项）;</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；</span></span><br><span class="line">      <span class="comment">//   return true                // 就返回这个对象</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span> <span class="comment">// item包含输入的值，返回此对象；其他情况false不返回</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)          <span class="comment">// 更新渲染数组； 重新渲染</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> autoChange = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;</span></span><br><span class="line">      <span class="comment">//   return true</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div id=<span class="string">&#x27;wrap&#x27;</span>&gt;</span><br><span class="line">      &lt;AutoComplete</span><br><span class="line">        getPopupContainer=&#123;<span class="function">() =&gt;</span> <span class="built_in">document</span>.getElementById(<span class="string">&quot;wrap&quot;</span>)&#125;</span><br><span class="line">        onSearch=&#123;handleSearch&#125;</span><br><span class="line">        onChange=&#123;autoChange&#125;</span><br><span class="line">        placeholder=<span class="string">&quot;请输入&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">        &#123;realyDatas.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">          &lt;Option value=&#123;item&#125; key=&#123;item&#125;&gt;</span><br><span class="line">            &#123;item&#125;</span><br><span class="line">          &lt;/Option&gt;</span><br><span class="line">        ))&#125;</span><br><span class="line">      &lt;/AutoComplete&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> DimSerch</span><br></pre></td></tr></table></figure>
 
+
+  const handleSearch = (val) =&gt; &#123;
+    // const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含&#39;&#39;，
+      // 也就是说，此时返回被遍历对象的所有（每一项）;
+    let newArray = originList.filter((item) =&gt; &#123;
+      // if (regex.test(item)) &#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；
+      //   return true                // 就返回这个对象
+      // &#125;
+      if(item.includes(val)) return true // item包含输入的值，返回此对象；其他情况false不返回
+      return false
+    &#125;)
+    setRealyDatas(newArray)          // 更新渲染数组； 重新渲染
+  &#125;
+  
+  const autoChange = (val) =&gt; &#123;
+    // const regex = new RegExp(val)
+    let newArray = originList.filter((item) =&gt; &#123;
+      // if (regex.test(item)) &#123;
+      //   return true
+      // &#125;
+      if(item.includes(val)) return true
+      return false
+    &#125;)
+    setRealyDatas(newArray)
+  &#125;
+  return (
+    &lt;div id=&#39;wrap&#39;&gt;
+      &lt;AutoComplete
+        getPopupContainer=&#123;() =&gt; document.getElementById(&quot;wrap&quot;)&#125;
+        onSearch=&#123;handleSearch&#125;
+        onChange=&#123;autoChange&#125;
+        placeholder=&quot;请输入&quot;
+      &gt;
+        &#123;realyDatas.map((item, index) =&gt; (
+          &lt;Option value=&#123;item&#125; key=&#123;item&#125;&gt;
+            &#123;item&#125;
+          &lt;/Option&gt;
+        ))&#125;
+      &lt;/AutoComplete&gt;
+    &lt;/div&gt;
+  )
+&#125;
+
+export default DimSerch
+</code></pre>
 
                 
             </div>
@@ -503,7 +571,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">http://siberiabar2.github.io/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/</a>
+                    <a href="http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/">http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -718,7 +786,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/">
+                <a href="/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/">
                     <div class="card-image">
                         
                         
@@ -763,7 +831,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/">
+                <a href="/2021/04/30/sui-bi/">
                     <div class="card-image">
                         
                         

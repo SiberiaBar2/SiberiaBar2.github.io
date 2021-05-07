@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="随笔, 李晓飞Blog">
+    <meta name="keywords" content="算法java初识, 李晓飞Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>随笔 | 李晓飞Blog</title>
+    <title>算法java初识 | 李晓飞Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">随笔</h1>
+                    <h1 class="description center-align post-title">算法java初识</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E3%80%81java/">
+                                <span class="chip bg-color">算法、java</span>
                             </a>
                         
                     </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-30
+                    2021-05-06
                 </div>
                 
 
@@ -468,32 +468,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="4-10-4-16-report"><a href="#4-10-4-16-report" class="headerlink" title="4.10-4.16 report"></a>4.10-4.16 report</h4><h5 id="1-Object-keys-obj-传入对象，返回属性名"><a href="#1-Object-keys-obj-传入对象，返回属性名" class="headerlink" title="1) Object.keys(obj)  // 传入对象，返回属性名"></a>1) Object.keys(obj)  // 传入对象，返回属性名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">type</span>: <span class="string">&quot;上午&quot;</span>,<span class="attr">list</span>:<span class="string">&quot;333&quot;</span>, <span class="attr">dance</span>:<span class="string">&quot;巴克勒&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj)) <span class="comment">// (3) [&quot;type&quot;, &quot;list&quot;, &quot;dance&quot;]  返回键名，但并没有吃掉属性值</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-classList添加类名"><a href="#2-classList添加类名" class="headerlink" title="2) classList添加类名"></a>2) classList添加类名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bot = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;bot&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bot.classList.add(<span class="string">&#x27;niuheng&#x27;</span>) </span><br><span class="line">	<span class="comment">// console.log(bot.classList.contains(&#x27;niuheng&#x27;)) // true</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3）-map的参数"><a href="#3）-map的参数" class="headerlink" title="3） map的参数"></a>3） map的参数</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="string">&quot;类型&quot;</span>, <span class="string">&quot;影响&quot;</span>, <span class="string">&quot;距离&quot;</span>, <span class="string">&quot;推荐&quot;</span>, <span class="string">&quot;预计&quot;</span>]</span><br><span class="line">	 array.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>)</span>&#123;</span><br><span class="line">		 <span class="comment">// console.log(item+&#x27;x&#x27;, index, arr)</span></span><br><span class="line">        <span class="comment">// 类型x 0 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 影响x 1 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 距离x 2 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 推荐x 3 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 预计x 4 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">		 <span class="keyword">return</span> item+<span class="string">&#x27;x&#x27;</span></span><br><span class="line">	 &#125;)</span><br><span class="line"><span class="comment">// (5) [&quot;类型x&quot;, &quot;影响x&quot;, &quot;距离x&quot;, &quot;推荐x&quot;, &quot;预计x&quot;]</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="4-Array-from"><a href="#4-Array-from" class="headerlink" title="4) Array.from()"></a>4) Array.from()</h5><h6 id="Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组"><a href="#Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组" class="headerlink" title="Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组"></a>Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">12</span>,<span class="number">45</span>,<span class="number">97</span>,<span class="number">9797</span>,<span class="number">564</span>,<span class="number">134</span>,<span class="number">45642</span>,<span class="number">12</span>]</span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(arr1)</span><br><span class="line"><span class="comment">// [[Entries]]</span></span><br><span class="line">		<span class="comment">// 0: 12</span></span><br><span class="line">		<span class="comment">// 1: 45</span></span><br><span class="line">		<span class="comment">// 2: 97</span></span><br><span class="line">		<span class="comment">// 3: 9797</span></span><br><span class="line">		<span class="comment">// 4: 564</span></span><br><span class="line">		<span class="comment">// 5: 134</span></span><br><span class="line">		<span class="comment">// 6: 45642</span></span><br><span class="line">		<span class="comment">// size: 7,</span></span><br><span class="line"><span class="comment">// 可以看到set不是一个数组，它看起来想一个对象，却又不是一个对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log( Array.from(set))  // [12, 45, 97, 9797, 564, 134, 45642]</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="Array-from-还可将NodeList-转为真正的数组。"><a href="#Array-from-还可将NodeList-转为真正的数组。" class="headerlink" title="Array.from()还可将NodeList  转为真正的数组。"></a>Array.from()还可将NodeList  转为真正的数组。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">var</span> abc = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;a&#x27;</span>)<span class="comment">// 通过getElementsByTagName获取的元素不是一个数组，而是nodeList</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(abc),abc)  </span><br><span class="line"><span class="comment">// 使用Array.from()</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;Array.form&#x27;</span>,<span class="built_in">Array</span>.from(abc)) <span class="comment">//[a, a, a, a, a, a, a, a]</span></span><br><span class="line"><span class="comment">//第二种方法转化</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>()  <span class="comment">// 这种方式新建数组很新颖</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; abc.length; i++)&#123;</span><br><span class="line">		<span class="keyword">var</span> ele = abc[i]</span><br><span class="line">		arr.push(ele)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(arr)  <span class="comment">// [a, a, a, a, a, a, a, a]</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="5-合并对象-assign"><a href="#5-合并对象-assign" class="headerlink" title="5) 合并对象 assign"></a>5) 合并对象 assign</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> newObj = (&#123;&#125; ,config, &#123; <span class="attr">key</span>:<span class="built_in">Math</span>.random()&#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="6）writing-mode"><a href="#6）writing-mode" class="headerlink" title="6）writing-mode"></a>6）writing-mode</h5><p>文字垂直显示</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;writing-mode: vertical-lr&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="7）getAttribute-setAttribute"><a href="#7）getAttribute-setAttribute" class="headerlink" title="7）getAttribute\setAttribute"></a>7）getAttribute\setAttribute</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pp = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;input&#x27;</span>)</span><br><span class="line"></span><br><span class="line">pp.setAttribute(<span class="string">&#x27;data-event&#x27;</span>, <span class="literal">true</span>)  <span class="comment">// 添加属性</span></span><br><span class="line"><span class="keyword">let</span> hasEvent = pp.getAttribute(<span class="string">&#x27;data-event&#x27;</span>) <span class="comment">// 获取对应键名对应的属性值</span></span><br><span class="line"><span class="built_in">console</span>.log(hasEvent)  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="8）Object-prototype-toString-call"><a href="#8）Object-prototype-toString-call" class="headerlink" title="8）Object.prototype.toString.call()"></a>8）Object.prototype.toString.call()</h5><h6 id="用Object-prototype-toString-call-obj-检测对象类型"><a href="#用Object-prototype-toString-call-obj-检测对象类型" class="headerlink" title="用Object.prototype.toString.call(obj)检测对象类型"></a>用Object.prototype.toString.call(obj)检测对象类型</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;Eric&#x27;</span>,<span class="string">&#x27;Mary&#x27;</span>,<span class="string">&#x27;Rose&#x27;</span>]</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr))  <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="string">&#x27;Eric&#x27;</span>))  <span class="comment">// [object String]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">0</span>))   <span class="comment">// [object Number]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>))    <span class="comment">// [object Boolean]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>))  <span class="comment">// [object Undefined]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>))  <span class="comment">// [object Null]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(&#123;<span class="attr">name</span>:<span class="string">&quot;julius&quot;</span>&#125;))  <span class="comment">// [object Object]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;))  <span class="comment">// [object Function]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([]))   <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>))  <span class="comment">// [object Date]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="regexp">/^\[.*\]$/</span>))  <span class="comment">// [object RegExp]</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="判断数据类型-gt-函数调用"><a href="#判断数据类型-gt-函数调用" class="headerlink" title="判断数据类型====&gt;函数调用"></a>判断数据类型====&gt;函数调用</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isNumber</span> (<span class="params">number</span>) </span>&#123;</span><br><span class="line">	    <span class="keyword">return</span>  <span class="built_in">Object</span>.prototype.toString.call(number) === <span class="string">&#x27;[object Number]&#x27;</span>  <span class="comment">// 字符串怎么能是true呢？</span></span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="built_in">console</span>.log(isNumber(<span class="number">12</span>))  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="9）引入iconfont字体图标"><a href="#9）引入iconfont字体图标" class="headerlink" title="9）引入iconfont字体图标"></a>9）引入iconfont字体图标</h5><p>下载好并放入，import ‘./iconfont/iconfont.css’</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 使用：第一种方法 =&gt;  <span class="tag">&lt;<span class="name">i</span> *<span class="attr">className</span>*=<span class="string">&quot;iconfont icon-zanting&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 第二种方法 =&gt; <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon iconfont&quot;</span>&gt;</span><span class="symbol">&amp;#xe635;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+                <p>递归：自己调自己，效率非常不好。使用递归测算可能会卡主程序，因为慢；</p>
+<p>循环：速度很快，因为是异步进行的？</p>
+<p>所谓算法，其实就是，比对各种不同测算结果的优劣，取最优！（以后再补充）</p>
+<p>java 的函数需要在主函数main里调，out规定输出什么值；</p>
 
                 
             </div>
@@ -520,7 +498,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/04/30/%E9%9A%8F%E7%AC%94/">http://siberiabar2.github.io/2021/04/30/%E9%9A%8F%E7%AC%94/</a>
+                    <a href="http://siberiabar2.github.io/2021/05/06/suan-fa-java-chu-shi/">http://siberiabar2.github.io/2021/05/06/suan-fa-java-chu-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -558,8 +536,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E3%80%81java/">
+                                    <span class="chip bg-color">算法、java</span>
                                 </a>
                             
                         </div>
@@ -731,17 +709,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
+                <a href="/2021/05/06/suan-fa-java-chu-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="AutoComplute制作模糊搜索">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="算法java初识">
                         
-                        <span class="card-title">AutoComplute制作模糊搜索</span>
+                        <span class="card-title">算法java初识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -751,9 +730,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -762,11 +741,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
-                        <span class="chip bg-color">模糊搜索</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E3%80%81java/">
+                        <span class="chip bg-color">算法、java</span>
                     </a>
                     
                 </div>
@@ -780,13 +760,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">
+                <a href="/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git操作">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="antdPopover的动态变色和动态visable">
                         
-                        <span class="card-title">git操作</span>
+                        <span class="card-title">antdPopover的动态变色和动态visable</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -797,7 +777,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
                             </span>
                         <span class="publish-author">
                             
@@ -810,8 +790,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">git命令</span>
+                    <a href="/tags/aned-Popover/">
+                        <span class="chip bg-color">aned Popover</span>
                     </a>
                     
                 </div>

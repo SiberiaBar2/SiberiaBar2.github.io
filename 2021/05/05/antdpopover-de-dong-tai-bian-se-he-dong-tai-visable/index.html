@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 李晓飞Blog">
+    <meta name="keywords" content="antdPopover的动态变色和动态visable, 李晓飞Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 李晓飞Blog</title>
+    <title>antdPopover的动态变色和动态visable | 李晓飞Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -315,7 +315,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">antdPopover的动态变色和动态visable</h1>
                 </div>
             </div>
         </div>
@@ -429,9 +429,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/aned-Popover/">
+                                <span class="chip bg-color">aned Popover</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -443,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-25
+                    2021-05-05
                 </div>
                 
 
@@ -464,19 +468,209 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+                <h5 id="目的：-使用Popover制作动态的变色和控制Visable"><a href="#目的：-使用Popover制作动态的变色和控制Visable" class="headerlink" title="目的： 使用Popover制作动态的变色和控制Visable"></a>目的： 使用Popover制作动态的变色和控制Visable</h5><p>引入相关文件</p>
+<pre><code class="js">import React, &#123; useState &#125; from &#39;react&#39;;
+import cxs from &#39;classnames&#39;
+import &#123; Popover &#125; from &#39;antd&#39;;
+import &#39;../../iconfont/iconfont.css&#39;
+import &quot;./popovers.css&quot;;
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+<pre><code class="jsx">function Popovers() &#123;
+  const [chooseIndex, setChooseIndex] = useState(undefined)
+  const list = [
+    &#123; &quot;name&quot;: &quot;Rose&quot;, &quot;age&quot;: 22 &#125;,
+    &#123; &quot;name&quot;: &quot;Eric&quot;, &quot;age&quot;: 18 &#125;,
+    &#123; &quot;name&quot;: &quot;Mary&quot;, &quot;age&quot;: 25 &#125;,
+    &#123; &quot;name&quot;: &quot;Lucy&quot;, &quot;age&quot;: 28 &#125;,
+    &#123; &quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 21 &#125;,
+    &#123; &quot;name&quot;: &quot;Jack&quot;, &quot;age&quot;: 29 &#125;,
+    &#123; &quot;name&quot;: &quot;Bruce&quot;, &quot;age&quot;: 27 &#125;,
+    &#123; &quot;name&quot;: &quot;Tian&quot;, &quot;age&quot;: 25 &#125;,
+    &#123; &quot;name&quot;: &quot;JuDiao&quot;, &quot;age&quot;: 24 &#125;,
+    &#123; &quot;name&quot;: &quot;Niuheng&quot;, &quot;age&quot;: 31 &#125;,
+    &#123; &quot;name&quot;: &quot;KaiDi&quot;, &quot;age&quot;: 26 &#125;,
+    &#123; &quot;name&quot;: &quot;Haohao&quot;, &quot;age&quot;: 26 &#125;,
+    &#123; &quot;name&quot;: &quot;Wind&quot;, &quot;age&quot;: 23 &#125;
+  ]
+
+  const closeList = (index) =&gt; &#123;
+    console.log(&#39;close&#39;)
+    setChooseIndex()  // 每次关闭也会重新return？ 渲染的是全部视图还是局部视图
+    // stopPropagation 阻止事件冒泡
+  &#125;
+  const renderContent = (item, index) =&gt; &#123;  // 函数组件的函数，还必须const
+    console.log(item)
+    return &lt;div className=&#123;cxs(&#39;content-wrap&#39;)&#125;&gt;
+      &lt;div className=&#123;cxs(&quot;content-top&quot;)&#125;&gt;
+        &lt;div className=&#123;cxs(&#39;content-top-left&#39;)&#125;&gt;&lt;h1&gt;Name:&lt;/h1&gt;&lt;p&gt;&#123;item.name&#125;&lt;/p&gt;&lt;/div&gt;
+        &lt;div 
+        onClick=&#123;(e) =&gt; &#123;
+          e.stopPropagation()   // 此处必须阻止冒泡事件，否则会触发父元素的点击事件，导致子元素的点击事件点击了但是没效果
+          closeList(index)      // ***这是因为事件冒泡触发父元素点击对值重新赋值了***
+        &#125;&#125;
+        className=&#123;cxs(&#39;content-top-right&#39;)&#125;&gt;
+          &lt;i className=&quot;icon iconfont&quot;&gt;&amp;#xe607;&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className=&#123;cxs(&quot;content-bottom&quot;)&#125;&gt;
+        &lt;h2&gt;Have a good nice Day !&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &#125;
+  const changeColorAndIndex = (item, index) =&gt; &#123;
+    // console.log(item, index)
+    // console.log(&#39;changeIndex&#39;)
+    setChooseIndex(index)   // 中间值与下标相等了 ，完成了两件事，被点击元素变色，被点击元素的pop显示，其他不显示！
+  &#125;
+ 
+  return (
+    &lt;div className=&#123;cxs(&#39;wrap&#39;)&#125;&gt;
+      &lt;header&gt;点名&lt;/header&gt;
+      &#123;list.map( (item, index) =&gt; &#123;
+        return &lt;div 
+        key=&#123;index&#125;
+        id=&#39;item-info&#39;    
+        className=&#123;cxs(&#123;&quot;activeIndex&quot;: chooseIndex === index&#125;)&#125;  //1. 若类名与中间值相等，就出现变化的背景色
+        onClick=&#123;() =&gt; &#123;changeColorAndIndex(item, index)&#125;&#125;    //3.  使中间值和下标相等的事件。触发器
+        &gt;
+        &lt;Popover
+          content=&#123;renderContent(item, index)&#125;
+          trigger=&quot;click&quot;
+          getPopupContainer=&#123;() =&gt; document.getElementById(&quot;item-info&quot;)&#125;  // 绑定渲染父级
+          visible=&#123;chooseIndex === index&#125;     //2. 同理，若下标和中间值相同就显示
+        &gt;
+          &lt;div className=&#123;cxs(&quot;item-onfo1&quot;)&#125;&gt;
+            &lt;div className=&#123;cxs(&#39;item-info-left&#39;)&#125;&gt;&#123;item.name&#125;&lt;/div&gt;
+            &lt;div className=&#123;cxs(&#39;item-info-right&#39;)&#125;&gt;&#123;item.age&#125;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/Popover&gt;
+      &lt;/div&gt;
+      &#125;)&#125;
+    &lt;/div&gt;
+  )
+&#125;
+
+export default Popovers
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+<h5 id="关于为什么popover要绑定父级"><a href="#关于为什么popover要绑定父级" class="headerlink" title="关于为什么popover要绑定父级"></a>关于为什么popover要绑定父级</h5><pre><code class="jsx">// popover的默认渲染父级是body ，这在有些时候会出问题，例如元素错位(当然在目前看来是没有问题的，为了严谨)
+getPopupContainer=&#123;() =&gt; document.getElementById(&quot;item-info&quot;)&#125;
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+<h5 id="css"><a href="#css" class="headerlink" title="css:"></a>css:</h5><pre><code class="css">// 给父级元素相对定位，高度
+// 给子元素向左的距离
+.ant-popover &#123;
+    left: 415px  !important;
+    top: 0 !important;
+&#125;
+.ant-popover-arrow&#123;
+    display: none  !important;
+&#125;
+
+.ant-popover-inner-content&#123;
+    padding: 0  !important;
+    width: 400px;
+    height: 270px;
+&#125;
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h6 id="完整css"><a href="#完整css" class="headerlink" title="完整css"></a>完整css</h6><pre><code class="css">
+
+.wrap&#123;
+    width: 400px;
+    height: 900px;
+    margin-top: 40px;
+    margin-left: 50px;
+    background: rgba(0, 0, 0, .6);
+&#125;
+
+header&#123;
+    height: 50px;
+    margin-bottom: 15px;
+    /* text-align: center; */
+    line-height: 50px;
+    font-size: 18px;
+    color: seagreen;
+    padding-left: 16px;
+    font-weight: 700;
+&#125;
+#item-info&#123;
+    height: 40px;
+    padding: 0 16px;
+    position: relative;
+&#125;
+
+.activeIndex&#123;
+    background: #cccccc;
+&#125;
+
+.item-onfo1&#123;
+    height: 100%;
+    display: flex;
+    font-size: 14px;
+    padding: 11px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccccc;
+&#125;
+
+.item-info-left&#123;
+    color: blueviolet;
+&#125;
+.item-info-right&#123;
+    color: brown;
+&#125;
+
+.ant-popover &#123;
+    left: 415px  !important;
+    top: 0 !important;
+&#125;
+.ant-popover-arrow&#123;
+    display: none  !important;
+&#125;
+
+.ant-popover-inner-content&#123;
+    padding: 0  !important;
+    width: 400px;
+    height: 270px;
+&#125;
+
+
+/* content */
+.content-wrap&#123;
+    padding: 14px 16px;
+    height: 100%;
+&#125;
+.content-top&#123;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+&#125;
+
+.content-bottom&#123;
+    /* less 预编译  要  calc(~&quot;100% - 50px&quot;) */
+    height: calc(100% - 50px);  
+&#125;
+
+.content-top-left&#123;
+    display: flex;
+&#125;
+.content-top-left p&#123;
+    margin-left: 20px;
+    line-height: 50px;
+&#125;
+.content-top-left h1&#123;
+    color: crimson;
+&#125;
+.content-top-right &#123;
+    line-height: 50px;
+&#125;
+
+.content-top-right i &#123;
+    color: lightseagreen;
+    font-weight: 800;
+&#125;
+.content-bottom h2&#123;
+    color: dodgerblue;
+&#125;
+
+</code></pre>
 
                 
             </div>
@@ -503,7 +697,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/04/25/hello-world/">http://siberiabar2.github.io/2021/04/25/hello-world/</a>
+                    <a href="http://siberiabar2.github.io/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/">http://siberiabar2.github.io/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,7 +734,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/aned-Popover/">
+                                    <span class="chip bg-color">aned Popover</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -714,13 +912,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/">
+                <a href="/2021/05/06/suan-fa-java-chu-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="css磨砂效果，模糊效果">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="算法java初识">
                         
-                        <span class="card-title">css磨砂效果，模糊效果</span>
+                        <span class="card-title">算法java初识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -731,7 +929,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
                         </span>
                         <span class="publish-author">
                             
@@ -744,8 +942,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/">
-                        <span class="chip bg-color">css 磨砂，模糊</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E3%80%81java/">
+                        <span class="chip bg-color">算法、java</span>
                     </a>
                     
                 </div>
@@ -756,16 +954,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/25/hello-world/">
+                <a href="/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="AutoComplute制作模糊搜索">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">AutoComplute制作模糊搜索</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -776,7 +974,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
                             </span>
                         <span class="publish-author">
                             
@@ -786,7 +984,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
+                        <span class="chip bg-color">模糊搜索</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

@@ -476,14 +476,36 @@
 <p>将undefined发送给其他需要的组件，那么是极有可能出问题的，因此我们需要对数据进行处理：<strong>在数据为undefined时不发送数据！</strong></p>
 <p>哪怕我只发送过去一条实际存在的数据，也不发送undefined,可以少传，可以不传，但不可以发undefined!</p>
 <p>试了很多种方法，例如：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// list是我们要发送的数组</span></span><br><span class="line"><span class="comment">// 将list 遍历</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">const</span> [datas, setDatas] = useState([])</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> res = <span class="keyword">await</span> mydatas()</span><br><span class="line"><span class="keyword">const</span> list = res.data</span><br><span class="line">...</span><br><span class="line"><span class="keyword">let</span> newArr = []</span><br><span class="line">list.map( <span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(item &amp;&amp; item!== <span class="literal">undefined</span> || item !== <span class="literal">null</span> || item !== <span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line">        newArr.push(item)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(newArr) <span class="comment">// [&#123;item&#125;,undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span></span><br><span class="line">    setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]])</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">// list是我们要发送的数组
+// 将list 遍历
+&#123;
+    const [datas, setDatas] = useState([])
+...
+const res = await mydatas()
+const list = res.data
+...
+let newArr = []
+list.map( (item) =&gt; &#123;
+    if(item &amp;&amp; item!== undefined || item !== null || item !== &#39;&#39;)&#123;
+        newArr.push(item)
+    &#125;
+&#125;)
+    console.log(newArr) // [&#123;item&#125;,undefined,undefined] 结果依然没有发生变化,依然发送的是undefined
+    setDatas([list[0],list[1],list[2,list[3]])
+...
+&#125;
+</code></pre>
 <p>解决：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))</span><br><span class="line"> <span class="built_in">console</span>.log([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))  <span class="comment">// 返回的新数组种没有undefined！！！</span></span><br><span class="line"><span class="comment">// success</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">setDatas([list[0],list[1],list[2,list[3]].filter( item =&gt; item))
+ console.log([list[0],list[1],list[2,list[3]].filter( item =&gt; item))  // 返回的新数组种没有undefined！！！
+// success
+</code></pre>
 <p>原因：经过filter后会自动去掉undefined、null,空字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="literal">undefined</span>, <span class="string">&#x27;3.jpg&#x27;</span>,<span class="literal">undefined</span>, <span class="literal">null</span>、, <span class="string">&quot;&quot;</span>]</span><br><span class="line"><span class="keyword">var</span> newArr = arr.filter(<span class="function"><span class="params">item</span> =&gt;</span> item)</span><br><span class="line"><span class="built_in">console</span>.log(newArr)</span><br><span class="line">VM23:<span class="number">3</span> (<span class="number">3</span>) [<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3.jpg&quot;</span>] <span class="comment">// 可以看到undefined、null、&quot;&quot; 被去除了</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">var arr = [&#39;1&#39;,&#39;2&#39;,undefined, &#39;3.jpg&#39;,undefined, null、, &quot;&quot;]
+var newArr = arr.filter(item =&gt; item)
+console.log(newArr)
+VM23:3 (3) [&quot;1&quot;, &quot;2&quot;, &quot;3.jpg&quot;] // 可以看到undefined、null、&quot;&quot; 被去除了
+</code></pre>
 
                 
             </div>
@@ -510,7 +532,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">http://siberiabar2.github.io/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/</a>
+                    <a href="http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/">http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -725,7 +747,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">
+                <a href="/2021/04/30/git-cao-zuo/">
                     <div class="card-image">
                         
                         
@@ -770,7 +792,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/">
+                <a href="/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/">
                     <div class="card-image">
                         
                         

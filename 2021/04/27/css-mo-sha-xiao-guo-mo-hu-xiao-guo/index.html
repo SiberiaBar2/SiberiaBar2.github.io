@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决OpenSSL报错, 李晓飞Blog">
+    <meta name="keywords" content="css磨砂效果，模糊效果, 李晓飞Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>解决OpenSSL报错 | 李晓飞Blog</title>
+    <title>css磨砂效果，模糊效果 | 李晓飞Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">解决OpenSSL报错</h1>
+                    <h1 class="description center-align post-title">css磨砂效果，模糊效果</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/">
-                                <span class="chip bg-color">Git报错解决</span>
+                            <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/">
+                                <span class="chip bg-color">css 磨砂，模糊</span>
                             </a>
                         
                     </div>
@@ -468,9 +468,78 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>首先，这个错误很可能是网络不稳定，连接超时导致的；</p>
-<h5 id="若再次尝试依然报错，可输入如下命令"><a href="#若再次尝试依然报错，可输入如下命令" class="headerlink" title="若再次尝试依然报错，可输入如下命令"></a>若再次尝试依然报错，可输入如下命令</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">global</span> http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure>
+                <p>要点：给需要磨砂的div(设rgba的那个元素) =&gt; 设置伪元素；</p>
+<p>给伪元素content: ‘’、绝对定位，四处为0,left：0….</p>
+<p>给伪元素一样的背景图，并给z-index: -1 、给自身z-index:1 ***重要，必须给！</p>
+<p>最后给 伪元素 filter: blur(37px); 属性值，效果就出来了。</p>
+<pre><code class="css">body&#123;
 
+background: url(./heroheart.jpg);   
+
+background-size: cover;
+
+&#125;
+
+#app&#123;
+
+margin: 100px auto;
+
+width: 600px;
+
+height: 370px;
+
+background: rgba(0,0,0,.5);
+
+padding: 100px;
+
+position: relative;
+
+z-index: 1;
+
+&#125;
+
+#app::after&#123;
+
+position: absolute;
+
+left: 0;top: 0;
+
+bottom: 0;right: 0;
+
+content: &#39;&#39;;
+
+background: url(./heroheart.jpg);
+
+background-size:cover ;
+
+z-index: -1;
+
+filter: blur(37px);
+
+&#125;
+
+p&#123;
+
+font-size: 28px;
+
+color: #FFFFFF;
+
+margin-bottom: 30px;
+
+&#125;
+</code></pre>
+<pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+
+    &lt;p&gt;时间带走了回不去的青春，&lt;/p&gt;
+
+    &lt;p&gt;却带不走我一往无前的心！&lt;/p&gt;
+
+    &lt;p&gt;世间万物，万般困难、&lt;/p&gt;
+
+    &lt;p&gt;能耐我何？&lt;/p&gt;
+
+&lt;/div&gt;
+</code></pre>
 
                 
             </div>
@@ -497,7 +566,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/">http://siberiabar2.github.io/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/</a>
+                    <a href="http://siberiabar2.github.io/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/">http://siberiabar2.github.io/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,8 +604,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/">
-                                    <span class="chip bg-color">Git报错解决</span>
+                                <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/">
+                                    <span class="chip bg-color">css 磨砂，模糊</span>
                                 </a>
                             
                         </div>
@@ -712,13 +781,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/">
+                <a href="/2021/04/27/jie-jue-openssl-bao-cuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="事件冒泡的影响，两种hook">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="解决OpenSSL报错">
                         
-                        <span class="card-title">事件冒泡的影响，两种hook</span>
+                        <span class="card-title">解决OpenSSL报错</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -729,7 +798,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
                         </span>
                         <span class="publish-author">
                             
@@ -742,8 +811,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/">
-                        <span class="chip bg-color">事件冒泡、hook</span>
+                    <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/">
+                        <span class="chip bg-color">Git报错解决</span>
                     </a>
                     
                 </div>
@@ -757,13 +826,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/">
+                <a href="/2021/04/25/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="css磨砂效果，模糊效果">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">css磨砂效果，模糊效果</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -774,7 +843,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-25
                             </span>
                         <span class="publish-author">
                             
@@ -783,14 +852,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/">
-                        <span class="chip bg-color">css 磨砂，模糊</span>
-                    </a>
-                    
                 </div>
                 
             </div>
