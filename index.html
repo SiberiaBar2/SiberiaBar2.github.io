@@ -1,656 +1,1325 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+    <meta charset="utf-8">
+    <meta name="keywords" content="李晓飞Blog">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <title>李晓飞Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-  
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
 <meta name="generator" content="Hexo 5.4.0"></head>
 
+
+
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">李晓飞Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
       
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">李晓飞Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-antdPopover的动态变色和动态visable" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/" class="article-date">
-  <time class="dt-published" datetime="2021-05-05T04:35:26.000Z" itemprop="datePublished">2021-05-05</time>
-</a>
     
-  </div>
-  <div class="article-inner">
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/">antdPopover的动态变色和动态visable</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="目的：-使用Popover制作动态的变色和控制Visable"><a href="#目的：-使用Popover制作动态的变色和控制Visable" class="headerlink" title="目的： 使用Popover制作动态的变色和控制Visable"></a>目的： 使用Popover制作动态的变色和控制Visable</h5><p>引入相关文件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> cxs <span class="keyword">from</span> <span class="string">&#x27;classnames&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Popover &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../../iconfont/iconfont.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./popovers.css&quot;</span>;</span><br></pre></td></tr></table></figure>
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    subtitle
+                
+            </div>
 
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Popovers</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">  <span class="keyword">const</span> list = [</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Rose&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">22</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Eric&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">18</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Mary&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Lucy&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">28</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">21</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Jack&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">29</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Bruce&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">27</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Tian&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;JuDiao&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">24</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Niuheng&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">31</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;KaiDi&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Haohao&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Wind&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">23</span> &#125;</span><br><span class="line">  ]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> closeList = <span class="function">(<span class="params">index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;close&#x27;</span>)</span><br><span class="line">    setChooseIndex()  <span class="comment">// 每次关闭也会重新return？ 渲染的是全部视图还是局部视图</span></span><br><span class="line">    <span class="comment">// stopPropagation 阻止事件冒泡</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 函数组件的函数，还必须const</span></span><br><span class="line">    <span class="built_in">console</span>.log(item)</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;cxs(</span>&#x27;<span class="attr">content-wrap</span>&#x27;)&#125;&gt;</span></span></span><br><span class="line">      &lt;div className=&#123;cxs(&quot;content-top&quot;)&#125;&gt;</span><br><span class="line">        &lt;div className=&#123;cxs(&#x27;content-top-left&#x27;)&#125;&gt;&lt;h1&gt;Name:&lt;/h1&gt;&lt;p&gt;&#123;item.name&#125;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div </span><br><span class="line">        onClick=&#123;(e) =&gt; &#123;</span><br><span class="line">          e.stopPropagation()   // 此处必须阻止冒泡事件，否则会触发父元素的点击事件，导致子元素的点击事件点击了但是没效果</span><br><span class="line">          closeList(index)      // ***这是因为事件冒泡触发父元素点击对值重新赋值了***</span><br><span class="line">        &#125;&#125;</span><br><span class="line">        className=&#123;cxs(&#x27;content-top-right&#x27;)&#125;&gt;</span><br><span class="line">          &lt;i className=&quot;icon iconfont&quot;&gt;&amp;#xe607;&lt;/i&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      &lt;div className=&#123;cxs(&quot;content-bottom&quot;)&#125;&gt;</span><br><span class="line">        &lt;h2&gt;Have a good nice Day !&lt;/h2&gt;</span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> changeColorAndIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// console.log(item, index)</span></span><br><span class="line">    <span class="comment">// console.log(&#x27;changeIndex&#x27;)</span></span><br><span class="line">    setChooseIndex(index)   <span class="comment">// 中间值与下标相等了 ，完成了两件事，被点击元素变色，被点击元素的pop显示，其他不显示！</span></span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=&#123;cxs(<span class="string">&#x27;wrap&#x27;</span>)&#125;&gt;</span><br><span class="line">      &lt;header&gt;点名&lt;/header&gt;</span><br><span class="line">      &#123;list.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> </span></span></span><br><span class="line"><span class="xml">        key=&#123;index&#125;</span></span><br><span class="line"><span class="xml">        id=&#x27;item-info&#x27;    </span></span><br><span class="line"><span class="xml">        className=&#123;cxs(&#123;&quot;activeIndex&quot;: chooseIndex === index&#125;)&#125;  //1. 若类名与中间值相等，就出现变化的背景色</span></span><br><span class="line"><span class="xml">        onClick=&#123;() =&gt; &#123;changeColorAndIndex(item, index)&#125;&#125;    //3.  使中间值和下标相等的事件。触发器</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line">        &lt;Popover</span><br><span class="line">          content=&#123;renderContent(item, index)&#125;</span><br><span class="line">          trigger=&quot;click&quot;</span><br><span class="line">          getPopupContainer=&#123;() =&gt; document.getElementById(&quot;item-info&quot;)&#125;  // 绑定渲染父级</span><br><span class="line">          visible=&#123;chooseIndex === index&#125;     //2. 同理，若下标和中间值相同就显示</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;div className=&#123;cxs(&quot;item-onfo1&quot;)&#125;&gt;</span><br><span class="line">            &lt;div className=&#123;cxs(&#x27;item-info-left&#x27;)&#125;&gt;&#123;item.name&#125;&lt;/div&gt;</span><br><span class="line">            &lt;div className=&#123;cxs(&#x27;item-info-right&#x27;)&#125;&gt;&#123;item.age&#125;&lt;/div&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">Popover</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      &#125;)&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Popovers</span><br></pre></td></tr></table></figure>
-
-<h5 id="关于为什么popover要绑定父级"><a href="#关于为什么popover要绑定父级" class="headerlink" title="关于为什么popover要绑定父级"></a>关于为什么popover要绑定父级</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// popover的默认渲染父级是body ，这在有些时候会出问题，例如元素错位(当然在目前看来是没有问题的，为了严谨)</span></span><br><span class="line">getPopupContainer=&#123;<span class="function">() =&gt;</span> <span class="built_in">document</span>.getElementById(<span class="string">&quot;item-info&quot;</span>)&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="css"><a href="#css" class="headerlink" title="css:"></a>css:</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 给父级元素相对定位，高度</span><br><span class="line">// 给子元素向左的距离</span><br><span class="line"><span class="selector-class">.ant-popover</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">415px</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ant-popover-arrow</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none  <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover-inner-content</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">270px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h6 id="完整css"><a href="#完整css" class="headerlink" title="完整css"></a>完整css</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">900px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">6</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="comment">/* text-align: center; */</span></span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    <span class="attribute">color</span>: seagreen;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#item-info</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.activeIndex</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#cccccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-onfo1</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">11px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#cccccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-info-left</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: blueviolet;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-info-right</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">415px</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ant-popover-arrow</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none  <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover-inner-content</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">270px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* content */</span></span><br><span class="line"><span class="selector-class">.content-wrap</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">14px</span> <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-bottom</span>&#123;</span><br><span class="line">    <span class="comment">/* less 预编译  要  calc(~&quot;100% - 50px&quot;) */</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">50px</span>);  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-top-left</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-left</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-left</span> <span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: crimson;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-right</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-top-right</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: lightseagreen;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">800</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-bottom</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: dodgerblue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/" data-id="ckoaznc9b0008vowc6jqgfiim" data-title="antdPopover的动态变色和动态visable" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aned-Popover/" rel="tag">aned Popover</a></li></ul>
+</div>
 
-    </footer>
-  </div>
-  
-</article>
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
 
 
-  
-    <article id="使用antd-AutoComplute制作模糊搜索" class="h-entry article article-type-使用antd" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" class="article-date">
-  <time class="dt-published" datetime="2021-05-05T04:00:18.000Z" itemprop="datePublished">2021-05-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">AutoComplute制作模糊搜索</a>
-    </h1>
-  
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> cxs <span class="keyword">from</span> <span class="string">&#x27;classnames&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; AutoComplete &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./dimserch.css&#x27;</span></span><br><span class="line"><span class="keyword">const</span> &#123; Option &#125; = AutoComplete</span><br></pre></td></tr></table></figure>
-
-<p><strong>思路</strong> ：</p>
-<p>将一份数据存两遍，一份用于渲染，一份用于查找。</p>
-<p>由于传入的  搜索值(serch)或是 变化值(onChange)的值若是空字符串，那么只需在另一份保存的数据中查找就可以了；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">filter，用list.filter( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">   <span class="comment">// 第一种写法  1</span></span><br><span class="line">	<span class="keyword">if</span>(item.includes.val) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">   <span class="comment">// 若item包含传入值，返回此对象</span></span><br><span class="line">    </span><br><span class="line">  <span class="comment">//第二种写法   2</span></span><br><span class="line">  <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">  <span class="comment">// if(regex.test(item)) return true</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span> 其他情况不返回！</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DimSerch</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> list =</span><br><span class="line">    [</span><br><span class="line">      <span class="string">&quot;双皮奶&quot;</span>, <span class="string">&quot;狮子头&quot;</span>, <span class="string">&quot;擀面皮&quot;</span>, <span class="string">&quot;巧克力蛋糕&quot;</span>, <span class="string">&quot;热米皮&quot;</span>, <span class="string">&quot;牛肉面&quot;</span>, <span class="string">&quot;二细牛肉面&quot;</span>, <span class="string">&quot;三细牛肉面&quot;</span>,</span><br><span class="line">      <span class="string">&quot;扬州炒饭&quot;</span>, <span class="string">&quot;蛋炒饭&quot;</span>, <span class="string">&quot;蛋炒土豆丝&quot;</span>, <span class="string">&quot;巧克力饼&quot;</span>, <span class="string">&quot;狮子头拌奶酪&quot;</span>, <span class="string">&quot;火腿擀面皮&quot;</span>, <span class="string">&quot;加量擀面皮&quot;</span>,</span><br><span class="line">      <span class="string">&quot;热米皮拌青椒&quot;</span>, <span class="string">&quot;双皮奶加量&quot;</span>, <span class="string">&quot;海之言&quot;</span>, <span class="string">&quot;蓝色海之言&quot;</span>, <span class="string">&quot;紫色海之言&quot;</span>, <span class="string">&quot;橘黄海之言&quot;</span>, <span class="string">&quot;绿色海之言&quot;</span>,</span><br><span class="line">      <span class="string">&quot;百吉猫锅巴&quot;</span>, <span class="string">&quot;三元锅巴&quot;</span>, <span class="string">&quot;酥锅巴&quot;</span>, <span class="string">&quot;AD钙&quot;</span>, <span class="string">&quot;乳酸菌AD钙&quot;</span>, <span class="string">&quot;草莓AD钙&quot;</span>, <span class="string">&quot;香辣火腿肠&quot;</span>, <span class="string">&quot;玉米火腿肠&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  <span class="keyword">const</span> [realyDatas, setRealyDatas] = useState(list)</span><br><span class="line">  <span class="keyword">const</span> [originList, setoriginList] = useState(list)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleSearch = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含&#x27;&#x27;，</span></span><br><span class="line">      <span class="comment">// 也就是说，此时返回被遍历对象的所有（每一项）;</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；</span></span><br><span class="line">      <span class="comment">//   return true                // 就返回这个对象</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span> <span class="comment">// item包含输入的值，返回此对象；其他情况false不返回</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)          <span class="comment">// 更新渲染数组； 重新渲染</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> autoChange = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;</span></span><br><span class="line">      <span class="comment">//   return true</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div id=<span class="string">&#x27;wrap&#x27;</span>&gt;</span><br><span class="line">      &lt;AutoComplete</span><br><span class="line">        getPopupContainer=&#123;<span class="function">() =&gt;</span> <span class="built_in">document</span>.getElementById(<span class="string">&quot;wrap&quot;</span>)&#125;</span><br><span class="line">        onSearch=&#123;handleSearch&#125;</span><br><span class="line">        onChange=&#123;autoChange&#125;</span><br><span class="line">        placeholder=<span class="string">&quot;请输入&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">        &#123;realyDatas.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">          &lt;Option value=&#123;item&#125; key=&#123;item&#125;&gt;</span><br><span class="line">            &#123;item&#125;</span><br><span class="line">          &lt;/Option&gt;</span><br><span class="line">        ))&#125;</span><br><span class="line">      &lt;/AutoComplete&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> DimSerch</span><br></pre></td></tr></table></figure>
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
 
-      
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" data-id="ckoaznc910000vowcd5xe5d62" data-title="AutoComplute制作模糊搜索" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" rel="tag">模糊搜索</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-随笔" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/" class="article-date">
-  <time class="dt-published" datetime="2021-04-30T14:02:42.000Z" itemprop="datePublished">2021-04-30</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+</div>
+
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/30/%E9%9A%8F%E7%AC%94/">随笔</a>
-    </h1>
-  
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
 
-      </header>
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
+
+
+
+<main class="content">
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h4 id="4-10-4-16-report"><a href="#4-10-4-16-report" class="headerlink" title="4.10-4.16 report"></a>4.10-4.16 report</h4><h5 id="1-Object-keys-obj-传入对象，返回属性名"><a href="#1-Object-keys-obj-传入对象，返回属性名" class="headerlink" title="1) Object.keys(obj)  // 传入对象，返回属性名"></a>1) Object.keys(obj)  // 传入对象，返回属性名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">type</span>: <span class="string">&quot;上午&quot;</span>,<span class="attr">list</span>:<span class="string">&quot;333&quot;</span>, <span class="attr">dance</span>:<span class="string">&quot;巴克勒&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj)) <span class="comment">// (3) [&quot;type&quot;, &quot;list&quot;, &quot;dance&quot;]  返回键名，但并没有吃掉属性值</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-classList添加类名"><a href="#2-classList添加类名" class="headerlink" title="2) classList添加类名"></a>2) classList添加类名</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bot = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;bot&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bot.classList.add(<span class="string">&#x27;niuheng&#x27;</span>) </span><br><span class="line">	<span class="comment">// console.log(bot.classList.contains(&#x27;niuheng&#x27;)) // true</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3）-map的参数"><a href="#3）-map的参数" class="headerlink" title="3） map的参数"></a>3） map的参数</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="string">&quot;类型&quot;</span>, <span class="string">&quot;影响&quot;</span>, <span class="string">&quot;距离&quot;</span>, <span class="string">&quot;推荐&quot;</span>, <span class="string">&quot;预计&quot;</span>]</span><br><span class="line">	 array.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>)</span>&#123;</span><br><span class="line">		 <span class="comment">// console.log(item+&#x27;x&#x27;, index, arr)</span></span><br><span class="line">        <span class="comment">// 类型x 0 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 影响x 1 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 距离x 2 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 推荐x 3 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">        <span class="comment">// VM22:3 预计x 4 (5) [&quot;类型&quot;, &quot;影响&quot;, &quot;距离&quot;, &quot;推荐&quot;, &quot;预计&quot;]</span></span><br><span class="line">		 <span class="keyword">return</span> item+<span class="string">&#x27;x&#x27;</span></span><br><span class="line">	 &#125;)</span><br><span class="line"><span class="comment">// (5) [&quot;类型x&quot;, &quot;影响x&quot;, &quot;距离x&quot;, &quot;推荐x&quot;, &quot;预计x&quot;]</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="4-Array-from"><a href="#4-Array-from" class="headerlink" title="4) Array.from()"></a>4) Array.from()</h5><h6 id="Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组"><a href="#Array-from-将一个类数组对象或可遍历对象转化为一个真正的数组" class="headerlink" title="Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组"></a>Array.from()将一个类数组对象或可遍历对象转化为一个真正的数组</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">12</span>,<span class="number">45</span>,<span class="number">97</span>,<span class="number">9797</span>,<span class="number">564</span>,<span class="number">134</span>,<span class="number">45642</span>,<span class="number">12</span>]</span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(arr1)</span><br><span class="line"><span class="comment">// [[Entries]]</span></span><br><span class="line">		<span class="comment">// 0: 12</span></span><br><span class="line">		<span class="comment">// 1: 45</span></span><br><span class="line">		<span class="comment">// 2: 97</span></span><br><span class="line">		<span class="comment">// 3: 9797</span></span><br><span class="line">		<span class="comment">// 4: 564</span></span><br><span class="line">		<span class="comment">// 5: 134</span></span><br><span class="line">		<span class="comment">// 6: 45642</span></span><br><span class="line">		<span class="comment">// size: 7,</span></span><br><span class="line"><span class="comment">// 可以看到set不是一个数组，它看起来想一个对象，却又不是一个对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log( Array.from(set))  // [12, 45, 97, 9797, 564, 134, 45642]</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="Array-from-还可将NodeList-转为真正的数组。"><a href="#Array-from-还可将NodeList-转为真正的数组。" class="headerlink" title="Array.from()还可将NodeList  转为真正的数组。"></a>Array.from()还可将NodeList  转为真正的数组。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">var</span> abc = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;a&#x27;</span>)<span class="comment">// 通过getElementsByTagName获取的元素不是一个数组，而是nodeList</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(abc),abc)  </span><br><span class="line"><span class="comment">// 使用Array.from()</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;Array.form&#x27;</span>,<span class="built_in">Array</span>.from(abc)) <span class="comment">//[a, a, a, a, a, a, a, a]</span></span><br><span class="line"><span class="comment">//第二种方法转化</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>()  <span class="comment">// 这种方式新建数组很新颖</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; abc.length; i++)&#123;</span><br><span class="line">		<span class="keyword">var</span> ele = abc[i]</span><br><span class="line">		arr.push(ele)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(arr)  <span class="comment">// [a, a, a, a, a, a, a, a]</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="5-合并对象-assign"><a href="#5-合并对象-assign" class="headerlink" title="5) 合并对象 assign"></a>5) 合并对象 assign</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> newObj = (&#123;&#125; ,config, &#123; <span class="attr">key</span>:<span class="built_in">Math</span>.random()&#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="6）writing-mode"><a href="#6）writing-mode" class="headerlink" title="6）writing-mode"></a>6）writing-mode</h5><p>文字垂直显示</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;writing-mode: vertical-lr&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="7）getAttribute-setAttribute"><a href="#7）getAttribute-setAttribute" class="headerlink" title="7）getAttribute\setAttribute"></a>7）getAttribute\setAttribute</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pp = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;input&#x27;</span>)</span><br><span class="line"></span><br><span class="line">pp.setAttribute(<span class="string">&#x27;data-event&#x27;</span>, <span class="literal">true</span>)  <span class="comment">// 添加属性</span></span><br><span class="line"><span class="keyword">let</span> hasEvent = pp.getAttribute(<span class="string">&#x27;data-event&#x27;</span>) <span class="comment">// 获取对应键名对应的属性值</span></span><br><span class="line"><span class="built_in">console</span>.log(hasEvent)  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="8）Object-prototype-toString-call"><a href="#8）Object-prototype-toString-call" class="headerlink" title="8）Object.prototype.toString.call()"></a>8）Object.prototype.toString.call()</h5><h6 id="用Object-prototype-toString-call-obj-检测对象类型"><a href="#用Object-prototype-toString-call-obj-检测对象类型" class="headerlink" title="用Object.prototype.toString.call(obj)检测对象类型"></a>用Object.prototype.toString.call(obj)检测对象类型</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;Eric&#x27;</span>,<span class="string">&#x27;Mary&#x27;</span>,<span class="string">&#x27;Rose&#x27;</span>]</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr))  <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="string">&#x27;Eric&#x27;</span>))  <span class="comment">// [object String]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">0</span>))   <span class="comment">// [object Number]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>))    <span class="comment">// [object Boolean]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>))  <span class="comment">// [object Undefined]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>))  <span class="comment">// [object Null]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(&#123;<span class="attr">name</span>:<span class="string">&quot;julius&quot;</span>&#125;))  <span class="comment">// [object Object]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;))  <span class="comment">// [object Function]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([]))   <span class="comment">// [object Array]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>))  <span class="comment">// [object Date]</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="regexp">/^\[.*\]$/</span>))  <span class="comment">// [object RegExp]</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="判断数据类型-gt-函数调用"><a href="#判断数据类型-gt-函数调用" class="headerlink" title="判断数据类型====&gt;函数调用"></a>判断数据类型====&gt;函数调用</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isNumber</span> (<span class="params">number</span>) </span>&#123;</span><br><span class="line">	    <span class="keyword">return</span>  <span class="built_in">Object</span>.prototype.toString.call(number) === <span class="string">&#x27;[object Number]&#x27;</span>  <span class="comment">// 字符串怎么能是true呢？</span></span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="built_in">console</span>.log(isNumber(<span class="number">12</span>))  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="9）引入iconfont字体图标"><a href="#9）引入iconfont字体图标" class="headerlink" title="9）引入iconfont字体图标"></a>9）引入iconfont字体图标</h5><p>下载好并放入，import ‘./iconfont/iconfont.css’</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 使用：第一种方法 =&gt;  <span class="tag">&lt;<span class="name">i</span> *<span class="attr">className</span>*=<span class="string">&quot;iconfont icon-zanting&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 第二种方法 =&gt; <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon iconfont&quot;</span>&gt;</span><span class="symbol">&amp;#xe635;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/30/%E9%9A%8F%E7%AC%94/" data-id="ckoaznc9h000mvowc5t3d7d5t" data-title="随笔" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-git操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/" class="article-date">
-  <time class="dt-published" datetime="2021-04-30T13:58:38.000Z" itemprop="datePublished">2021-04-30</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">git操作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h4 id="git-操作"><a href="#git-操作" class="headerlink" title="git 操作"></a>git 操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push (若从远程上来下来，并切换了分支，那么可直接git push 就能将本地最新代码push到远程对应的这个分支上去)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名 (已在远程对应的分支上，可使用此命令切换到其他远程分支)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名 (创建本地分支)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a (查看所有分支，本地and远程)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (查看本地分支)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin 本地分支名</span><br><span class="line">(将本地分支推到远程仓库，使远程仓库下有该分支名)</span><br></pre></td></tr></table></figure>
-
-
-      
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/30/git%E6%93%8D%E4%BD%9C/" data-id="ckoaznc9a0005vowcaben2m4y" data-title="git操作" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git%E5%91%BD%E4%BB%A4/" rel="tag">git命令</a></li></ul>
+</div>
 
-    </footer>
-  </div>
-  
-</article>
+                    
 
+                    
 
+                    
 
-  
-    <article id="post-数组过滤undefined" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" class="article-date">
-  <time class="dt-published" datetime="2021-04-30T13:12:04.000Z" itemprop="datePublished">2021-04-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>我们在传递数据的时候，很多时候数据是一个数组，而又有些时候我们并不需要将整个数组传递过去，而是传递数组中的前几个对象；</p>
-<p>这时就可以现在这样： method([list[0],list[1],list[2,list[3]])；</p>
-<p>(调用父组件传递过来的函数，发送一个数组)；</p>
-<p><strong>问题：数据都是调用后端接口得来的，而数据这个东西，有时候多，有时候少，多的时候就不说了，反正我们时以下标这样取得，怎么传也只有三条数据，但是数据少的时候问题就来了；</strong></p>
-<p>什么问题呢？ 通过像这样传递的数据 method([list[0],list[1],list[2,list[3]])，<strong>如果数据一旦少于三条。也就是说如果调接口之得到一条数据</strong>，但是你这样通过下标传递数据, 那么发送过去的这个数组后两个必定是undefined!</p>
-<p>将undefined发送给其他需要的组件，那么是极有可能出问题的，因此我们需要对数据进行处理：<strong>在数据为undefined时不发送数据！</strong></p>
-<p>哪怕我只发送过去一条实际存在的数据，也不发送undefined,可以少传，可以不传，但不可以发undefined!</p>
-<p>试了很多种方法，例如：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// list是我们要发送的数组</span></span><br><span class="line"><span class="comment">// 将list 遍历</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">const</span> [datas, setDatas] = useState([])</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> res = <span class="keyword">await</span> mydatas()</span><br><span class="line"><span class="keyword">const</span> list = res.data</span><br><span class="line">...</span><br><span class="line"><span class="keyword">let</span> newArr = []</span><br><span class="line">list.map( <span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(item &amp;&amp; item!== <span class="literal">undefined</span> || item !== <span class="literal">null</span> || item !== <span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line">        newArr.push(item)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(newArr) <span class="comment">// [&#123;item&#125;,undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span></span><br><span class="line">    setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]])</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>解决：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))</span><br><span class="line"> <span class="built_in">console</span>.log([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))  <span class="comment">// 返回的新数组种没有undefined！！！</span></span><br><span class="line"><span class="comment">// success</span></span><br></pre></td></tr></table></figure>
-
-<p>原因：经过filter后会自动去掉undefined、null,空字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="literal">undefined</span>, <span class="string">&#x27;3.jpg&#x27;</span>,<span class="literal">undefined</span>, <span class="literal">null</span>、, <span class="string">&quot;&quot;</span>]</span><br><span class="line"><span class="keyword">var</span> newArr = arr.filter(<span class="function"><span class="params">item</span> =&gt;</span> item)</span><br><span class="line"><span class="built_in">console</span>.log(newArr)</span><br><span class="line">VM23:<span class="number">3</span> (<span class="number">3</span>) [<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3.jpg&quot;</span>] <span class="comment">// 可以看到undefined、null、&quot;&quot; 被去除了</span></span><br></pre></td></tr></table></figure>
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
 
 
-      
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/" data-id="ckoaznc9b0009vowc9nrk344c" data-title="数组过滤undefined" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-事件冒泡的影响，两种hook" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" class="article-date">
-  <time class="dt-published" datetime="2021-04-28T15:54:59.000Z" itemprop="datePublished">2021-04-28</time>
-</a>
     
-  </div>
-  <div class="article-inner">
+
     
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/05/06/%E7%AE%97%E6%B3%95java%E5%88%9D%E8%AF%86/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="算法java初识">
+                            
+                            <span class="card-title">算法java初识</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                递归：自己调自己，效率非常不好。使用递归测算可能会卡主程序，因为慢；
+循环：速度很快，因为是异步进行的？
+所谓算法，其实就是，比对各种不同测算结果的优劣，取最优！（以后再补充）
+java 的函数需要在主函数main里调，out规定输出什么值
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95%E3%80%81java/">
+                            <span class="chip bg-color">算法、java</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="antdPopover的动态变色和动态visable">
+                            
+                            <span class="card-title">antdPopover的动态变色和动态visable</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                目的： 使用Popover制作动态的变色和控制Visable引入相关文件
+12345import React, &#123; useState &#125; from &#x27;react&#x27;;import cxs from &#
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/aned-Popover/">
+                            <span class="chip bg-color">aned Popover</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="AutoComplute制作模糊搜索">
+                            
+                            <span class="card-title">AutoComplute制作模糊搜索</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                1. 引入React, useState classnames插件，引出Option12345import React, &#123; useState &#125; from &#x27;react&#x27;;import cxs fr
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
+                            <span class="chip bg-color">模糊搜索</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="随笔">
+                            
+                            <span class="card-title">随笔</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                4.10-4.16 report1) Object.keys(obj)  // 传入对象，返回属性名123let obj = &#123;type: &quot;上午&quot;,list:&quot;333&quot;, dance:&q
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                            <span class="chip bg-color">随笔</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git操作">
+                            
+                            <span class="card-title">git操作</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                git 操作1git add .
+
+1git commit -m 
+
+1git push (若从远程上来下来，并切换了分支，那么可直接git push 就能将本地最新代码push到远程对应的这个分支上去)
+
+1git checkout 分支
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/git%E5%91%BD%E4%BB%A4/">
+                            <span class="chip bg-color">git命令</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="数组过滤undefined">
+                            
+                            <span class="card-title">数组过滤undefined</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                前言：我们在传递数据的时候，很多时候数据是一个数组，而又有些时候我们并不需要将整个数组传递过去，而是传递数组中的前几个对象；
+这时就可以现在这样： method([list[0],list[1],list[2,list[3]])；
+(调用父
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/">
+                            <span class="chip bg-color">数组过滤undefined、null，&#39;&#39;</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="事件冒泡的影响，两种hook">
+                            
+                            <span class="card-title">事件冒泡的影响，两种hook</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。冒泡：点击子元素的  点击事件， 会同时触发父组件的点击事件；
+在多个嵌套元素设置多个点击事件，极有可能发生此类问题！
+关于冒泡带来的问题，例如：    
+123
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/">
+                            <span class="chip bg-color">事件冒泡、hook</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="解决OpenSSL报错">
+                            
+                            <span class="card-title">解决OpenSSL报错</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                首先，这个错误很可能是网络不稳定，连接超时导致的；
+若再次尝试依然报错，可输入如下命令1git config --global http.sslVerify &quot;false&quot;
+
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/">
+                            <span class="chip bg-color">Git报错解决</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="css磨砂效果，模糊效果">
+                            
+                            <span class="card-title">css磨砂效果，模糊效果</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                要点：给需要磨砂的div(设rgba的那个元素) =&gt; 设置伪元素；
+给伪元素content: ‘’、绝对定位，四处为0,left：0….
+给伪元素一样的背景图，并给z-index: -1 、给自身z-index:1 ***重要，必须
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/">
+                            <span class="chip bg-color">css 磨砂，模糊</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/04/25/hello-world/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                            
+                            <span class="card-title">Hello World</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-25
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                李晓飞
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
     
-      <header class="article-header">
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/">事件冒泡的影响，两种hook</a>
-    </h1>
-  
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
 
-      </header>
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"><a href="#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。" class="headerlink" title="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"></a>1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。</h5><p><strong>冒泡</strong>：点击子元素的  点击事件， 会同时触发父组件的点击事件；</p>
-<p><strong>在多个嵌套元素设置多个点击事件，极有可能发生此类问题！</strong></p>
-<p>关于冒泡带来的问题，例如：    </p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">                e.stopPropagation()<span class="comment">// 阻止事件冒泡</span></span><br><span class="line">                closeStatus()&#125;</span><br><span class="line">         &#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
 
-<p>2 . 补充：   useEffect 、useState</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useEffect 函数在  函数组件是可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新调用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。</span><br></pre></td></tr></table></figure>
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
 
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 而定义的  </span></span><br><span class="line"><span class="keyword">const</span> [content, setContnet] = useState(<span class="number">0</span>) <span class="comment">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span></span><br></pre></td></tr></table></figure>
-
-
-      
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/28/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%B8%A4%E7%A7%8Dhook/" data-id="ckoaznc980003vowca65l8yhh" data-title="事件冒泡的影响，两种hook" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li></ul>
+</div>
 
-    </footer>
-  </div>
-  
-</article>
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-
-
-  
-    <article id="post-解决OpenSSL报错" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/" class="article-date">
-  <time class="dt-published" datetime="2021-04-27T15:43:11.000Z" itemprop="datePublished">2021-04-27</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/">解决OpenSSL报错</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>首先，这个错误很可能是网络不稳定，连接超时导致的；</p>
-<h5 id="若再次尝试依然报错，可输入如下命令"><a href="#若再次尝试依然报错，可输入如下命令" class="headerlink" title="若再次尝试依然报错，可输入如下命令"></a>若再次尝试依然报错，可输入如下命令</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">global</span> http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure>
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">李晓飞</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
 
-      
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/27/%E8%A7%A3%E5%86%B3OpenSSL%E6%8A%A5%E9%94%99/" data-id="ckoaznc990004vowc0krk6esh" data-title="解决OpenSSL报错" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-css磨砂效果，模糊效果" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/" class="article-date">
-  <time class="dt-published" datetime="2021-04-27T15:17:54.000Z" itemprop="datePublished">2021-04-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/">css磨砂效果，模糊效果</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>要点：给需要磨砂的div(设rgba的那个元素) =&gt; 设置伪元素；</p>
-<p>给伪元素content: ‘’、绝对定位，四处为0,left：0….</p>
-<p>给伪元素一样的背景图，并给z-index: -1 、给自身z-index:1 ***重要，必须给！</p>
-<p>最后给 伪元素 filter: blur(37px); 属性值，效果就出来了。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">./heroheart.jpg</span>);   </span><br><span class="line"></span><br><span class="line"><span class="attribute">background-size</span>: cover;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#app</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line"></span><br><span class="line"><span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">height</span>: <span class="number">370px</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="attribute">padding</span>: <span class="number">100px</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line"></span><br><span class="line"><span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#app</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"></span><br><span class="line"><span class="attribute">left</span>: <span class="number">0</span>;<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">bottom</span>: <span class="number">0</span>;<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">./heroheart.jpg</span>);</span><br><span class="line"></span><br><span class="line"><span class="attribute">background-size</span>:cover ;</span><br><span class="line"></span><br><span class="line"><span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">37px</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">28px</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">margin-bottom</span>: <span class="number">30px</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>时间带走了回不去的青春，<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>却带不走我一往无前的心！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>世间万物，万般困难、<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>能耐我何？<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/27/css%E7%A3%A8%E7%A0%82%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C/" data-id="ckoaznc950001vowc8zvu7h5a" data-title="css磨砂效果，模糊效果" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/25/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-04-25T15:46:44.136Z" itemprop="datePublished">2021-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/25/hello-world/" data-id="ckoaznc9c000bvowcheuz774f" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" rel="tag">Git报错解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aned-Popover/" rel="tag">aned Popover</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" rel="tag">css 磨砂，模糊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E5%91%BD%E4%BB%A4/" rel="tag">git命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" rel="tag">事件冒泡、hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" rel="tag">数组过滤undefined、null，''</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" rel="tag">模糊搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">Git报错解决</a> <a href="/tags/aned-Popover/" style="font-size: 10px;">aned Popover</a> <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/" style="font-size: 10px;">css 磨砂，模糊</a> <a href="/tags/git%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">git命令</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/" style="font-size: 10px;">事件冒泡、hook</a> <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/" style="font-size: 10px;">数组过滤undefined、null，''</a> <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/" style="font-size: 10px;">模糊搜索</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/05/05/antdPopover%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%98%E8%89%B2%E5%92%8C%E5%8A%A8%E6%80%81visable/">antdPopover的动态变色和动态visable</a>
-          </li>
-        
-          <li>
-            <a href="/2021/05/05/AutoComplute%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">AutoComplute制作模糊搜索</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/30/%E9%9A%8F%E7%AC%94/">随笔</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/30/git%E6%93%8D%E4%BD%9C/">git操作</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/30/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined/">数组过滤undefined</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
 
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
+    
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+    
 
+    <!--腾讯兔小巢-->
+    
+    
 
+    
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    
 
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
 
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
 </body>
+
 </html>
