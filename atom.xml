@@ -123,7 +123,9 @@
       
         
         
-    <summary type="html">&lt;h4 id=&quot;git-操作&quot;&gt;&lt;a href=&quot;#git-操作&quot; class=&quot;headerlink&quot; title=&quot;git 操作&quot;&gt;&lt;/a&gt;git 操作&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+    <summary type="html">&lt;h4 id=&quot;git-操作&quot;&gt;&lt;a href=&quot;#git-操作&quot; class=&quot;headerlink&quot; title=&quot;git 操作&quot;&gt;&lt;/a&gt;git 操作&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git commit</summary>
         
       
     

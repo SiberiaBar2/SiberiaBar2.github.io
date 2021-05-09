@@ -30,7 +30,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="小飞Blog" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    534
+                    519
                 </div>
                 
 
@@ -492,14 +492,36 @@
 <p>将undefined发送给其他需要的组件，那么是极有可能出问题的，因此我们需要对数据进行处理：<strong>在数据为undefined时不发送数据！</strong></p>
 <p>哪怕我只发送过去一条实际存在的数据，也不发送undefined,可以少传，可以不传，但不可以发undefined!</p>
 <p>试了很多种方法，例如：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// list是我们要发送的数组</span></span><br><span class="line"><span class="comment">// 将list 遍历</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">const</span> [datas, setDatas] = useState([])</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> res = <span class="keyword">await</span> mydatas()</span><br><span class="line"><span class="keyword">const</span> list = res.data</span><br><span class="line">...</span><br><span class="line"><span class="keyword">let</span> newArr = []</span><br><span class="line">list.map( <span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(item &amp;&amp; item!== <span class="literal">undefined</span> || item !== <span class="literal">null</span> || item !== <span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line">        newArr.push(item)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(newArr) <span class="comment">// [&#123;item&#125;,undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span></span><br><span class="line">    setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]])</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// list是我们要发送的数组</span>
+<span class="token comment" spellcheck="true">// 将list 遍历</span>
+<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>datas<span class="token punctuation">,</span> setDatas<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">...</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">mydatas</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> list <span class="token operator">=</span> res<span class="token punctuation">.</span>data
+<span class="token operator">...</span>
+<span class="token keyword">let</span> newArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>item <span class="token operator">&amp;&amp;</span> item<span class="token operator">!==</span> undefined <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        newArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [&amp;#123;item&amp;#125;,undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span>
+    <span class="token function">setDatas</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">...</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
 <p>解决：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setDatas([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))</span><br><span class="line"> <span class="built_in">console</span>.log([list[<span class="number">0</span>],list[<span class="number">1</span>],list[<span class="number">2</span>,list[<span class="number">3</span>]].filter( <span class="function"><span class="params">item</span> =&gt;</span> item))  <span class="comment">// 返回的新数组种没有undefined！！！</span></span><br><span class="line"><span class="comment">// success</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-js"><code class="language-js"><span class="token function">setDatas</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 返回的新数组种没有undefined！！！</span>
+<span class="token comment" spellcheck="true">// success</span>
+</code></pre>
 <p>原因：经过filter后会自动去掉undefined、null,空字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="literal">undefined</span>, <span class="string">&#x27;3.jpg&#x27;</span>,<span class="literal">undefined</span>, <span class="literal">null</span>、, <span class="string">&quot;&quot;</span>]</span><br><span class="line"><span class="keyword">var</span> newArr = arr.filter(<span class="function"><span class="params">item</span> =&gt;</span> item)</span><br><span class="line"><span class="built_in">console</span>.log(newArr)</span><br><span class="line">VM23:<span class="number">3</span> (<span class="number">3</span>) [<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3.jpg&quot;</span>] <span class="comment">// 可以看到undefined、null、&quot;&quot; 被去除了</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span>undefined<span class="token punctuation">,</span> <span class="token string">'3.jpg'</span><span class="token punctuation">,</span>undefined<span class="token punctuation">,</span> <span class="token keyword">null</span>、<span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">]</span>
+<span class="token keyword">var</span> newArr <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArr<span class="token punctuation">)</span>
+VM23<span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"3.jpg"</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">// 可以看到undefined、null、"" 被去除了</span>
+</code></pre>
 
                 
             </div>
@@ -1390,7 +1412,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.2k</span>
+                        class="white-color">4k</span>
             
             
             
@@ -1442,7 +1464,7 @@ gitment.render('gitment-content');
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="https://siberiabar2.github.io/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
 

@@ -30,7 +30,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="小飞Blog" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -484,22 +484,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="git-操作"><a href="#git-操作" class="headerlink" title="git 操作"></a>git 操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push (若从远程上来下来，并切换了分支，那么可直接git push 就能将本地最新代码push到远程对应的这个分支上去)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名 (已在远程对应的分支上，可使用此命令切换到其他远程分支)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名 (创建本地分支)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a (查看所有分支，本地and远程)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (查看本地分支)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin 本地分支名</span><br><span class="line">(将本地分支推到远程仓库，使远程仓库下有该分支名)</span><br></pre></td></tr></table></figure>
-
+                <h4 id="git-操作"><a href="#git-操作" class="headerlink" title="git 操作"></a>git 操作</h4><pre><code>git add .
+</code></pre>
+<pre><code>git commit -m 
+</code></pre>
+<pre><code>git push (若从远程上来下来，并切换了分支，那么可直接git push 就能将本地最新代码push到远程对应的这个分支上去)
+</code></pre>
+<pre><code>git checkout 分支名 (已在远程对应的分支上，可使用此命令切换到其他远程分支)
+</code></pre>
+<pre><code>git checkout -b 分支名 (创建本地分支)
+</code></pre>
+<pre><code>git branch -a (查看所有分支，本地and远程)
+</code></pre>
+<pre><code>git branch (查看本地分支)
+</code></pre>
+<pre><code>git push --set-upstream origin 本地分支名
+(将本地分支推到远程仓库，使远程仓库下有该分支名)
+</code></pre>
 
                 
             </div>
@@ -1390,7 +1391,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.2k</span>
+                        class="white-color">4k</span>
             
             
             
@@ -1442,7 +1443,7 @@ gitment.render('gitment-content');
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="https://siberiabar2.github.io/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
 

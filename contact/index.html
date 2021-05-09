@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="AutoComplute制作模糊搜索, 小飞Blog">
+    <meta name="keywords" content="contact, 小飞Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>AutoComplute制作模糊搜索 | 小飞Blog</title>
+    <title>contact | 小飞Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">AutoComplute制作模糊搜索</h1>
+                    <h1 class="description center-align post-title">contact</h1>
                 </div>
             </div>
         </div>
@@ -430,13 +430,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
-                                <span class="chip bg-color">模糊搜索</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -448,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-05
+                    2021-05-09
                 </div>
                 
 
@@ -457,14 +453,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    569
+                    6
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -484,83 +480,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token entity" title="&#123;">&amp;#123;</span> useState <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> cxs <span class="token keyword">from</span> <span class="token string">'classnames'</span>
-<span class="token keyword">import</span> <span class="token entity" title="&#123;">&amp;#123;</span> AutoComplete <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token string">'./dimserch.css'</span>
-<span class="token keyword">const</span> <span class="token entity" title="&#123;">&amp;#123;</span> Option <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token operator">=</span> AutoComplete
-</code></pre>
-<p><strong>思路</strong> ：</p>
-<p>将一份数据存两遍，一份用于渲染，一份用于查找。</p>
-<p>由于传入的  搜索值(serch)或是 变化值(onChange)的值若是空字符串，那么只需在另一份保存的数据中查找就可以了；</p>
-<pre class=" language-js"><code class="language-js">filter，用list<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-   <span class="token comment" spellcheck="true">// 第一种写法  1</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>includes<span class="token punctuation">.</span>val<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span>
-   <span class="token comment" spellcheck="true">// 若item包含传入值，返回此对象</span>
-    
-  <span class="token comment" spellcheck="true">//第二种写法   2</span>
-  <span class="token comment" spellcheck="true">// const regex = new RegExp(val)</span>
-  <span class="token comment" spellcheck="true">// if(regex.test(item)) return true</span>
-  <span class="token keyword">return</span> <span class="token boolean">false</span> 其他情况不返回！
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-</code></pre>
-<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">DimSerch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
-  <span class="token keyword">const</span> list <span class="token operator">=</span>
-    <span class="token punctuation">[</span>
-      <span class="token string">"双皮奶"</span><span class="token punctuation">,</span> <span class="token string">"狮子头"</span><span class="token punctuation">,</span> <span class="token string">"擀面皮"</span><span class="token punctuation">,</span> <span class="token string">"巧克力蛋糕"</span><span class="token punctuation">,</span> <span class="token string">"热米皮"</span><span class="token punctuation">,</span> <span class="token string">"牛肉面"</span><span class="token punctuation">,</span> <span class="token string">"二细牛肉面"</span><span class="token punctuation">,</span> <span class="token string">"三细牛肉面"</span><span class="token punctuation">,</span>
-      <span class="token string">"扬州炒饭"</span><span class="token punctuation">,</span> <span class="token string">"蛋炒饭"</span><span class="token punctuation">,</span> <span class="token string">"蛋炒土豆丝"</span><span class="token punctuation">,</span> <span class="token string">"巧克力饼"</span><span class="token punctuation">,</span> <span class="token string">"狮子头拌奶酪"</span><span class="token punctuation">,</span> <span class="token string">"火腿擀面皮"</span><span class="token punctuation">,</span> <span class="token string">"加量擀面皮"</span><span class="token punctuation">,</span>
-      <span class="token string">"热米皮拌青椒"</span><span class="token punctuation">,</span> <span class="token string">"双皮奶加量"</span><span class="token punctuation">,</span> <span class="token string">"海之言"</span><span class="token punctuation">,</span> <span class="token string">"蓝色海之言"</span><span class="token punctuation">,</span> <span class="token string">"紫色海之言"</span><span class="token punctuation">,</span> <span class="token string">"橘黄海之言"</span><span class="token punctuation">,</span> <span class="token string">"绿色海之言"</span><span class="token punctuation">,</span>
-      <span class="token string">"百吉猫锅巴"</span><span class="token punctuation">,</span> <span class="token string">"三元锅巴"</span><span class="token punctuation">,</span> <span class="token string">"酥锅巴"</span><span class="token punctuation">,</span> <span class="token string">"AD钙"</span><span class="token punctuation">,</span> <span class="token string">"乳酸菌AD钙"</span><span class="token punctuation">,</span> <span class="token string">"草莓AD钙"</span><span class="token punctuation">,</span> <span class="token string">"香辣火腿肠"</span><span class="token punctuation">,</span> <span class="token string">"玉米火腿肠"</span>
-    <span class="token punctuation">]</span>
-  <span class="token keyword">const</span> <span class="token punctuation">[</span>realyDatas<span class="token punctuation">,</span> setRealyDatas<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span>
-  <span class="token keyword">const</span> <span class="token punctuation">[</span>originList<span class="token punctuation">,</span> setoriginList<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span>
-
-
-
-  <span class="token keyword">const</span> handleSearch <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
-    <span class="token comment" spellcheck="true">// const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含''，</span>
-      <span class="token comment" spellcheck="true">// 也就是说，此时返回被遍历对象的所有（每一项）;</span>
-    <span class="token keyword">let</span> newArray <span class="token operator">=</span> originList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
-      <span class="token comment" spellcheck="true">// if (regex.test(item)) &amp;#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；</span>
-      <span class="token comment" spellcheck="true">//   return true                // 就返回这个对象</span>
-      <span class="token comment" spellcheck="true">// &amp;#125;</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span> <span class="token comment" spellcheck="true">// item包含输入的值，返回此对象；其他情况false不返回</span>
-      <span class="token keyword">return</span> <span class="token boolean">false</span>
-    <span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span>
-    <span class="token function">setRealyDatas</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span>          <span class="token comment" spellcheck="true">// 更新渲染数组； 重新渲染</span>
-  <span class="token entity" title="&#125;">&amp;#125;</span>
-  
-  <span class="token keyword">const</span> autoChange <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
-    <span class="token comment" spellcheck="true">// const regex = new RegExp(val)</span>
-    <span class="token keyword">let</span> newArray <span class="token operator">=</span> originList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
-      <span class="token comment" spellcheck="true">// if (regex.test(item)) &amp;#123;</span>
-      <span class="token comment" spellcheck="true">//   return true</span>
-      <span class="token comment" spellcheck="true">// &amp;#125;</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span>
-      <span class="token keyword">return</span> <span class="token boolean">false</span>
-    <span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span>
-    <span class="token function">setRealyDatas</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span>
-  <span class="token entity" title="&#125;">&amp;#125;</span>
-  <span class="token keyword">return</span> <span class="token punctuation">(</span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>wrap<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>
-      <span class="token operator">&lt;</span>AutoComplete
-        getPopupContainer<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"wrap"</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
-        onSearch<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>handleSearch<span class="token entity" title="&#125;">&amp;#125;</span>
-        onChange<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>autoChange<span class="token entity" title="&#125;">&amp;#125;</span>
-        placeholder<span class="token operator">=</span><span class="token string">"请输入"</span>
-      <span class="token operator">></span>
-        <span class="token entity" title="&#123;">&amp;#123;</span>realyDatas<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;item&amp;#125;</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;item&amp;#125;</span><span class="token punctuation">></span></span>
-            <span class="token entity" title="&#123;">&amp;#123;</span>item<span class="token entity" title="&#125;">&amp;#125;</span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Option</span><span class="token punctuation">></span></span>
-        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>AutoComplete</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token punctuation">)</span>
-<span class="token entity" title="&#125;">&amp;#125;</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> DimSerch
-</code></pre>
+                <p>to be strong! to be victory!</p>
 
                 
             </div>
@@ -587,7 +507,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/">http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/</a>
+                    <a href="http://siberiabar2.github.io/contact/index.html">http://siberiabar2.github.io/contact/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,11 +544,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/">
-                                    <span class="chip bg-color">模糊搜索</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -797,7 +713,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-05-05T12-00-18',
+        id: '2021-05-09T20-55-59',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -821,7 +737,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Wed May 05 2021 12:00:18 GMT+0800',
+    id: 'Sun May 09 2021 20:55:59 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -846,9 +762,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/';
-        this.page.identifier = '/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/';
-        this.page.title = 'AutoComplute制作模糊搜索';
+        this.page.url = 'http://siberiabar2.github.io/contact/index.html';
+        this.page.identifier = '/contact/index.html';
+        this.page.title = 'contact';
     };
     let disqus_shortname = '';
 
@@ -1166,62 +1082,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/">
+                <a href="/contact/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="antdPopover的动态变色和动态visable">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
                         
-                        <span class="card-title">antdPopover的动态变色和动态visable</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            小飞
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/aned-Popover/">
-                        <span class="chip bg-color">aned Popover</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/04/30/sui-bi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="随笔">
-                        
-                        <span class="card-title">随笔</span>
+                        <span class="card-title">contact</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1232,7 +1104,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
                             </span>
                         <span class="publish-author">
                             
@@ -1242,14 +1114,45 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
-                    </a>
-                    
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/contact/index.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        
+                        <span class="card-title">contact</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小飞
+                            
+                        </span>
+                    </div>
                 </div>
+
                 
             </div>
         </div>

@@ -30,7 +30,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="小飞Blog" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    559
+                    565
                 </div>
                 
 
@@ -487,13 +487,55 @@
                 <h5 id="1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"><a href="#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。" class="headerlink" title="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"></a>1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。</h5><p><strong>冒泡</strong>：点击子元素的  点击事件， 会同时触发父组件的点击事件；</p>
 <p><strong>在多个嵌套元素设置多个点击事件，极有可能发生此类问题！</strong></p>
 <p>关于冒泡带来的问题，例如：    </p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">                e.stopPropagation()<span class="comment">// 阻止事件冒泡</span></span><br><span class="line">                closeStatus()&#125;</span><br><span class="line">         &#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span>
 
+<span class="token keyword">function</span> <span class="token function">Cool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#123;">&amp;#123;</span>
+    <span class="token operator">...</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>chooseIndex<span class="token punctuation">,</span> setChooseIndex<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>undefined<span class="token punctuation">)</span>
+    <span class="token operator">...</span>
+    
+   changeIndex <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>  <span class="token comment" spellcheck="true">// 父级元素的点击事件</span>
+        <span class="token function">setChooseIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span>
+    <span class="token entity" title="&#125;">&amp;#125;</span> 
+   closeStatus <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>        <span class="token comment" spellcheck="true">// 子节点的点击事件</span>
+       <span class="token function">setChooseIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span>
+   <span class="token entity" title="&#125;">&amp;#125;</span>                       <span class="token comment" spellcheck="true">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span>
+    
+<span class="token entity" title="&#123;">&amp;#123;</span>dataList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span> 
+    <span class="token comment" spellcheck="true">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span>
+    <span class="token comment" spellcheck="true">// **** 阻止事件冒泡即可</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Fragment</span><span class="token punctuation">></span></span>
+        <span class="token operator">...</span>
+    <span class="token operator">...</span>  
+       <span class="token comment" spellcheck="true">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span>
+    <span class="token operator">&lt;</span>div classname<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span><span class="token function">cx</span><span class="token punctuation">(</span><span class="token string">'list-wrap'</span><span class="token punctuation">,</span> <span class="token entity" title="&#123;">&amp;#123;</span><span class="token string">"activeItemClass"</span> <span class="token punctuation">:</span> chooseIndex <span class="token operator">===</span> index<span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span>Popver
+      content <span class="token operator">=</span> <span class="token entity" title="&#123;">&amp;#123;</span><span class="token function">renderContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
+     visable<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>chooseIndex <span class="token operator">===</span> index<span class="token entity" title="&#125;">&amp;#125;</span>  <span class="token comment" spellcheck="true">// 当chooseIndex === index，即成立时，visable为true</span>
+     <span class="token operator">></span>                                <span class="token comment" spellcheck="true">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span>
+      <span class="token operator">&lt;</span>div onClick<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">changeIndex</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Popver</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Fragment</span><span class="token punctuation">></span></span>
+<span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
+   
+    renderContent <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
+        <span class="token operator">...</span>
+        <span class="token operator">...</span>
+        <span class="token operator">&lt;</span>div 
+        onClick <span class="token operator">=</span> <span class="token entity" title="&#123;">&amp;#123;</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
+                e<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 阻止事件冒泡</span>
+                <span class="token function">closeStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
+         <span class="token entity" title="&#125;">&amp;#125;</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token entity" title="&#125;">&amp;#125;</span>
+<span class="token entity" title="&#125;">&amp;#125;</span>
+</code></pre>
 <p>2 . 补充：   useEffect 、useState</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useEffect 函数在  函数组件是可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新调用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 而定义的  </span></span><br><span class="line"><span class="keyword">const</span> [content, setContnet] = useState(<span class="number">0</span>) <span class="comment">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-tex"><code class="language-tex">useEffect 函数在  函数组件是可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新调用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。
+</code></pre>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// 而定义的  </span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>content<span class="token punctuation">,</span> setContnet<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&amp;#123;&amp;#125;)也会重新调用render函数，重新刷新页面。</span>
+</code></pre>
 
                 
             </div>
@@ -1384,7 +1426,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.2k</span>
+                        class="white-color">4k</span>
             
             
             
@@ -1436,7 +1478,7 @@ gitment.render('gitment-content');
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="https://siberiabar2.github.io/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
 
