@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="小飞Blog" type="application/atom+xml">
+</head>
 
 
 
@@ -57,7 +58,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -68,7 +69,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -79,7 +80,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -90,7 +91,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -101,7 +102,7 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
+      <span>关于</span>
     </a>
     
   </li>
@@ -112,7 +113,7 @@
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>Contact</span>
+      <span>留言板</span>
     </a>
     
   </li>
@@ -123,14 +124,14 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>Friends</span>
+      <span>友情链接</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -160,7 +161,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -171,7 +172,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -182,7 +183,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -193,7 +194,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -204,7 +205,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
+			关于
 		</a>
           
         </li>
@@ -215,7 +216,7 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -226,7 +227,7 @@
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			Friends
+			友情链接
 		</a>
           
         </li>
@@ -446,7 +447,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-05-05
                 </div>
                 
@@ -454,10 +455,25 @@
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    622
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -468,83 +484,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><pre><code class="jsx">import React, &#123; useState &#125; from &#39;react&#39;;
-import cxs from &#39;classnames&#39;
-import &#123; AutoComplete &#125; from &#39;antd&#39;;
-import &#39;./dimserch.css&#39;
-const &#123; Option &#125; = AutoComplete
-</code></pre>
+                <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> cxs <span class="keyword">from</span> <span class="string">&#x27;classnames&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; AutoComplete &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./dimserch.css&#x27;</span></span><br><span class="line"><span class="keyword">const</span> &#123; Option &#125; = AutoComplete</span><br></pre></td></tr></table></figure>
+
 <p><strong>思路</strong> ：</p>
 <p>将一份数据存两遍，一份用于渲染，一份用于查找。</p>
 <p>由于传入的  搜索值(serch)或是 变化值(onChange)的值若是空字符串，那么只需在另一份保存的数据中查找就可以了；</p>
-<pre><code class="js">filter，用list.filter( item =&gt; &#123;
-   // 第一种写法  1
-    if(item.includes.val) return true
-   // 若item包含传入值，返回此对象
-    
-  //第二种写法   2
-  // const regex = new RegExp(val)
-  // if(regex.test(item)) return true
-  return false 其他情况不返回！
-&#125;)
-</code></pre>
-<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><pre><code class="jsx">function DimSerch() &#123;
-  const list =
-    [
-      &quot;双皮奶&quot;, &quot;狮子头&quot;, &quot;擀面皮&quot;, &quot;巧克力蛋糕&quot;, &quot;热米皮&quot;, &quot;牛肉面&quot;, &quot;二细牛肉面&quot;, &quot;三细牛肉面&quot;,
-      &quot;扬州炒饭&quot;, &quot;蛋炒饭&quot;, &quot;蛋炒土豆丝&quot;, &quot;巧克力饼&quot;, &quot;狮子头拌奶酪&quot;, &quot;火腿擀面皮&quot;, &quot;加量擀面皮&quot;,
-      &quot;热米皮拌青椒&quot;, &quot;双皮奶加量&quot;, &quot;海之言&quot;, &quot;蓝色海之言&quot;, &quot;紫色海之言&quot;, &quot;橘黄海之言&quot;, &quot;绿色海之言&quot;,
-      &quot;百吉猫锅巴&quot;, &quot;三元锅巴&quot;, &quot;酥锅巴&quot;, &quot;AD钙&quot;, &quot;乳酸菌AD钙&quot;, &quot;草莓AD钙&quot;, &quot;香辣火腿肠&quot;, &quot;玉米火腿肠&quot;
-    ]
-  const [realyDatas, setRealyDatas] = useState(list)
-  const [originList, setoriginList] = useState(list)
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">filter，用list.filter( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">   <span class="comment">// 第一种写法  1</span></span><br><span class="line">	<span class="keyword">if</span>(item.includes.val) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">   <span class="comment">// 若item包含传入值，返回此对象</span></span><br><span class="line">    </span><br><span class="line">  <span class="comment">//第二种写法   2</span></span><br><span class="line">  <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">  <span class="comment">// if(regex.test(item)) return true</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span> 其他情况不返回！</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DimSerch</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> list =</span><br><span class="line">    [</span><br><span class="line">      <span class="string">&quot;双皮奶&quot;</span>, <span class="string">&quot;狮子头&quot;</span>, <span class="string">&quot;擀面皮&quot;</span>, <span class="string">&quot;巧克力蛋糕&quot;</span>, <span class="string">&quot;热米皮&quot;</span>, <span class="string">&quot;牛肉面&quot;</span>, <span class="string">&quot;二细牛肉面&quot;</span>, <span class="string">&quot;三细牛肉面&quot;</span>,</span><br><span class="line">      <span class="string">&quot;扬州炒饭&quot;</span>, <span class="string">&quot;蛋炒饭&quot;</span>, <span class="string">&quot;蛋炒土豆丝&quot;</span>, <span class="string">&quot;巧克力饼&quot;</span>, <span class="string">&quot;狮子头拌奶酪&quot;</span>, <span class="string">&quot;火腿擀面皮&quot;</span>, <span class="string">&quot;加量擀面皮&quot;</span>,</span><br><span class="line">      <span class="string">&quot;热米皮拌青椒&quot;</span>, <span class="string">&quot;双皮奶加量&quot;</span>, <span class="string">&quot;海之言&quot;</span>, <span class="string">&quot;蓝色海之言&quot;</span>, <span class="string">&quot;紫色海之言&quot;</span>, <span class="string">&quot;橘黄海之言&quot;</span>, <span class="string">&quot;绿色海之言&quot;</span>,</span><br><span class="line">      <span class="string">&quot;百吉猫锅巴&quot;</span>, <span class="string">&quot;三元锅巴&quot;</span>, <span class="string">&quot;酥锅巴&quot;</span>, <span class="string">&quot;AD钙&quot;</span>, <span class="string">&quot;乳酸菌AD钙&quot;</span>, <span class="string">&quot;草莓AD钙&quot;</span>, <span class="string">&quot;香辣火腿肠&quot;</span>, <span class="string">&quot;玉米火腿肠&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  <span class="keyword">const</span> [realyDatas, setRealyDatas] = useState(list)</span><br><span class="line">  <span class="keyword">const</span> [originList, setoriginList] = useState(list)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleSearch = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含&#x27;&#x27;，</span></span><br><span class="line">      <span class="comment">// 也就是说，此时返回被遍历对象的所有（每一项）;</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；</span></span><br><span class="line">      <span class="comment">//   return true                // 就返回这个对象</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span> <span class="comment">// item包含输入的值，返回此对象；其他情况false不返回</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)          <span class="comment">// 更新渲染数组； 重新渲染</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> autoChange = <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// const regex = new RegExp(val)</span></span><br><span class="line">    <span class="keyword">let</span> newArray = originList.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// if (regex.test(item)) &#123;</span></span><br><span class="line">      <span class="comment">//   return true</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="keyword">if</span>(item.includes(val)) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    setRealyDatas(newArray)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div id=<span class="string">&#x27;wrap&#x27;</span>&gt;</span><br><span class="line">      &lt;AutoComplete</span><br><span class="line">        getPopupContainer=&#123;<span class="function">() =&gt;</span> <span class="built_in">document</span>.getElementById(<span class="string">&quot;wrap&quot;</span>)&#125;</span><br><span class="line">        onSearch=&#123;handleSearch&#125;</span><br><span class="line">        onChange=&#123;autoChange&#125;</span><br><span class="line">        placeholder=<span class="string">&quot;请输入&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">        &#123;realyDatas.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">          &lt;Option value=&#123;item&#125; key=&#123;item&#125;&gt;</span><br><span class="line">            &#123;item&#125;</span><br><span class="line">          &lt;/Option&gt;</span><br><span class="line">        ))&#125;</span><br><span class="line">      &lt;/AutoComplete&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> DimSerch</span><br></pre></td></tr></table></figure>
 
-
-  const handleSearch = (val) =&gt; &#123;
-    // const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含&#39;&#39;，
-      // 也就是说，此时返回被遍历对象的所有（每一项）;
-    let newArray = originList.filter((item) =&gt; &#123;
-      // if (regex.test(item)) &#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；
-      //   return true                // 就返回这个对象
-      // &#125;
-      if(item.includes(val)) return true // item包含输入的值，返回此对象；其他情况false不返回
-      return false
-    &#125;)
-    setRealyDatas(newArray)          // 更新渲染数组； 重新渲染
-  &#125;
-  
-  const autoChange = (val) =&gt; &#123;
-    // const regex = new RegExp(val)
-    let newArray = originList.filter((item) =&gt; &#123;
-      // if (regex.test(item)) &#123;
-      //   return true
-      // &#125;
-      if(item.includes(val)) return true
-      return false
-    &#125;)
-    setRealyDatas(newArray)
-  &#125;
-  return (
-    &lt;div id=&#39;wrap&#39;&gt;
-      &lt;AutoComplete
-        getPopupContainer=&#123;() =&gt; document.getElementById(&quot;wrap&quot;)&#125;
-        onSearch=&#123;handleSearch&#125;
-        onChange=&#123;autoChange&#125;
-        placeholder=&quot;请输入&quot;
-      &gt;
-        &#123;realyDatas.map((item, index) =&gt; (
-          &lt;Option value=&#123;item&#125; key=&#123;item&#125;&gt;
-            &#123;item&#125;
-          &lt;/Option&gt;
-        ))&#125;
-      &lt;/AutoComplete&gt;
-    &lt;/div&gt;
-  )
-&#125;
-
-export default DimSerch
-</code></pre>
 
                 
             </div>
@@ -557,7 +505,7 @@ export default DimSerch
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -567,7 +515,7 @@ export default DimSerch
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -577,13 +525,13 @@ export default DimSerch
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
+                    许可协议。转载请注明来源
                     <a href="/about" target="_blank">小飞</a>
                     !
                 </span>
@@ -593,7 +541,7 @@ export default DimSerch
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -762,12 +710,380 @@ export default DimSerch
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2021-05-05T12-00-18',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
 
     
 
     
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Wed May 05 2021 12:00:18 GMT+0800',
+    owner: '',
+    repo: '',
+    oauth: {
+        client_id: '',
+        client_secret: ''
+    }
+});
+
+gitment.render('gitment-content');
+</script>
 
     
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/';
+        this.page.identifier = '/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/';
+        this.page.title = 'AutoComplute制作模糊搜索';
+    };
+    let disqus_shortname = '';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '',
+        appKey: '',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
 
     
 
@@ -784,7 +1100,7 @@ export default DimSerch
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/">
                     <div class="card-image">
@@ -828,7 +1144,7 @@ export default DimSerch
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/04/30/sui-bi/">
@@ -898,7 +1214,7 @@ export default DimSerch
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -1066,19 +1382,22 @@ export default DimSerch
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">4.2k</span>
+            
             
             
                 
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -1090,13 +1409,13 @@ export default DimSerch
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/SiberiaBar2" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1215204550@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1106,7 +1425,7 @@ export default DimSerch
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1215204550" class="tooltipped" target="_blank" data-tooltip="QQ联系我:1215204550" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1131,8 +1450,8 @@ export default DimSerch
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>

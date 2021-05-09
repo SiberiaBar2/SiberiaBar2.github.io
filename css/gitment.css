@@ -285,7 +285,6 @@ table tr:nth-child(2n), thead {
 .gitment-markdown pre code {
     padding: 0;
     color: #e8eaf6;
-    background-color: #272822;
 }
 
 .gitment-markdown pre[class*="language-"] {

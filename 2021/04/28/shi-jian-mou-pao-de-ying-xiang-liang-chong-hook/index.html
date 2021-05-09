@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="小飞Blog" type="application/atom+xml">
+</head>
 
 
 
@@ -57,7 +58,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -68,7 +69,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -79,7 +80,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -90,7 +91,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -101,7 +102,7 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
+      <span>关于</span>
     </a>
     
   </li>
@@ -112,7 +113,7 @@
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>Contact</span>
+      <span>留言板</span>
     </a>
     
   </li>
@@ -123,14 +124,14 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>Friends</span>
+      <span>友情链接</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -160,7 +161,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -171,7 +172,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -182,7 +183,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -193,7 +194,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -204,7 +205,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
+			关于
 		</a>
           
         </li>
@@ -215,7 +216,7 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -226,7 +227,7 @@
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			Friends
+			友情链接
 		</a>
           
         </li>
@@ -446,7 +447,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-04-28
                 </div>
                 
@@ -454,10 +455,25 @@
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    559
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -471,55 +487,13 @@
                 <h5 id="1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"><a href="#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。" class="headerlink" title="1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。"></a>1. 多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。</h5><p><strong>冒泡</strong>：点击子元素的  点击事件， 会同时触发父组件的点击事件；</p>
 <p><strong>在多个嵌套元素设置多个点击事件，极有可能发生此类问题！</strong></p>
 <p>关于冒泡带来的问题，例如：    </p>
-<pre><code class="jsx">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cool</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">   changeIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 父级元素的点击事件</span></span><br><span class="line">        setChooseIndex(index)  <span class="comment">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span></span><br><span class="line">    &#125; </span><br><span class="line">   closeStatus = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;        <span class="comment">// 子节点的点击事件</span></span><br><span class="line">       setChooseIndex()    <span class="comment">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span></span><br><span class="line">   &#125;                       <span class="comment">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span></span><br><span class="line">    </span><br><span class="line">&#123;dataList.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="comment">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span></span><br><span class="line">    <span class="comment">// **** 阻止事件冒泡即可</span></span><br><span class="line">    <span class="keyword">return</span> &lt;Fragment&gt;</span><br><span class="line">        ...</span><br><span class="line">    ...  </span><br><span class="line">       <span class="comment">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span></span><br><span class="line">    &lt;div classname=&#123;cx(<span class="string">&#x27;list-wrap&#x27;</span>, &#123;<span class="string">&quot;activeItemClass&quot;</span> : chooseIndex === index&#125;)&#125;&gt;</span><br><span class="line">     &lt;Popver</span><br><span class="line">      content = &#123;renderContent()&#125;</span><br><span class="line">     visable=&#123;chooseIndex === index&#125;  <span class="comment">// 当chooseIndex === index，即成立时，visable为true</span></span><br><span class="line">     &gt;                                <span class="comment">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span></span><br><span class="line">      &lt;div onClick=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> changeIndex(item, index)&#125;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/Popver&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">        &lt;/Fragment&gt;</span><br><span class="line">&#125;)&#125;</span><br><span class="line">   </span><br><span class="line">    renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        &lt;div </span><br><span class="line">        onClick = &#123;<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">                e.stopPropagation()<span class="comment">// 阻止事件冒泡</span></span><br><span class="line">                closeStatus()&#125;</span><br><span class="line">         &#125;&gt;&lt;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-function Cool()&#123;
-    ...
-    const [chooseIndex, setChooseIndex] = useState(undefined)
-    ...
-    
-   changeIndex = (item, index) =&gt; &#123;  // 父级元素的点击事件
-        setChooseIndex(index)  // setChooseIndex改变初始值后  是必定会引发视图更新的！！
-    &#125; 
-   closeStatus = (item, index) =&gt; &#123;        // 子节点的点击事件
-       setChooseIndex()    // 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭
-   &#125;                       // 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变
-    
-&#123;dataList.map( (item, index) =&gt; &#123; 
-    // ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****
-    // **** 阻止事件冒泡即可
-    return &lt;Fragment&gt;
-        ...
-    ...  
-       // 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true
-    &lt;div classname=&#123;cx(&#39;list-wrap&#39;, &#123;&quot;activeItemClass&quot; : chooseIndex === index&#125;)&#125;&gt;
-     &lt;Popver
-      content = &#123;renderContent()&#125;
-     visable=&#123;chooseIndex === index&#125;  // 当chooseIndex === index，即成立时，visable为true
-     &gt;                                // visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false
-      &lt;div onClick=&#123;(e) =&gt; changeIndex(item, index)&#125;&gt;&lt;/div&gt;
-     &lt;/Popver&gt;
-    &lt;/div&gt;
-        &lt;/Fragment&gt;
-&#125;)&#125;
-   
-    renderContent = (item, index) =&gt; &#123;
-        ...
-        ...
-        &lt;div 
-        onClick = &#123;(e) =&gt; &#123;
-                e.stopPropagation()// 阻止事件冒泡
-                closeStatus()&#125;
-         &#125;&gt;&lt;div&gt;
-    &#125;
-&#125;
-</code></pre>
 <p>2 . 补充：   useEffect 、useState</p>
-<pre><code class="tex">useEffect 函数在  函数组件是可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新调用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。
-</code></pre>
-<pre><code class="jsx">// 而定义的  
-const [content, setContnet] = useState(0) // 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。
-</code></pre>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useEffect 函数在  函数组件是可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新调用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 而定义的  </span></span><br><span class="line"><span class="keyword">const</span> [content, setContnet] = useState(<span class="number">0</span>) <span class="comment">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&#123;&#125;)也会重新调用render函数，重新刷新页面。</span></span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -532,7 +506,7 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -542,7 +516,7 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -552,13 +526,13 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
+                    许可协议。转载请注明来源
                     <a href="/about" target="_blank">小飞</a>
                     !
                 </span>
@@ -568,7 +542,7 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -737,12 +711,380 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2021-04-28T23-54-59',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
 
     
 
     
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Wed Apr 28 2021 23:54:59 GMT+0800',
+    owner: '',
+    repo: '',
+    oauth: {
+        client_id: '',
+        client_secret: ''
+    }
+});
+
+gitment.render('gitment-content');
+</script>
 
     
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'http://siberiabar2.github.io/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/';
+        this.page.identifier = '/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/';
+        this.page.title = '事件冒泡的影响，两种hook';
+    };
+    let disqus_shortname = '';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '',
+        appKey: '',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
 
     
 
@@ -759,7 +1101,7 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2021/04/30/shu-zu-guo-lu-undefined/">
                     <div class="card-image">
@@ -803,7 +1145,7 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/04/27/jie-jue-openssl-bao-cuo/">
@@ -873,7 +1215,7 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -1041,19 +1383,22 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">4.2k</span>
+            
             
             
                 
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -1065,13 +1410,13 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/SiberiaBar2" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1215204550@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1081,7 +1426,7 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1215204550" class="tooltipped" target="_blank" data-tooltip="QQ联系我:1215204550" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1106,8 +1451,8 @@ const [content, setContnet] = useState(0) // 在set后是一定会重新刷新�
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>

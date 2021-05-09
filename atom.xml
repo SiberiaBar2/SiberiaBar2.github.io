@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小飞Blog</title>
+  
+  
+  <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://siberiabar2.github.io/"/>
+  <updated>2021-05-06T14:33:45.279Z</updated>
+  <id>http://siberiabar2.github.io/</id>
+  
+  <author>
+    <name>小飞</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法java初识</title>
+    <link href="http://siberiabar2.github.io/2021/05/06/suan-fa-java-chu-shi/"/>
+    <id>http://siberiabar2.github.io/2021/05/06/suan-fa-java-chu-shi/</id>
+    <published>2021-05-06T14:29:45.000Z</published>
+    <updated>2021-05-06T14:33:45.279Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;递归：自己调自己，效率非常不好。使用递归测算可能会卡主程序，因为慢；&lt;/p&gt;
+&lt;p&gt;循环：速度很快，因为是异步进行的？&lt;/p&gt;
+&lt;p&gt;所谓算法，其实就是，比对各种不同测算结果的优劣，取最优！（以后再补充）&lt;/p&gt;
+&lt;p&gt;java</summary>
+        
+      
+    
+    
+    
+    
+    <category term="算法、java" scheme="http://siberiabar2.github.io/tags/%E7%AE%97%E6%B3%95%E3%80%81java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>antdPopover的动态变色和动态visable</title>
+    <link href="http://siberiabar2.github.io/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/"/>
+    <id>http://siberiabar2.github.io/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/</id>
+    <published>2021-05-05T04:35:26.000Z</published>
+    <updated>2021-05-05T04:51:48.773Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;目的：-使用Popover制作动态的变色和控制Visable&quot;&gt;&lt;a href=&quot;#目的：-使用Popover制作动态的变色和控制Visable&quot; class=&quot;headerlink&quot; title=&quot;目的：</summary>
+        
+      
+    
+    
+    
+    
+    <category term="aned Popover" scheme="http://siberiabar2.github.io/tags/aned-Popover/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AutoComplute制作模糊搜索</title>
+    <link href="http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/"/>
+    <id>http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/</id>
+    <published>2021-05-05T04:00:18.000Z</published>
+    <updated>2021-05-05T04:55:51.337Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;1-引入React-useState-classnames插件，引出Option&quot;&gt;&lt;a href=&quot;#1-引入React-useState-classnames插件，引出Option&quot; class=&quot;headerlink&quot; title=&quot;1. 引入React,</summary>
+        
+      
+    
+    
+    
+    
+    <category term="模糊搜索" scheme="http://siberiabar2.github.io/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔</title>
+    <link href="http://siberiabar2.github.io/2021/04/30/sui-bi/"/>
+    <id>http://siberiabar2.github.io/2021/04/30/sui-bi/</id>
+    <published>2021-04-30T14:02:42.000Z</published>
+    <updated>2021-04-30T14:10:54.035Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;4-10-4-16-report&quot;&gt;&lt;a href=&quot;#4-10-4-16-report&quot; class=&quot;headerlink&quot; title=&quot;4.10-4.16 report&quot;&gt;&lt;/a&gt;4.10-4.16 report&lt;/h4&gt;&lt;h5</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="http://siberiabar2.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git操作</title>
+    <link href="http://siberiabar2.github.io/2021/04/30/git-cao-zuo/"/>
+    <id>http://siberiabar2.github.io/2021/04/30/git-cao-zuo/</id>
+    <published>2021-04-30T13:58:38.000Z</published>
+    <updated>2021-04-30T14:01:39.988Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;git-操作&quot;&gt;&lt;a href=&quot;#git-操作&quot; class=&quot;headerlink&quot; title=&quot;git 操作&quot;&gt;&lt;/a&gt;git 操作&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="git命令" scheme="http://siberiabar2.github.io/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组过滤undefined</title>
+    <link href="http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/"/>
+    <id>http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/</id>
+    <published>2021-04-30T13:12:04.000Z</published>
+    <updated>2021-04-30T13:44:08.953Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数组过滤undefined、null，&#39;&#39;" scheme="http://siberiabar2.github.io/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>事件冒泡的影响，两种hook</title>
+    <link href="http://siberiabar2.github.io/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/"/>
+    <id>http://siberiabar2.github.io/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/</id>
+    <published>2021-04-28T15:54:59.000Z</published>
+    <updated>2021-04-30T13:56:22.141Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。&quot;&gt;&lt;a href=&quot;#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="事件冒泡、hook" scheme="http://siberiabar2.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决OpenSSL报错</title>
+    <link href="http://siberiabar2.github.io/2021/04/27/jie-jue-openssl-bao-cuo/"/>
+    <id>http://siberiabar2.github.io/2021/04/27/jie-jue-openssl-bao-cuo/</id>
+    <published>2021-04-27T15:43:11.000Z</published>
+    <updated>2021-04-30T13:46:45.320Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先，这个错误很可能是网络不稳定，连接超时导致的；&lt;/p&gt;
+&lt;h5 id=&quot;若再次尝试依然报错，可输入如下命令&quot;&gt;&lt;a href=&quot;#若再次尝试依然报错，可输入如下命令&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Git报错解决" scheme="http://siberiabar2.github.io/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css磨砂效果，模糊效果</title>
+    <link href="http://siberiabar2.github.io/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/"/>
+    <id>http://siberiabar2.github.io/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/</id>
+    <published>2021-04-27T15:17:54.000Z</published>
+    <updated>2021-04-27T15:53:22.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;要点：给需要磨砂的div(设rgba的那个元素) =&amp;gt; 设置伪元素；&lt;/p&gt;
+&lt;p&gt;给伪元素content: ‘’、绝对定位，四处为0,left：0….&lt;/p&gt;
+&lt;p&gt;给伪元素一样的背景图，并给z-index: -1 、给自身z-index:1</summary>
+        
+      
+    
+    
+    
+    
+    <category term="css 磨砂，模糊" scheme="http://siberiabar2.github.io/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://siberiabar2.github.io/2021/04/25/hello-world/"/>
+    <id>http://siberiabar2.github.io/2021/04/25/hello-world/</id>
+    <published>2021-04-25T15:46:44.136Z</published>
+    <updated>2021-04-25T15:46:44.136Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

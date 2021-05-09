@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="小飞Blog" type="application/atom+xml">
+</head>
 
 
 
@@ -57,7 +58,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -68,7 +69,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -79,7 +80,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -90,7 +91,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -101,7 +102,7 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
+      <span>关于</span>
     </a>
     
   </li>
@@ -112,7 +113,7 @@
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>Contact</span>
+      <span>留言板</span>
     </a>
     
   </li>
@@ -123,14 +124,14 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>Friends</span>
+      <span>友情链接</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -160,7 +161,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -171,7 +172,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -182,7 +183,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -193,7 +194,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -204,7 +205,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
+			关于
 		</a>
           
         </li>
@@ -215,7 +216,7 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -226,7 +227,7 @@
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			Friends
+			友情链接
 		</a>
           
         </li>
@@ -446,7 +447,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-05-05
                 </div>
                 
@@ -454,10 +455,25 @@
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.1k
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -469,208 +485,16 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h5 id="目的：-使用Popover制作动态的变色和控制Visable"><a href="#目的：-使用Popover制作动态的变色和控制Visable" class="headerlink" title="目的： 使用Popover制作动态的变色和控制Visable"></a>目的： 使用Popover制作动态的变色和控制Visable</h5><p>引入相关文件</p>
-<pre><code class="js">import React, &#123; useState &#125; from &#39;react&#39;;
-import cxs from &#39;classnames&#39;
-import &#123; Popover &#125; from &#39;antd&#39;;
-import &#39;../../iconfont/iconfont.css&#39;
-import &quot;./popovers.css&quot;;
-</code></pre>
-<pre><code class="jsx">function Popovers() &#123;
-  const [chooseIndex, setChooseIndex] = useState(undefined)
-  const list = [
-    &#123; &quot;name&quot;: &quot;Rose&quot;, &quot;age&quot;: 22 &#125;,
-    &#123; &quot;name&quot;: &quot;Eric&quot;, &quot;age&quot;: 18 &#125;,
-    &#123; &quot;name&quot;: &quot;Mary&quot;, &quot;age&quot;: 25 &#125;,
-    &#123; &quot;name&quot;: &quot;Lucy&quot;, &quot;age&quot;: 28 &#125;,
-    &#123; &quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 21 &#125;,
-    &#123; &quot;name&quot;: &quot;Jack&quot;, &quot;age&quot;: 29 &#125;,
-    &#123; &quot;name&quot;: &quot;Bruce&quot;, &quot;age&quot;: 27 &#125;,
-    &#123; &quot;name&quot;: &quot;Tian&quot;, &quot;age&quot;: 25 &#125;,
-    &#123; &quot;name&quot;: &quot;JuDiao&quot;, &quot;age&quot;: 24 &#125;,
-    &#123; &quot;name&quot;: &quot;Niuheng&quot;, &quot;age&quot;: 31 &#125;,
-    &#123; &quot;name&quot;: &quot;KaiDi&quot;, &quot;age&quot;: 26 &#125;,
-    &#123; &quot;name&quot;: &quot;Haohao&quot;, &quot;age&quot;: 26 &#125;,
-    &#123; &quot;name&quot;: &quot;Wind&quot;, &quot;age&quot;: 23 &#125;
-  ]
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> cxs <span class="keyword">from</span> <span class="string">&#x27;classnames&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Popover &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../../iconfont/iconfont.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./popovers.css&quot;</span>;</span><br></pre></td></tr></table></figure>
 
-  const closeList = (index) =&gt; &#123;
-    console.log(&#39;close&#39;)
-    setChooseIndex()  // 每次关闭也会重新return？ 渲染的是全部视图还是局部视图
-    // stopPropagation 阻止事件冒泡
-  &#125;
-  const renderContent = (item, index) =&gt; &#123;  // 函数组件的函数，还必须const
-    console.log(item)
-    return &lt;div className=&#123;cxs(&#39;content-wrap&#39;)&#125;&gt;
-      &lt;div className=&#123;cxs(&quot;content-top&quot;)&#125;&gt;
-        &lt;div className=&#123;cxs(&#39;content-top-left&#39;)&#125;&gt;&lt;h1&gt;Name:&lt;/h1&gt;&lt;p&gt;&#123;item.name&#125;&lt;/p&gt;&lt;/div&gt;
-        &lt;div 
-        onClick=&#123;(e) =&gt; &#123;
-          e.stopPropagation()   // 此处必须阻止冒泡事件，否则会触发父元素的点击事件，导致子元素的点击事件点击了但是没效果
-          closeList(index)      // ***这是因为事件冒泡触发父元素点击对值重新赋值了***
-        &#125;&#125;
-        className=&#123;cxs(&#39;content-top-right&#39;)&#125;&gt;
-          &lt;i className=&quot;icon iconfont&quot;&gt;&amp;#xe607;&lt;/i&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div className=&#123;cxs(&quot;content-bottom&quot;)&#125;&gt;
-        &lt;h2&gt;Have a good nice Day !&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &#125;
-  const changeColorAndIndex = (item, index) =&gt; &#123;
-    // console.log(item, index)
-    // console.log(&#39;changeIndex&#39;)
-    setChooseIndex(index)   // 中间值与下标相等了 ，完成了两件事，被点击元素变色，被点击元素的pop显示，其他不显示！
-  &#125;
- 
-  return (
-    &lt;div className=&#123;cxs(&#39;wrap&#39;)&#125;&gt;
-      &lt;header&gt;点名&lt;/header&gt;
-      &#123;list.map( (item, index) =&gt; &#123;
-        return &lt;div 
-        key=&#123;index&#125;
-        id=&#39;item-info&#39;    
-        className=&#123;cxs(&#123;&quot;activeIndex&quot;: chooseIndex === index&#125;)&#125;  //1. 若类名与中间值相等，就出现变化的背景色
-        onClick=&#123;() =&gt; &#123;changeColorAndIndex(item, index)&#125;&#125;    //3.  使中间值和下标相等的事件。触发器
-        &gt;
-        &lt;Popover
-          content=&#123;renderContent(item, index)&#125;
-          trigger=&quot;click&quot;
-          getPopupContainer=&#123;() =&gt; document.getElementById(&quot;item-info&quot;)&#125;  // 绑定渲染父级
-          visible=&#123;chooseIndex === index&#125;     //2. 同理，若下标和中间值相同就显示
-        &gt;
-          &lt;div className=&#123;cxs(&quot;item-onfo1&quot;)&#125;&gt;
-            &lt;div className=&#123;cxs(&#39;item-info-left&#39;)&#125;&gt;&#123;item.name&#125;&lt;/div&gt;
-            &lt;div className=&#123;cxs(&#39;item-info-right&#39;)&#125;&gt;&#123;item.age&#125;&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/Popover&gt;
-      &lt;/div&gt;
-      &#125;)&#125;
-    &lt;/div&gt;
-  )
-&#125;
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Popovers</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [chooseIndex, setChooseIndex] = useState(<span class="literal">undefined</span>)</span><br><span class="line">  <span class="keyword">const</span> list = [</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Rose&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">22</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Eric&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">18</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Mary&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Lucy&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">28</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">21</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Jack&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">29</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Bruce&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">27</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Tian&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;JuDiao&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">24</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Niuheng&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">31</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;KaiDi&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Haohao&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Wind&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">23</span> &#125;</span><br><span class="line">  ]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> closeList = <span class="function">(<span class="params">index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;close&#x27;</span>)</span><br><span class="line">    setChooseIndex()  <span class="comment">// 每次关闭也会重新return？ 渲染的是全部视图还是局部视图</span></span><br><span class="line">    <span class="comment">// stopPropagation 阻止事件冒泡</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> renderContent = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;  <span class="comment">// 函数组件的函数，还必须const</span></span><br><span class="line">    <span class="built_in">console</span>.log(item)</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;cxs(</span>&#x27;<span class="attr">content-wrap</span>&#x27;)&#125;&gt;</span></span></span><br><span class="line">      &lt;div className=&#123;cxs(&quot;content-top&quot;)&#125;&gt;</span><br><span class="line">        &lt;div className=&#123;cxs(&#x27;content-top-left&#x27;)&#125;&gt;&lt;h1&gt;Name:&lt;/h1&gt;&lt;p&gt;&#123;item.name&#125;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div </span><br><span class="line">        onClick=&#123;(e) =&gt; &#123;</span><br><span class="line">          e.stopPropagation()   // 此处必须阻止冒泡事件，否则会触发父元素的点击事件，导致子元素的点击事件点击了但是没效果</span><br><span class="line">          closeList(index)      // ***这是因为事件冒泡触发父元素点击对值重新赋值了***</span><br><span class="line">        &#125;&#125;</span><br><span class="line">        className=&#123;cxs(&#x27;content-top-right&#x27;)&#125;&gt;</span><br><span class="line">          &lt;i className=&quot;icon iconfont&quot;&gt;&amp;#xe607;&lt;/i&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      &lt;div className=&#123;cxs(&quot;content-bottom&quot;)&#125;&gt;</span><br><span class="line">        &lt;h2&gt;Have a good nice Day !&lt;/h2&gt;</span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> changeColorAndIndex = <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// console.log(item, index)</span></span><br><span class="line">    <span class="comment">// console.log(&#x27;changeIndex&#x27;)</span></span><br><span class="line">    setChooseIndex(index)   <span class="comment">// 中间值与下标相等了 ，完成了两件事，被点击元素变色，被点击元素的pop显示，其他不显示！</span></span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=&#123;cxs(<span class="string">&#x27;wrap&#x27;</span>)&#125;&gt;</span><br><span class="line">      &lt;header&gt;点名&lt;/header&gt;</span><br><span class="line">      &#123;list.map( <span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> </span></span></span><br><span class="line"><span class="xml">        key=&#123;index&#125;</span></span><br><span class="line"><span class="xml">        id=&#x27;item-info&#x27;    </span></span><br><span class="line"><span class="xml">        className=&#123;cxs(&#123;&quot;activeIndex&quot;: chooseIndex === index&#125;)&#125;  //1. 若类名与中间值相等，就出现变化的背景色</span></span><br><span class="line"><span class="xml">        onClick=&#123;() =&gt; &#123;changeColorAndIndex(item, index)&#125;&#125;    //3.  使中间值和下标相等的事件。触发器</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line">        &lt;Popover</span><br><span class="line">          content=&#123;renderContent(item, index)&#125;</span><br><span class="line">          trigger=&quot;click&quot;</span><br><span class="line">          getPopupContainer=&#123;() =&gt; document.getElementById(&quot;item-info&quot;)&#125;  // 绑定渲染父级</span><br><span class="line">          visible=&#123;chooseIndex === index&#125;     //2. 同理，若下标和中间值相同就显示</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;div className=&#123;cxs(&quot;item-onfo1&quot;)&#125;&gt;</span><br><span class="line">            &lt;div className=&#123;cxs(&#x27;item-info-left&#x27;)&#125;&gt;&#123;item.name&#125;&lt;/div&gt;</span><br><span class="line">            &lt;div className=&#123;cxs(&#x27;item-info-right&#x27;)&#125;&gt;&#123;item.age&#125;&lt;/div&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">Popover</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      &#125;)&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Popovers</span><br></pre></td></tr></table></figure>
 
-export default Popovers
-</code></pre>
-<h5 id="关于为什么popover要绑定父级"><a href="#关于为什么popover要绑定父级" class="headerlink" title="关于为什么popover要绑定父级"></a>关于为什么popover要绑定父级</h5><pre><code class="jsx">// popover的默认渲染父级是body ，这在有些时候会出问题，例如元素错位(当然在目前看来是没有问题的，为了严谨)
-getPopupContainer=&#123;() =&gt; document.getElementById(&quot;item-info&quot;)&#125;
-</code></pre>
-<h5 id="css"><a href="#css" class="headerlink" title="css:"></a>css:</h5><pre><code class="css">// 给父级元素相对定位，高度
-// 给子元素向左的距离
-.ant-popover &#123;
-    left: 415px  !important;
-    top: 0 !important;
-&#125;
-.ant-popover-arrow&#123;
-    display: none  !important;
-&#125;
+<h5 id="关于为什么popover要绑定父级"><a href="#关于为什么popover要绑定父级" class="headerlink" title="关于为什么popover要绑定父级"></a>关于为什么popover要绑定父级</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// popover的默认渲染父级是body ，这在有些时候会出问题，例如元素错位(当然在目前看来是没有问题的，为了严谨)</span></span><br><span class="line">getPopupContainer=&#123;<span class="function">() =&gt;</span> <span class="built_in">document</span>.getElementById(<span class="string">&quot;item-info&quot;</span>)&#125;</span><br></pre></td></tr></table></figure>
 
-.ant-popover-inner-content&#123;
-    padding: 0  !important;
-    width: 400px;
-    height: 270px;
-&#125;
-</code></pre>
-<h6 id="完整css"><a href="#完整css" class="headerlink" title="完整css"></a>完整css</h6><pre><code class="css">
+<h5 id="css"><a href="#css" class="headerlink" title="css:"></a>css:</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 给父级元素相对定位，高度</span><br><span class="line">// 给子元素向左的距离</span><br><span class="line"><span class="selector-class">.ant-popover</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">415px</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ant-popover-arrow</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none  <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover-inner-content</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">270px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-.wrap&#123;
-    width: 400px;
-    height: 900px;
-    margin-top: 40px;
-    margin-left: 50px;
-    background: rgba(0, 0, 0, .6);
-&#125;
+<h6 id="完整css"><a href="#完整css" class="headerlink" title="完整css"></a>完整css</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">900px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">6</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="comment">/* text-align: center; */</span></span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    <span class="attribute">color</span>: seagreen;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#item-info</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.activeIndex</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#cccccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-onfo1</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">11px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#cccccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-info-left</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: blueviolet;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-info-right</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">415px</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ant-popover-arrow</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none  <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ant-popover-inner-content</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>  <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">270px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* content */</span></span><br><span class="line"><span class="selector-class">.content-wrap</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">14px</span> <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-bottom</span>&#123;</span><br><span class="line">    <span class="comment">/* less 预编译  要  calc(~&quot;100% - 50px&quot;) */</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">50px</span>);  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-top-left</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-left</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-left</span> <span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: crimson;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-top-right</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-top-right</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: lightseagreen;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">800</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-bottom</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: dodgerblue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-header&#123;
-    height: 50px;
-    margin-bottom: 15px;
-    /* text-align: center; */
-    line-height: 50px;
-    font-size: 18px;
-    color: seagreen;
-    padding-left: 16px;
-    font-weight: 700;
-&#125;
-#item-info&#123;
-    height: 40px;
-    padding: 0 16px;
-    position: relative;
-&#125;
-
-.activeIndex&#123;
-    background: #cccccc;
-&#125;
-
-.item-onfo1&#123;
-    height: 100%;
-    display: flex;
-    font-size: 14px;
-    padding: 11px 0;
-    justify-content: space-between;
-    border-bottom: 1px solid #cccccc;
-&#125;
-
-.item-info-left&#123;
-    color: blueviolet;
-&#125;
-.item-info-right&#123;
-    color: brown;
-&#125;
-
-.ant-popover &#123;
-    left: 415px  !important;
-    top: 0 !important;
-&#125;
-.ant-popover-arrow&#123;
-    display: none  !important;
-&#125;
-
-.ant-popover-inner-content&#123;
-    padding: 0  !important;
-    width: 400px;
-    height: 270px;
-&#125;
-
-
-/* content */
-.content-wrap&#123;
-    padding: 14px 16px;
-    height: 100%;
-&#125;
-.content-top&#123;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-&#125;
-
-.content-bottom&#123;
-    /* less 预编译  要  calc(~&quot;100% - 50px&quot;) */
-    height: calc(100% - 50px);  
-&#125;
-
-.content-top-left&#123;
-    display: flex;
-&#125;
-.content-top-left p&#123;
-    margin-left: 20px;
-    line-height: 50px;
-&#125;
-.content-top-left h1&#123;
-    color: crimson;
-&#125;
-.content-top-right &#123;
-    line-height: 50px;
-&#125;
-
-.content-top-right i &#123;
-    color: lightseagreen;
-    font-weight: 800;
-&#125;
-.content-bottom h2&#123;
-    color: dodgerblue;
-&#125;
-
-</code></pre>
 
                 
             </div>
@@ -683,7 +507,7 @@ header&#123;
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -693,7 +517,7 @@ header&#123;
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -703,13 +527,13 @@ header&#123;
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
+                    许可协议。转载请注明来源
                     <a href="/about" target="_blank">小飞</a>
                     !
                 </span>
@@ -719,7 +543,7 @@ header&#123;
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -888,12 +712,380 @@ header&#123;
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2021-05-05T12-35-26',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
 
     
 
     
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Wed May 05 2021 12:35:26 GMT+0800',
+    owner: '',
+    repo: '',
+    oauth: {
+        client_id: '',
+        client_secret: ''
+    }
+});
+
+gitment.render('gitment-content');
+</script>
 
     
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'http://siberiabar2.github.io/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/';
+        this.page.identifier = '/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/';
+        this.page.title = 'antdPopover的动态变色和动态visable';
+    };
+    let disqus_shortname = '';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '',
+        appKey: '',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
 
     
 
@@ -910,7 +1102,7 @@ header&#123;
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2021/05/06/suan-fa-java-chu-shi/">
                     <div class="card-image">
@@ -954,7 +1146,7 @@ header&#123;
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/">
@@ -1024,7 +1216,7 @@ header&#123;
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -1192,19 +1384,22 @@ header&#123;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">4.2k</span>
+            
             
             
                 
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -1216,13 +1411,13 @@ header&#123;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/SiberiaBar2" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1215204550@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1232,7 +1427,7 @@ header&#123;
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1215204550" class="tooltipped" target="_blank" data-tooltip="QQ联系我:1215204550" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1257,8 +1452,8 @@ header&#123;
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
