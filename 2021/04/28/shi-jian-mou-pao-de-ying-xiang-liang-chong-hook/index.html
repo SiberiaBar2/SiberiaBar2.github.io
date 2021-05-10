@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    565
+                    509
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -489,52 +489,52 @@
 <p>关于冒泡带来的问题，例如：    </p>
 <pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// 在一个元素的父级 定义一个点击事件    // 在这个事件中定义一种状态或者是下标，</span>
 
-<span class="token keyword">function</span> <span class="token function">Cool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#123;">&amp;#123;</span>
+<span class="token keyword">function</span> <span class="token function">Cool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token operator">...</span>
     <span class="token keyword">const</span> <span class="token punctuation">[</span>chooseIndex<span class="token punctuation">,</span> setChooseIndex<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>undefined<span class="token punctuation">)</span>
     <span class="token operator">...</span>
     
-   changeIndex <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>  <span class="token comment" spellcheck="true">// 父级元素的点击事件</span>
+   changeIndex <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">// 父级元素的点击事件</span>
         <span class="token function">setChooseIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// setChooseIndex改变初始值后  是必定会引发视图更新的！！</span>
-    <span class="token entity" title="&#125;">&amp;#125;</span> 
-   closeStatus <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>        <span class="token comment" spellcheck="true">// 子节点的点击事件</span>
+    <span class="token punctuation">}</span> 
+   closeStatus <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">// 子节点的点击事件</span>
        <span class="token function">setChooseIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 默认传空，chooseIndex 便不再等于index，但是visable 却没有关闭</span>
-   <span class="token entity" title="&#125;">&amp;#125;</span>                       <span class="token comment" spellcheck="true">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span>
+   <span class="token punctuation">}</span>                       <span class="token comment" spellcheck="true">// 在useEffect 和 reuturn打印发现值还是上一次的，也就是没有被改变</span>
     
-<span class="token entity" title="&#123;">&amp;#123;</span>dataList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span> 
+<span class="token punctuation">{</span>dataList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> 
     <span class="token comment" spellcheck="true">// ****原因是因为，子元素每次closeStatus时都重新触发了changeIndex事件，因此closeStatus的值怎么都改不过来****</span>
     <span class="token comment" spellcheck="true">// **** 阻止事件冒泡即可</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Fragment</span><span class="token punctuation">></span></span>
         <span class="token operator">...</span>
     <span class="token operator">...</span>  
        <span class="token comment" spellcheck="true">// 当chooseIndex == index 时，会出现两个效果，点击每一个变色；popver单个visable 属性true</span>
-    <span class="token operator">&lt;</span>div classname<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span><span class="token function">cx</span><span class="token punctuation">(</span><span class="token string">'list-wrap'</span><span class="token punctuation">,</span> <span class="token entity" title="&#123;">&amp;#123;</span><span class="token string">"activeItemClass"</span> <span class="token punctuation">:</span> chooseIndex <span class="token operator">===</span> index<span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span><span class="token operator">></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">classname</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token function">cx</span><span class="token punctuation">(</span><span class="token string">'list-wrap'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"activeItemClass"</span> <span class="token punctuation">:</span> chooseIndex <span class="token operator">===</span> index<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
      <span class="token operator">&lt;</span>Popver
-      content <span class="token operator">=</span> <span class="token entity" title="&#123;">&amp;#123;</span><span class="token function">renderContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
-     visable<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>chooseIndex <span class="token operator">===</span> index<span class="token entity" title="&#125;">&amp;#125;</span>  <span class="token comment" spellcheck="true">// 当chooseIndex === index，即成立时，visable为true</span>
+      content <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token function">renderContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+     visable<span class="token operator">=</span><span class="token punctuation">{</span>chooseIndex <span class="token operator">===</span> index<span class="token punctuation">}</span>  <span class="token comment" spellcheck="true">// 当chooseIndex === index，即成立时，visable为true</span>
      <span class="token operator">></span>                                <span class="token comment" spellcheck="true">// visable 在不成立，值不存在的情况下为false  例如： item.visable不存在为          false</span>
-      <span class="token operator">&lt;</span>div onClick<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">changeIndex</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">changeIndex</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Popver</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Fragment</span><span class="token punctuation">></span></span>
-<span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
    
-    renderContent <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
+    renderContent <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
         <span class="token operator">...</span>
         <span class="token operator">...</span>
         <span class="token operator">&lt;</span>div 
-        onClick <span class="token operator">=</span> <span class="token entity" title="&#123;">&amp;#123;</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
+        onClick <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
                 e<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 阻止事件冒泡</span>
-                <span class="token function">closeStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
-         <span class="token entity" title="&#125;">&amp;#125;</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
-    <span class="token entity" title="&#125;">&amp;#125;</span>
-<span class="token entity" title="&#125;">&amp;#125;</span>
+                <span class="token function">closeStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+         <span class="token punctuation">}</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>2 . 补充：   useEffect 、useState</p>
 <pre class=" language-tex"><code class="language-tex">useEffect 函数在  函数组件是可以多次定义的，这样的好处是：各放各的，不至于在有的状态和一个开关的值发生变化时，因为空数组传了值而重新调用useEffect 里面请求接口数据的函数，造成多次请求，严重影响页面性能。
 </code></pre>
 <pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// 而定义的  </span>
-<span class="token keyword">const</span> <span class="token punctuation">[</span>content<span class="token punctuation">,</span> setContnet<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 在set后是一定会重新刷新页面的，就像类的this.setSate(&amp;#123;&amp;#125;)也会重新调用render函数，重新刷新页面。</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>content<span class="token punctuation">,</span> setContnet<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 在set后是一定会重新刷新页面的，就像类的this.setSate({})也会重新调用render函数，重新刷新页面。</span>
 </code></pre>
 
                 
@@ -1426,7 +1426,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4k</span>
+                        class="white-color">3.5k</span>
             
             
             

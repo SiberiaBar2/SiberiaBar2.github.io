@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    519
+                    503
                 </div>
                 
 
@@ -494,22 +494,22 @@
 <p>试了很多种方法，例如：</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// list是我们要发送的数组</span>
 <span class="token comment" spellcheck="true">// 将list 遍历</span>
-<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">const</span> <span class="token punctuation">[</span>datas<span class="token punctuation">,</span> setDatas<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token operator">...</span>
 <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">mydatas</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> list <span class="token operator">=</span> res<span class="token punctuation">.</span>data
 <span class="token operator">...</span>
 <span class="token keyword">let</span> newArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>item <span class="token operator">&amp;&amp;</span> item<span class="token operator">!==</span> undefined <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>item <span class="token operator">&amp;&amp;</span> item<span class="token operator">!==</span> undefined <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         newArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [&amp;#123;item&amp;#125;,undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [{item},undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span>
     <span class="token function">setDatas</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token operator">...</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>解决：</p>
 <pre class=" language-js"><code class="language-js"><span class="token function">setDatas</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -1412,7 +1412,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4k</span>
+                        class="white-color">3.5k</span>
             
             
             

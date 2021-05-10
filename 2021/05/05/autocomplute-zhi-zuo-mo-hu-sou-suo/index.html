@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    569
+                    497
                 </div>
                 
 
@@ -484,16 +484,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token entity" title="&#123;">&amp;#123;</span> useState <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                <h5 id="1-引入React-useState-classnames插件，引出Option"><a href="#1-引入React-useState-classnames插件，引出Option" class="headerlink" title="1. 引入React, useState classnames插件，引出Option"></a>1. 引入React, useState classnames插件，引出Option</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> cxs <span class="token keyword">from</span> <span class="token string">'classnames'</span>
-<span class="token keyword">import</span> <span class="token entity" title="&#123;">&amp;#123;</span> AutoComplete <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AutoComplete <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./dimserch.css'</span>
-<span class="token keyword">const</span> <span class="token entity" title="&#123;">&amp;#123;</span> Option <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token operator">=</span> AutoComplete
+<span class="token keyword">const</span> <span class="token punctuation">{</span> Option <span class="token punctuation">}</span> <span class="token operator">=</span> AutoComplete
 </code></pre>
 <p><strong>思路</strong> ：</p>
 <p>将一份数据存两遍，一份用于渲染，一份用于查找。</p>
 <p>由于传入的  搜索值(serch)或是 变化值(onChange)的值若是空字符串，那么只需在另一份保存的数据中查找就可以了；</p>
-<pre class=" language-js"><code class="language-js">filter，用list<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-js"><code class="language-js">filter，用list<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
    <span class="token comment" spellcheck="true">// 第一种写法  1</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>includes<span class="token punctuation">.</span>val<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span>
    <span class="token comment" spellcheck="true">// 若item包含传入值，返回此对象</span>
@@ -502,9 +502,9 @@
   <span class="token comment" spellcheck="true">// const regex = new RegExp(val)</span>
   <span class="token comment" spellcheck="true">// if(regex.test(item)) return true</span>
   <span class="token keyword">return</span> <span class="token boolean">false</span> 其他情况不返回！
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
-<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">DimSerch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
+<h5 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">DimSerch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> list <span class="token operator">=</span>
     <span class="token punctuation">[</span>
       <span class="token string">"双皮奶"</span><span class="token punctuation">,</span> <span class="token string">"狮子头"</span><span class="token punctuation">,</span> <span class="token string">"擀面皮"</span><span class="token punctuation">,</span> <span class="token string">"巧克力蛋糕"</span><span class="token punctuation">,</span> <span class="token string">"热米皮"</span><span class="token punctuation">,</span> <span class="token string">"牛肉面"</span><span class="token punctuation">,</span> <span class="token string">"二细牛肉面"</span><span class="token punctuation">,</span> <span class="token string">"三细牛肉面"</span><span class="token punctuation">,</span>
@@ -517,47 +517,47 @@
 
 
 
-  <span class="token keyword">const</span> handleSearch <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
+  <span class="token keyword">const</span> handleSearch <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// const regex = new RegExp(val)  //定义规则(传入值);若val是空字符串，那么所有被检验元素都包含''，</span>
       <span class="token comment" spellcheck="true">// 也就是说，此时返回被遍历对象的所有（每一项）;</span>
-    <span class="token keyword">let</span> newArray <span class="token operator">=</span> originList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
-      <span class="token comment" spellcheck="true">// if (regex.test(item)) &amp;#123;      // 若每一项包含所定义规则；所有字符都包含空字符串；</span>
+    <span class="token keyword">let</span> newArray <span class="token operator">=</span> originList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// if (regex.test(item)) {      // 若每一项包含所定义规则；所有字符都包含空字符串；</span>
       <span class="token comment" spellcheck="true">//   return true                // 就返回这个对象</span>
-      <span class="token comment" spellcheck="true">// &amp;#125;</span>
+      <span class="token comment" spellcheck="true">// }</span>
       <span class="token keyword">if</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span> <span class="token comment" spellcheck="true">// item包含输入的值，返回此对象；其他情况false不返回</span>
       <span class="token keyword">return</span> <span class="token boolean">false</span>
-    <span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token function">setRealyDatas</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span>          <span class="token comment" spellcheck="true">// 更新渲染数组； 重新渲染</span>
-  <span class="token entity" title="&#125;">&amp;#125;</span>
+  <span class="token punctuation">}</span>
   
-  <span class="token keyword">const</span> autoChange <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
+  <span class="token keyword">const</span> autoChange <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// const regex = new RegExp(val)</span>
-    <span class="token keyword">let</span> newArray <span class="token operator">=</span> originList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span>
-      <span class="token comment" spellcheck="true">// if (regex.test(item)) &amp;#123;</span>
+    <span class="token keyword">let</span> newArray <span class="token operator">=</span> originList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// if (regex.test(item)) {</span>
       <span class="token comment" spellcheck="true">//   return true</span>
-      <span class="token comment" spellcheck="true">// &amp;#125;</span>
+      <span class="token comment" spellcheck="true">// }</span>
       <span class="token keyword">if</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span>
       <span class="token keyword">return</span> <span class="token boolean">false</span>
-    <span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token function">setRealyDatas</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span>
-  <span class="token entity" title="&#125;">&amp;#125;</span>
+  <span class="token punctuation">}</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>wrap<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>
-      <span class="token operator">&lt;</span>AutoComplete
-        getPopupContainer<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"wrap"</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
-        onSearch<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>handleSearch<span class="token entity" title="&#125;">&amp;#125;</span>
-        onChange<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>autoChange<span class="token entity" title="&#125;">&amp;#125;</span>
-        placeholder<span class="token operator">=</span><span class="token string">"请输入"</span>
-      <span class="token operator">></span>
-        <span class="token entity" title="&#123;">&amp;#123;</span>realyDatas<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;item&amp;#125;</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;item&amp;#125;</span><span class="token punctuation">></span></span>
-            <span class="token entity" title="&#123;">&amp;#123;</span>item<span class="token entity" title="&#125;">&amp;#125;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AutoComplete</span>
+        <span class="token attr-name">getPopupContainer</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"wrap"</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+        <span class="token attr-name">onSearch</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>handleSearch<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>autoChange<span class="token punctuation">}</span></span>
+        <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+        <span class="token punctuation">{</span>realyDatas<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Option</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>item<span class="token punctuation">}</span></span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>item<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+            <span class="token punctuation">{</span>item<span class="token punctuation">}</span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Option</span><span class="token punctuation">></span></span>
-        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token entity" title="&#125;">&amp;#125;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>AutoComplete</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span>
-<span class="token entity" title="&#125;">&amp;#125;</span>
+<span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> DimSerch
 </code></pre>
@@ -1451,7 +1451,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4k</span>
+                        class="white-color">3.5k</span>
             
             
             
