@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="git操作, 小飞Blog">
+    <meta name="keywords" content="Ant-Design双向数据绑定及其他, 小飞Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git操作 | 小飞Blog</title>
+    <title>Ant-Design双向数据绑定及其他 | 小飞Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git操作</h1>
+                    <h1 class="description center-align post-title">Ant-Design双向数据绑定及其他</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/git%E5%91%BD%E4%BB%A4/">
-                                <span class="chip bg-color">git命令</span>
+                            <a href="/tags/antd-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-%E5%85%B6%E4%BB%96/">
+                                <span class="chip bg-color">antd  数据绑定  其他</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-30
+                    2021-05-15
                 </div>
                 
 
@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    149
+                    612
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -484,22 +484,98 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="git-操作"><a href="#git-操作" class="headerlink" title="git 操作"></a>git 操作</h4><pre><code>git add .
+                <p>前提：</p>
+<p>antd的表单Input，Selcet,多选check不像在Vue，数据与视图实时绑定，view刷新数据跟着变。</p>
+<p>由于react是单向数据流，数据变化了才会同步到视图，因此需要另一种方式来实现。</p>
+<p>举例Input:</p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">/**
+    **思路：**
+    给Input设置value、onChange属性，在onChange时修改兵保存value的值。同Select、checked。
+
+    如果一个onChange事件要一次修改保存多个Input、Select，checked。
+    可以在onChange事件函数中定义一个对象，传给onChange函数的参数再多出一个作为标识，
+    第二个值默认是改变后的====>最新值。
+*/</span>
+
+valueChange <span class="token operator">=</span> <span class="token punctuation">(</span>type<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> valueChange <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    dataChange<span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> value
+    <span class="token comment" spellcheck="true">/**
+        ps：对象使用[]存键名，可存储特殊键名
+        例如obj["123"] = 789
+        obj["#@^%Gd"] = 666 都是正确的
+        这里使用obj[]就更加灵活
+    */</span>
+    <span class="token comment" spellcheck="true">/**
+       此处相当于将一条有键所对应的Input、Select，checked变化后的Value值存储到一个对象了
+    */</span>
+    <span class="token comment" spellcheck="true">// 那么每次在有一条数据的value发生变化的时候，重新修改这个对象即可！</span>
+    
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//*** 使用 hook</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>dataChange<span class="token punctuation">,</span> setDataChange<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+valueChange <span class="token operator">=</span> <span class="token punctuation">(</span>type<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    dataChange<span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> value <span class="token comment" spellcheck="true">//此时dataChange原值已被更改</span>
+    <span class="token comment" spellcheck="true">// 更新更改后的dataChange</span>
+    <span class="token function">setDataChange</span><span class="token punctuation">(</span>dataChange<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// view</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Input</span> 
+    <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>dataChange<span class="token punctuation">.</span>inputs<span class="token punctuation">}</span></span> 
+    <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">valueChange</span><span class="token punctuation">(</span><span class="token string">"inputs"</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">/></span></span>
+
+<span class="token comment" spellcheck="true">// 使用 类式组件</span>
+<span class="token keyword">export</span> defalut Class <span class="token class-name">Demo</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span><span class="token punctuation">{</span>
+    <span class="token function">cconstructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+            dataChange <span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    valueChange <span class="token operator">=</span> <span class="token punctuation">(</span>type<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> dataChange <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        dataChange<span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> value 
+         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>dataChange<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// view</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Input</span> 
+    <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>dataChange<span class="token punctuation">.</span>inputs<span class="token punctuation">}</span></span> 
+    <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">valueChange</span><span class="token punctuation">(</span><span class="token string">"inputs"</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">/></span></span>
 </code></pre>
-<pre><code>git commit -m 
+<p>其他：</p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">/**
+   1) 防抖处理
+ 背景：在做webscoket推送时，需要重新刷新页面，以体现实时更新的效果。
+ 但是有个问题，webscoket推送太快后面页面会非常卡，刷新频率太快不利于用户操作，也影响美观
+ 解决方法：（防抖）控制数据更新频率
+*/</span>
+ <span class="token comment" spellcheck="true">// code</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment" spellcheck="true">//借助闭包维护全局纯净</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> 
+        <span class="token punctuation">}</span>
+        timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 简化写法</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 在调数据接口的地方调用 debounce（），传入请求数据接口的函数和希望延迟的时间</span>
 </code></pre>
-<pre><code>git push (若从远程上来下来，并切换了分支，那么可直接git push 就能将本地最新代码push到远程对应的这个分支上去)
+<p>相关资料地址：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018428170">https://segmentfault.com/a/1190000018428170</a></p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">/**
+  2) 
+  关于git为什么先pull
+   先pull 最后再push 的情况就是为了应对多人合并开发的情况
+*/</span>
 </code></pre>
-<pre><code>git checkout 分支名 (已在远程对应的分支上，可使用此命令切换到其他远程分支)
-</code></pre>
-<pre><code>git checkout -b 分支名 (创建本地分支)
-</code></pre>
-<pre><code>git branch -a (查看所有分支，本地and远程)
-</code></pre>
-<pre><code>git branch (查看本地分支)
-</code></pre>
-<pre><code>git push --set-upstream origin 本地分支名
-(将本地分支推到远程仓库，使远程仓库下有该分支名)
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">/**
+  3) 问题：
+  在用到一个视频插件的地方给包裹它的元素position，给这个元素的父级realtive，
+  结果子元素不显示了，去除掉父级的realtive就能正常显示，此问题尚未解决，仍在思考中！
+  对于相对，绝对定位的理解有待加深。
+*/</span>
 </code></pre>
 
                 
@@ -527,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/04/30/git-cao-zuo/">http://siberiabar2.github.io/2021/04/30/git-cao-zuo/</a>
+                    <a href="http://siberiabar2.github.io/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/">http://siberiabar2.github.io/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -565,8 +641,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/git%E5%91%BD%E4%BB%A4/">
-                                    <span class="chip bg-color">git命令</span>
+                                <a href="/tags/antd-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-%E5%85%B6%E4%BB%96/">
+                                    <span class="chip bg-color">antd  数据绑定  其他</span>
                                 </a>
                             
                         </div>
@@ -737,7 +813,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-04-30T21-58-38',
+        id: '2021-05-15T18-13-32',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -761,7 +837,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Fri Apr 30 2021 21:58:38 GMT+0800',
+    id: 'Sat May 15 2021 18:13:32 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -786,9 +862,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/04/30/git-cao-zuo/';
-        this.page.identifier = '/2021/04/30/git-cao-zuo/';
-        this.page.title = 'git操作';
+        this.page.url = 'http://siberiabar2.github.io/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/';
+        this.page.identifier = '/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/';
+        this.page.title = 'Ant-Design双向数据绑定及其他';
     };
     let disqus_shortname = '';
 
@@ -1106,17 +1182,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/30/sui-bi/">
+                <a href="/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="随笔">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Ant-Design双向数据绑定及其他">
                         
-                        <span class="card-title">随笔</span>
+                        <span class="card-title">Ant-Design双向数据绑定及其他</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1126,9 +1203,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1137,11 +1214,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/antd-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-%E5%85%B6%E4%BB%96/">
+                        <span class="chip bg-color">antd  数据绑定  其他</span>
                     </a>
                     
                 </div>
@@ -1155,13 +1233,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/30/shu-zu-guo-lu-undefined/">
+                <a href="/2021/05/10/js-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="数组过滤undefined">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="js总结">
                         
-                        <span class="card-title">数组过滤undefined</span>
+                        <span class="card-title">js总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1172,7 +1250,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-10
                             </span>
                         <span class="publish-author">
                             
@@ -1185,8 +1263,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/">
-                        <span class="chip bg-color">数组过滤undefined、null，&#39;&#39;</span>
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
