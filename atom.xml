@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-05-15T11:04:15.926Z</updated>
+  <updated>2021-05-20T15:32:19.278Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js总结2对象函数</title>
+    <link href="http://siberiabar2.github.io/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/"/>
+    <id>http://siberiabar2.github.io/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/</id>
+    <published>2021-05-20T13:28:54.000Z</published>
+    <updated>2021-05-20T15:32:19.278Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-对象&quot;&gt;&lt;a href=&quot;#1-对象&quot; class=&quot;headerlink&quot; title=&quot;1. 对象&quot;&gt;&lt;/a&gt;1. 对象&lt;/h4&gt;&lt;pre class=&quot; language-jsp&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="对象、函数" scheme="http://siberiabar2.github.io/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Ant-Design双向数据绑定及其他</title>

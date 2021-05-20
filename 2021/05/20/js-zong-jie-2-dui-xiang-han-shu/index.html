@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数组过滤undefined, 小飞Blog">
+    <meta name="keywords" content="js总结2对象函数, 小飞Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数组过滤undefined | 小飞Blog</title>
+    <title>js总结2对象函数 | 小飞Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数组过滤undefined</h1>
+                    <h1 class="description center-align post-title">js总结2对象函数</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/">
-                                <span class="chip bg-color">数组过滤undefined、null，&#39;&#39;</span>
+                            <a href="/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E5%87%BD%E6%95%B0/">
+                                <span class="chip bg-color">对象、函数</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-30
+                    2021-05-20
                 </div>
                 
 
@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    503
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -484,43 +484,222 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>我们在传递数据的时候，很多时候数据是一个数组，而又有些时候我们并不需要将整个数组传递过去，而是传递数组中的前几个对象；</p>
-<p>这时就可以现在这样： method([list[0],list[1],list[2,list[3]])；</p>
-<p>(调用父组件传递过来的函数，发送一个数组)；</p>
-<p><strong>问题：数据都是调用后端接口得来的，而数据这个东西，有时候多，有时候少，多的时候就不说了，反正我们时以下标这样取得，怎么传也只有三条数据，但是数据少的时候问题就来了；</strong></p>
-<p>什么问题呢？ 通过像这样传递的数据 method([list[0],list[1],list[2,list[3]])，<strong>如果数据一旦少于三条。也就是说如果调接口之得到一条数据</strong>，但是你这样通过下标传递数据, 那么发送过去的这个数组后两个必定是undefined!</p>
-<p>将undefined发送给其他需要的组件，那么是极有可能出问题的，因此我们需要对数据进行处理：<strong>在数据为undefined时不发送数据！</strong></p>
-<p>哪怕我只发送过去一条实际存在的数据，也不发送undefined,可以少传，可以不传，但不可以发undefined!</p>
-<p>试了很多种方法，例如：</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// list是我们要发送的数组</span>
-<span class="token comment" spellcheck="true">// 将list 遍历</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">const</span> <span class="token punctuation">[</span>datas<span class="token punctuation">,</span> setDatas<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">...</span>
-<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">mydatas</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> list <span class="token operator">=</span> res<span class="token punctuation">.</span>data
-<span class="token operator">...</span>
-<span class="token keyword">let</span> newArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>item <span class="token operator">&amp;&amp;</span> item<span class="token operator">!==</span> undefined <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">||</span> item <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        newArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [{item},undefined,undefined] 结果依然没有发生变化,依然发送的是undefined</span>
-    <span class="token function">setDatas</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">...</span>
+                <h4 id="1-对象"><a href="#1-对象" class="headerlink" title="1. 对象"></a>1. 对象</h4><pre class=" language-jsp"><code class="language-jsp">已经有了五种数据类型，为什么我们还需要对象？
+
+基本数据类型值单一，值与值之间没有联系（不是一个整体）
+
+对象的作用就是**将多个值放在一起，批量操作；
+
+对象属于复合数据类型，可保存多个不同数据类型的属性，就像一个袋子。
+</code></pre>
+<h5 id="1-2）对象的类型"><a href="#1-2）对象的类型" class="headerlink" title="1-2）对象的类型"></a>1-2）对象的类型</h5><pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> 内建对象
+
+由Es标准中定义的对象，在任何Es实现中都可以使用 例如：
+
+​    Math、String、Number、Boolean、Function<span class="token punctuation">,</span>Object
+
+问题<span class="token punctuation">:</span>String、Number、Boolean数据类型与String、Number、Boolean内建对象有何区别？
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> 宿主对象
+
+由Js环境提供的对象，目前主要指由浏览器提供的对象。
+
+例如： BoM<span class="token punctuation">,</span>Dom<span class="token punctuation">;</span> console<span class="token punctuation">.</span>log就是一个对象，
+
+document<span class="token punctuation">.</span>write也是一个对象，这个两者都由浏览器提供。
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">(3) 自定义对象  （开发人员自己创建的对象）
+
+// 使用new关键字调用的函数，是构造函数constructor; ；构造函数时专门用来创建对象的。
+
+创建对象： var obj = new Object()
+
+添加属性： obj.name= "Eric"  ； 对象改值与添加一样的。
+
+注意： 读取对象中没有的属性，不会报错，而是undefined!
+
+删除对象属性： delete  obj.name
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">  对象属性名，属性值
+  
+对象属性名不强制要求遵守标识符规范，什么乱七八糟的命都可以，但还是尽量按标识符的规范去做。
+
+使用特殊属性名、语法，不能例如 obj.123
+
+正确写法： Obj["123"] = 789  ; obj["@#^%GK"] = 666;
+
+使用[]操作对象属性，更加灵活，[]可传变量，例如var n = "123",
+
+这样可以随时更改， console.log(obj[n]);
+</code></pre>
+<pre class=" language-js"><code class="language-js">  对象属性值
+  
+对象的属性值可以是任意的数据类型，甚至可以是一个对象。
+
+例如： <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      obj<span class="token punctuation">.</span>test <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      obj<span class="token punctuation">.</span>test <span class="token operator">=</span> undefined<span class="token punctuation">;</span>
+      <span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      obj<span class="token punctuation">.</span>test <span class="token operator">=</span> obj2  <span class="token comment" spellcheck="true">// 袋中袋</span>
+      
+对象中没有的属性不报错，而是undefined<span class="token punctuation">,</span>那么如何检查一个对象中是否有指定属性？
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"test"</span> <span class="token keyword">in</span> obj <span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 有返回true, 无返回false</span>
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">   深浅拷贝
+   
+浅拷贝针对于引用数据类型（复杂数据类型Object （object,array, function））
+
+浅拷贝原因: 只拷贝了堆空间地址，而未开辟新的内存空间，两处堆内存空间地址指向一处 堆内存空间。一处变化，另一个跟着变化。
+
+为什么叫引用数据类型？ 
+
+对象保存在堆空间当中，栈空间只保存了变量名和 指向堆内存空间的地址，变量名和堆空间由地址建立联系。(地址即引用)
+
+每当var obj = new Object();就在堆空间开辟了内存空间。
+
+两个堆内存空间，即使里面的值一模一样他们也不相同，因为空间地址不一样。
+
+**基本数据类型直接在栈空间存储，变量值是对立存在的，修改一个值，对其他值没有任何影响。
+
+*** 比较基本数据类型，比较的是值；（基本在栈中存->值）
+
+    比较引用数据类型，比较的是空间地址。即便里面的东西一样但内存地址不一样，那还是不一样！（引用在栈中存->空间地址）
+</code></pre>
+<pre class=" language-tcl"><code class="language-tcl">  对象字面量
+  
+var obj = <span class="token punctuation">{</span><span class="token punctuation">}</span>; console.log<span class="token punctuation">(</span>type of obj<span class="token punctuation">)</span> <span class="token punctuation">[</span>object object<span class="token punctuation">]</span>；
+
+使用var obj = <span class="token punctuation">{</span><span class="token punctuation">}</span> 与var obj = new Object<span class="token punctuation">(</span><span class="token punctuation">)</span>; 本质上一样；
+
+对象字面量的属性，引号可以不加，也建议不加，若使用奇怪的名，必须加！
+
+名和值用：分隔，多个属性用逗号隔开；
+</code></pre>
+<h4 id="2-函数-（也是对象）"><a href="#2-函数-（也是对象）" class="headerlink" title="2. 函数 （也是对象）"></a>2. 函数 （也是对象）</h4><p><strong>除基本数据类型，剩下的都是对象</strong></p>
+<pre class=" language-tex"><code class="language-tex">普通的对象只能装东西，而函数却还能封装一些功能，在需要时执行这些功能（代码）；
+
+封装的函数一定程度上简化了代码量；
+
+封装： 存起来，用的时候（调用）很简单；
+
+(1) 将要封装的代码，以字符串形式传递给构造函数；// ??不太明白
+
+(2) 封装的函数不会立即执行，调用时执行；
+
+(3) 调用 ：fun() ；调用时，函数中的代码以顺序执行；
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">2-1）创建一个对象
+
+(1) 构造函数创建对象
+
+var fun = new Function(); // console.log(typeof fun ) "function"
+
+补充: fun.name = "hello" 也是可以存在函数中的；
+
+函数拥有普通对象的一切功能，但比所有普通对象更强大！
+
+在开发中很少使用 （var fun = new Function();）构造函数创建对象；
+
+(2) 使用函数声明创建一个函数
+
+function 函数名(形参1, 形参2){}
+
+function fn([..,..]){}, 套[]表可选，写不写都行。// ??? 不太明白
+
+构造函数创建对象与函数声明创建一个函数的区别及函数声明创建一个函数的优越性？
+...
+
+(3) 使用函数表达式创建一个函数
+
+let fn1 = funtion(形参1, 形参2){}；
+
+funtion fn2(a, b){a+b} 相当于在函数内部声明变量  
+
+var a ,var b 但未赋值，实参会赋值给函数中对应的形参；
+
+调用函数，解析器不会检查实参类型；传数值会计算，fn2(1,3) // 4
+
+传(123,"hello") -> 123hello;
+
+传(true, false) -> 1
+
+因此要注意是否会接收到不合法的参数，若有可能，最好对参数类型检查。
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">调函数，也不会检查实参数量，多余的实参不会被赋值，因为函数中只有a+b，多传也是a+b的结果；
+
+函数实参可以是任意数据类型；
+
+若实参数量少于形参，则没有对应实参的形参，将会是undefined,funtion fn2(a, b){a+b}， a+b结果为NAN；
+
+函数必须有返回值！
+
+return 将作为函数的执行结果返；return后的代码不再执行；
+
+return 后不写任何值，相当于返回undefined, 同不写return;
+
+return 后可以跟任意类型的值；
+
+
+例： function sum(a, b, c){
+ var d = a+b +c
+ return d
+}
+sum(11,22,33)
+
+
+var result = sum(11,22,33)  // 这样更加灵活，函数返回什么值，result结果就是什么；
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">alert()是函数;
+
+函数实参可以是任何值，也可以是对象；
+
+参数过多，可以将参数封装到一个对象里，再通过 对象.属性值拿值；
+
+函数也可以作为函数的参数；fn(main())  相当于把函数的返回值放进去了；
+
+fn(main)相当于把函数放进去  （机器）
+
+
+break退出循环体，for停止；return结束函数；
+
+函数内部可无限声明函数；
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">函数的键值
+
+var a = fn3();
+
+console.log(a.name)
+
+
+自执行函数： (往往只执行一次)
+(function(){})()
+
+对象属性值可为任何数据类型，亦可以是一个函数；
+
+var obj = new Object();
+obj.name = "牛恒";
+obj.sayname = function() {
+    console.log(obj.name)
+}
+
+obj.sayname()  // 牛恒  (调方法)
+
+sayname() // 调函数  ，这两种，只是叫法不一样，无本质区别
+
+若函数作为对象的一个属性保存，那么就称 *** 这个函数是这个对象的方法。调用函数就叫调用对象的方法（methods）。
+</code></pre>
+<h4 id="3-枚举-（将对象的属性一个个取出）"><a href="#3-枚举-（将对象的属性一个个取出）" class="headerlink" title="3. 枚举 （将对象的属性一个个取出）"></a>3. 枚举 （将对象的属性一个个取出）</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 使用for in</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span><span class="token string">"wind"</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> <span class="token string">"24"</span>
 <span class="token punctuation">}</span>
-</code></pre>
-<p>解决：</p>
-<pre class=" language-js"><code class="language-js"><span class="token function">setDatas</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>
- console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span>list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span> item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 返回的新数组种没有undefined！！！</span>
-<span class="token comment" spellcheck="true">// success</span>
-</code></pre>
-<p>原因：经过filter后会自动去掉undefined、null,空字符串。</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span>undefined<span class="token punctuation">,</span> <span class="token string">'3.jpg'</span><span class="token punctuation">,</span>undefined<span class="token punctuation">,</span> <span class="token keyword">null</span>、<span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">]</span>
-<span class="token keyword">var</span> newArr <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArr<span class="token punctuation">)</span>
-VM23<span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"3.jpg"</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">// 可以看到undefined、null、"" 被去除了</span>
+<span class="token comment" spellcheck="true">// 语法:</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> n <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 有几个键，(打印几次),循环就会执行几次，每次执行都会将对象的属性赋值给变量 n</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// n = name 第一次</span>
+<span class="token comment" spellcheck="true">// n = age 第二次</span>
 </code></pre>
 
                 
@@ -548,7 +727,7 @@ VM23<span class="token punctuation">:</span><span class="token number">3</span> 
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/">http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/</a>
+                    <a href="http://siberiabar2.github.io/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/">http://siberiabar2.github.io/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -586,8 +765,8 @@ VM23<span class="token punctuation">:</span><span class="token number">3</span> 
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/">
-                                    <span class="chip bg-color">数组过滤undefined、null，&#39;&#39;</span>
+                                <a href="/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E5%87%BD%E6%95%B0/">
+                                    <span class="chip bg-color">对象、函数</span>
                                 </a>
                             
                         </div>
@@ -758,7 +937,7 @@ VM23<span class="token punctuation">:</span><span class="token number">3</span> 
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-04-30T21-12-04',
+        id: '2021-05-20T21-28-54',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -782,7 +961,7 @@ VM23<span class="token punctuation">:</span><span class="token number">3</span> 
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Fri Apr 30 2021 21:12:04 GMT+0800',
+    id: 'Thu May 20 2021 21:28:54 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -807,9 +986,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/';
-        this.page.identifier = '/2021/04/30/shu-zu-guo-lu-undefined/';
-        this.page.title = '数组过滤undefined';
+        this.page.url = 'http://siberiabar2.github.io/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/';
+        this.page.identifier = '/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/';
+        this.page.title = 'js总结2对象函数';
     };
     let disqus_shortname = '';
 
@@ -1127,17 +1306,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/30/git-cao-zuo/">
+                <a href="/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git操作">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="js总结2对象函数">
                         
-                        <span class="card-title">git操作</span>
+                        <span class="card-title">js总结2对象函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1147,9 +1327,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1158,11 +1338,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">git命令</span>
+                    <a href="/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E5%87%BD%E6%95%B0/">
+                        <span class="chip bg-color">对象、函数</span>
                     </a>
                     
                 </div>
@@ -1176,13 +1357,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/">
+                <a href="/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="事件冒泡的影响，两种hook">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Ant-Design双向数据绑定及其他">
                         
-                        <span class="card-title">事件冒泡的影响，两种hook</span>
+                        <span class="card-title">Ant-Design双向数据绑定及其他</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1193,7 +1374,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
                             </span>
                         <span class="publish-author">
                             
@@ -1206,8 +1387,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/">
-                        <span class="chip bg-color">事件冒泡、hook</span>
+                    <a href="/tags/antd-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-%E5%85%B6%E4%BB%96/">
+                        <span class="chip bg-color">antd  数据绑定  其他</span>
                     </a>
                     
                 </div>
