@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="反思总结, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | 卡尔 · 弗兰兹</title>
+    <title>反思总结 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">categories</h1>
+                    <h1 class="description center-align post-title">反思总结</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8F%8D%E6%80%9D/">
+                                <span class="chip bg-color">反思</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -444,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-09
+                    2021-05-21
                 </div>
                 
 
@@ -453,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    673
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -480,7 +484,72 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h4 id="1-Js变量名如果太相近，容易引用错误且不易发现错误！"><a href="#1-Js变量名如果太相近，容易引用错误且不易发现错误！" class="headerlink" title="1. Js变量名如果太相近，容易引用错误且不易发现错误！"></a>1. Js变量名如果太相近，容易引用错误且不易发现错误！</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">AAA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>dataList<span class="token punctuation">,</span> setDataList<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">...</span>
+<span class="token comment" spellcheck="true">// 数据请求方法</span>
+<span class="token keyword">const</span> getDataMethods <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> datasList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       datasList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">...</span>
+<span class="token comment" spellcheck="true">// 渲染</span>
+<span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">// 为什么会出错？ 不知道起什么变量名，在给变量赋值时简单写了一个变量名（为了图方便），就有了后面的错误。</span>
+    <span class="token comment" spellcheck="true">// 错误的引用即便 原本的dataList是一个数组，这里的datasList也是is not defined 且拿不到length属性，也没有[0]这一项。</span>
+    <span class="token comment" spellcheck="true">// 所以这里的三项判断完全没有作用！ 这就是变量名太相近的危害！出了错误也不易被发现。</span>
+    <span class="token comment" spellcheck="true">// 建议将变量名 以英文全量组合而成，这样可能名字很长，但却不易出错！</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>datasList <span class="token operator">&amp;&amp;</span> datasList<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> datasList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">!==</span> undefined<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        dataList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>v<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>
+                 <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>v<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                 <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>v<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                 <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>v<span class="token punctuation">.</span>sex<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-tex"><code class="language-tex">补充：为什么判断不是一个空数组要用 datasList && datasList.length > 0 && datasList[0] !== undefined
+第一个  datasList 表示 datasList存在且定义了；
+第二个  datasList.length > 0 表示数组的长度大于零，只有数组，字符串才有length属性！，布尔值的length为undefined，
+
+let arr = true; 
+arr.lenght // undefined
+
+undefined和null数据类型的length都会报错。
+
+let arr = undefined ;arr.lenght // 报错
+let arr = null ; arr.length     // 报错
+
+对象不加length，length属性为undefined；
+
+let obj = new Object(); 
+obj.name = "牛恒"; 
+obj.age = 30 ; 
+obj.sex = "男"; 
+obj.length // undefined
+
+函数的length根据形参（和内部定义的变量？？）决定
+
+let fn = function(a,b, c) {let d};  // fn.length  ---> 3,let 声明的变量并没有算到length
+
+第三个 判断是否不是一个空数组，不能使用 
+let arr = [];
+if(arr !== []){} 的做法，即便arr确实是空数组，它也绝对不等于 []，因为二者都是引用数据类型，空间地址不一样，怎么比都不一样，
+
+因此要使用 arr[0] !== undefined的方法； 如果arr不为空数组，那么它的第一项就不是undefined,反之，如果arr是空数组，那么它的第
+
+一项是不存在的，是为undefined。
+</code></pre>
+<h4 id="2-写代码要先心中有一幅画-（想好，想的差不多）"><a href="#2-写代码要先心中有一幅画-（想好，想的差不多）" class="headerlink" title="2. 写代码要先心中有一幅画 （想好，想的差不多）"></a>2. 写代码要先心中有一幅画 （想好，想的差不多）</h4><pre class=" language-tex"><code class="language-tex">前言：如果完全没有思路或者思路根本不清晰就去写代码，那基本是写一点错一点，写一点就要改。这样的代码写出来不仅就非常费劲，而且后面业务一变说不定 之前的逻辑就完全用不了了，简而言之就是 没有想好就去写代码难写且极难维护，久而久之开发人员也容易失去信息和对工作的兴趣，可见危害之大！
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -506,7 +575,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/categories/index.html">http://siberiabar2.github.io/categories/index.html</a>
+                    <a href="http://siberiabar2.github.io/2021/05/21/fan-si-zong-jie/">http://siberiabar2.github.io/2021/05/21/fan-si-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,7 +612,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%8F%8D%E6%80%9D/">
+                                    <span class="chip bg-color">反思</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -712,7 +785,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-05-09T20-38-32',
+        id: '2021-05-21T21-09-29',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -736,7 +809,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun May 09 2021 20:38:32 GMT+0800',
+    id: 'Fri May 21 2021 21:09:29 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -761,9 +834,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/categories/index.html';
-        this.page.identifier = '/categories/index.html';
-        this.page.title = 'categories';
+        this.page.url = 'http://siberiabar2.github.io/2021/05/21/fan-si-zong-jie/';
+        this.page.identifier = '/2021/05/21/fan-si-zong-jie/';
+        this.page.title = '反思总结';
     };
     let disqus_shortname = '';
 
@@ -1081,18 +1154,17 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/05/24/may24/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="May24">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">May24</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1102,9 +1174,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1113,7 +1185,14 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/summary/">
+                        <span class="chip bg-color">summary</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1121,16 +1200,16 @@ gitment.render('gitment-content');
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="js总结2对象函数">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">js总结2对象函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1141,7 +1220,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
                             </span>
                         <span class="publish-author">
                             
@@ -1151,7 +1230,14 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E5%87%BD%E6%95%B0/">
+                        <span class="chip bg-color">对象、函数</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

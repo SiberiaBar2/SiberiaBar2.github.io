@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="May24, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | 卡尔 · 弗兰兹</title>
+    <title>May24 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">categories</h1>
+                    <h1 class="description center-align post-title">May24</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/summary/">
+                                <span class="chip bg-color">summary</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -444,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-09
+                    2021-05-24
                 </div>
                 
 
@@ -453,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    537
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -480,7 +484,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h4 id="1-关于react中使用less"><a href="#1-关于react中使用less" class="headerlink" title="1. 关于react中使用less"></a>1. 关于react中使用less</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+在网上试了很多方法，都没有作用。最后，用了一种办法，在vs-code写less,引入的时候引入css文件，less中定义颜色的方法和嵌套随你写。
+@red-color : red ;
+*/</span>
+</code></pre>
+<h4 id="2-关于判断一段值是否为undefined"><a href="#2-关于判断一段值是否为undefined" class="headerlink" title="2. 关于判断一段值是否为undefined"></a>2. 关于判断一段值是否为undefined</h4><pre class=" language-js"><code class="language-js">例如一个字段为  alartItem（object） <span class="token punctuation">,</span>它所包含的字段可能有值，也可能值为undefined，
+也可能值<span class="token keyword">null</span><span class="token punctuation">,</span>那么我们就需要进行判断，不能使undefined值报出来。
+    <span class="token keyword">let</span> alarmItem <span class="token operator">=</span> <span class="token punctuation">{</span>name <span class="token punctuation">:</span> <span class="token string">"我"</span><span class="token punctuation">,</span> tiems<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span>
+    如果 alarmItem<span class="token punctuation">.</span>name 有值，不含undefined、<span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span><span class="token boolean">false</span>，
+执行 <span class="token operator">?</span> 后面的打印这段话。反之执行 <span class="token punctuation">:</span>得到 <span class="token keyword">null</span> ，<span class="token keyword">null</span>  下面的<span class="token keyword">if</span> 语句不执行！console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>alarmText<span class="token punctuation">)</span> 打印为<span class="token keyword">null</span>。
+    
+    <span class="token keyword">let</span> alarmText <span class="token operator">=</span> <span class="token punctuation">(</span>alarmItem <span class="token operator">&amp;&amp;</span> alarmItem<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token template-string"><span class="token string">`阳光明媚的春天,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>alarmItem<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">去了苏州园林、北塔寺。苏州的温
+婉，徐徐清风沁人心脾。以后若有机会可还要再去</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>alarmItem<span class="token punctuation">.</span>times <span class="token operator">||</span> <span class="token number">0</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 次。`</span></span><span class="token punctuation">:</span> <span class="token keyword">null</span> （没有times字段， 则取<span class="token number">0</span>）
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>alarmText<span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span><span class="token punctuation">(</span>alarmText<span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">// 如果有值，不含undefined、null, '',false，执行此条件语句,反之不执行！</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'11111'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h4 id="3-echarts配置项轻点"><a href="#3-echarts配置项轻点" class="headerlink" title="3. echarts配置项轻点"></a>3. echarts配置项轻点</h4><pre class=" language-js"><code class="language-js">tooltip是鼠标悬浮的相关配置项
+
+grid是echarts距离上下左右 的距离，还包含其他属性，此处浅谈。
+
+xAxis 、yAxis分别代表x<span class="token punctuation">,</span>y轴， type表示坐标轴类型
+
+  <span class="token string">'value'</span> 数值轴，适用于连续数据。（y轴可能用的多）
+
+  <span class="token string">'category'</span> 类目轴，适用于离散的类目数据。为该类型时类目数据可自动从 series<span class="token punctuation">.</span>data 或 dataset<span class="token punctuation">.</span>source 中取，或者可通过 xAxis<span class="token punctuation">.</span>data 设置类目数据。（x轴设置此属性，要给一个data数组以在x轴显示）
+
+  <span class="token string">'time'</span> 时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度。 （此二种暂未用到）
+
+  <span class="token string">'log'</span> 对数轴。适用于对数数据。
+
+axisLine <span class="token operator">--</span><span class="token operator">-</span><span class="token operator">></span> 坐标轴轴线相关设置，可设置 
+lineStyle<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              color<span class="token punctuation">:</span> <span class="token string">"#fff"</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ 很多线段相关的社会都有lineStyle这个属性，里面的属性设置也大致相同。
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -506,7 +549,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/categories/index.html">http://siberiabar2.github.io/categories/index.html</a>
+                    <a href="http://siberiabar2.github.io/2021/05/24/may24/">http://siberiabar2.github.io/2021/05/24/may24/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,7 +586,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/summary/">
+                                    <span class="chip bg-color">summary</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -712,7 +759,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-05-09T20-38-32',
+        id: '2021-05-24T22-17-58',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -736,7 +783,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun May 09 2021 20:38:32 GMT+0800',
+    id: 'Mon May 24 2021 22:17:58 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -761,9 +808,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/categories/index.html';
-        this.page.identifier = '/categories/index.html';
-        this.page.title = 'categories';
+        this.page.url = 'http://siberiabar2.github.io/2021/05/24/may24/';
+        this.page.identifier = '/2021/05/24/may24/';
+        this.page.title = 'May24';
     };
     let disqus_shortname = '';
 
@@ -1086,13 +1133,13 @@ gitment.render('gitment-content');
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/05/24/may24/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="May24">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">May24</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1103,7 +1150,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
                             </span>
                         <span class="publish-author">
                             
@@ -1115,22 +1162,30 @@ gitment.render('gitment-content');
                 </div>
 
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/summary/">
+                        <span class="chip bg-color">summary</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/05/21/fan-si-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="反思总结">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">反思总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1141,7 +1196,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
                             </span>
                         <span class="publish-author">
                             
@@ -1151,7 +1206,14 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8F%8D%E6%80%9D/">
+                        <span class="chip bg-color">反思</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
