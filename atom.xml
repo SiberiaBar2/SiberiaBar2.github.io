@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-05-24T15:26:16.156Z</updated>
+  <updated>2021-05-30T10:57:45.849Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>May30</title>
+    <link href="http://siberiabar2.github.io/2021/05/30/may30/"/>
+    <id>http://siberiabar2.github.io/2021/05/30/may30/</id>
+    <published>2021-05-30T10:46:41.000Z</published>
+    <updated>2021-05-30T10:57:45.849Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;h4 id=&quot;在运行前-先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。&quot;&gt;&lt;a href=&quot;#在运行前-先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。&quot; class=&quot;headerlink&quot; title=&quot;在运行前</summary>
+        
+      
+    
+    
+    
+    
+    <category term="错误总结" scheme="http://siberiabar2.github.io/tags/%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>this指向、构造函数</title>
+    <link href="http://siberiabar2.github.io/2021/05/27/this-zhi-xiang-gou-zao-han-shu/"/>
+    <id>http://siberiabar2.github.io/2021/05/27/this-zhi-xiang-gou-zao-han-shu/</id>
+    <published>2021-05-27T14:06:47.000Z</published>
+    <updated>2021-05-30T10:45:15.336Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;函数的this指向&quot;&gt;&lt;a href=&quot;#函数的this指向&quot; class=&quot;headerlink&quot; title=&quot;函数的this指向&quot;&gt;&lt;/a&gt;函数的this指向&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="this指向、构造函数" scheme="http://siberiabar2.github.io/tags/this%E6%8C%87%E5%90%91%E3%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>May24</title>
