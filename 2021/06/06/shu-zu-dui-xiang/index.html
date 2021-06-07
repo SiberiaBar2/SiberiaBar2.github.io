@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="css磨砂效果，模糊效果, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="数组对象, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>css磨砂效果，模糊效果 | 卡尔 · 弗兰兹</title>
+    <title>数组对象 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">css磨砂效果，模糊效果</h1>
+                    <h1 class="description center-align post-title">数组对象</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/">
-                                <span class="chip bg-color">css 磨砂，模糊</span>
+                            <a href="/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/">
+                                <span class="chip bg-color">数组对象</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-27
+                    2021-06-06
                 </div>
                 
 
@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    201
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -484,77 +484,217 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>要点：给需要磨砂的div(设rgba的那个元素) =&gt; 设置伪元素；</p>
-<p>给伪元素content: ‘’、绝对定位，四处为0,left：0….</p>
-<p>给伪元素一样的背景图，并给z-index: -1 、给自身z-index:1 ***重要，必须给！</p>
-<p>最后给 伪元素 filter: blur(37px); 属性值，效果就出来了。</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">body</span><span class="token punctuation">{</span>
+                <h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><pre class=" language-js"><code class="language-js">与普通对象功能类似，也是用来存储一些值的。
 
-<span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url(./heroheart.jpg)</span><span class="token punctuation">;</span>   
+不同之处在于，普通对象以字符串作为属性名，而数组使用（下标）索引来操作元素。
 
-<span class="token property">background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+索引：从零开始的整数。
 
-<span class="token punctuation">}</span>
+一个索引来对应一个值，这叫一个元素。
 
-<span class="token selector"><span class="token id">#app</span></span><span class="token punctuation">{</span>
-
-<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">100</span>px auto<span class="token punctuation">;</span>
-
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">600</span>px<span class="token punctuation">;</span>
-
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">370</span>px<span class="token punctuation">;</span>
-
-<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
-
-<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-
-<span class="token selector"><span class="token id">#app</span><span class="token pseudo-element">::after</span></span><span class="token punctuation">{</span>
-
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-
-<span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token property">right</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-
-<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
-
-<span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url(./heroheart.jpg)</span><span class="token punctuation">;</span>
-
-<span class="token property">background-size</span><span class="token punctuation">:</span>cover <span class="token punctuation">;</span>
-
-<span class="token property">z-index</span><span class="token punctuation">:</span> -<span class="token number">1</span><span class="token punctuation">;</span>
-
-<span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span><span class="token number">37</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-
-<span class="token selector">p</span><span class="token punctuation">{</span>
-
-<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">28</span>px<span class="token punctuation">;</span>
-
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#FFFFFF</span><span class="token punctuation">;</span>
-
-<span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">30</span>px<span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
+数组存储性能比对象好，因此在开发中经常使用。
 </code></pre>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<h5 id="创建数组对象"><a href="#创建数组对象" class="headerlink" title="创建数组对象"></a>创建数组对象</h5><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// []</span>
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>时间带走了回不去的青春，<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+向数组添加元素
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'hello'</span>  <span class="token comment" spellcheck="true">// console.log(arr1[0])  hello ---> string</span>
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>却带不走我一往无前的心！<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+如果读取不存在的下标，不会报错，而是会返回undefined，就像的确不存在的对象属性也不会报错，也会报undefined一样。
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>世间万物，万般困难、<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+数组长度：
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>能耐我何？<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+数组<span class="token punctuation">.</span>length  <span class="token comment" spellcheck="true">// arr.length</span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+若是不连续的数组，length会获取最大的索引<span class="token operator">+</span><span class="token number">1</span>。
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"1"</span>
+arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"2"</span>
+arr<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"3"</span>  
+
+尽量不要创建非连续数组。
+
+修改数组length 属性，若修改length大于原长度，多出的会显示empty<span class="token punctuation">;</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 4 [1, 3, 5, empty]</span>
+
+若修改的length小于原长度，值保留对应长度的，多余的会被删除。因此可用length来删除一些元素
+</code></pre>
+<pre class=" language-js"><code class="language-js">向数组最后位置添加一个元素
+
+arr<span class="token punctuation">[</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"70"</span>  
+
+为什么使用arr<span class="token punctuation">.</span>length可以向最后的位置添加？length是最大的索引（index） <span class="token operator">+</span> <span class="token number">1</span>，所以 arr<span class="token punctuation">.</span>length 意为最大的索引 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>也就是增加一项。（下一位索引）
+</code></pre>
+<h5 id="数组字面量"><a href="#数组字面量" class="headerlink" title="数组字面量"></a>数组字面量</h5><pre class=" language-js"><code class="language-js">语法 ： <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+与 <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span>一样，但字面量创建的更加简单！
+
+向数组arr<span class="token punctuation">.</span>hello <span class="token operator">=</span> <span class="token string">"123"</span> 是完全正确的，但这样没有任何意义，数组最大的特点便是下标（索引）。
+
+使用数组字面量的方式创建数组，可以在创建时就指定数组中的元素。  <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+
+使用构造函数创建函数
+<span class="token keyword">let</span> arr3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr3<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [10, 20, 30]</span>
+
+不同：
+arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">// 创建一个数组，里面只有一个元素（10）</span>
+
+arr4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 创建一个长度为10 的数组</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js">数组中的元素可以是任意数据类型，亦可以是对象。
+
+例如： <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>name <span class="token punctuation">:</span> <span class="token string">"wind"</span><span class="token punctuation">}</span>
+    
+     <span class="token keyword">let</span> arr5 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'length----->'</span><span class="token punctuation">,</span>arr5<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 0</span>
+     arr5<span class="token punctuation">[</span>arr5<span class="token punctuation">.</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> obj
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr5<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [{...}]</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr5<span class="token punctuation">.</span>length<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 1</span>
+
+也可以是函数：
+
+     <span class="token keyword">let</span> arr7 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'11111'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+    
+     arr7<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 调用</span>
+
+亦可以是数组 ：
+
+     <span class="token keyword">let</span> arr9 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr9<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//  [4, 8, 10]</span>
+</code></pre>
+<h5 id="数组四方法"><a href="#数组四方法" class="headerlink" title="数组四方法"></a>数组四方法</h5><pre class=" language-js"><code class="language-js">push ：向数组的末尾添加一个或多个元素，并返回数组新长度。返回值为数组新长度。
+
+pop ： 删除数组最后一个元素，返回值是被删除元素。
+
+Unshift ：向数组开头添加一个或多个元素并返回新的长度，插入元素，后面的元素索引依次调整。
+
+shift ：删除数组第一个元素，将被删除元素作为返回值。
+</code></pre>
+<h5 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h5><pre class=" language-js"><code class="language-js">遍历就是将数组中所有元素取出来。
+
+    <span class="token keyword">let</span> arr10 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+    
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr10<span class="token punctuation">.</span>length <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'item----->'</span><span class="token punctuation">,</span>arr10<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+数组遍历之forEach<span class="token punctuation">:</span>
+
+forEach 以一个函数为参数，它的参数就是回调函数，回调函数我们并没有调，而是浏览器调了。
+
+arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'111'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+数组有几个元素，函数就会执行几次，每次执行浏览器会将遍历的元素以实参形式传递进来。
+
+浏览器向该回调函数传递了三个参数：
+
+第一个参数为数组的每一项，第二个参数为每一项的下标，第三个参数为正在遍历的数组。
+
+arr10<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1111'</span><span class="token punctuation">,</span>item<span class="token punctuation">,</span>index<span class="token punctuation">,</span>c<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+实参列表<span class="token punctuation">.</span>html<span class="token punctuation">:</span><span class="token number">55</span> <span class="token number">1111</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+实参列表<span class="token punctuation">.</span>html<span class="token punctuation">:</span><span class="token number">55</span> <span class="token number">1111</span> <span class="token number">2</span> <span class="token number">1</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+实参列表<span class="token punctuation">.</span>html<span class="token punctuation">:</span><span class="token number">55</span> <span class="token number">1111</span> <span class="token number">4</span> <span class="token number">2</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+实参列表<span class="token punctuation">.</span>html<span class="token punctuation">:</span><span class="token number">55</span> <span class="token number">1111</span> <span class="token number">5</span> <span class="token number">3</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+实参列表<span class="token punctuation">.</span>html<span class="token punctuation">:</span><span class="token number">55</span> <span class="token number">1111</span> <span class="token number">7</span> <span class="token number">4</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+实参列表<span class="token punctuation">.</span>html<span class="token punctuation">:</span><span class="token number">55</span> <span class="token number">1111</span> <span class="token number">8</span> <span class="token number">5</span> <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+</code></pre>
+<h5 id="数组方法slice-splice"><a href="#数组方法slice-splice" class="headerlink" title="数组方法slice,splice"></a>数组方法slice,splice</h5><pre class=" language-js"><code class="language-js">slice 
+
+包含两个参数，
+第一个参数为开始下标（包括开始索引），第二个参数为结束下标（不包括结束索引）。
+
+只写一个参数，会截取以开始到后面所有的。
+
+slice不会影响原数组。
+
+如果传递一个负值，则从后往前计算。
+
+splice
+
+会影响原数组，会将指定元素从数组删除，并将被删除元素作为返回值返回。
+
+包含三个参数，
+
+第一个参数表示开始位置索引，
+
+第二个参数表示删除数量，
+
+第三个参数可传递一些新元素，会自动插入开始位置前。
+</code></pre>
+<h5 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h5><pre class=" language-js"><code class="language-js">待续。。。
+</code></pre>
+<h5 id="数组其他方法"><a href="#数组其他方法" class="headerlink" title="数组其他方法"></a>数组其他方法</h5><pre class=" language-js"><code class="language-js">concat
+
+<span class="token function">合并数组，concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>中除可以传数组，也可以传单个元素。
+
+arr1<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>arr2<span class="token punctuation">,</span> <span class="token string">"牛恒"</span><span class="token punctuation">)</span>
+
+join
+
+将数组所有元素放入字符串，不会影响原数组，而是将转换的字符串作为结果返回。
+
+<span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span>括号中可指定一个字符作为元素的连接符。
+
+
+reverse
+
+反转数组
+
+sort
+
+对数组进行排序，会影响原数组。按unicode编码进行排序，小的在前，大的在后，abc在前，efd在后。
+
+排序数字：
+
+排序数字也是按照unicode编码排序，但可能得到错误的结果
+arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">11</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [11, 3, 4, 5, 7]</span>
+
+指定排序规则
+
+可在sort中添加一个回调函数，浏览器会分别使用数组中的元素作为实参去调用回调函数。
+
+arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+
+arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a = "</span> <span class="token operator">+</span> a<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b = "</span> <span class="token operator">+</span> b<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/**
+得到：
+ "a = 5"
+ "b = 4"
+ "a = 4"
+ "b = 3"
+*/</span>
+
+使用哪个元素调用不太确定，但确定的是<span class="token punctuation">,</span>在数组中a一定在b的前面。
+
+浏览器会根据函数的返回值来决定元素的顺序。
+若返回一个大于<span class="token number">0</span>的值，则元素交换位置。
+若返回一个小于<span class="token number">0</span>的值，则元素位置不变。
+若返回一个<span class="token number">0</span>，则认为两元素相等，也不交换位置。
+
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>a <span class="token operator">></span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a <span class="token operator">&lt;</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+简写 ：
+
+升序 <span class="token keyword">return</span> a <span class="token operator">-</span> b
+
+降序 retun b <span class="token operator">-</span> a
 </code></pre>
 
                 
@@ -582,7 +722,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/">http://siberiabar2.github.io/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/</a>
+                    <a href="http://siberiabar2.github.io/2021/06/06/shu-zu-dui-xiang/">http://siberiabar2.github.io/2021/06/06/shu-zu-dui-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -620,8 +760,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/">
-                                    <span class="chip bg-color">css 磨砂，模糊</span>
+                                <a href="/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/">
+                                    <span class="chip bg-color">数组对象</span>
                                 </a>
                             
                         </div>
@@ -792,7 +932,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-04-27T23-17-54',
+        id: '2021-06-06T16-26-59',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -816,7 +956,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Tue Apr 27 2021 23:17:54 GMT+0800',
+    id: 'Sun Jun 06 2021 16:26:59 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -841,9 +981,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/';
-        this.page.identifier = '/2021/04/27/css-mo-sha-xiao-guo-mo-hu-xiao-guo/';
-        this.page.title = 'css磨砂效果，模糊效果';
+        this.page.url = 'http://siberiabar2.github.io/2021/06/06/shu-zu-dui-xiang/';
+        this.page.identifier = '/2021/06/06/shu-zu-dui-xiang/';
+        this.page.title = '数组对象';
     };
     let disqus_shortname = '';
 
@@ -1161,17 +1301,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/27/jie-jue-openssl-bao-cuo/">
+                <a href="/2021/06/06/shu-zu-dui-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="解决OpenSSL报错">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="数组对象">
                         
-                        <span class="card-title">解决OpenSSL报错</span>
+                        <span class="card-title">数组对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1181,9 +1322,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1192,11 +1333,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/">
-                        <span class="chip bg-color">Git报错解决</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/">
+                        <span class="chip bg-color">数组对象</span>
                     </a>
                     
                 </div>
@@ -1210,13 +1352,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/25/hello-world/">
+                <a href="/2021/05/30/may30/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="May30">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">May30</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1227,7 +1369,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
                             </span>
                         <span class="publish-author">
                             
@@ -1236,6 +1378,14 @@ gitment.render('gitment-content');
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">错误总结</span>
+                    </a>
+                    
                 </div>
                 
             </div>
