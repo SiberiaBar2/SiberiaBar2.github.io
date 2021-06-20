@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-06-06T10:02:38.295Z</updated>
+  <updated>2021-06-20T09:34:28.995Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>June20</title>
+    <link href="http://siberiabar2.github.io/2021/06/20/june20/"/>
+    <id>http://siberiabar2.github.io/2021/06/20/june20/</id>
+    <published>2021-06-20T08:25:43.000Z</published>
+    <updated>2021-06-20T09:34:28.995Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-css文字隐藏，hover上去显示全部。&quot;&gt;&lt;a href=&quot;#1-css文字隐藏，hover上去显示全部。&quot; class=&quot;headerlink&quot; title=&quot;1. css文字隐藏，hover上去显示全部。&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数组对象</title>

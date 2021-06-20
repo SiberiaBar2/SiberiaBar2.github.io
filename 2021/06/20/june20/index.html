@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="May30, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="June20, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>May30 | 卡尔 · 弗兰兹</title>
+    <title>June20 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">May30</h1>
+                    <h1 class="description center-align post-title">June20</h1>
                 </div>
             </div>
         </div>
@@ -430,13 +430,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/">
-                                <span class="chip bg-color">错误总结</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -448,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-30
+                    2021-06-20
                 </div>
                 
 
@@ -457,14 +453,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    155
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -484,13 +480,143 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li><h4 id="在运行前-先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。"><a href="#在运行前-先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。" class="headerlink" title="在运行前 先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。"></a>在运行前 先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。</h4></li>
-<li><h4 id="记得连接N网。"><a href="#记得连接N网。" class="headerlink" title="记得连接N网。"></a>记得连接N网。</h4><p>悲伤难过解决不了问题，反而会影响人的判断和本该有的能力。冷静下来，想解决的办法和吸取上次失败的经验才是失败后该做的。</p>
-<p>我们生来就是为了经历苦难，打败苦难。超越苦难才是唯一的救赎，放纵和一时的安逸不过是慢性死亡。真正的勇士，就该直面苦难！</p>
-<p>不想百年之后想我此生枉过！</p>
-</li>
-</ol>
+                <h4 id="1-css文字隐藏，hover上去显示全部。"><a href="#1-css文字隐藏，hover上去显示全部。" class="headerlink" title="1. css文字隐藏，hover上去显示全部。"></a>1. css文字隐藏，hover上去显示全部。</h4><p>有些时候文字太长，但布局规定的范围可能给不了那么长，因此需要值显示一部分，hover的时候再显示全部。</p>
+<p>其实这个操作已经有了，不需要我们再操作的，通过下面的代码就能实现，不需要写多余的代码。</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>我爱夏天的风，冬天的雪，夏天的雨，和你的眼眸。<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>我爱夏天的风，冬天的雪，夏天的雨，和你的眼眸。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-CSS"><code class="language-CSS">p{
+    width:40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background: brown;
+    font-size: 12px;
+    color: white;
+}
+</code></pre>
+<p>补充： 其实也可以自己写，但这样就会有两个hover显示全部文字了。</p>
+<p>利用属性选自器和伪元素，为伪元素的content设置 attr(title)。</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">p<span class="token attribute">[title]</span></span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">40</span>px<span class="token punctuation">;</span>
+    <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+    <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> brown<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">p<span class="token attribute">[title]</span><span class="token pseudo-element">::before</span></span><span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">attr</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#F2F2F2</span><span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#E5E5E5</span><span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">2</span>px <span class="token number">4</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">56</span>,<span class="token number">62</span>,<span class="token number">71</span>,<span class="token number">0.10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">2</span>px<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">2</span>px <span class="token number">6</span>px<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">13</span>px<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#202332</span><span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span><span class="token number">106</span>px<span class="token punctuation">;</span> // 设置位置
+  <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> // 设置位置
+  <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">90%</span><span class="token punctuation">;</span>
+  <span class="token property">word-break</span><span class="token punctuation">:</span> break-word<span class="token punctuation">;</span> // 如果一个单词太长，则截断  CSS 属性 word-break 指定了怎样在单词内断行。
+  <span class="token property">white-space</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>// 可以换行  white-space CSS 属性是用来设置如何处理元素中的空白。
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="2-amp-amp-与-条件-if"><a href="#2-amp-amp-与-条件-if" class="headerlink" title="2.  &amp;&amp; 与 条件 if"></a>2.  &amp;&amp; 与 条件 if</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+从接口拿到的数据，一般要判断指针，避免空指针异常。
+
+在渲染时  list &amp;&amp; list.map( v => {} ) 如果list的值为 undefined 、 null 、 '' ,false, 后面的语句不会map。
+
+也可以这么写。 
+*/</span>
+
+<span class="token punctuation">(</span> list 
+ <span class="token operator">?</span> list
+ <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> v <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/**
+上面这种方式会在list的值为空时( undefined 、 null 、 '' ,false),取空数组。
+
+空数组map,map中的回调函数不会执行！ map和foreach一样，被遍历数组有几个元素，回调执行几次，反之一个元素都没有，那么回调一次都不执行。
+
+在if判断时，   如果list的值为undefined 、 null 、 '' ,false, 则不执行该条件语句
+*/</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span> list <span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/**
+无论是 list &amp;&amp; list.map 或是 ( list 
+ ? list
+ : []
+).map( v => {}) 
+
+都只能判断值不为 undefined 、 null 、 '' ,false 的情况。如果数据是一个空对象，是满足不为四种情况的，因此都会map，
+
+而此时空对象map就会报错，因为对象没有map方法。
+
+ps : 一般遍历数据，基本上对数据结构很清楚，因此不需要做过多限制，而有时在没数据或其他情况下，对一个数据进行map， 即使有了
+ list &amp;&amp; list.map 或是 ( list 
+ ? list
+ : []
+).map( v => {}) 这样的操作也是会报错的，因为数据格式不是一个数组，而我们又没有对遍历数据做遍历前的限制。
+*/</span>
+
+<span class="token comment" spellcheck="true">// 当map 不是一个数组时可能会报的错</span>
+xx<span class="token punctuation">.</span>map is not defined 
+
+xx<span class="token punctuation">.</span>map is not a <span class="token keyword">function</span>
+
+
+<span class="token comment" spellcheck="true">// 限制遍历数据的  限制(一定为一个数组时遍历，其他情况不遍历)</span>
+
+<span class="token comment" spellcheck="true">// Array.isArray(list) 检测数据是否为数组，若是，返回true（包含空数组）</span>
+list <span class="token operator">&amp;&amp;</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> v <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="3-为什么一个元素的-offsetscrollHeight-是它的最大高-？"><a href="#3-为什么一个元素的-offsetscrollHeight-是它的最大高-？" class="headerlink" title="3. 为什么一个元素的  offsetscrollHeight 是它的最大高 ？"></a>3. 为什么一个元素的  offsetscrollHeight 是它的最大高 ？</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 经这样一操作， table 有了一个最大高maxHeight 和overflowY</span>
+<span class="token keyword">const</span> getHeight <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> heights <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">queruSelect</span><span class="token punctuation">(</span><span class="token string">'.abc'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> heights <span class="token operator">?</span> height <span class="token operator">-</span> <span class="token number">150</span> <span class="token punctuation">:</span> <span class="token number">300</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span>Table
+<span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token operator">...</span>
+<span class="token operator">...</span>
+style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> y <span class="token punctuation">:</span> <span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">></span>
+    
+    待续<span class="token operator">...</span>
+</code></pre>
+<h4 id="4-mobx-使用心得"><a href="#4-mobx-使用心得" class="headerlink" title="4. mobx 使用心得"></a>4. mobx 使用心得</h4><pre class=" language-js"><code class="language-js">组件通信通过props传值，子组件 通过<span class="token keyword">this</span><span class="token punctuation">.</span>props <span class="token operator">||</span> props 接收，这样麻烦而且有一些局限性。
+
+而mobx 就是一个store 类似数据处理和存储库的东西，你完全可以把接口拿到的数据在mobx中处理好，然后直接传给jsx。
+
+mobx中的 @oberserver 就好比声明了一个变量，初始值是一个定值，这并不重要。
+
+@action 动作，其实就是函数，能做一些事情，用它通常用来变更定义的 @oberserver， 实现一些功能 ，
+
+因此你经常会看到这样的定义 ： @action addNameList <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> 
+    <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token operator">...</span><span class="token punctuation">.</span> <span class="token comment" spellcheck="true">// list是 @oberserver定义的变量</span>
+<span class="token punctuation">}</span>
+
+以上方法是使用了装饰器的方法
+
+通常定义mobx ，需要写一个<span class="token keyword">class</span> <span class="token punctuation">,</span> 在<span class="token keyword">class</span> 中 定义一些 @oberserver 和 @action，
+
+在暴露文件时，要<span class="token keyword">new</span>一下这个暴露的<span class="token keyword">class</span> ，
+
+在store文件建一个index<span class="token punctuation">.</span>jsx 引入并再次暴露这些 定义的<span class="token keyword">class</span> 。
+
+
+在jsx 文件需要注入并监听注入的变量。 注入 @<span class="token function">inject</span><span class="token punctuation">(</span><span class="token string">"Dbc"</span><span class="token punctuation">)</span>   @obsrever <span class="token punctuation">(</span>若store的值发生了变化则自动更新该jsx文件的值<span class="token punctuation">)</span>
+
+使用一个store <span class="token punctuation">(</span><span class="token keyword">class</span><span class="token punctuation">)</span> 中的变量和函数，需要引入，
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span>addNameList <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>Dbc
+
+对于使用了react hooks的函数组件，需要使用mobx6。
+</code></pre>
 
                 
             </div>
@@ -517,7 +643,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/05/30/may30/">http://siberiabar2.github.io/2021/05/30/may30/</a>
+                    <a href="http://siberiabar2.github.io/2021/06/20/june20/">http://siberiabar2.github.io/2021/06/20/june20/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,11 +680,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/">
-                                    <span class="chip bg-color">错误总结</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -727,7 +849,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-05-30T18-46-41',
+        id: '2021-06-20T16-25-43',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -751,7 +873,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun May 30 2021 18:46:41 GMT+0800',
+    id: 'Sun Jun 20 2021 16:25:43 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -776,9 +898,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/05/30/may30/';
-        this.page.identifier = '/2021/05/30/may30/';
-        this.page.title = 'May30';
+        this.page.url = 'http://siberiabar2.github.io/2021/06/20/june20/';
+        this.page.identifier = '/2021/06/20/june20/';
+        this.page.title = 'June20';
     };
     let disqus_shortname = '';
 
@@ -1096,9 +1218,48 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/06/20/june20/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="June20">
+                        
+                        <span class="card-title">June20</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            卡尔 · 弗兰兹
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/06/06/shu-zu-dui-xiang/">
                     <div class="card-image">
@@ -1116,9 +1277,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1132,51 +1293,6 @@ gitment.render('gitment-content');
                     
                     <a href="/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/">
                         <span class="chip bg-color">数组对象</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/05/27/this-zhi-xiang-gou-zao-han-shu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="this指向、构造函数">
-                        
-                        <span class="card-title">this指向、构造函数</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            卡尔 · 弗兰兹
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/this%E6%8C%87%E5%90%91%E3%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">this指向、构造函数</span>
                     </a>
                     
                 </div>
