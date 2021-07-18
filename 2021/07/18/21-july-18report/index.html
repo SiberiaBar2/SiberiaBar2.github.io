@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="friends, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="21-july-18report, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>friends | 卡尔 · 弗兰兹</title>
+    <title>21-july-18report | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">friends</h1>
+                    <h1 class="description center-align post-title">21-july-18report</h1>
                 </div>
             </div>
         </div>
@@ -444,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-09
+                    2021-07-18
                 </div>
                 
 
@@ -453,7 +453,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11
+                    408
                 </div>
                 
 
@@ -480,7 +480,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>刘恒的个人博客：<a target="_blank" rel="noopener" href="https://mymessages.github.io/">https://mymessages.github.io/</a></p>
+                <h4 id="Object的三种方法"><a href="#Object的三种方法" class="headerlink" title="Object的三种方法"></a>Object的三种方法</h4><pre class=" language-js"><code class="language-js">Object<span class="token punctuation">.</span>keys 会返回一个数组，数字组中的元素全部为字符串，是对象的键。
+Object<span class="token punctuation">.</span>values <span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span>，数组中的元素皆为对象的键所对应的值。
+Object<span class="token punctuation">.</span>entries 返回一个二维数组，其中的每一个元素为数组，元素数组中包含键名和值两个元素。
+</code></pre>
+<h4 id="React-Props-类型校验-和默认值指定"><a href="#React-Props-类型校验-和默认值指定" class="headerlink" title="React Props 类型校验 和默认值指定"></a>React Props 类型校验 和默认值指定</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> propTypes <span class="token keyword">from</span> <span class="token string">'prop-types'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SvgEditor</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 指定外部传入的数据类型，若不符合指定的数据类型，则给出精确的报错！</span>
+SvgEditor<span class="token punctuation">.</span>propTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  width<span class="token punctuation">:</span> propTypes<span class="token punctuation">.</span>string
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 定义默认的props，防止当外部未传入该变量时发生报错。</span>
+SvgEditor<span class="token punctuation">.</span>defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span>
+  height<span class="token punctuation">:</span> <span class="token number">200</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="防抖和节流"><a href="#防抖和节流" class="headerlink" title="防抖和节流"></a>防抖和节流</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 防抖：防止多次触发函数，在一定时间内只能触发一次。</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment" spellcheck="true">//借助闭包</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 如果正在计时，取消之前的计时(清除定时器)，重新开始计时。</span>
+            <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> 
+        <span class="token punctuation">}</span>
+        timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 其他情况，说明当前并没有在计时，那么就开始一个计时</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">/**
+   * 类似于技能冷却
+   * 在一定时间内已经触发过函数，在该时间段内再次点击或多次点击不能触发函数；
+   * 除非等事件结束方可再点击
+   * 但有一个问题，第一次执行函数是有延迟的。
+  */</span>
+
+  btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> status <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>status<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">// 点过了就不能再点了</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">// 没点过的情况下，允许点击（触发函数）</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        status <span class="token operator">=</span> <span class="token boolean">false</span>   <span class="token comment" spellcheck="true">// 点过后就不能再点了</span>
+        timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'间隔执行'</span><span class="token punctuation">)</span> 
+          status <span class="token operator">=</span> <span class="token boolean">true</span>  <span class="token comment" spellcheck="true">// 在一定时间后，允许点击</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre>
 
                 
             </div>
@@ -507,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/friends/index.html">http://siberiabar2.github.io/friends/index.html</a>
+                    <a href="http://siberiabar2.github.io/2021/07/18/21-july-18report/">http://siberiabar2.github.io/2021/07/18/21-july-18report/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,7 +769,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-05-09T20-38-52',
+        id: '2021-07-18T21-01-39',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -737,7 +793,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun May 09 2021 20:38:52 GMT+0800',
+    id: 'Sun Jul 18 2021 21:01:39 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -762,9 +818,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/friends/index.html';
-        this.page.identifier = '/friends/index.html';
-        this.page.title = 'friends';
+        this.page.url = 'http://siberiabar2.github.io/2021/07/18/21-july-18report/';
+        this.page.identifier = '/2021/07/18/21-july-18report/';
+        this.page.title = '21-july-18report';
     };
     let disqus_shortname = '';
 
@@ -1087,13 +1143,13 @@ gitment.render('gitment-content');
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/friends/index.html">
+                <a href="/2021/07/18/21-july-18report/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="friends">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="21-july-18report">
                         
-                        <span class="card-title">friends</span>
+                        <span class="card-title">21-july-18report</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1104,7 +1160,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
                             </span>
                         <span class="publish-author">
                             
@@ -1122,16 +1178,16 @@ gitment.render('gitment-content');
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/friends/index.html">
+                <a href="/2021/06/20/june20/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="friends">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="June20">
                         
-                        <span class="card-title">friends</span>
+                        <span class="card-title">June20</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1142,7 +1198,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
                             </span>
                         <span class="publish-author">
                             
@@ -1152,7 +1208,6 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

@@ -453,14 +453,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -617,6 +617,97 @@ mobx中的 @oberserver 就好比声明了一个变量，初始值是一个定值
 
 对于使用了react hooks的函数组件，需要使用mobx6。
 </code></pre>
+<h4 id="5-如何处理不同类型的信息版"><a href="#5-如何处理不同类型的信息版" class="headerlink" title="5. 如何处理不同类型的信息版"></a>5. 如何处理不同类型的信息版</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+有些时候需要展示字段完全不同的信息版，这时写多种版面是费力且难写的。
+
+此时我们就需要将switch 封装成一个函数，return 不同的数据就好了。
+*/</span>
+
+util<span class="token punctuation">.</span>js
+
+<span class="token keyword">const</span> getInforMation <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> InfoContent 
+    
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">"1"</span> <span class="token punctuation">:</span> 
+        InfoContent <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+            value<span class="token punctuation">:</span> item<span class="token punctuation">.</span>value
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>  
+        breake <span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token string">"2"</span> <span class="token punctuation">:</span> 
+        InfoContent <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+            value<span class="token punctuation">:</span> item<span class="token punctuation">.</span>value
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>  
+        breake <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">return</span> InfoContent
+<span class="token punctuation">}</span>
+
+
+Demo<span class="token punctuation">.</span>jsx
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+    getInforMation
+<span class="token punctuation">}</span> 
+<span class="token keyword">from</span> <span class="token string">'./util.js'</span>
+
+<span class="token keyword">const</span> renderifferentPanel <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> lists <span class="token operator">=</span> <span class="token function">getInforMation</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> lists<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> v <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>div 
+        className<span class="token operator">=</span><span class="token string">"lists"</span>
+        key<span class="token operator">=</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>id<span class="token punctuation">}</span>
+        <span class="token operator">></span>
+            <span class="token operator">&lt;</span>span<span class="token operator">></span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+            <span class="token operator">&lt;</span>span<span class="token operator">></span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>value<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> panles <span class="token operator">=</span> <span class="token punctuation">(</span>datas<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> val <span class="token operator">=</span> <span class="token function">renderifferentPanel</span><span class="token punctuation">(</span>datas<span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">...</span><span class="token punctuation">.</span>
+    <span class="token operator">...</span><span class="token punctuation">.</span>
+    <span class="token operator">...</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">{</span>val<span class="token punctuation">}</span>   <span class="token comment" spellcheck="true">// 返回视图</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token punctuation">}</span>
+
+补充： 需要在不同的类型下展示不同的页面效果。
+
+思路<span class="token punctuation">:</span> 根据数值来判断！
+
+<span class="token keyword">const</span> panles <span class="token operator">=</span> <span class="token punctuation">(</span>datas<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> val <span class="token operator">=</span> <span class="token function">renderifferentPanel</span><span class="token punctuation">(</span>datas<span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">cx</span><span class="token punctuation">(</span><span class="token string">'panles'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'vids'</span><span class="token punctuation">,</span>datas<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'5'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+    <span class="token operator">...</span><span class="token punctuation">.</span>
+    <span class="token operator">...</span><span class="token punctuation">.</span>
+    <span class="token punctuation">{</span>datas <span class="token operator">&amp;&amp;</span> datas<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'5'</span> <span class="token operator">&lt;</span>span<span class="token operator">></span><span class="token punctuation">{</span>datas<span class="token punctuation">.</span>Ip<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// type 为 5 时显示</span>
+    <span class="token operator">...</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">{</span>val<span class="token punctuation">}</span>  
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.panles</span></span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+    <span class="token property">heigth</span><span class="token punctuation">:</span> <span class="token number">120</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.vids</span></span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">500</span>px <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="6-有时在请求某些视频时，需要先握手"><a href="#6-有时在请求某些视频时，需要先握手" class="headerlink" title="6. 有时在请求某些视频时，需要先握手"></a>6. 有时在请求某些视频时，需要先握手</h4><p>实际上是在请求视频数据的接口后，在请求成功的情况下， 再发起一次axios请求（需要传递特定的参数）。握手成功，返回视频流数据，若无此次握手，只返回普通数据，不返回视频流？</p>
 
                 
             </div>
@@ -1218,18 +1309,17 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/20/june20/">
+                <a href="/2021/07/18/21-july-18report/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="June20">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="21-july-18report">
                         
-                        <span class="card-title">June20</span>
+                        <span class="card-title">21-july-18report</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1239,9 +1329,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1250,7 +1340,6 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1497,7 +1586,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.4k</span>
+                        class="white-color">13.2k</span>
             
             
             
