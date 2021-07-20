@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="卡尔 · 弗兰兹" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="卡尔 · 弗兰兹" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    596
+                    720
                 </div>
                 
 
@@ -559,6 +559,12 @@
        <span class="token comment" spellcheck="true">/**
           在渲染时如果数据量过大，搜索框会出现卡顿
           因此不能直接渲染全部数据
+          
+          补充：这里截取数组 为什么使用了slice 而不是 splice?
+          splice操作原数组，而slice不会操作原数组，使用splice 数据会自动删，
+          如果有2003条数据，那么最后只会剩下3条数据！
+          原因： 一份数据存了两份，操作一份数据会影响另一份数据！这是浅拷贝的问题，
+          slice不影响原数组，所以数据不会变少。在多数情况下，建议不要操作原数据。
        */</span>
         <span class="token punctuation">{</span><span class="token punctuation">(</span>realyDatas<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">30</span> 
           <span class="token operator">?</span> realyDatas<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span> 
@@ -1464,7 +1470,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.2k</span>
+                        class="white-color">13.3k</span>
             
             
             
