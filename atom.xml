@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-07-20T06:10:40.821Z</updated>
+  <updated>2021-07-21T15:48:43.327Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>严格模式与es5对象的两种扩展</title>
+    <link href="http://siberiabar2.github.io/2021/07/21/yan-ge-mo-shi-yu-es5-dui-xiang-de-liang-chong-kuo-zhan/"/>
+    <id>http://siberiabar2.github.io/2021/07/21/yan-ge-mo-shi-yu-es5-dui-xiang-de-liang-chong-kuo-zhan/</id>
+    <published>2021-07-21T15:17:48.000Z</published>
+    <updated>2021-07-21T15:48:43.327Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;严格模式&quot;&gt;&lt;a href=&quot;#严格模式&quot; class=&quot;headerlink&quot; title=&quot;严格模式&quot;&gt;&lt;/a&gt;严格模式&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="严格模式  对象es5两种扩展" scheme="http://siberiabar2.github.io/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F-%E5%AF%B9%E8%B1%A1es5%E4%B8%A4%E7%A7%8D%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>21-july-18report</title>
@@ -460,27 +483,6 @@
     
     
     <category term="css 磨砂，模糊" scheme="http://siberiabar2.github.io/tags/css-%E7%A3%A8%E7%A0%82%EF%BC%8C%E6%A8%A1%E7%B3%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://siberiabar2.github.io/2021/04/25/hello-world/"/>
-    <id>http://siberiabar2.github.io/2021/04/25/hello-world/</id>
-    <published>2021-04-25T15:46:44.136Z</published>
-    <updated>2021-04-25T15:46:44.136Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
