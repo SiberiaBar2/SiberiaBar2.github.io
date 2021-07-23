@@ -460,7 +460,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -573,49 +573,59 @@ xx<span class="token punctuation">.</span>map is not a <span class="token keywor
 <span class="token comment" spellcheck="true">// Array.isArray(list) 检测数据是否为数组，若是，返回true（包含空数组）</span>
 list <span class="token operator">&amp;&amp;</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span> v <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
-<h4 id="3-为什么一个元素的-offsetscrollHeight-是它的最大高-？"><a href="#3-为什么一个元素的-offsetscrollHeight-是它的最大高-？" class="headerlink" title="3. 为什么一个元素的  offsetscrollHeight 是它的最大高 ？"></a>3. 为什么一个元素的  offsetscrollHeight 是它的最大高 ？</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 经这样一操作， table 有了一个最大高maxHeight 和overflowY</span>
+<h4 id="3-Ant-Design-Table-可设置最大高度"><a href="#3-Ant-Design-Table-可设置最大高度" class="headerlink" title="3. Ant-Design     Table 可设置最大高度"></a>3. Ant-Design     Table 可设置最大高度</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 经这样一操作， table 有了一个最大高maxHeight 和overflowY</span>
+
+<span class="token comment" spellcheck="true">// x ,y (横向、纵向滚动，也可用于指定滚动区域的宽、高)</span>
 <span class="token keyword">const</span> getHeight <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> heights <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">queruSelect</span><span class="token punctuation">(</span><span class="token string">'.abc'</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> heights <span class="token operator">?</span> height <span class="token operator">-</span> <span class="token number">150</span> <span class="token punctuation">:</span> <span class="token number">300</span>
+    <span class="token keyword">return</span> heights<span class="token punctuation">.</span>offsetHeight <span class="token operator">?</span> heights<span class="token punctuation">.</span>offsetHeight  <span class="token operator">-</span> <span class="token number">150</span> <span class="token punctuation">:</span> <span class="token number">300</span>
 <span class="token punctuation">}</span>
 
 <span class="token operator">&lt;</span>Table
 <span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token operator">...</span>
 <span class="token operator">...</span>
-style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> y <span class="token punctuation">:</span> <span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+scroll<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> y <span class="token punctuation">:</span> <span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token operator">></span>
     
     待续<span class="token operator">...</span>
 </code></pre>
-<h4 id="4-mobx-使用心得"><a href="#4-mobx-使用心得" class="headerlink" title="4. mobx 使用心得"></a>4. mobx 使用心得</h4><pre class=" language-js"><code class="language-js">组件通信通过props传值，子组件 通过<span class="token keyword">this</span><span class="token punctuation">.</span>props <span class="token operator">||</span> props 接收，这样麻烦而且有一些局限性。
+<h4 id="4-mobx-使用心得"><a href="#4-mobx-使用心得" class="headerlink" title="4. mobx 使用心得"></a>4. mobx 使用心得</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+组件通信通过props传值，子组件 通过this.props || props 接收，这样麻烦而且有一些局限性。
 
-而mobx 就是一个store 类似数据处理和存储库的东西，你完全可以把接口拿到的数据在mobx中处理好，然后直接传给jsx。
+而mobx 就是一个store, 类似数据处、存储库的东西，你完全可以把接口拿到的数据在mobx中处理好，然后直接传给jsx。
 
 mobx中的 @oberserver 就好比声明了一个变量，初始值是一个定值，这并不重要。
 
 @action 动作，其实就是函数，能做一些事情，用它通常用来变更定义的 @oberserver， 实现一些功能 ，
 
-因此你经常会看到这样的定义 ： @action addNameList <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> 
+因此你经常会看到这样的定义 ：
+*/</span>
+
+ @oberserver list <span class="token operator">=</span> <span class="token string">'aaa'</span>
+
+ @action addNameList <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> 
     <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token operator">...</span><span class="token punctuation">.</span> <span class="token comment" spellcheck="true">// list是 @oberserver定义的变量</span>
 <span class="token punctuation">}</span>
 
+<span class="token comment" spellcheck="true">/**
 以上方法是使用了装饰器的方法
 
-通常定义mobx ，需要写一个<span class="token keyword">class</span> <span class="token punctuation">,</span> 在<span class="token keyword">class</span> 中 定义一些 @oberserver 和 @action，
+通常定义mobx ，需要写一个class , 在class 中 定义一些 @oberserver 和 @action，
 
-在暴露文件时，要<span class="token keyword">new</span>一下这个暴露的<span class="token keyword">class</span> ，
+在暴露文件时，要new一下这个暴露的class ，
 
-在store文件建一个index<span class="token punctuation">.</span>jsx 引入并再次暴露这些 定义的<span class="token keyword">class</span> 。
+在store文件建一个index.jsx 引入并再次暴露这些 定义的class 。
 
 
-在jsx 文件需要注入并监听注入的变量。 注入 @<span class="token function">inject</span><span class="token punctuation">(</span><span class="token string">"Dbc"</span><span class="token punctuation">)</span>   @obsrever <span class="token punctuation">(</span>若store的值发生了变化则自动更新该jsx文件的值<span class="token punctuation">)</span>
+在jsx 文件需要注入并监听注入的变量。 注入 @inject("Dbc")   @obsrever (若store的值发生了变化则自动更新该jsx文件的值)
 
-使用一个store <span class="token punctuation">(</span><span class="token keyword">class</span><span class="token punctuation">)</span> 中的变量和函数，需要引入，
+使用一个store (class) 中的变量和函数，需要引入，
+*/</span>
 
 <span class="token keyword">const</span> <span class="token punctuation">{</span>addNameList <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>Dbc
 
-对于使用了react hooks的函数组件，需要使用mobx6。
+<span class="token comment" spellcheck="true">// 对于使用了react hooks的函数组件，需要使用mobx6。</span>
 </code></pre>
 <h4 id="5-如何处理不同类型的信息版"><a href="#5-如何处理不同类型的信息版" class="headerlink" title="5. 如何处理不同类型的信息版"></a>5. 如何处理不同类型的信息版</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
 有些时候需要展示字段完全不同的信息版，这时写多种版面是费力且难写的。
@@ -623,7 +633,7 @@ mobx中的 @oberserver 就好比声明了一个变量，初始值是一个定值
 此时我们就需要将switch 封装成一个函数，return 不同的数据就好了。
 */</span>
 
-util<span class="token punctuation">.</span>js
+<span class="token comment" spellcheck="true">// util.js</span>
 
 <span class="token keyword">const</span> getInforMation <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token keyword">let</span> InfoContent 
@@ -647,7 +657,7 @@ util<span class="token punctuation">.</span>js
 <span class="token punctuation">}</span>
 
 
-Demo<span class="token punctuation">.</span>jsx
+<span class="token comment" spellcheck="true">// Demo.jsx</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span>
     getInforMation
@@ -680,9 +690,9 @@ Demo<span class="token punctuation">.</span>jsx
     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token punctuation">}</span>
 
-补充： 需要在不同的类型下展示不同的页面效果。
+<span class="token comment" spellcheck="true">// 补充： 需要在不同的类型下展示不同的页面效果。</span>
 
-思路<span class="token punctuation">:</span> 根据数值来判断！
+<span class="token comment" spellcheck="true">// 思路: 根据数值来判断！</span>
 
 <span class="token keyword">const</span> panles <span class="token operator">=</span> <span class="token punctuation">(</span>datas<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> val <span class="token operator">=</span> <span class="token function">renderifferentPanel</span><span class="token punctuation">(</span>datas<span class="token punctuation">)</span>
@@ -707,7 +717,10 @@ Demo<span class="token punctuation">.</span>jsx
     <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px <span class="token important">!important</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="6-有时在请求某些视频时，需要先握手"><a href="#6-有时在请求某些视频时，需要先握手" class="headerlink" title="6. 有时在请求某些视频时，需要先握手"></a>6. 有时在请求某些视频时，需要先握手</h4><p>实际上是在请求视频数据的接口后，在请求成功的情况下， 再发起一次axios请求（需要传递特定的参数）。握手成功，返回视频流数据，若无此次握手，只返回普通数据，不返回视频流？</p>
+<h4 id="6-有时在请求某些视频时，需要先握手"><a href="#6-有时在请求某些视频时，需要先握手" class="headerlink" title="6. 有时在请求某些视频时，需要先握手"></a>6. 有时在请求某些视频时，需要先握手</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+实际上是在请求视频数据的接口后，在请求成功的情况下， 再发起一次axios请求（需要传递特定的参数）。握手成功，返回视频流数据，若无此次握手，只返回普通数据，不返回视频流？
+*/</span>
+</code></pre>
 
                 
             </div>
@@ -1586,7 +1599,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.9k</span>
+                        class="white-color">14k</span>
             
             
             

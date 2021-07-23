@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    628
+                    658
                 </div>
                 
 
@@ -496,9 +496,9 @@
   
   2. 八进制必须以0o开头， (如console.log(034) 就是八进制数据，以0开头的，就是八进制数据，javascript默认为八进制数据)；
   
-  3. eval函数只能进行简单的数值运算。(而不使用严格模式， eval函数是可以识别多种运算符的)
+  3. eval函数只能进行简单的数值运算。(而不使用严格模式， eval函数是可以识别多种运算符、和 var,let 等)
   
-  4. 严格模式不能删除变量， 而非严格模式可以删除。
+  4. 严格模式不能删除变量， 而非严格模式可以删除 (var age = 18 , delete age 在非严格模式中可以使用)。
   
   5. 严格模式没有this, 普通函数的this 指向window对象，而启用了严格模式后，this变为undefined。
   
@@ -514,16 +514,19 @@
 
 反序列化： JSON<span class="token conjunction variable">.</span>parse<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token verb keyword">,</span> <span class="token conjunction variable">..</span><span class="token conjunction variable">..</span><span class="token conjunction variable">..</span><span class="token verb keyword">,</span>参数是json串
 </code></pre>
-<h4 id="es5扩展-新建对象-和-给对象添加属性值"><a href="#es5扩展-新建对象-和-给对象添加属性值" class="headerlink" title="es5扩展 新建对象 和  给对象添加属性值"></a>es5扩展 新建对象 和  给对象添加属性值</h4><pre class=" language-js"><code class="language-js">  <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+<h4 id="es5扩展-新建对象-和-给对象添加属性值-（不常用，只在特定场景下使用）"><a href="#es5扩展-新建对象-和-给对象添加属性值-（不常用，只在特定场景下使用）" class="headerlink" title="es5扩展    新建对象    和   给对象添加属性值 （不常用，只在特定场景下使用）"></a>es5扩展    新建对象    和   给对象添加属性值 （不常用，只在特定场景下使用）</h4><pre class=" language-js"><code class="language-js">  <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
     name<span class="token punctuation">:</span><span class="token string">'Eric'</span><span class="token punctuation">,</span>
     age<span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">,</span>
     sex<span class="token punctuation">:</span><span class="token string">'男'</span>
   <span class="token punctuation">}</span>
   
-  <span class="token comment" spellcheck="true">// es5 创建对象的方式</span>
-  <span class="token comment" spellcheck="true">// 包含两个参数，第一个是原型对象，第二个是一个描述</span>
-  <span class="token comment" spellcheck="true">// 描述是一个对象，对象中属性名所对应的属性值是一个对象，包含四个属性。</span>
-  <span class="token comment" spellcheck="true">// 这样也算是继承了原型对象的属性和方法；可以在新建对象的_proto_看到继承的属性和方法。</span>
+  <span class="token comment" spellcheck="true">/**
+    es5 创建对象的方式
+    包含两个参数，第一个是原型对象，第二个是一个描述
+    描述是一个对象，对象中属性名所对应的属性值是一个对象，包含四个属性。
+    这样也是继承了原型对象的属性和方法；可以在新建对象的_proto_看到继承的属性和方法。
+  */</span>
+  
   <span class="token keyword">let</span> newObj <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span><span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 四个属性值默认均为false</span>
     address<span class="token punctuation">:</span><span class="token punctuation">{</span>
@@ -1453,7 +1456,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.9k</span>
+                        class="white-color">14k</span>
             
             
             
