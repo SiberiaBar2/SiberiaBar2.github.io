@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js总结, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="面向对象, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>js总结 | 卡尔 · 弗兰兹</title>
+    <title>面向对象 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">js总结</h1>
+                    <h1 class="description center-align post-title">面向对象</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/js/">
-                                <span class="chip bg-color">js</span>
+                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%EF%BC%8C%E5%AF%BC%E5%87%BA%E5%92%8C%E6%9A%B4%E9%9C%B2%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                                <span class="chip bg-color">面向对象、 文件操作，导出和暴露的方式</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-10
+                    2021-07-25
                 </div>
                 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    933
+                    852
                 </div>
                 
 
@@ -484,129 +484,223 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>JS：布兰登艾奇发明</p>
-<p>简称JS(javascript),与Java无本质关系</p>
-<p>JS是ECMA的体现，ECMA是JS的规范</p>
-<h4 id="什么是javascript-？"><a href="#什么是javascript-？" class="headerlink" title="什么是javascript ？"></a>什么是javascript ？</h4><p>基于对象和事件驱动的 解释性，程序设计脚本语言。</p>
-<p>基于对象：暂时省略..</p>
-<p>事件驱动： …</p>
-<p>解释性：…</p>
-<p>跨平台性：…</p>
-<pre class=" language-tcl"><code class="language-tcl">JS语法以;结尾，不写也行，浏览器会自动添加，但会消耗系统资源。
-JS会忽略多个换行和空格，因此我们可以对代码进行优化。
-字面量：不可改变的值，用的较少；
-变量：可保存字面量，且可以改变。
+                <h4 id="class"><a href="#class" class="headerlink" title="class"></a>class</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 创建一个类</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    name <span class="token operator">=</span> <span class="token string">"Eric"</span>  <span class="token comment" spellcheck="true">// 类的属性</span>
+    age <span class="token operator">=</span> <span class="token number">18</span>
+    hobby <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>     <span class="token comment" spellcheck="true">// 类的方法</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'make a teacher'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 一个类可以创建多个对象</span>
+
+<span class="token comment" spellcheck="true">// 因此可以说类  是 对象的模具 ， 对象是 类的铸件。</span>
+
+<span class="token comment" spellcheck="true">// 实例化一个类</span>
+
+<span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 使用关键字 new 实例化， 实例化出来的是一个对象，该对象有类的属性和方法，方法位于原型上。</span>
+
 </code></pre>
-<pre class=" language-tex"><code class="language-tex">标识符：JS中可自主命名的，都叫标识符。(变量名、函数名，属性名)
-1）标识符可含数字、字母、_,$;
-2）标识符不能以数字开头;
-3) 不能是ES中的关键字或保留字;
-4) JS中一般标识符使用驼峰命名;
-</code></pre>
-<h4 id="数据类型（基本数据类型，引用数据类型）"><a href="#数据类型（基本数据类型，引用数据类型）" class="headerlink" title="数据类型（基本数据类型，引用数据类型）"></a>数据类型（基本数据类型，引用数据类型）</h4><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>基本数据类型
-number<span class="token punctuation">,</span>string<span class="token punctuation">,</span>boolean<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">,</span>undefined
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 构造器 constructor (主要的作用是初始化数据)</span>
 
-<span class="token number">2</span><span class="token punctuation">.</span>引用数据类型
-Object 包含 object、array<span class="token punctuation">,</span><span class="token keyword">function</span>
-</code></pre>
-<pre class=" language-js"><code class="language-js">string<span class="token punctuation">:</span>字符串
-需要使用<span class="token string">""</span>引起来，单双都可以；
-字符串使用 \ 作为转义符（转义作用：把一个东西以普通方式展现，不做过多处理，同正则转义）；
-在字符串中 \n 表示换行 （这是换行符？待定）  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">"我爱你，\n娟"</span>；
-咋字符串中 \t 表示制表符，相当于按了tab键。
-</code></pre>
-<h5 id="数据类型强制转换"><a href="#数据类型强制转换" class="headerlink" title="数据类型强制转换"></a><strong>数据类型强制转换</strong></h5><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token punctuation">;</span> <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span>    a<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>不会影响原变量，有返回值；
-
-   <span class="token keyword">null</span><span class="token function">，undefined没有toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法<span class="token punctuation">;</span>
-
-
-<span class="token number">2</span><span class="token punctuation">.</span> <span class="token function">string</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 函数； 将要转化的作为参数，s大写；
-
-   可将<span class="token keyword">null</span><span class="token punctuation">,</span>undefined加上<span class="token string">""</span><span class="token function">，转为字面量；相对于toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>可转<span class="token keyword">null</span><span class="token punctuation">,</span>undefined；
-
-
-<span class="token number">3</span><span class="token punctuation">.</span> <span class="token function">Number</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token punctuation">;</span> 将要转的值放里面，空<span class="token string">' '</span>或 <span class="token string">'    '</span>里面加了空格转为<span class="token number">0</span>；
-
-   布尔值 <span class="token boolean">true</span> 转为 <span class="token number">1</span>， <span class="token boolean">false</span>转为 <span class="token number">0</span> ；
-
-   <span class="token keyword">null</span>类型为number，结果为 <span class="token number">0</span>；
-
-   undefined<span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span>，结果为NAN；
-</code></pre>
-<p><strong>专门处理字符串的parseInt</strong></p>
-<pre class=" language-js"><code class="language-js">a <span class="token operator">=</span> <span class="token string">"123px"</span> 
-
-a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 123</span>
-
-parseInt将字符串中的整数内容取出；
-
-<span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>取浮点型
-
-<span class="token operator">*</span>补充<span class="token operator">*</span> 
-
-对于非string类型使用parseInt会先转成string<span class="token punctuation">,</span>然后再操作，因此parseInt（<span class="token boolean">true</span>）结果会是NAN；
-
-<span class="token operator">**</span><span class="token function">相对于Number</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token function">可以转换带px</span><span class="token punctuation">(</span>单位的<span class="token punctuation">)</span>，但转有些值（<span class="token boolean">true</span>）并不太理想<span class="token operator">**</span>
+<span class="token keyword">class</span> <span class="token class-name">Persons</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age <span class="token punctuation">,</span>sex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+        <span class="token keyword">this</span><span class="token punctuation">.</span>sex <span class="token operator">=</span> sex
+    <span class="token punctuation">}</span>
     
+    <span class="token function">hobbys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">的爱好是...`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-<span class="token number">4</span><span class="token punctuation">.</span> <span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token punctuation">;</span><span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// true;</span>
+<span class="token comment" spellcheck="true">// 给要实例化的类传入参数， 类中的构造器（constructor）可以接收到参数</span>
 
-   <span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span>
+<span class="token operator">**</span><span class="token operator">*</span> <span class="token comment" spellcheck="true">// 至于为什么类的 constructor 能接收到 参数，以后再谈。</span>
 
-   <span class="token function">Boolean</span><span class="token punctuation">(</span>Infinty<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
-
-   <span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span>
-
-   <span class="token operator">**</span>总结：<span class="token operator">**</span>
-
-   数字，再除了<span class="token number">0</span>和<span class="token keyword">null</span>，都是<span class="token boolean">true</span><span class="token punctuation">;</span>
-
-   字符串除了空字符串<span class="token string">' '</span>，都是<span class="token boolean">true</span>。字符串里一个空格，也是<span class="token boolean">true</span><span class="token punctuation">;</span>
-
-   undefined是<span class="token boolean">false</span><span class="token punctuation">;</span>
-
-   转对象也是<span class="token boolean">true</span>。
+<span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"Eric"</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"男"</span><span class="token punctuation">)</span>
 </code></pre>
-<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token punctuation">)</span>就是一种运算符。
-算数运算符？
-<span class="token operator">+</span> <span class="token punctuation">:</span> <span class="token operator">+</span> 号是比较特殊的运算符，可做字符串拼接。
-  任何值 与 字符串 做拼接，都会把该值转为字符串，再拼接；
-  <span class="token operator">**</span><span class="token operator">*</span>可以使用  任意数据 <span class="token operator">+</span> <span class="token string">""</span> <span class="token operator">**</span><span class="token operator">*</span> 这种方法转为字符串串；
-  <span class="token operator">**</span><span class="token operator">*</span>在打印的时候，可以使用 <span class="token string">" c = "</span> <span class="token operator">+</span> c 的方式打印更佳！  
-  
-<span class="token operator">-</span> <span class="token operator">/</span> <span class="token operator">*</span> 
-  任何 值使用 <span class="token operator">-</span> <span class="token operator">/</span> <span class="token operator">*</span> 运算符时会将值转为number（隐式转换）
-  <span class="token number">2</span> <span class="token operator">*</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  <span class="token operator">**</span><span class="token operator">*</span> 可以用一个   字符串 <span class="token operator">-</span> <span class="token number">0</span> ，就转化为number<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// "123" - 0</span>
-  <span class="token operator">-</span> 号可对值进行取反， <span class="token operator">-</span> 为number负值， <span class="token operator">+</span> 为正值；
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 派生类  （用于继承基类的属性 和 方法）</span>
 
-运算符优先级：
- 先乘除后加减，同数学。
- <span class="token operator">||</span>  <span class="token operator">&amp;&amp;</span>   <span class="token operator">!</span>有一个优先级的表；
- 优先级一样，就从左往右算；
-</code></pre>
-<h5 id="JS代码块：-只有分组作用"><a href="#JS代码块：-只有分组作用" class="headerlink" title="JS代码块： 只有分组作用"></a>JS代码块： 只有分组作用</h5><p>补充：质数(除了1和它本身之间的数，不能整除它本身，那它就是质数)</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 质数: 除了1和他本身，也就是从二开始到它之间的数，若都不能被这之间的数整除，该数是质数</span>
-    <span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">'请输入一个大于1的数'</span><span class="token punctuation">)</span>
-    <span class="token keyword">let</span> flag <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token keyword">class</span> <span class="token class-name">Children</span> <span class="token keyword">extends</span> <span class="token class-name">Persons</span> <span class="token punctuation">{</span>
     
-        <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'非法！'</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> num <span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
-                    <span class="token comment" spellcheck="true">// 被一个数整除</span>
-                    flag <span class="token operator">=</span> <span class="token boolean">false</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            
-            <span class="token keyword">if</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token function">alert</span><span class="token punctuation">(</span>num<span class="token operator">+</span><span class="token string">'是质数'</span><span class="token punctuation">)</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token function">alert</span><span class="token punctuation">(</span>num<span class="token operator">+</span><span class="token string">"不是质数！"</span><span class="token punctuation">)</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 当基类的方法不能满足派生类的需求的时候，派生类可以在自己内部 重写基类方法。</span>
+    
+    <span class="token comment" spellcheck="true">// hobbys</span>
+    
+    <span class="token comment" spellcheck="true">// console.log('玩游戏')</span>
+    
+<span class="token comment" spellcheck="true">//  }</span>
+    
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Children</span><span class="token punctuation">(</span><span class="token string">'xiaoJun'</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 派生类可访问基类的属性和方法， 也可以重写基类的方法</span>
+
+child<span class="token punctuation">.</span>name <span class="token comment" spellcheck="true">// xiaoJun</span>
+child<span class="token punctuation">.</span><span class="token function">hobbys</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// xiaoJun的爱好是...</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 继承构造器 （当基类的数据不能满足派生类的需求的时候，可继承构造器(相当于super调用了constructor函数),再添加自己需要的）</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Children</span> <span class="token keyword">extends</span> <span class="token class-name">Persons</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>sex<span class="token punctuation">,</span> eat<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age <span class="token punctuation">,</span> sex<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 继承</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>eat <span class="token operator">=</span> eat
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 面向对象静态方法</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Worker</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> user <span class="token operator">=</span> <span class="token string">"Eric"</span>
+    
+    <span class="token keyword">static</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Worker<span class="token punctuation">.</span>user <span class="token operator">+</span> <span class="token string">'说他的工作是教书'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Worker<span class="token punctuation">.</span><span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// Eric说他的工作是教书</span>
+
+<span class="token comment" spellcheck="true">// 使用静态方法不需要实例化，因此不用开辟堆栈空间，速度比对象方法快55%。</span>
+
+<span class="token operator">**</span><span class="token comment" spellcheck="true">// 静态成员不能使用非静态成员，因为使用非静态成员 ，必须实例化！</span>
+
+<span class="token operator">**</span><span class="token comment" spellcheck="true">// 若要使用，把方法或属性也改成静态的。</span>
+</code></pre>
+<h4 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h4><pre class=" language-js"><code class="language-js">cd 文件名  <span class="token comment" spellcheck="true">// 切到下级目录</span>
+
+cd <span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token comment" spellcheck="true">// 返回上一级</span>
+
+mkdir 文件夹名 <span class="token comment" spellcheck="true">// 创建文件夹</span>
+
+rmdir 文件夹名 <span class="token comment" spellcheck="true">// 删除文件夹 ，必须是空文件夹</span>
+
+rmdir 文件夹名 <span class="token operator">/</span>s <span class="token comment" spellcheck="true">// 强制删除， 加/q 静默删除</span>
+
+dir<span class="token punctuation">.</span><span class="token operator">></span> 文件名 <span class="token comment" spellcheck="true">// 创建文件， 例如dir.> 1.html 、dir.> 8.json 、6.js</span>
+
+<span class="token keyword">delete</span> 文件名 <span class="token comment" spellcheck="true">// 删除文件</span>
+</code></pre>
+<h4 id="暴露和导出的方式"><a href="#暴露和导出的方式" class="headerlink" title="暴露和导出的方式"></a>暴露和导出的方式</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 第一种方式  exports</span>
+
+<span class="token comment" spellcheck="true">// public1.js </span>
+
+exports<span class="token punctuation">.</span>username <span class="token operator">=</span> <span class="token string">'admin'</span>
+exports<span class="token punctuation">.</span>password <span class="token operator">=</span> <span class="token string">'123'</span>
+
+exports<span class="token punctuation">.</span>obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name <span class="token punctuation">:</span> <span class="token string">"Eric"</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">,</span>
+  sex<span class="token punctuation">:</span> <span class="token string">'男'</span>
+<span class="token punctuation">}</span>
+exports<span class="token punctuation">.</span>login <span class="token operator">=</span> <span class="token punctuation">{</span>
+  username <span class="token punctuation">:</span> <span class="token string">"Eric"</span><span class="token punctuation">,</span>
+  password <span class="token punctuation">:</span> <span class="token number">123</span>
+<span class="token punctuation">}</span>
+
+exports<span class="token punctuation">.</span>fun <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这是public1中的fun方法'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// module.js</span>
+<span class="token keyword">const</span> <span class="token keyword">public</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./public1'</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">public</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+cmd 命令行  node  module<span class="token punctuation">.</span>js 运行 ，可以看到暴露成功
+
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 第二种方式   module.exports</span>
+
+<span class="token comment" spellcheck="true">// public2.js </span>
+
+<span class="token keyword">let</span> username <span class="token operator">=</span> <span class="token string">'admin'</span>
+<span class="token keyword">let</span> password <span class="token operator">=</span> <span class="token string">'123'</span>
+
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name <span class="token punctuation">:</span> <span class="token string">"Eric"</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">,</span>
+  sex<span class="token punctuation">:</span> <span class="token string">'男'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> login <span class="token operator">=</span> <span class="token punctuation">{</span>
+  username <span class="token punctuation">:</span> <span class="token string">"Eric"</span><span class="token punctuation">,</span>
+  password <span class="token punctuation">:</span> <span class="token number">123</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> fun <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这是public1中的fun方法'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span>  <span class="token punctuation">{</span>
+  username<span class="token punctuation">,</span>
+  password<span class="token punctuation">,</span>
+  obj<span class="token punctuation">,</span>
+  login<span class="token punctuation">,</span>
+  fun
+<span class="token punctuation">}</span>
+
+同module<span class="token punctuation">.</span>js 运行文件，也可以看到运行成功。
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 第三种方式  export 导出，import  失败？？</span>
+
+<span class="token comment" spellcheck="true">// public3.js</span>
+<span class="token keyword">const</span> username <span class="token operator">=</span> <span class="token string">'admin'</span>
+<span class="token keyword">const</span> password <span class="token operator">=</span> <span class="token string">'123'</span>
+
+<span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name <span class="token punctuation">:</span> <span class="token string">"Eric"</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">,</span>
+  sex<span class="token punctuation">:</span> <span class="token string">'男'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> login <span class="token operator">=</span> <span class="token punctuation">{</span>
+  username <span class="token punctuation">:</span> <span class="token string">"Eric"</span><span class="token punctuation">,</span>
+  password <span class="token punctuation">:</span> <span class="token number">123</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> fun <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这是public1中的fun方法'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span>
+  username<span class="token punctuation">,</span>
+  password<span class="token punctuation">,</span>
+  obj<span class="token punctuation">,</span>
+  login<span class="token punctuation">,</span>
+  fun
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// module1.js</span>
+
+<span class="token keyword">import</span> a <span class="token keyword">from</span> <span class="token string">'./public3'</span>
+
+<span class="token comment" spellcheck="true">// 为什么无法引入</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">**</span><span class="token comment" spellcheck="true">// 在react框架下是可以这样导出并引入的，但这里写demo却失败了，待定...</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 第四种方式</span>
+
+<span class="token comment" spellcheck="true">// default.js</span>
+<span class="token keyword">const</span> rect <span class="token operator">=</span> <span class="token punctuation">{</span>
+  x<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+  y<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+  fill<span class="token punctuation">:</span><span class="token string">'red'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> rect
+
+<span class="token comment" spellcheck="true">// import.js</span>
+
+<span class="token keyword">import</span> rect <span class="token keyword">from</span> <span class="token string">'./default'</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'rect'</span><span class="token punctuation">,</span>rect<span class="token punctuation">)</span>
+
+<span class="token operator">**</span><span class="token operator">*</span><span class="token comment" spellcheck="true">// 这种方式运行也不行，但在框架中是可行的。因此后面两种无法运行应该是其他原因。</span>
 </code></pre>
 
                 
@@ -634,7 +728,7 @@ parseInt将字符串中的整数内容取出；
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/05/10/js-zong-jie/">http://siberiabar2.github.io/2021/05/10/js-zong-jie/</a>
+                    <a href="http://siberiabar2.github.io/2021/07/25/mian-xiang-dui-xiang/">http://siberiabar2.github.io/2021/07/25/mian-xiang-dui-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -672,8 +766,8 @@ parseInt将字符串中的整数内容取出；
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/js/">
-                                    <span class="chip bg-color">js</span>
+                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%EF%BC%8C%E5%AF%BC%E5%87%BA%E5%92%8C%E6%9A%B4%E9%9C%B2%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                                    <span class="chip bg-color">面向对象、 文件操作，导出和暴露的方式</span>
                                 </a>
                             
                         </div>
@@ -844,7 +938,7 @@ parseInt将字符串中的整数内容取出；
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-05-10T20-55-21',
+        id: '2021-07-25T12-05-10',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -868,7 +962,7 @@ parseInt将字符串中的整数内容取出；
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Mon May 10 2021 20:55:21 GMT+0800',
+    id: 'Sun Jul 25 2021 12:05:10 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -893,9 +987,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/05/10/js-zong-jie/';
-        this.page.identifier = '/2021/05/10/js-zong-jie/';
-        this.page.title = 'js总结';
+        this.page.url = 'http://siberiabar2.github.io/2021/07/25/mian-xiang-dui-xiang/';
+        this.page.identifier = '/2021/07/25/mian-xiang-dui-xiang/';
+        this.page.title = '面向对象';
     };
     let disqus_shortname = '';
 
@@ -1213,17 +1307,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/">
+                <a href="/2021/07/25/mian-xiang-dui-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Ant-Design双向数据绑定及其他">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="面向对象">
                         
-                        <span class="card-title">Ant-Design双向数据绑定及其他</span>
+                        <span class="card-title">面向对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1233,9 +1328,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1244,11 +1339,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/antd-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-%E5%85%B6%E4%BB%96/">
-                        <span class="chip bg-color">antd  数据绑定  其他</span>
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%EF%BC%8C%E5%AF%BC%E5%87%BA%E5%92%8C%E6%9A%B4%E9%9C%B2%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                        <span class="chip bg-color">面向对象、 文件操作，导出和暴露的方式</span>
                     </a>
                     
                 </div>
@@ -1262,13 +1358,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/06/suan-fa-java-chu-shi/">
+                <a href="/2021/07/21/yan-ge-mo-shi-yu-es5-dui-xiang-de-liang-chong-kuo-zhan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="算法java初识">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="严格模式与es5对象的两种扩展">
                         
-                        <span class="card-title">算法java初识</span>
+                        <span class="card-title">严格模式与es5对象的两种扩展</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1279,7 +1375,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
                             </span>
                         <span class="publish-author">
                             
@@ -1292,8 +1388,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95%E3%80%81java/">
-                        <span class="chip bg-color">算法、java</span>
+                    <a href="/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F-%E5%AF%B9%E8%B1%A1es5%E4%B8%A4%E7%A7%8D%E6%89%A9%E5%B1%95/">
+                        <span class="chip bg-color">严格模式  对象es5两种扩展</span>
                     </a>
                     
                 </div>
