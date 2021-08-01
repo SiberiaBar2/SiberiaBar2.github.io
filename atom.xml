@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-07-26T14:01:59.857Z</updated>
+  <updated>2021-08-01T14:26:28.450Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>事件循环机制-宏任务微任务</title>
+    <link href="http://siberiabar2.github.io/2021/08/01/shi-jian-xun-huan-ji-zhi-hong-ren-wu-wei-ren-wu/"/>
+    <id>http://siberiabar2.github.io/2021/08/01/shi-jian-xun-huan-ji-zhi-hong-ren-wu-wei-ren-wu/</id>
+    <published>2021-08-01T13:32:45.000Z</published>
+    <updated>2021-08-01T14:26:28.450Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;代码执行顺序&quot;&gt;&lt;a href=&quot;#代码执行顺序&quot; class=&quot;headerlink&quot; title=&quot;代码执行顺序&quot;&gt;&lt;/a&gt;代码执行顺序&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="事件循环  宏任务 微任务" scheme="http://siberiabar2.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF-%E5%AE%8F%E4%BB%BB%E5%8A%A1-%E5%BE%AE%E4%BB%BB%E5%8A%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象</title>
@@ -457,30 +481,6 @@
     
     
     <category term="事件冒泡、hook" scheme="http://siberiabar2.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决OpenSSL报错</title>
-    <link href="http://siberiabar2.github.io/2021/04/27/jie-jue-openssl-bao-cuo/"/>
-    <id>http://siberiabar2.github.io/2021/04/27/jie-jue-openssl-bao-cuo/</id>
-    <published>2021-04-27T15:43:11.000Z</published>
-    <updated>2021-05-15T11:12:03.560Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;首先，这个错误很可能是网络不稳定，连接超时导致的；&lt;/p&gt;
-&lt;h5 id=&quot;若再次尝试依然报错，可输入如下命令&quot;&gt;&lt;a href=&quot;#若再次尝试依然报错，可输入如下命令&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Git报错解决" scheme="http://siberiabar2.github.io/tags/Git%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/"/>
     
   </entry>
   
