@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-08-01T14:26:28.450Z</updated>
+  <updated>2021-09-06T14:34:08.637Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -17,11 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>typescript</title>
+    <link href="http://siberiabar2.github.io/2021/09/06/typescript/"/>
+    <id>http://siberiabar2.github.io/2021/09/06/typescript/</id>
+    <published>2021-09-06T14:17:09.000Z</published>
+    <updated>2021-09-06T14:34:08.637Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;Ts&quot;&gt;&lt;a href=&quot;#Ts&quot; class=&quot;headerlink&quot; title=&quot;Ts&quot;&gt;&lt;/a&gt;Ts&lt;/h4&gt;&lt;pre class=&quot; language-typescript&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="typescript" scheme="http://siberiabar2.github.io/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="http://siberiabar2.github.io/2021/09/06/zheng-ze-biao-da-shi/"/>
+    <id>http://siberiabar2.github.io/2021/09/06/zheng-ze-biao-da-shi/</id>
+    <published>2021-09-06T13:35:59.000Z</published>
+    <updated>2021-09-06T14:17:11.265Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;
+&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="正则表达式" scheme="http://siberiabar2.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>事件循环机制-宏任务微任务</title>
     <link href="http://siberiabar2.github.io/2021/08/01/shi-jian-xun-huan-ji-zhi-hong-ren-wu-wei-ren-wu/"/>
     <id>http://siberiabar2.github.io/2021/08/01/shi-jian-xun-huan-ji-zhi-hong-ren-wu-wei-ren-wu/</id>
     <published>2021-08-01T13:32:45.000Z</published>
-    <updated>2021-08-01T14:26:28.450Z</updated>
+    <updated>2021-08-01T14:39:07.911Z</updated>
     
     
       
@@ -435,52 +482,6 @@
     
     
     <category term="git命令" scheme="http://siberiabar2.github.io/tags/git%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数组过滤undefined</title>
-    <link href="http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/"/>
-    <id>http://siberiabar2.github.io/2021/04/30/shu-zu-guo-lu-undefined/</id>
-    <published>2021-04-30T13:12:04.000Z</published>
-    <updated>2021-04-30T13:44:08.953Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h5 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="数组过滤undefined、null，&#39;&#39;" scheme="http://siberiabar2.github.io/tags/%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4undefined%E3%80%81null%EF%BC%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>事件冒泡的影响，两种hook</title>
-    <link href="http://siberiabar2.github.io/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/"/>
-    <id>http://siberiabar2.github.io/2021/04/28/shi-jian-mou-pao-de-ying-xiang-liang-chong-hook/</id>
-    <published>2021-04-28T15:54:59.000Z</published>
-    <updated>2021-04-30T13:56:22.141Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h5 id=&quot;1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。&quot;&gt;&lt;a href=&quot;#1-多个元素嵌套设有多个点击事件，最下级的元素触发点击事件可能发生冒泡情况。&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
-        
-      
-    
-    
-    
-    
-    <category term="事件冒泡、hook" scheme="http://siberiabar2.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E3%80%81hook/"/>
     
   </entry>
   
