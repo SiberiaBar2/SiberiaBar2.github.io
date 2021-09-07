@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    387
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -485,12 +485,14 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h4><pre class=" language-js"><code class="language-js">
-<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'regex'</span><span class="token punctuation">,</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token regex">/(?:)/</span>
 <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
 
  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token string">'ig'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">// 正则实例对象， 第一个参数为检索的字符， 第二个参数是修饰符, 注意修饰符必须加''（不加为变量） ； i 为不区分大小写， g为全局匹配(匹配多个而不是只匹配第一个)</span>
+<span class="token comment" spellcheck="true">/* 正则实例对象， 第一个参数为检索的字符， 第二个参数是修饰符, 注意修饰符必须加''（不加为变量） ；
+ *  i 为不区分大小写， g为全局匹配(匹配多个而不是只匹配第一个) 
+ */</span> 
  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'hello people hello world hello country hello army'</span>
  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">'你好'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 你好 people 你好 world 你好 country 你好 aramy</span>
 <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
@@ -502,8 +504,9 @@
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">'你说'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 你说 天这么蓝 你说 空气这么清新 你说 你真的好开心</span>
 <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
 
-<span class="token comment" spellcheck="true">// test </span>
-<span class="token comment" spellcheck="true">// 检索字符串中是否包含正则规定的内容，包含返回true，不包含返回false</span>
+<span class="token comment" spellcheck="true">/* test 
+ * 检索字符串中是否包含正则规定的内容，包含返回true，不包含返回false
+ */</span>
   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'五杀超神'</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
 <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
@@ -534,6 +537,146 @@
   <span class="token comment" spellcheck="true">// 返回正则匹配到的第一个字符的下标</span>
   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/复/</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/* 元字符
+  * . 表示除换行符外的任意字符 ( \n为换行符 )
+  * \ 表示转义字符
+  */</span> 
+
+   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/./</span>
+   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'\n123'</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+   
+   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'1215204550@qq.com'</span>
+   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\.c/</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+
+   <span class="token comment" spellcheck="true">// []匹配字符集中的任意字符</span>
+   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/[0-9]/</span>
+   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'abc'</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span>
+
+   
+   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/[0-9a-z]/</span>
+   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'123zzz'</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+   
+</code></pre>
+<pre class=" language-js"><code class="language-js">   <span class="token comment" spellcheck="true">// 密码</span>
+   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/[0-9][0-9][0-9][0-9][0-9][0-9]/</span>
+   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'23456'</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+  
+</code></pre>
+<pre class=" language-js"><code class="language-js">   <span class="token comment" spellcheck="true">// ^ 以什么开头</span>
+   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/^[a-z]/</span>
+   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'123acc'</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span>
+
+   <span class="token comment" spellcheck="true">// $ 以什么结尾</span>
+   <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/m$/</span>
+   <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'1215204550@qq.com'</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+ 
+</code></pre>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// \d 匹配数字</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\d\d\d/</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'123'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+  <span class="token comment" spellcheck="true">// \D 匹配非数字 (字母 + 字符)</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\D\D\D/</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'A._'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// \w 匹配字母、数字，下划线</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\w\w\w\w\w\w/</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'qq_com'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+  <span class="token comment" spellcheck="true">// \W 匹配非数字、字母，下划线</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\W\W\W/</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'@ -'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+ 
+  <span class="token comment" spellcheck="true">// 匹配空白字符(空格)</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\W\s\W/</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// \b 匹配单词边界</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\b/g</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'hello for world'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">'你好'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 你好hello你好 你好for你好 你好world你好</span>
+  
+  <span class="token comment" spellcheck="true">// \B 匹配非单词边界</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\B/g</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'hello for world'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">'你好'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// h你好e你好l你好l你好o f你好o你好r w你好o你好r你好l你好d</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 正则量词</span>
+  <span class="token comment" spellcheck="true">// ? 匹配0个或1个</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/4?/</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'123'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+  <span class="token comment" spellcheck="true">// * 匹配0个或多个</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/a*/</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'aaaBaaaaaa'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ["aaa", index: 0, input: "aaaBaaaaaa", groups: undefined]</span>
+
+  <span class="token comment" spellcheck="true">// + 匹配1个或多个</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\d+/</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'4567aaaaaaaaaaaaaa'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// helloaaaaaaaaaaaaaa</span>
+
+  <span class="token comment" spellcheck="true">// {6} 六位  {2, 6} 最少两位， 最多六位</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\d{11}/</span>
+  <span class="token keyword">let</span> phone <span class="token operator">=</span> <span class="token string">'17393845392'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+  
+</code></pre>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 其他</span>
+  <span class="token comment" spellcheck="true">// | 或</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/^http:\/\/www\.\w+(.com|.cn|.gov|.net)/</span>
+  <span class="token keyword">let</span> net <span class="token operator">=</span> <span class="token string">'http://www.baidu.net'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>net<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+  
+  <span class="token comment" spellcheck="true">// ()分组</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/(\d{3})(\d{4})(\d{4})/</span>
+  <span class="token keyword">let</span> ipone <span class="token operator">=</span> <span class="token string">'17393845392'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>ipone<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>RegExp<span class="token punctuation">.</span>$<span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 173</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>RegExp<span class="token punctuation">.</span>$<span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 9384</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>RegExp<span class="token punctuation">.</span>$<span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 5392</span>
+  <span class="token comment" spellcheck="true">// 替换</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ipone<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">'$1****$3'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 173****5392</span>
+  
+  <span class="token comment" spellcheck="true">// 邮箱正则</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\d+(@qq.com|@163.com)/</span>
+  <span class="token keyword">let</span> mail <span class="token operator">=</span> <span class="token string">'1215204550@163.com'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>mail<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// $1 是分组，有几个分组，就有几个$几</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>RegExp<span class="token punctuation">.</span>$<span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// @163.com</span>
+  
+  <span class="token comment" spellcheck="true">// 密码六位</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/\d{6}/</span>
+
+  <span class="token comment" spellcheck="true">// 手机号</span>
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/^1[3, 5, 7 ,8 , 9]\d{9}/</span>
+
+  <span class="token comment" spellcheck="true">/*
+   * qq密码，必须有字母数字
+   *  ***这样有一个缺点，就是字母必须在前！***
+   */</span> 
+  
+  <span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex">/[a-z]{2,6}[0-9]{6,10}/</span>
+  <span class="token keyword">let</span> password <span class="token operator">=</span> <span class="token string">'wa124567'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
 </code></pre>
 
                 
@@ -1425,7 +1568,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.9k</span>
+                        class="white-color">16.5k</span>
             
             
             
