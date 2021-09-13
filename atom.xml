@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-09-11T07:50:16.273Z</updated>
+  <updated>2021-09-13T03:42:58.419Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>原生轮播图</title>
+    <link href="http://siberiabar2.github.io/2021/09/13/yuan-sheng-lun-bo-tu/"/>
+    <id>http://siberiabar2.github.io/2021/09/13/yuan-sheng-lun-bo-tu/</id>
+    <published>2021-09-13T02:48:54.000Z</published>
+    <updated>2021-09-13T03:42:58.419Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;css&quot;&gt;&lt;a href=&quot;#css&quot; class=&quot;headerlink&quot; title=&quot;css&quot;&gt;&lt;/a&gt;css&lt;/h4&gt;&lt;pre class=&quot; language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;    &lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="原生轮播图" scheme="http://siberiabar2.github.io/tags/%E5%8E%9F%E7%94%9F%E8%BD%AE%E6%92%AD%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端性能优化</title>
+    <link href="http://siberiabar2.github.io/2021/09/13/qian-duan-xing-neng-you-hua/"/>
+    <id>http://siberiabar2.github.io/2021/09/13/qian-duan-xing-neng-you-hua/</id>
+    <published>2021-09-13T02:43:38.000Z</published>
+    <updated>2021-09-13T03:47:15.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;防抖&quot;&gt;&lt;a href=&quot;#防抖&quot; class=&quot;headerlink&quot; title=&quot;防抖&quot;&gt;&lt;/a&gt;防抖&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端性能优化" scheme="http://siberiabar2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件命令行操作</title>
+    <link href="http://siberiabar2.github.io/2021/09/12/wen-jian-ming-ling-xing-cao-zuo/"/>
+    <id>http://siberiabar2.github.io/2021/09/12/wen-jian-ming-ling-xing-cao-zuo/</id>
+    <published>2021-09-12T08:56:40.000Z</published>
+    <updated>2021-09-12T08:58:14.142Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;文件操作&quot;&gt;&lt;a href=&quot;#文件操作&quot; class=&quot;headerlink&quot; title=&quot;文件操作&quot;&gt;&lt;/a&gt;文件操作&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;cd 文件名 </summary>
+        
+      
+    
+    
+    
+    
+    <category term="文件命令行操作" scheme="http://siberiabar2.github.io/tags/%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>封装ajax</title>
@@ -46,7 +115,7 @@
     <link href="http://siberiabar2.github.io/2021/09/06/typescript/"/>
     <id>http://siberiabar2.github.io/2021/09/06/typescript/</id>
     <published>2021-09-06T14:17:09.000Z</published>
-    <updated>2021-09-06T14:34:08.637Z</updated>
+    <updated>2021-09-13T02:45:06.478Z</updated>
     
     
       
@@ -117,7 +186,7 @@
     <link href="http://siberiabar2.github.io/2021/07/25/mian-xiang-dui-xiang/"/>
     <id>http://siberiabar2.github.io/2021/07/25/mian-xiang-dui-xiang/</id>
     <published>2021-07-25T04:05:10.000Z</published>
-    <updated>2021-07-26T14:01:59.857Z</updated>
+    <updated>2021-09-12T08:58:17.789Z</updated>
     
     
       
@@ -415,75 +484,6 @@
     
     
     <category term="算法、java" scheme="http://siberiabar2.github.io/tags/%E7%AE%97%E6%B3%95%E3%80%81java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>antdPopover的动态变色和动态visable</title>
-    <link href="http://siberiabar2.github.io/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/"/>
-    <id>http://siberiabar2.github.io/2021/05/05/antdpopover-de-dong-tai-bian-se-he-dong-tai-visable/</id>
-    <published>2021-05-05T04:35:26.000Z</published>
-    <updated>2021-05-05T04:51:48.773Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h5 id=&quot;目的：-使用Popover制作动态的变色和控制Visable&quot;&gt;&lt;a href=&quot;#目的：-使用Popover制作动态的变色和控制Visable&quot; class=&quot;headerlink&quot; title=&quot;目的：</summary>
-        
-      
-    
-    
-    
-    
-    <category term="aned Popover" scheme="http://siberiabar2.github.io/tags/aned-Popover/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AutoComplute制作模糊搜索</title>
-    <link href="http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/"/>
-    <id>http://siberiabar2.github.io/2021/05/05/autocomplute-zhi-zuo-mo-hu-sou-suo/</id>
-    <published>2021-05-05T04:00:18.000Z</published>
-    <updated>2021-07-20T10:24:37.363Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h5 id=&quot;1-引入React-useState-classnames插件，引出Option&quot;&gt;&lt;a href=&quot;#1-引入React-useState-classnames插件，引出Option&quot; class=&quot;headerlink&quot; title=&quot;1. 引入React,</summary>
-        
-      
-    
-    
-    
-    
-    <category term="模糊搜索" scheme="http://siberiabar2.github.io/tags/%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随笔</title>
-    <link href="http://siberiabar2.github.io/2021/04/30/sui-bi/"/>
-    <id>http://siberiabar2.github.io/2021/04/30/sui-bi/</id>
-    <published>2021-04-30T14:02:42.000Z</published>
-    <updated>2021-04-30T14:10:54.035Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;4-10-4-16-report&quot;&gt;&lt;a href=&quot;#4-10-4-16-report&quot; class=&quot;headerlink&quot; title=&quot;4.10-4.16 report&quot;&gt;&lt;/a&gt;4.10-4.16 report&lt;/h4&gt;&lt;h5</summary>
-        
-      
-    
-    
-    
-    
-    <category term="随笔" scheme="http://siberiabar2.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
