@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-09-13T03:42:58.419Z</updated>
+  <updated>2021-09-17T09:11:01.481Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>es6promise对象</title>
+    <link href="http://siberiabar2.github.io/2021/09/17/es6promise-dui-xiang/"/>
+    <id>http://siberiabar2.github.io/2021/09/17/es6promise-dui-xiang/</id>
+    <published>2021-09-17T09:04:11.000Z</published>
+    <updated>2021-09-17T09:11:01.481Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;//</summary>
+        
+      
+    
+    
+    
+    
+    <category term="promise" scheme="http://siberiabar2.github.io/tags/promise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react引入antd</title>
+    <link href="http://siberiabar2.github.io/2021/09/17/react-yin-ru-antd/"/>
+    <id>http://siberiabar2.github.io/2021/09/17/react-yin-ru-antd/</id>
+    <published>2021-09-16T16:49:39.000Z</published>
+    <updated>2021-09-16T16:52:29.255Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;// 安装&lt;/span&gt;
+
+npm install</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react引入antd" scheme="http://siberiabar2.github.io/tags/react%E5%BC%95%E5%85%A5antd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建react脚手架</title>
+    <link href="http://siberiabar2.github.io/2021/09/17/chuang-jian-react-jiao-shou-jia/"/>
+    <id>http://siberiabar2.github.io/2021/09/17/chuang-jian-react-jiao-shou-jia/</id>
+    <published>2021-09-16T16:48:28.000Z</published>
+    <updated>2021-09-16T16:49:18.988Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;// cra 创建react 脚手架</summary>
+        
+      
+    
+    
+    
+    
+    <category term="创建react脚手架" scheme="http://siberiabar2.github.io/tags/%E5%88%9B%E5%BB%BAreact%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>原生轮播图</title>
@@ -115,14 +186,14 @@
     <link href="http://siberiabar2.github.io/2021/09/06/typescript/"/>
     <id>http://siberiabar2.github.io/2021/09/06/typescript/</id>
     <published>2021-09-06T14:17:09.000Z</published>
-    <updated>2021-09-13T02:45:06.478Z</updated>
+    <updated>2021-09-16T16:47:55.816Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h4 id=&quot;Ts&quot;&gt;&lt;a href=&quot;#Ts&quot; class=&quot;headerlink&quot; title=&quot;Ts&quot;&gt;&lt;/a&gt;Ts&lt;/h4&gt;&lt;pre class=&quot; language-typescript&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;h4 id=&quot;一些问题&quot;&gt;&lt;a href=&quot;#一些问题&quot; class=&quot;headerlink&quot; title=&quot;一些问题&quot;&gt;&lt;/a&gt;一些问题&lt;/h4&gt;&lt;pre class=&quot; language-typescript&quot;&gt;&lt;code</summary>
         
       
     
@@ -405,85 +476,6 @@
     
     
     <category term="对象、函数" scheme="http://siberiabar2.github.io/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ant-Design双向数据绑定及其他</title>
-    <link href="http://siberiabar2.github.io/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/"/>
-    <id>http://siberiabar2.github.io/2021/05/15/ant-design-shuang-xiang-shu-ju-bang-ding-ji-qi-ta/</id>
-    <published>2021-05-15T10:13:32.000Z</published>
-    <updated>2021-05-15T11:04:15.926Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;前提：&lt;/p&gt;
-&lt;p&gt;antd的表单Input，Selcet,多选check不像在Vue，数据与视图实时绑定，view刷新数据跟着变。&lt;/p&gt;
-&lt;p&gt;由于react是单向数据流，数据变化了才会同步到视图，因此需要另一种方式来实现。&lt;/p&gt;
-&lt;p&gt;举例Input:&lt;/p&gt;
-&lt;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="antd  数据绑定  其他" scheme="http://siberiabar2.github.io/tags/antd-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js总结</title>
-    <link href="http://siberiabar2.github.io/2021/05/10/js-zong-jie/"/>
-    <id>http://siberiabar2.github.io/2021/05/10/js-zong-jie/</id>
-    <published>2021-05-10T12:55:21.000Z</published>
-    <updated>2021-05-10T14:04:47.893Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;JS：布兰登艾奇发明&lt;/p&gt;
-&lt;p&gt;简称JS(javascript),与Java无本质关系&lt;/p&gt;
-&lt;p&gt;JS是ECMA的体现，ECMA是JS的规范&lt;/p&gt;
-&lt;h4 id=&quot;什么是javascript-？&quot;&gt;&lt;a href=&quot;#什么是javascript-？&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="js" scheme="http://siberiabar2.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法java初识</title>
-    <link href="http://siberiabar2.github.io/2021/05/06/suan-fa-java-chu-shi/"/>
-    <id>http://siberiabar2.github.io/2021/05/06/suan-fa-java-chu-shi/</id>
-    <published>2021-05-06T14:29:45.000Z</published>
-    <updated>2021-05-06T14:33:45.279Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;递归：自己调自己，效率非常不好。使用递归测算可能会卡主程序，因为慢；&lt;/p&gt;
-&lt;p&gt;循环：速度很快，因为是异步进行的？&lt;/p&gt;
-&lt;p&gt;所谓算法，其实就是，比对各种不同测算结果的优劣，取最优！（以后再补充）&lt;/p&gt;
-&lt;p&gt;java</summary>
-        
-      
-    
-    
-    
-    
-    <category term="算法、java" scheme="http://siberiabar2.github.io/tags/%E7%AE%97%E6%B3%95%E3%80%81java/"/>
     
   </entry>
   

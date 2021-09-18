@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    294
+                    420
                 </div>
                 
 
@@ -484,7 +484,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="Ts"><a href="#Ts" class="headerlink" title="Ts"></a>Ts</h4><pre class=" language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">/* 与javascript相比 ，typescript 增加了类型， 使javascript变得强类型了。
+                <h4 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h4><pre class=" language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// 在安装了一些插件后，建议在 ***src目录下新建  *.d.ts文件声明引入的插件，否则会报错!</span>
+ 
+<span class="token comment" spellcheck="true">// 例如在入口index.ts 引入了 morgan</span>
+
+ <span class="token keyword">import</span> morgan <span class="token keyword">from</span> <span class="token string">'morgan'</span>  
+  
+<span class="token comment" spellcheck="true">// 安装了依然报错</span>
+Could not find a declaration file <span class="token keyword">for</span> <span class="token keyword">module</span> <span class="token string">'morgan'</span><span class="token punctuation">.</span> <span class="token string">'D:/React/antd-demo-ts/node_modules/_morgan@1.10.0@morgan/index.js'</span> implicitly has an <span class="token string">'any'</span> type<span class="token punctuation">.</span>
+  Try <span class="token template-string"><span class="token string">`npm i --save-dev @types/morgan`</span></span> <span class="token keyword">if</span> it exists or add a <span class="token keyword">new</span> <span class="token class-name">declaration</span> <span class="token punctuation">(</span><span class="token punctuation">.</span>d<span class="token punctuation">.</span>ts<span class="token punctuation">)</span> file containing <span class="token template-string"><span class="token string">`declare module 'morgan';`</span></span>
+  
+</code></pre>
+<pre class=" language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// src/declaration.d.ts</span>
+<span class="token comment" spellcheck="true">// 添加如下声明 ，报错消失</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'morgan'</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h4><pre class=" language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">/* 与javascript相比 ，typescript 增加了类型， 使javascript变得强类型了。
 typescript 声明的变量 、函数和参数， 甚至外部的props，都可以定义变量的类型。
 虽然javascript非常灵活，使用起来很自由，但是这种自由会在项目变得很大时称为一种隐患，例如因为你可以随意的将一个number类型的变量变为其他类型，如果出错可能将是很难排查的。
 与javascript 相比， typescript定义类型的好处是 ： 在大型项目中更易于维护，且在编码阶段就能发现错误。
@@ -1418,7 +1433,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">18k</span>
+                        class="white-color">18.4k</span>
             
             
             
