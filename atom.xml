@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-09-17T09:11:01.481Z</updated>
+  <updated>2021-09-24T04:19:55.007Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组方法reduce</title>
+    <link href="http://siberiabar2.github.io/2021/09/24/shu-zu-fang-fa-reduce/"/>
+    <id>http://siberiabar2.github.io/2021/09/24/shu-zu-fang-fa-reduce/</id>
+    <published>2021-09-24T04:13:21.000Z</published>
+    <updated>2021-09-24T04:19:55.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;   arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数组reduce方法" scheme="http://siberiabar2.github.io/tags/%E6%95%B0%E7%BB%84reduce%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>es6promise对象</title>
@@ -453,29 +476,6 @@ npm install</summary>
     
     
     <category term="反思" scheme="http://siberiabar2.github.io/tags/%E5%8F%8D%E6%80%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js总结2对象函数</title>
-    <link href="http://siberiabar2.github.io/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/"/>
-    <id>http://siberiabar2.github.io/2021/05/20/js-zong-jie-2-dui-xiang-han-shu/</id>
-    <published>2021-05-20T13:28:54.000Z</published>
-    <updated>2021-05-24T15:12:09.183Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-对象&quot;&gt;&lt;a href=&quot;#1-对象&quot; class=&quot;headerlink&quot; title=&quot;1. 对象&quot;&gt;&lt;/a&gt;1. 对象&lt;/h4&gt;&lt;pre class=&quot; language-json&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="对象、函数" scheme="http://siberiabar2.github.io/tags/%E5%AF%B9%E8%B1%A1%E3%80%81%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   

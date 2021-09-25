@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端性能优化, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="数组方法reduce, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端性能优化 | 卡尔 · 弗兰兹</title>
+    <title>数组方法reduce | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端性能优化</h1>
+                    <h1 class="description center-align post-title">数组方法reduce</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                                <span class="chip bg-color">前端性能优化</span>
+                            <a href="/tags/%E6%95%B0%E7%BB%84reduce%E6%96%B9%E6%B3%95/">
+                                <span class="chip bg-color">数组reduce方法</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-13
+                    2021-09-24
                 </div>
                 
 
@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    581
+                    281
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -484,50 +484,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 为避免一个函数的执行频率过高， 使用防抖。</span>
-<span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//进入该分支语句，说明当前正在一个计时过程中，并且又触发了相同事件。所以要取消当前的计时，重新开始计时</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// 自定义属性，外部不用再定义一个timer传进来 (timer初始为undefined)</span>
-            <span class="token function">clearTimeout</span><span class="token punctuation">(</span>fn<span class="token punctuation">.</span>timer<span class="token punctuation">)</span> 
-        <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">// 其他情况，说明当前并没有在计时，那么就开始一个计时</span>
-        fn<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span>  
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h4 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 一种类似控制阀门一样定期开放的函数，也就是让函数执行一次后，在某个时间段内暂时失效，过了这段时间后再重新激活（类似于技能冷却时间） </span>
-<span class="token comment" spellcheck="true">// 取自思否</span>
-<span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">let</span> valid <span class="token operator">=</span> <span class="token boolean">true</span>
-    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-       <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>valid<span class="token punctuation">)</span><span class="token punctuation">{</span>
-           <span class="token comment" spellcheck="true">//休息时间 暂不接客</span>
-           <span class="token keyword">return</span> <span class="token boolean">false</span> 
-       <span class="token punctuation">}</span>
-       <span class="token comment" spellcheck="true">// 工作时间，执行函数并且在间隔期内把状态位设为无效</span>
-        valid <span class="token operator">=</span> <span class="token boolean">false</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-            valid <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h4 id="视频流"><a href="#视频流" class="headerlink" title="视频流"></a>视频流</h4><pre class=" language-tex"><code class="language-tex">有时组件内部会嵌套视频，而在组件将要卸载时，必须断掉这些视频流，不断掉视频流不会自动停止，会对性能产生严重影响！
-
-有些场景，需要在组件卸载前，将定时器也清除掉。
-</code></pre>
-<h4 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h4><pre class=" language-tex"><code class="language-tex">游戏开发一般对性能、内存有严格要求。 
-拿移动端举例， 有的游戏从始至终只会请求一次接口，任何页面数据变化 ，全部由前端计算并更新页面数据。 
-也就是说在点某个具体的按钮时，数据发生变化，会传一个流程Id给后端，后端根据这个流程Id 更新数据库数据，而前端展示数据由前端更新。
-（注意：这里只是传了流程Id给后端，并没有重新请求接口渲染页面！），但在下次重新请求数据时，使用数据库数据！
-
-
-**前端更新数据，子组件将需要更新的数据传回父组件，由父组件完成更新再传递给子组件。
-</code></pre>
-<h4 id="尽量少调接口"><a href="#尽量少调接口" class="headerlink" title="尽量少调接口"></a>尽量少调接口</h4><pre class=" language-tex"><code class="language-tex">若非必要情况，尽量少调用接口。 接口的调用一定意义上会消耗性能，因此，减少非必要接口的调用，移动端游戏开发正是这种思想。
+                <pre class=" language-js"><code class="language-js">   arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span>cur<span class="token punctuation">,</span>index<span class="token punctuation">,</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token operator">...</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span> init<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       
+     <span class="token comment" spellcheck="true">// 其中，</span>
+  <span class="token comment" spellcheck="true">// arr 表示原数组；</span>
+  <span class="token comment" spellcheck="true">// prev 表示上一次调用回调时的返回值，或者初始值 init;</span>
+  <span class="token comment" spellcheck="true">// cur 表示当前正在处理的数组元素；</span>
+  <span class="token comment" spellcheck="true">// index 表示当前正在处理的数组元素的索引，若提供 init 值，则索引为0，否则索引为1；</span>
+  <span class="token comment" spellcheck="true">// init 表示初始值。</span>
+       
+  <span class="token comment" spellcheck="true">// 计算数组项之和</span>
+   <span class="token keyword">let</span> bigarr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bigarr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> prev <span class="token operator">+</span> cur
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 56</span>
+       
+  <span class="token comment" spellcheck="true">// 求最大值</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'max'</span><span class="token punctuation">,</span> bigarr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+       
+  <span class="token comment" spellcheck="true">// 数组去重</span>
+    <span class="token keyword">let</span> newArr <span class="token operator">=</span> bigarr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'prev'</span><span class="token punctuation">,</span> prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//   prev [] 1</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev [1] 3</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (2) [1, 3] 7</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (3) [1, 3, 7] 9</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (4) [1, 3, 7, 9] 8</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (5) [1, 3, 7, 9, 8] 7</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (5) [1, 3, 7, 9, 8] 6</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (6) [1, 3, 7, 9, 8, 6] 2</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (7) [1, 3, 7, 9, 8, 6, 2] 9</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (7) [1, 3, 7, 9, 8, 6, 2] 1</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (7) [1, 3, 7, 9, 8, 6, 2] 3</span>
+        
+    prev<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> prev<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> prev
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'new'</span><span class="token punctuation">,</span> newArr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [1, 3, 7, 9, 8, 6, 2]</span>
 </code></pre>
 
                 
@@ -555,7 +553,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/09/13/qian-duan-xing-neng-you-hua/">http://siberiabar2.github.io/2021/09/13/qian-duan-xing-neng-you-hua/</a>
+                    <a href="http://siberiabar2.github.io/2021/09/24/shu-zu-fang-fa-reduce/">http://siberiabar2.github.io/2021/09/24/shu-zu-fang-fa-reduce/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -593,8 +591,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                                    <span class="chip bg-color">前端性能优化</span>
+                                <a href="/tags/%E6%95%B0%E7%BB%84reduce%E6%96%B9%E6%B3%95/">
+                                    <span class="chip bg-color">数组reduce方法</span>
                                 </a>
                             
                         </div>
@@ -765,7 +763,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-09-13T10-43-38',
+        id: '2021-09-24T12-13-21',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -789,7 +787,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Mon Sep 13 2021 10:43:38 GMT+0800',
+    id: 'Fri Sep 24 2021 12:13:21 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -814,9 +812,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/09/13/qian-duan-xing-neng-you-hua/';
-        this.page.identifier = '/2021/09/13/qian-duan-xing-neng-you-hua/';
-        this.page.title = '前端性能优化';
+        this.page.url = 'http://siberiabar2.github.io/2021/09/24/shu-zu-fang-fa-reduce/';
+        this.page.identifier = '/2021/09/24/shu-zu-fang-fa-reduce/';
+        this.page.title = '数组方法reduce';
     };
     let disqus_shortname = '';
 
@@ -1134,17 +1132,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/13/yuan-sheng-lun-bo-tu/">
+                <a href="/2021/09/24/shu-zu-fang-fa-reduce/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="原生轮播图">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="数组方法reduce">
                         
-                        <span class="card-title">原生轮播图</span>
+                        <span class="card-title">数组方法reduce</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1154,9 +1153,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1165,11 +1164,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8E%9F%E7%94%9F%E8%BD%AE%E6%92%AD%E5%9B%BE/">
-                        <span class="chip bg-color">原生轮播图</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84reduce%E6%96%B9%E6%B3%95/">
+                        <span class="chip bg-color">数组reduce方法</span>
                     </a>
                     
                 </div>
@@ -1183,13 +1183,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/12/wen-jian-ming-ling-xing-cao-zuo/">
+                <a href="/2021/09/17/es6promise-dui-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="文件命令行操作">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="es6promise对象">
                         
-                        <span class="card-title">文件命令行操作</span>
+                        <span class="card-title">es6promise对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1200,7 +1200,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
                             </span>
                         <span class="publish-author">
                             
@@ -1213,8 +1213,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">文件命令行操作</span>
+                    <a href="/tags/promise/">
+                        <span class="chip bg-color">promise</span>
                     </a>
                     
                 </div>
