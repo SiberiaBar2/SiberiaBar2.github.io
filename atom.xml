@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-09-24T04:19:55.007Z</updated>
+  <updated>2021-09-28T16:06:06.981Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,101 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cra引入文件非全称</title>
+    <link href="http://siberiabar2.github.io/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/"/>
+    <id>http://siberiabar2.github.io/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/</id>
+    <published>2021-09-28T16:03:52.000Z</published>
+    <updated>2021-09-28T16:06:06.981Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;配置webpack.config.js&lt;/p&gt;
+&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;//</summary>
+        
+      
+    
+    
+    
+    
+    <category term="cra引入文件非全称" scheme="http://siberiabar2.github.io/tags/cra%E5%BC%95%E5%85%A5%E6%96%87%E4%BB%B6%E9%9D%9E%E5%85%A8%E7%A7%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cra中使用相对路径</title>
+    <link href="http://siberiabar2.github.io/2021/09/28/cra-zhong-shi-yong-xiang-dui-lu-jing/"/>
+    <id>http://siberiabar2.github.io/2021/09/28/cra-zhong-shi-yong-xiang-dui-lu-jing/</id>
+    <published>2021-09-28T15:56:58.000Z</published>
+    <updated>2021-09-28T16:00:34.594Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-配置&quot;&gt;&lt;a href=&quot;#1-配置&quot; class=&quot;headerlink&quot; title=&quot;1.配置&quot;&gt;&lt;/a&gt;1.配置&lt;/h4&gt;&lt;p&gt;tsconfig.json中加入如下配置&lt;/p&gt;
+&lt;pre class=&quot; language-json&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="cra使用相对路径" scheme="http://siberiabar2.github.io/tags/cra%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hoc高阶组件</title>
+    <link href="http://siberiabar2.github.io/2021/09/28/hoc-gao-jie-zu-jian/"/>
+    <id>http://siberiabar2.github.io/2021/09/28/hoc-gao-jie-zu-jian/</id>
+    <published>2021-09-28T15:35:07.000Z</published>
+    <updated>2021-09-28T16:10:25.310Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-概念&quot;&gt;&lt;a href=&quot;#1-概念&quot; class=&quot;headerlink&quot; title=&quot;1.概念&quot;&gt;&lt;/a&gt;1.概念&lt;/h4&gt;&lt;pre class=&quot; language-tsx&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="高阶组件" scheme="http://siberiabar2.github.io/tags/%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react-redux</title>
+    <link href="http://siberiabar2.github.io/2021/09/28/react-redux/"/>
+    <id>http://siberiabar2.github.io/2021/09/28/react-redux/</id>
+    <published>2021-09-28T14:43:18.000Z</published>
+    <updated>2021-09-28T16:11:32.610Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-为什么用redux&quot;&gt;&lt;a href=&quot;#1-为什么用redux&quot; class=&quot;headerlink&quot; title=&quot;1.为什么用redux&quot;&gt;&lt;/a&gt;1.为什么用redux&lt;/h4&gt;&lt;pre class=&quot; language-react&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react-redux" scheme="http://siberiabar2.github.io/tags/react-redux/"/>
+    
+  </entry>
   
   <entry>
     <title>数组方法reduce</title>
@@ -383,99 +478,6 @@ npm install</summary>
     
     
     <category term="数组对象" scheme="http://siberiabar2.github.io/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>May30</title>
-    <link href="http://siberiabar2.github.io/2021/05/30/may30/"/>
-    <id>http://siberiabar2.github.io/2021/05/30/may30/</id>
-    <published>2021-05-30T10:46:41.000Z</published>
-    <updated>2021-07-27T03:24:21.904Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;h4 id=&quot;在运行前-先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。&quot;&gt;&lt;a href=&quot;#在运行前-先确定有没有保存，如果没有保存，保存，或者干脆设为自动保存。&quot; class=&quot;headerlink&quot; title=&quot;在运行前</summary>
-        
-      
-    
-    
-    
-    
-    <category term="错误总结" scheme="http://siberiabar2.github.io/tags/%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>this指向、构造函数</title>
-    <link href="http://siberiabar2.github.io/2021/05/27/this-zhi-xiang-gou-zao-han-shu/"/>
-    <id>http://siberiabar2.github.io/2021/05/27/this-zhi-xiang-gou-zao-han-shu/</id>
-    <published>2021-05-27T14:06:47.000Z</published>
-    <updated>2021-05-30T10:45:15.336Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;函数的this指向&quot;&gt;&lt;a href=&quot;#函数的this指向&quot; class=&quot;headerlink&quot; title=&quot;函数的this指向&quot;&gt;&lt;/a&gt;函数的this指向&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="this指向、构造函数" scheme="http://siberiabar2.github.io/tags/this%E6%8C%87%E5%90%91%E3%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>May24</title>
-    <link href="http://siberiabar2.github.io/2021/05/24/may24/"/>
-    <id>http://siberiabar2.github.io/2021/05/24/may24/</id>
-    <published>2021-05-24T14:17:58.000Z</published>
-    <updated>2021-05-24T15:26:16.156Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-关于react中使用less&quot;&gt;&lt;a href=&quot;#1-关于react中使用less&quot; class=&quot;headerlink&quot; title=&quot;1. 关于react中使用less&quot;&gt;&lt;/a&gt;1. 关于react中使用less&lt;/h4&gt;&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="summary" scheme="http://siberiabar2.github.io/tags/summary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>反思总结</title>
-    <link href="http://siberiabar2.github.io/2021/05/21/fan-si-zong-jie/"/>
-    <id>http://siberiabar2.github.io/2021/05/21/fan-si-zong-jie/</id>
-    <published>2021-05-21T13:09:29.000Z</published>
-    <updated>2021-05-21T13:52:12.400Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-Js变量名如果太相近，容易引用错误且不易发现错误！&quot;&gt;&lt;a href=&quot;#1-Js变量名如果太相近，容易引用错误且不易发现错误！&quot; class=&quot;headerlink&quot; title=&quot;1. Js变量名如果太相近，容易引用错误且不易发现错误！&quot;&gt;&lt;/a&gt;1.</summary>
-        
-      
-    
-    
-    
-    
-    <category term="反思" scheme="http://siberiabar2.github.io/tags/%E5%8F%8D%E6%80%9D/"/>
     
   </entry>
   
