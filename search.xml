@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>mac查看ip</title>
+      <link href="2021/10/05/mac-cha-kan-ip/"/>
+      <url>2021/10/05/mac-cha-kan-ip/</url>
+      
+        <content type="html"><![CDATA[<h4 id="在开发中，我们可能需要配置本地的ip、端口-而mac在每次关机后，会重新分配ip。"><a href="#在开发中，我们可能需要配置本地的ip、端口-而mac在每次关机后，会重新分配ip。" class="headerlink" title="在开发中，我们可能需要配置本地的ip、端口, 而mac在每次关机后，会重新分配ip。"></a>在开发中，我们可能需要配置本地的ip、端口, 而mac在每次关机后，会重新分配ip。</h4><p>这时我们就需要重新查看当前的ip了。</p><pre class=" language-js"><code class="language-js">ifconfig <span class="token operator">|</span> grep <span class="token string">"inet "</span> <span class="token operator">|</span> grep <span class="token operator">-</span>v <span class="token number">127.0</span><span class="token punctuation">.</span><span class="token number">0.1</span></code></pre><h4 id="mac更改时间日期"><a href="#mac更改时间日期" class="headerlink" title="mac更改时间日期"></a>mac更改时间日期</h4><pre class=" language-js"><code class="language-js">sudo date <span class="token number">0827102121</span>月日时分年最后的<span class="token number">21</span>是年</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mac查看ip </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cra引入文件非全称</title>
       <link href="2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/"/>
       <url>2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/</url>
