@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-10-05T13:55:56.298Z</updated>
+  <updated>2021-10-09T16:07:27.026Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,121 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node中的path和url模块</title>
+    <link href="http://siberiabar2.github.io/2021/10/09/node-zhong-de-path-he-url-mo-kuai/"/>
+    <id>http://siberiabar2.github.io/2021/10/09/node-zhong-de-path-he-url-mo-kuai/</id>
+    <published>2021-10-09T15:59:30.000Z</published>
+    <updated>2021-10-09T16:07:27.026Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;node中的path和url模块&quot;&gt;&lt;a href=&quot;#node中的path和url模块&quot; class=&quot;headerlink&quot; title=&quot;node中的path和url模块&quot;&gt;&lt;/a&gt;node中的path和url模块&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="node中的path和url模块" scheme="http://siberiabar2.github.io/tags/node%E4%B8%AD%E7%9A%84path%E5%92%8Curl%E6%A8%A1%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>启用nodemon热更新</title>
+    <link href="http://siberiabar2.github.io/2021/10/09/qi-yong-nodemon-re-geng-xin/"/>
+    <id>http://siberiabar2.github.io/2021/10/09/qi-yong-nodemon-re-geng-xin/</id>
+    <published>2021-10-09T15:39:13.000Z</published>
+    <updated>2021-10-09T15:45:21.416Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;启用nodemon热更新&quot;&gt;&lt;a href=&quot;#启用nodemon热更新&quot; class=&quot;headerlink&quot; title=&quot;启用nodemon热更新&quot;&gt;&lt;/a&gt;启用nodemon热更新&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="启用nodemon热更新" scheme="http://siberiabar2.github.io/tags/%E5%90%AF%E7%94%A8nodemon%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node写入文件的几种方式</title>
+    <link href="http://siberiabar2.github.io/2021/10/09/node-xie-ru-wen-jian-de-ji-chong-fang-shi/"/>
+    <id>http://siberiabar2.github.io/2021/10/09/node-xie-ru-wen-jian-de-ji-chong-fang-shi/</id>
+    <published>2021-10-09T15:14:06.000Z</published>
+    <updated>2021-10-09T16:09:09.644Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;node写入文件的几种方式&quot;&gt;&lt;a href=&quot;#node写入文件的几种方式&quot; class=&quot;headerlink&quot; title=&quot;node写入文件的几种方式&quot;&gt;&lt;/a&gt;node写入文件的几种方式&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="node写入文件的几种方式" scheme="http://siberiabar2.github.io/tags/node%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode使用git命令行</title>
+    <link href="http://siberiabar2.github.io/2021/10/09/vscode-shi-yong-git-ming-ling-xing/"/>
+    <id>http://siberiabar2.github.io/2021/10/09/vscode-shi-yong-git-ming-ling-xing/</id>
+    <published>2021-10-09T14:51:24.000Z</published>
+    <updated>2021-10-09T14:53:40.034Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;vscode使用git命令行&quot;&gt;&lt;a href=&quot;#vscode使用git命令行&quot; class=&quot;headerlink&quot; title=&quot;vscode使用git命令行&quot;&gt;&lt;/a&gt;vscode使用git命令行&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="vscode使用git命令行" scheme="http://siberiabar2.github.io/tags/vscode%E4%BD%BF%E7%94%A8git%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Object.assign深浅拷贝</title>
+    <link href="http://siberiabar2.github.io/2021/10/09/object-assign-shen-qian-kao-bei/"/>
+    <id>http://siberiabar2.github.io/2021/10/09/object-assign-shen-qian-kao-bei/</id>
+    <published>2021-10-08T16:06:51.000Z</published>
+    <updated>2021-10-09T16:11:52.403Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;Object-assign深浅拷贝&quot;&gt;&lt;a href=&quot;#Object-assign深浅拷贝&quot; class=&quot;headerlink&quot; title=&quot;Object.assign深浅拷贝&quot;&gt;&lt;/a&gt;Object.assign深浅拷贝&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Object.assign深浅拷贝" scheme="http://siberiabar2.github.io/tags/Object-assign%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>mac查看ip</title>
@@ -366,118 +481,6 @@ npm install</summary>
     
     
     <category term="正则表达式" scheme="http://siberiabar2.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>事件循环机制-宏任务微任务</title>
-    <link href="http://siberiabar2.github.io/2021/08/01/shi-jian-xun-huan-ji-zhi-hong-ren-wu-wei-ren-wu/"/>
-    <id>http://siberiabar2.github.io/2021/08/01/shi-jian-xun-huan-ji-zhi-hong-ren-wu-wei-ren-wu/</id>
-    <published>2021-08-01T13:32:45.000Z</published>
-    <updated>2021-08-01T14:39:07.911Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;代码执行顺序&quot;&gt;&lt;a href=&quot;#代码执行顺序&quot; class=&quot;headerlink&quot; title=&quot;代码执行顺序&quot;&gt;&lt;/a&gt;代码执行顺序&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="事件循环  宏任务 微任务" scheme="http://siberiabar2.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF-%E5%AE%8F%E4%BB%BB%E5%8A%A1-%E5%BE%AE%E4%BB%BB%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面向对象</title>
-    <link href="http://siberiabar2.github.io/2021/07/25/mian-xiang-dui-xiang/"/>
-    <id>http://siberiabar2.github.io/2021/07/25/mian-xiang-dui-xiang/</id>
-    <published>2021-07-25T04:05:10.000Z</published>
-    <updated>2021-09-12T08:58:17.789Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;class&quot;&gt;&lt;a href=&quot;#class&quot; class=&quot;headerlink&quot; title=&quot;class&quot;&gt;&lt;/a&gt;class&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="面向对象、 文件操作，导出和暴露的方式" scheme="http://siberiabar2.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%EF%BC%8C%E5%AF%BC%E5%87%BA%E5%92%8C%E6%9A%B4%E9%9C%B2%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>严格模式与es5对象的两种扩展</title>
-    <link href="http://siberiabar2.github.io/2021/07/21/yan-ge-mo-shi-yu-es5-dui-xiang-de-liang-chong-kuo-zhan/"/>
-    <id>http://siberiabar2.github.io/2021/07/21/yan-ge-mo-shi-yu-es5-dui-xiang-de-liang-chong-kuo-zhan/</id>
-    <published>2021-07-21T15:17:48.000Z</published>
-    <updated>2021-07-21T15:57:07.194Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;严格模式&quot;&gt;&lt;a href=&quot;#严格模式&quot; class=&quot;headerlink&quot; title=&quot;严格模式&quot;&gt;&lt;/a&gt;严格模式&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="严格模式  对象es5两种扩展" scheme="http://siberiabar2.github.io/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F-%E5%AF%B9%E8%B1%A1es5%E4%B8%A4%E7%A7%8D%E6%89%A9%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>21-july-18report</title>
-    <link href="http://siberiabar2.github.io/2021/07/18/21-july-18report/"/>
-    <id>http://siberiabar2.github.io/2021/07/18/21-july-18report/</id>
-    <published>2021-07-18T13:01:39.000Z</published>
-    <updated>2021-07-20T06:10:40.821Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;Object的三种方法&quot;&gt;&lt;a href=&quot;#Object的三种方法&quot; class=&quot;headerlink&quot; title=&quot;Object的三种方法&quot;&gt;&lt;/a&gt;Object的三种方法&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>June20</title>
-    <link href="http://siberiabar2.github.io/2021/06/20/june20/"/>
-    <id>http://siberiabar2.github.io/2021/06/20/june20/</id>
-    <published>2021-06-20T08:25:43.000Z</published>
-    <updated>2021-07-23T09:17:03.952Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-css文字隐藏，hover上去显示全部。&quot;&gt;&lt;a href=&quot;#1-css文字隐藏，hover上去显示全部。&quot; class=&quot;headerlink&quot; title=&quot;1. css文字隐藏，hover上去显示全部。&quot;&gt;&lt;/a&gt;1.</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
