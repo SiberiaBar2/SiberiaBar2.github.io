@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    177
+                    286
                 </div>
                 
 
@@ -484,7 +484,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="git-操作"><a href="#git-操作" class="headerlink" title="git 操作"></a>git 操作</h4><pre class=" language-jsx"><code class="language-jsx">git add <span class="token punctuation">.</span>
+                <h4 id="git-操作"><a href="#git-操作" class="headerlink" title="git 操作"></a>git 操作</h4><pre class=" language-jsx"><code class="language-jsx">git init <span class="token comment" spellcheck="true">// (在github新建远程仓库，将一个文件使用此命令初始化，然后按照提示操作。)</span>
+git add <span class="token punctuation">.</span>
 git commit <span class="token operator">-</span>m 
 git push <span class="token comment" spellcheck="true">// (若从远程上来下来，并切换了分支，那么可直接git push 就能将本地最新代码push到远程对应的这个分支上去)</span>
 git checkout  <span class="token comment" spellcheck="true">// 分支名 (已在远程对应的分支上，可使用此命令切换到其他远程分支)</span>
@@ -492,8 +493,13 @@ git checkout <span class="token operator">-</span>b <span class="token comment" 
 git branch <span class="token operator">-</span>a <span class="token comment" spellcheck="true">// (查看所有分支，本地and远程)</span>
 git branch <span class="token comment" spellcheck="true">// (查看本地分支)</span>
 git push <span class="token operator">--</span><span class="token keyword">set</span><span class="token operator">-</span>upstream origin 本地分支名 <span class="token comment" spellcheck="true">// (将本地分支推到远程仓库，使远程仓库下有该分支名)</span>
-git pull origin develop <span class="token comment" spellcheck="true">// 拉取对应远程分支的代码</span>
-git reset <span class="token operator">--</span>hard commmit代码 <span class="token comment" spellcheck="true">// 回退到指定版本</span>
+git pull origin develop <span class="token comment" spellcheck="true">// (拉取对应远程分支的代码)</span>
+git reset <span class="token operator">--</span>hard commmit代码 <span class="token comment" spellcheck="true">// (回退到指定版本)</span>
+git commit <span class="token operator">--</span>no<span class="token operator">-</span>verify <span class="token operator">-</span>m <span class="token comment" spellcheck="true">// 跳过校验提交</span>
+git merge <span class="token comment" spellcheck="true">// (用于将分支代码合并至主分支)</span>
+<span class="token comment" spellcheck="true">// 先将自己的分支 add . commit  push 完毕， 再切换到master分支 ，</span>
+<span class="token comment" spellcheck="true">// 使用 git merge 你的分支 命令将自己分支上的代码合并至主分支 。</span>
+<span class="token comment" spellcheck="true">// 最后psuh 主分支代码</span>
 </code></pre>
 
                 
@@ -1385,7 +1391,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">21.2k</span>
+                        class="white-color">21.4k</span>
             
             
             

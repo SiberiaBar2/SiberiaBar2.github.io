@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-10-09T16:07:27.026Z</updated>
+  <updated>2021-10-17T10:08:22.769Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>格式化时间</title>
+    <link href="http://siberiabar2.github.io/2021/10/17/ge-shi-hua-shi-jian/"/>
+    <id>http://siberiabar2.github.io/2021/10/17/ge-shi-hua-shi-jian/</id>
+    <published>2021-10-17T10:02:23.000Z</published>
+    <updated>2021-10-17T10:08:22.769Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;h4 id=&quot;格式化时间&quot;&gt;&lt;a href=&quot;#格式化时间&quot; class=&quot;headerlink&quot; title=&quot;格式化时间&quot;&gt;&lt;/a&gt;格式化时间&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="格式化时间" scheme="http://siberiabar2.github.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>node中的path和url模块</title>
@@ -457,30 +481,6 @@ npm install</summary>
     
     
     <category term="typescript" scheme="http://siberiabar2.github.io/tags/typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式</title>
-    <link href="http://siberiabar2.github.io/2021/09/06/zheng-ze-biao-da-shi/"/>
-    <id>http://siberiabar2.github.io/2021/09/06/zheng-ze-biao-da-shi/</id>
-    <published>2021-09-06T13:35:59.000Z</published>
-    <updated>2021-09-07T12:00:08.219Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;
- &lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="正则表达式" scheme="http://siberiabar2.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
