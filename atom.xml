@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-10-22T13:54:29.839Z</updated>
+  <updated>2021-10-24T12:29:26.816Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>reactTypescript配置代理服务器</title>
+    <link href="http://siberiabar2.github.io/2021/10/24/reacttypescript-pei-zhi-dai-li-fu-wu-qi/"/>
+    <id>http://siberiabar2.github.io/2021/10/24/reacttypescript-pei-zhi-dai-li-fu-wu-qi/</id>
+    <published>2021-10-24T12:20:40.000Z</published>
+    <updated>2021-10-24T12:29:26.816Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;react-Typescript-配置代理服务器&quot;&gt;&lt;a href=&quot;#react-Typescript-配置代理服务器&quot; class=&quot;headerlink&quot; title=&quot;react + Typescript 配置代理服务器&quot;&gt;&lt;/a&gt;react +</summary>
+        
+      
+    
+    
+    
+    
+    <category term="reactTypescript配置代理服务器" scheme="http://siberiabar2.github.io/tags/reactTypescript%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>typescript取下级值</title>
+    <link href="http://siberiabar2.github.io/2021/10/24/typescript-qu-xia-ji-zhi/"/>
+    <id>http://siberiabar2.github.io/2021/10/24/typescript-qu-xia-ji-zhi/</id>
+    <published>2021-10-24T11:41:21.000Z</published>
+    <updated>2021-10-24T12:16:01.079Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;typescript取下级值&quot;&gt;&lt;a href=&quot;#typescript取下级值&quot; class=&quot;headerlink&quot; title=&quot;typescript取下级值&quot;&gt;&lt;/a&gt;typescript取下级值&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="typescript取下级值" scheme="http://siberiabar2.github.io/tags/typescript%E5%8F%96%E4%B8%8B%E7%BA%A7%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react函数组件路由跳转</title>
+    <link href="http://siberiabar2.github.io/2021/10/24/react-han-shu-zu-jian-lu-you-tiao-zhuan/"/>
+    <id>http://siberiabar2.github.io/2021/10/24/react-han-shu-zu-jian-lu-you-tiao-zhuan/</id>
+    <published>2021-10-24T11:29:26.000Z</published>
+    <updated>2021-10-24T12:38:22.168Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;react函数组件路由跳转&quot;&gt;&lt;a href=&quot;#react函数组件路由跳转&quot; class=&quot;headerlink&quot; title=&quot;react函数组件路由跳转&quot;&gt;&lt;/a&gt;react函数组件路由跳转&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react函数组件路由跳转" scheme="http://siberiabar2.github.io/tags/react%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>转化时间日期格式</title>
@@ -412,77 +481,6 @@
     
     
     <category term="react-redux" scheme="http://siberiabar2.github.io/tags/react-redux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数组方法reduce</title>
-    <link href="http://siberiabar2.github.io/2021/09/24/shu-zu-fang-fa-reduce/"/>
-    <id>http://siberiabar2.github.io/2021/09/24/shu-zu-fang-fa-reduce/</id>
-    <published>2021-09-24T04:13:21.000Z</published>
-    <updated>2021-09-24T04:19:55.007Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;   arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token</summary>
-        
-      
-    
-    
-    
-    
-    <category term="数组reduce方法" scheme="http://siberiabar2.github.io/tags/%E6%95%B0%E7%BB%84reduce%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>es6promise对象</title>
-    <link href="http://siberiabar2.github.io/2021/09/17/es6promise-dui-xiang/"/>
-    <id>http://siberiabar2.github.io/2021/09/17/es6promise-dui-xiang/</id>
-    <published>2021-09-17T09:04:11.000Z</published>
-    <updated>2021-09-17T09:11:01.481Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot; language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;//</summary>
-        
-      
-    
-    
-    
-    
-    <category term="promise" scheme="http://siberiabar2.github.io/tags/promise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react引入antd</title>
-    <link href="http://siberiabar2.github.io/2021/09/17/react-yin-ru-antd/"/>
-    <id>http://siberiabar2.github.io/2021/09/17/react-yin-ru-antd/</id>
-    <published>2021-09-16T16:49:39.000Z</published>
-    <updated>2021-09-16T16:52:29.255Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot; language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;// 安装&lt;/span&gt;
-
-npm install</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react引入antd" scheme="http://siberiabar2.github.io/tags/react%E5%BC%95%E5%85%A5antd/"/>
     
   </entry>
   
