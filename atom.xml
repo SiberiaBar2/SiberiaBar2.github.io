@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-10-24T12:29:26.816Z</updated>
+  <updated>2021-10-28T01:40:25.764Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简单算法</title>
+    <link href="http://siberiabar2.github.io/2021/10/28/jian-dan-suan-fa/"/>
+    <id>http://siberiabar2.github.io/2021/10/28/jian-dan-suan-fa/</id>
+    <published>2021-10-28T01:34:42.000Z</published>
+    <updated>2021-10-28T01:40:25.764Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;简单算法&quot;&gt;&lt;a href=&quot;#简单算法&quot; class=&quot;headerlink&quot; title=&quot;简单算法&quot;&gt;&lt;/a&gt;简单算法&lt;/h4&gt;&lt;h5 id=&quot;传入字符串，返回不重复字符串的最长长度&quot;&gt;&lt;a href=&quot;#传入字符串，返回不重复字符串的最长长度&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="简单算法" scheme="http://siberiabar2.github.io/tags/%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>antd优化加载组件</title>
+    <link href="http://siberiabar2.github.io/2021/10/25/antd-you-hua-jia-zai-zu-jian/"/>
+    <id>http://siberiabar2.github.io/2021/10/25/antd-you-hua-jia-zai-zu-jian/</id>
+    <published>2021-10-25T10:21:22.000Z</published>
+    <updated>2021-10-25T10:24:16.573Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;antd优化加载组件&quot;&gt;&lt;a href=&quot;#antd优化加载组件&quot; class=&quot;headerlink&quot; title=&quot;antd优化加载组件&quot;&gt;&lt;/a&gt;antd优化加载组件&lt;/h4&gt;&lt;pre class=&quot; language-jsx&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="antd优化加载组件" scheme="http://siberiabar2.github.io/tags/antd%E4%BC%98%E5%8C%96%E5%8A%A0%E8%BD%BD%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>reactTypescript配置代理服务器</title>
@@ -435,52 +481,6 @@
     
     
     <category term="cra使用相对路径" scheme="http://siberiabar2.github.io/tags/cra%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hoc高阶组件</title>
-    <link href="http://siberiabar2.github.io/2021/09/28/hoc-gao-jie-zu-jian/"/>
-    <id>http://siberiabar2.github.io/2021/09/28/hoc-gao-jie-zu-jian/</id>
-    <published>2021-09-28T15:35:07.000Z</published>
-    <updated>2021-09-28T16:10:25.310Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-概念&quot;&gt;&lt;a href=&quot;#1-概念&quot; class=&quot;headerlink&quot; title=&quot;1.概念&quot;&gt;&lt;/a&gt;1.概念&lt;/h4&gt;&lt;pre class=&quot; language-tsx&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="高阶组件" scheme="http://siberiabar2.github.io/tags/%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react-redux</title>
-    <link href="http://siberiabar2.github.io/2021/09/28/react-redux/"/>
-    <id>http://siberiabar2.github.io/2021/09/28/react-redux/</id>
-    <published>2021-09-28T14:43:18.000Z</published>
-    <updated>2021-09-28T16:11:32.610Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-为什么用redux&quot;&gt;&lt;a href=&quot;#1-为什么用redux&quot; class=&quot;headerlink&quot; title=&quot;1.为什么用redux&quot;&gt;&lt;/a&gt;1.为什么用redux&lt;/h4&gt;&lt;pre class=&quot; language-react&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react-redux" scheme="http://siberiabar2.github.io/tags/react-redux/"/>
     
   </entry>
   
