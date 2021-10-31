@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-10-28T01:40:25.764Z</updated>
+  <updated>2021-10-31T04:21:24.077Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>forIN和forOf的区别</title>
+    <link href="http://siberiabar2.github.io/2021/10/31/forin-he-forof-de-qu-bie/"/>
+    <id>http://siberiabar2.github.io/2021/10/31/forin-he-forof-de-qu-bie/</id>
+    <published>2021-10-31T04:10:47.000Z</published>
+    <updated>2021-10-31T04:21:24.077Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;for-in和for-of的区别&quot;&gt;&lt;a href=&quot;#for-in和for-of的区别&quot; class=&quot;headerlink&quot; title=&quot;for in和for of的区别&quot;&gt;&lt;/a&gt;for in和for of的区别&lt;/h4&gt;&lt;h5 id=&quot;循环对象&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="for in和for of的区别" scheme="http://siberiabar2.github.io/tags/for-in%E5%92%8Cfor-of%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>简单算法</title>
@@ -457,30 +480,6 @@
     
     
     <category term="cra引入文件非全称" scheme="http://siberiabar2.github.io/tags/cra%E5%BC%95%E5%85%A5%E6%96%87%E4%BB%B6%E9%9D%9E%E5%85%A8%E7%A7%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cra中使用相对路径</title>
-    <link href="http://siberiabar2.github.io/2021/09/28/cra-zhong-shi-yong-xiang-dui-lu-jing/"/>
-    <id>http://siberiabar2.github.io/2021/09/28/cra-zhong-shi-yong-xiang-dui-lu-jing/</id>
-    <published>2021-09-28T15:56:58.000Z</published>
-    <updated>2021-09-28T16:00:34.594Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-配置&quot;&gt;&lt;a href=&quot;#1-配置&quot; class=&quot;headerlink&quot; title=&quot;1.配置&quot;&gt;&lt;/a&gt;1.配置&lt;/h4&gt;&lt;p&gt;tsconfig.json中加入如下配置&lt;/p&gt;
-&lt;pre class=&quot; language-json&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="cra使用相对路径" scheme="http://siberiabar2.github.io/tags/cra%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/"/>
     
   </entry>
   

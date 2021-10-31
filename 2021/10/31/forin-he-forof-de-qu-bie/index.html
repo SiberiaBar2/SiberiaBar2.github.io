@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node.js的event中间件, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="forIN和forOf的区别, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node.js的event中间件 | 卡尔 · 弗兰兹</title>
+    <title>forIN和forOf的区别 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node.js的event中间件</h1>
+                    <h1 class="description center-align post-title">forIN和forOf的区别</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/node-js%E7%9A%84event%E4%B8%AD%E9%97%B4%E4%BB%B6/">
-                                <span class="chip bg-color">node.js的event中间件</span>
+                            <a href="/tags/for-in%E5%92%8Cfor-of%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                                <span class="chip bg-color">for in和for of的区别</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-17
+                    2021-10-31
                 </div>
                 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    121
+                    285
                 </div>
                 
 
@@ -484,23 +484,49 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-node-js的event中间件"><a href="#1-node-js的event中间件" class="headerlink" title="1.node.js的event中间件"></a>1.node.js的event中间件</h4><h5 id="event-js"><a href="#event-js" class="headerlink" title="event.js"></a>event.js</h5><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> events <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'events'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <h4 id="for-in和for-of的区别"><a href="#for-in和for-of的区别" class="headerlink" title="for in和for of的区别"></a>for in和for of的区别</h4><h5 id="循环对象"><a href="#循环对象" class="headerlink" title="循环对象"></a>循环对象</h5><pre class=" language-typescript"><code class="language-typescript"> <span class="token keyword">let</span> objKey <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">'牛恒'</span><span class="token punctuation">,</span> age <span class="token punctuation">:</span> <span class="token number">23</span> <span class="token punctuation">,</span> sex<span class="token punctuation">:</span><span class="token string">'男'</span> <span class="token punctuation">}</span>
+  
+  <span class="token comment" spellcheck="true">// for in 专门用来循环对象 ，key是对象的键， obj[key]是对象的值</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> value <span class="token keyword">in</span> objKey<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'objKey ----- value'</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// objKey ----- value name</span>
+    <span class="token comment" spellcheck="true">// index.tsx:30 objKey ----- value age</span>
+    <span class="token comment" spellcheck="true">// index.tsx:30 objKey ----- value sex</span>
+  <span class="token punctuation">}</span>
 
-<span class="token keyword">let</span> eventEmitter <span class="token operator">=</span> events<span class="token punctuation">.</span>EventEmitter<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// ***for of 循环对象会报错</span>
+  <span class="token comment" spellcheck="true">// 只能循环数组或者字符串类型</span>
+  <span class="token comment" spellcheck="true">// react-dom.development.js:11340 Uncaught TypeError: objKey is not iterable</span>
+  
+   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> value of objKey<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// error ； 类型“{ name: string; age: number; sex: string; }”不是数组类型或字符串类型。</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'value'</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
 
-<span class="token keyword">let</span> event <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">eventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  
+</code></pre>
+<h5 id="循环数组"><a href="#循环数组" class="headerlink" title="循环数组"></a>循环数组</h5><pre class=" language-typescript"><code class="language-typescript">    <span class="token keyword">let</span> sliceKey <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'红包'</span><span class="token punctuation">,</span> <span class="token string">'返现'</span><span class="token punctuation">,</span> <span class="token string">'首充'</span><span class="token punctuation">,</span> <span class="token string">'权益'</span><span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true">/** for in 和 for of 都可循环数组
+    *  其中 for in 循环的是数组的键， 即下标
+    *  同对象键值对取值 obj[key]
+    */</span> 
+    <span class="token comment" spellcheck="true">// for in 功能强大，可循环对象和数组，(即使取值也可obj[key]) ,完全可替代for of </span>
+    <span class="token comment" spellcheck="true">// for of 循环的是数组的值， 即键值</span>
+    
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> sliceKey<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'arrKey'</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+      <span class="token comment" spellcheck="true">// index.tsx: 39 arrKey 0</span>
+      <span class="token comment" spellcheck="true">// index.tsx: 39 arrKey 1</span>
+      <span class="token comment" spellcheck="true">// index.tsx: 39 arrKey 2</span>
+      <span class="token comment" spellcheck="true">// index.tsx: 39 arrKey 3</span>
+     <span class="token punctuation">}</span>
 
-<span class="token comment" spellcheck="true">// 使用event 的on方法绑定事件，内置两个参数，第一个参数是事件名，第二个参数 是回调函数，是事件的执行体</span>
-
-event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'I_LOVE_YOU'</span><span class="token punctuation">,</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name <span class="token operator">+</span> <span class="token string">'终于等到你'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-
-<span class="token comment" spellcheck="true">// 触发事件使用emit 内置参数若干</span>
-<span class="token comment" spellcheck="true">// 第一个参数是事件的名字，第二个参数开始依次是事件的参数</span>
-event<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'I_LOVE_YOU'</span><span class="token punctuation">,</span><span class="token string">'Mary'</span><span class="token punctuation">)</span>
-event<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'I_LOVE_YOU'</span><span class="token punctuation">,</span><span class="token string">'Anny'</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> value of sliceKey<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'ValueKey'</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// index.tsx:47 ValueKey 红包</span>
+    <span class="token comment" spellcheck="true">// index.tsx:47 ValueKey 返现</span>
+    <span class="token comment" spellcheck="true">// index.tsx:47 ValueKey 首充</span>
+    <span class="token comment" spellcheck="true">// index.tsx:47 ValueKey 权益</span>
+    <span class="token punctuation">}</span>
 </code></pre>
 
                 
@@ -528,7 +554,7 @@ event<span class="token punctuation">.</span><span class="token function">emit</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/10/17/node-js-de-event-zhong-jian-jian/">http://siberiabar2.github.io/2021/10/17/node-js-de-event-zhong-jian-jian/</a>
+                    <a href="http://siberiabar2.github.io/2021/10/31/forin-he-forof-de-qu-bie/">http://siberiabar2.github.io/2021/10/31/forin-he-forof-de-qu-bie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,8 +592,8 @@ event<span class="token punctuation">.</span><span class="token function">emit</
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/node-js%E7%9A%84event%E4%B8%AD%E9%97%B4%E4%BB%B6/">
-                                    <span class="chip bg-color">node.js的event中间件</span>
+                                <a href="/tags/for-in%E5%92%8Cfor-of%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                                    <span class="chip bg-color">for in和for of的区别</span>
                                 </a>
                             
                         </div>
@@ -738,7 +764,7 @@ event<span class="token punctuation">.</span><span class="token function">emit</
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-10-17T20-57-08',
+        id: '2021-10-31T12-10-47',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -762,7 +788,7 @@ event<span class="token punctuation">.</span><span class="token function">emit</
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun Oct 17 2021 20:57:08 GMT+0800',
+    id: 'Sun Oct 31 2021 12:10:47 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -787,9 +813,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/10/17/node-js-de-event-zhong-jian-jian/';
-        this.page.identifier = '/2021/10/17/node-js-de-event-zhong-jian-jian/';
-        this.page.title = 'node.js的event中间件';
+        this.page.url = 'http://siberiabar2.github.io/2021/10/31/forin-he-forof-de-qu-bie/';
+        this.page.identifier = '/2021/10/31/forin-he-forof-de-qu-bie/';
+        this.page.title = 'forIN和forOf的区别';
     };
     let disqus_shortname = '';
 
@@ -1107,17 +1133,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/22/vue-lu-you-chuan-can/">
+                <a href="/2021/10/31/forin-he-forof-de-qu-bie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="vue路由传参">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="forIN和forOf的区别">
                         
-                        <span class="card-title">vue路由传参</span>
+                        <span class="card-title">forIN和forOf的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1127,9 +1154,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1138,11 +1165,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/">
-                        <span class="chip bg-color">vue路由传参</span>
+                    <a href="/tags/for-in%E5%92%8Cfor-of%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                        <span class="chip bg-color">for in和for of的区别</span>
                     </a>
                     
                 </div>
@@ -1156,13 +1184,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/17/yuan-sheng-node-deng-lu-zhu-ce/">
+                <a href="/2021/10/28/jian-dan-suan-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="原生node登录注册">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="简单算法">
                         
-                        <span class="card-title">原生node登录注册</span>
+                        <span class="card-title">简单算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1173,7 +1201,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-28
                             </span>
                         <span class="publish-author">
                             
@@ -1186,8 +1214,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/node%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C/">
-                        <span class="chip bg-color">node登录注册</span>
+                    <a href="/tags/%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">简单算法</span>
                     </a>
                     
                 </div>
