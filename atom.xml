@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-10-31T04:21:24.077Z</updated>
+  <updated>2021-11-01T14:27:11.507Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,80 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数组件使用useRef</title>
+    <link href="http://siberiabar2.github.io/2021/11/01/han-shu-zu-jian-shi-yong-useref/"/>
+    <id>http://siberiabar2.github.io/2021/11/01/han-shu-zu-jian-shi-yong-useref/</id>
+    <published>2021-11-01T14:14:34.000Z</published>
+    <updated>2021-11-01T14:27:11.507Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;h4 id=&quot;函数组件使用useRef&quot;&gt;&lt;a href=&quot;#函数组件使用useRef&quot; class=&quot;headerlink&quot; title=&quot;函数组件使用useRef&quot;&gt;&lt;/a&gt;函数组件使用useRef&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="函数组件使用useRef" scheme="http://siberiabar2.github.io/tags/%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8useRef/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为数组所有对象添加一个新属性</title>
+    <link href="http://siberiabar2.github.io/2021/11/01/wei-shu-zu-suo-you-dui-xiang-tian-jia-yi-ge-xin-shu-xing/"/>
+    <id>http://siberiabar2.github.io/2021/11/01/wei-shu-zu-suo-you-dui-xiang-tian-jia-yi-ge-xin-shu-xing/</id>
+    <published>2021-11-01T12:52:54.000Z</published>
+    <updated>2021-11-01T14:13:05.320Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;h4 id=&quot;为数组所有对象添加一个新属性&quot;&gt;&lt;a href=&quot;#为数组所有对象添加一个新属性&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="为数组所有对象添加一个新属性" scheme="http://siberiabar2.github.io/tags/%E4%B8%BA%E6%95%B0%E7%BB%84%E6%89%80%E6%9C%89%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B1%9E%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高阶组件之高亮关键词</title>
+    <link href="http://siberiabar2.github.io/2021/11/01/gao-jie-zu-jian-zhi-gao-liang-guan-jian-ci/"/>
+    <id>http://siberiabar2.github.io/2021/11/01/gao-jie-zu-jian-zhi-gao-liang-guan-jian-ci/</id>
+    <published>2021-11-01T12:23:38.000Z</published>
+    <updated>2021-11-01T12:45:14.453Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;高阶组件之高亮关键词&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot; language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;//</summary>
+        
+      
+    
+    
+    
+    
+    <category term="高阶组件之高亮关键词" scheme="http://siberiabar2.github.io/tags/%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%AB%98%E4%BA%AE%E5%85%B3%E9%94%AE%E8%AF%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>forIN和forOf的区别</title>
@@ -44,7 +118,7 @@
     <link href="http://siberiabar2.github.io/2021/10/28/jian-dan-suan-fa/"/>
     <id>http://siberiabar2.github.io/2021/10/28/jian-dan-suan-fa/</id>
     <published>2021-10-28T01:34:42.000Z</published>
-    <updated>2021-10-28T01:40:25.764Z</updated>
+    <updated>2021-10-31T16:40:18.465Z</updated>
     
     
       
@@ -297,30 +371,6 @@
   </entry>
   
   <entry>
-    <title>格式化时间</title>
-    <link href="http://siberiabar2.github.io/2021/10/17/ge-shi-hua-shi-jian/"/>
-    <id>http://siberiabar2.github.io/2021/10/17/ge-shi-hua-shi-jian/</id>
-    <published>2021-10-17T10:02:23.000Z</published>
-    <updated>2021-10-17T10:08:22.769Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;h4 id=&quot;格式化时间&quot;&gt;&lt;a href=&quot;#格式化时间&quot; class=&quot;headerlink&quot; title=&quot;格式化时间&quot;&gt;&lt;/a&gt;格式化时间&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="格式化时间" scheme="http://siberiabar2.github.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/"/>
-    
-  </entry>
-  
-  <entry>
     <title>node中的path和url模块</title>
     <link href="http://siberiabar2.github.io/2021/10/09/node-zhong-de-path-he-url-mo-kuai/"/>
     <id>http://siberiabar2.github.io/2021/10/09/node-zhong-de-path-he-url-mo-kuai/</id>
@@ -432,54 +482,6 @@
     
     
     <category term="Object.assign深浅拷贝" scheme="http://siberiabar2.github.io/tags/Object-assign%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac查看ip</title>
-    <link href="http://siberiabar2.github.io/2021/10/05/mac-cha-kan-ip/"/>
-    <id>http://siberiabar2.github.io/2021/10/05/mac-cha-kan-ip/</id>
-    <published>2021-10-05T13:52:41.000Z</published>
-    <updated>2021-10-05T13:55:56.298Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;在开发中，我们可能需要配置本地的ip、端口-而mac在每次关机后，会重新分配ip。&quot;&gt;&lt;a href=&quot;#在开发中，我们可能需要配置本地的ip、端口-而mac在每次关机后，会重新分配ip。&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="mac查看ip" scheme="http://siberiabar2.github.io/tags/mac%E6%9F%A5%E7%9C%8Bip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cra引入文件非全称</title>
-    <link href="http://siberiabar2.github.io/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/"/>
-    <id>http://siberiabar2.github.io/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/</id>
-    <published>2021-09-28T16:03:52.000Z</published>
-    <updated>2021-09-28T16:06:06.981Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;配置webpack.config.js&lt;/p&gt;
-&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;//</summary>
-        
-      
-    
-    
-    
-    
-    <category term="cra引入文件非全称" scheme="http://siberiabar2.github.io/tags/cra%E5%BC%95%E5%85%A5%E6%96%87%E4%BB%B6%E9%9D%9E%E5%85%A8%E7%A7%B0/"/>
     
   </entry>
   

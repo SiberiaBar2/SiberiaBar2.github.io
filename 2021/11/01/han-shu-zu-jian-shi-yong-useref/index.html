@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="格式化时间, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="函数组件使用useRef, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>格式化时间 | 卡尔 · 弗兰兹</title>
+    <title>函数组件使用useRef | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">格式化时间</h1>
+                    <h1 class="description center-align post-title">函数组件使用useRef</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/">
-                                <span class="chip bg-color">格式化时间</span>
+                            <a href="/tags/%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8useRef/">
+                                <span class="chip bg-color">函数组件使用useRef</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-17
+                    2021-11-01
                 </div>
                 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    110
+                    256
                 </div>
                 
 
@@ -485,27 +485,64 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ol>
-<li><h4 id="格式化时间"><a href="#格式化时间" class="headerlink" title="格式化时间"></a>格式化时间</h4><pre class=" language-js"><code class="language-js">  <span class="token keyword">const</span> formateDate <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>val<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> time <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> Y <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> M <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    M <span class="token operator">=</span> M <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> M <span class="token punctuation">:</span> M<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 不够两位补充0</span>
-    <span class="token keyword">let</span> D <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    D <span class="token operator">=</span> D <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> D <span class="token punctuation">:</span> D<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> H <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getHours</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    H <span class="token operator">=</span> H <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> H <span class="token punctuation">:</span> H<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> Mi <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getMinutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Mi <span class="token operator">=</span> Mi <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> Mi <span class="token punctuation">:</span> Mi<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> S <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getSeconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    S <span class="token operator">=</span> S <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> S <span class="token punctuation">:</span> S<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> Y <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> M <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> D <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> H <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> Mi <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> S<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<li><h4 id="函数组件使用useRef"><a href="#函数组件使用useRef" class="headerlink" title="函数组件使用useRef"></a>函数组件使用useRef</h4><pre class=" language-js"><code class="language-js">useRef一般用于子组件为<span class="token keyword">class</span>的组件，因为函数组件没有实例，
+因此加给函数组件是无效的，这时我们就需要借助其他一些方法。
+</code></pre>
+<h4 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h4><pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// 子组件</span>
+<span class="token comment" spellcheck="true">// 引入 forwardRef, useImperativeHandle</span>
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">,</span> forwardRef<span class="token punctuation">,</span> useImperativeHandle <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">let</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data'</span><span class="token punctuation">,</span> date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> PopUp <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token comment" spellcheck="true">// react规定，必须使用useImperativeHandle方法，来保存并抛出想要传递给父组件的方法或者数据，</span>
+  <span class="token comment" spellcheck="true">// 第一个参数是ref,第二个参数是函数，返回想要抛出的对象集合</span>
+  <span class="token function">useImperativeHandle</span><span class="token punctuation">(</span>ref<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    modalData<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+            <span class="token operator">...</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'formateDate(date)'</span><span class="token punctuation">,</span> <span class="token function">formateDate</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 2021-10-17 18:01:07</span>
+<span class="token comment" spellcheck="true">//必须通过forwardRef方法抛出函数组件</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">forwardRef</span><span class="token punctuation">(</span>Popup<span class="token punctuation">)</span>
+</code></pre>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  useRef
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">const</span> Menu <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> 
+    <span class="token operator">...</span>
+    <span class="token keyword">const</span> Modalref <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">const</span> openModal <span class="token operator">=</span> <span class="token punctuation">(</span>record<span class="token punctuation">,</span> type<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'record, type'</span><span class="token punctuation">,</span> record<span class="token punctuation">,</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 若传递了数据，就是点击修改，其他情况为新增</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'edit'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 父组件事件函数中调起子组件的方法，将数据传递给子组件</span>
+          Modalref<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">modalData</span><span class="token punctuation">(</span>record<span class="token punctuation">,</span> type<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'add'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          Modalref<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">modalData</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> type<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">setShow</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+     <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+            <span class="token operator">...</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Popup</span>
+            <span class="token attr-name">show</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>show<span class="token punctuation">}</span></span>
+            <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>Modalref<span class="token punctuation">}</span></span>
+            <span class="token attr-name">treeTitle</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>treeList<span class="token punctuation">}</span></span>
+            <span class="token attr-name">closeModal</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>closeModal<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 </code></pre>
 </li>
 </ol>
@@ -535,7 +572,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/10/17/ge-shi-hua-shi-jian/">http://siberiabar2.github.io/2021/10/17/ge-shi-hua-shi-jian/</a>
+                    <a href="http://siberiabar2.github.io/2021/11/01/han-shu-zu-jian-shi-yong-useref/">http://siberiabar2.github.io/2021/11/01/han-shu-zu-jian-shi-yong-useref/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,8 +610,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/">
-                                    <span class="chip bg-color">格式化时间</span>
+                                <a href="/tags/%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8useRef/">
+                                    <span class="chip bg-color">函数组件使用useRef</span>
                                 </a>
                             
                         </div>
@@ -745,7 +782,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-10-17T18-02-23',
+        id: '2021-11-01T22-14-34',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -769,7 +806,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun Oct 17 2021 18:02:23 GMT+0800',
+    id: 'Mon Nov 01 2021 22:14:34 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -794,9 +831,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/10/17/ge-shi-hua-shi-jian/';
-        this.page.identifier = '/2021/10/17/ge-shi-hua-shi-jian/';
-        this.page.title = '格式化时间';
+        this.page.url = 'http://siberiabar2.github.io/2021/11/01/han-shu-zu-jian-shi-yong-useref/';
+        this.page.identifier = '/2021/11/01/han-shu-zu-jian-shi-yong-useref/';
+        this.page.title = '函数组件使用useRef';
     };
     let disqus_shortname = '';
 
@@ -1114,17 +1151,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/17/antd-mo-ren-xuan-ran-jie-dian-wei-body-de-jie-jue-fang-fa/">
+                <a href="/2021/11/01/han-shu-zu-jian-shi-yong-useref/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="antd默认渲染节点为body的解决方法">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="函数组件使用useRef">
                         
-                        <span class="card-title">antd默认渲染节点为body的解决方法</span>
+                        <span class="card-title">函数组件使用useRef</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1134,9 +1172,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1145,11 +1183,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/antd%E9%BB%98%E8%AE%A4%E6%B8%B2%E6%9F%93%E8%8A%82%E7%82%B9%E4%B8%BAbody%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
-                        <span class="chip bg-color">antd默认渲染节点为body的解决方法</span>
+                    <a href="/tags/%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8useRef/">
+                        <span class="chip bg-color">函数组件使用useRef</span>
                     </a>
                     
                 </div>
@@ -1163,13 +1202,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/09/node-zhong-de-path-he-url-mo-kuai/">
+                <a href="/2021/11/01/wei-shu-zu-suo-you-dui-xiang-tian-jia-yi-ge-xin-shu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="node中的path和url模块">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="为数组所有对象添加一个新属性">
                         
-                        <span class="card-title">node中的path和url模块</span>
+                        <span class="card-title">为数组所有对象添加一个新属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1180,7 +1219,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
                             </span>
                         <span class="publish-author">
                             
@@ -1193,8 +1232,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/node%E4%B8%AD%E7%9A%84path%E5%92%8Curl%E6%A8%A1%E5%9D%97/">
-                        <span class="chip bg-color">node中的path和url模块</span>
+                    <a href="/tags/%E4%B8%BA%E6%95%B0%E7%BB%84%E6%89%80%E6%9C%89%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B1%9E%E6%80%A7/">
+                        <span class="chip bg-color">为数组所有对象添加一个新属性</span>
                     </a>
                     
                 </div>
@@ -1399,7 +1438,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.6k</span>
+                        class="white-color">26.5k</span>
             
             
             

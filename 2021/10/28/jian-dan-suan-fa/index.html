@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    329
+                    528
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -495,13 +495,11 @@
     <span class="token keyword">return</span> <span class="token string">'当前没有长度'</span>
   <span class="token punctuation">}</span>
 
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'不重复最长长度'</span><span class="token punctuation">,</span> <span class="token function">mostStringLen</span><span class="token punctuation">(</span><span class="token string">'abaaa'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'不重复最长长度'</span><span class="token punctuation">,</span> <span class="token function">mostStringLen</span><span class="token punctuation">(</span><span class="token string">'abaaa'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
 </code></pre>
 <h5 id="传入下标，返回斐波那契数列下标对应的一项"><a href="#传入下标，返回斐波那契数列下标对应的一项" class="headerlink" title="传入下标，返回斐波那契数列下标对应的一项"></a>传入下标，返回斐波那契数列下标对应的一项</h5><pre class=" language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">feibonace</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">0</span>
-
     <span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token number">1</span>
-
     <span class="token keyword">let</span> z <span class="token operator">=</span> <span class="token number">0</span>
 
     <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -514,9 +512,7 @@
 
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> index <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       z <span class="token operator">=</span> x <span class="token operator">+</span> y
-
       x <span class="token operator">=</span> y
-
       y <span class="token operator">=</span> z
     <span class="token punctuation">}</span>
 
@@ -539,7 +535,7 @@
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'换位'</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'换位'</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 换位 (8) [1, 5, 7, 12, 33, 88, 89, 123]</span>
 </code></pre>
 <h5 id="传入数组和目标值，返回和为目标值的两项的下标"><a href="#传入数组和目标值，返回和为目标值的两项的下标" class="headerlink" title="传入数组和目标值，返回和为目标值的两项的下标"></a>传入数组和目标值，返回和为目标值的两项的下标</h5><pre class=" language-js"><code class="language-js">  <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">]</span>
   <span class="token keyword">let</span> target <span class="token operator">=</span> <span class="token number">13</span>
@@ -557,6 +553,45 @@
   <span class="token punctuation">}</span>
 
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'findArrIndex(arr,13)'</span><span class="token punctuation">,</span> <span class="token function">findArrIndex</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h5 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h5><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 一段字符正着读和反着读都一样，就叫回文数</span>
+  <span class="token keyword">let</span> strNum <span class="token operator">=</span> <span class="token string">'abccba'</span> <span class="token comment" spellcheck="true">// 传入123321都可以</span>
+  
+  <span class="token keyword">function</span> <span class="token function">reverse</span><span class="token punctuation">(</span>strNum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    num2 <span class="token operator">=</span> strNum<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>strNum <span class="token keyword">instanceof</span> <span class="token class-name">Number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      num2 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>num2<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+      
+    istrue <span class="token operator">=</span> strNum <span class="token operator">===</span> num2 <span class="token operator">?</span> <span class="token boolean">true</span> <span class="token punctuation">:</span> <span class="token boolean">false</span>
+    <span class="token keyword">return</span> istrue
+  <span class="token punctuation">}</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">reverse</span><span class="token punctuation">(</span>strNum<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+</code></pre>
+<h5 id="数组去重reduce方法"><a href="#数组去重reduce方法" class="headerlink" title="数组去重reduce方法"></a>数组去重reduce方法</h5><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 数组去重</span>
+  <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'v'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'v'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">]</span>
+
+  <span class="token keyword">let</span> result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    prev<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> prev<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> prev
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  
+  <span class="token comment" spellcheck="true">// reduce方法不会影响原数组</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'result'</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// result (5) ['a', 'b', 'c', 'v', 'r']</span>
+</code></pre>
+<h5 id="字符串去重"><a href="#字符串去重" class="headerlink" title="字符串去重"></a>字符串去重</h5><pre class=" language-js"><code class="language-js">  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'ffweuhfiowefjopxkopscmaicnweiyfgygdidbasdjaonvwiebvuwigasndjasncjasbceuihuaed'</span>
+  <span class="token keyword">let</span> str1 <span class="token operator">=</span> <span class="token string">''</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> str<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span>str1<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>str1 <span class="token operator">+</span><span class="token operator">=</span> str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'str1--->'</span><span class="token punctuation">,</span> str1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// str1---> fweuhiojpxkscmanygdbv</span>
+</code></pre>
+<h5 id="reduce累加"><a href="#reduce累加" class="headerlink" title="reduce累加"></a>reduce累加</h5><pre class=" language-js"><code class="language-js">  <span class="token keyword">let</span> numArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span> <span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">]</span>
+  <span class="token keyword">let</span> addNum <span class="token operator">=</span> numArr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> prev <span class="token operator">+</span><span class="token operator">=</span> cur
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'addNum'</span><span class="token punctuation">,</span> addNum<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 60</span>
 </code></pre>
 
                 
@@ -1448,7 +1483,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.6k</span>
+                        class="white-color">26.5k</span>
             
             
             

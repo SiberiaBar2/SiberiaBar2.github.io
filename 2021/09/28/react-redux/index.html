@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    498
+                    527
                 </div>
                 
 
@@ -486,9 +486,11 @@
             <div id="articleContent">
                 <h4 id="1-为什么用redux"><a href="#1-为什么用redux" class="headerlink" title="1.为什么用redux"></a>1.为什么用redux</h4><pre class=" language-react"><code class="language-react">React中 ，组件的数据是单向流动的，即数据从一个方向(父组件)流向子组件(通过props)。
 因此，两个非父子组件的通信就相对麻烦，redux的出现就是state数据问题。
+数据存放于全局，便于统一的配置、管理和维护。
 </code></pre>
 <h4 id="2-redux原理"><a href="#2-redux原理" class="headerlink" title="2.redux原理"></a>2.redux原理</h4><pre class=" language-react"><code class="language-react">触发action改变state。
-为reducer函数传入 state 和 action，并得到新的NewState 返回给store, store再把数据传回组件。
+state的改变均通过action来改变。（ 为reducer函数传入 state 和 action，并得到新的NewState
+返回给store, store再把数据传回组 ）件。
 </code></pre>
 <h4 id="3-redux三大原则"><a href="#3-redux三大原则" class="headerlink" title="3.redux三大原则"></a>3.redux三大原则</h4><pre class=" language-react"><code class="language-react">1. 单一的数据源
    redux思想中，一个应用永远只有一个唯一的数据源。  待续..。
@@ -1492,7 +1494,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.6k</span>
+                        class="white-color">26.5k</span>
             
             
             

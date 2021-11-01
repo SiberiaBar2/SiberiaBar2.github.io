@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    281
+                    295
                 </div>
                 
 
@@ -488,28 +488,32 @@
    <span class="token operator">...</span>
    <span class="token punctuation">}</span><span class="token punctuation">,</span> init<span class="token punctuation">)</span><span class="token punctuation">;</span>
        
-     <span class="token comment" spellcheck="true">// 其中，</span>
-  <span class="token comment" spellcheck="true">// arr 表示原数组；</span>
+  <span class="token comment" spellcheck="true">// 其中，</span>
   <span class="token comment" spellcheck="true">// prev 表示上一次调用回调时的返回值，或者初始值 init;</span>
   <span class="token comment" spellcheck="true">// cur 表示当前正在处理的数组元素；</span>
-  <span class="token comment" spellcheck="true">// index 表示当前正在处理的数组元素的索引，若提供 init 值，则索引为0，否则索引为1；</span>
-  <span class="token comment" spellcheck="true">// init 表示初始值。</span>
+  <span class="token comment" spellcheck="true">// index 表示当前正在处理的数组元素的索引，若提供 init 值( [] )，则索引为0，否则索引为1；</span>
+  <span class="token comment" spellcheck="true">// arr 表示原数组；</span>
+       
+  <span class="token comment" spellcheck="true">// init 表示初始值。可为[] ，也可以为 0 或其他初始值</span>
        
   <span class="token comment" spellcheck="true">// 计算数组项之和</span>
    <span class="token keyword">let</span> bigarr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bigarr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> prev <span class="token operator">+</span> cur
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 56</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 56</span>
        
   <span class="token comment" spellcheck="true">// 求最大值</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'max'</span><span class="token punctuation">,</span> bigarr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 9</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
        
   <span class="token comment" spellcheck="true">// 数组去重</span>
     <span class="token keyword">let</span> newArr <span class="token operator">=</span> bigarr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'prev'</span><span class="token punctuation">,</span> prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span>
-        <span class="token comment" spellcheck="true">//   prev [] 1</span>
+    prev<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> prev<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> prev
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// prev [] 1</span>
   <span class="token comment" spellcheck="true">// style.html:78 prev [1] 3</span>
   <span class="token comment" spellcheck="true">// style.html:78 prev (2) [1, 3] 7</span>
   <span class="token comment" spellcheck="true">// style.html:78 prev (3) [1, 3, 7] 9</span>
@@ -519,11 +523,7 @@
   <span class="token comment" spellcheck="true">// style.html:78 prev (6) [1, 3, 7, 9, 8, 6] 2</span>
   <span class="token comment" spellcheck="true">// style.html:78 prev (7) [1, 3, 7, 9, 8, 6, 2] 9</span>
   <span class="token comment" spellcheck="true">// style.html:78 prev (7) [1, 3, 7, 9, 8, 6, 2] 1</span>
-  <span class="token comment" spellcheck="true">// style.html:78 prev (7) [1, 3, 7, 9, 8, 6, 2] 3</span>
-        
-    prev<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> prev<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> prev
-  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// style.html:78 prev (7) [1, 3, 7, 9, 8, 6, 2] 3 </span>
     
    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'new'</span><span class="token punctuation">,</span> newArr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [1, 3, 7, 9, 8, 6, 2]</span>
 </code></pre>
@@ -1417,7 +1417,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.6k</span>
+                        class="white-color">26.5k</span>
             
             
             
