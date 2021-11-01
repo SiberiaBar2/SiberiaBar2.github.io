@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-11-01T14:27:11.507Z</updated>
+  <updated>2021-11-01T16:18:57.676Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react无状态组件和纯组件</title>
+    <link href="http://siberiabar2.github.io/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/"/>
+    <id>http://siberiabar2.github.io/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/</id>
+    <published>2021-11-01T16:18:03.000Z</published>
+    <updated>2021-11-01T16:18:57.676Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;react无状态组件和纯组件&quot;&gt;&lt;a href=&quot;#react无状态组件和纯组件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react无状态组件和纯组件" scheme="http://siberiabar2.github.io/tags/react%E6%97%A0%E7%8A%B6%E6%80%81%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BA%AF%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>函数组件使用useRef</title>
@@ -459,29 +482,6 @@
     
     
     <category term="vscode使用git命令行" scheme="http://siberiabar2.github.io/tags/vscode%E4%BD%BF%E7%94%A8git%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Object.assign深浅拷贝</title>
-    <link href="http://siberiabar2.github.io/2021/10/09/object-assign-shen-qian-kao-bei/"/>
-    <id>http://siberiabar2.github.io/2021/10/09/object-assign-shen-qian-kao-bei/</id>
-    <published>2021-10-08T16:06:51.000Z</published>
-    <updated>2021-10-09T16:11:52.403Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;Object-assign深浅拷贝&quot;&gt;&lt;a href=&quot;#Object-assign深浅拷贝&quot; class=&quot;headerlink&quot; title=&quot;Object.assign深浅拷贝&quot;&gt;&lt;/a&gt;Object.assign深浅拷贝&lt;/h4&gt;&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Object.assign深浅拷贝" scheme="http://siberiabar2.github.io/tags/Object-assign%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
     
   </entry>
   

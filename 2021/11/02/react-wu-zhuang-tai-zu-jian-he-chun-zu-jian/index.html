@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="typescript取下级值, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="react无状态组件和纯组件, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>typescript取下级值 | 卡尔 · 弗兰兹</title>
+    <title>react无状态组件和纯组件 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">typescript取下级值</h1>
+                    <h1 class="description center-align post-title">react无状态组件和纯组件</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/typescript%E5%8F%96%E4%B8%8B%E7%BA%A7%E5%80%BC/">
-                                <span class="chip bg-color">typescript取下级值</span>
+                            <a href="/tags/react%E6%97%A0%E7%8A%B6%E6%80%81%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BA%AF%E7%BB%84%E4%BB%B6/">
+                                <span class="chip bg-color">react无状态组件和纯组件</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-24
+                    2021-11-02
                 </div>
                 
 
@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    385
+                    12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -484,129 +484,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="typescript取下级值"><a href="#typescript取下级值" class="headerlink" title="typescript取下级值"></a>typescript取下级值</h4><pre class=" language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// type1 返回函数返回值的下级</span>
-<span class="token comment" spellcheck="true">// 定义接口类型</span>
-<span class="token keyword">interface</span> <span class="token class-name">resType</span> <span class="token punctuation">{</span>
-   data<span class="token operator">?</span><span class="token punctuation">:</span> Object
-<span class="token punctuation">}</span>
-  
-<span class="token keyword">export</span> <span class="token keyword">const</span> baseApi <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> method <span class="token operator">=</span> <span class="token string">'get'</span><span class="token punctuation">,</span> headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> url <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span> path <span class="token operator">=</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>reslove<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> option <span class="token operator">=</span> <span class="token punctuation">{</span>
-      url<span class="token punctuation">:</span> path<span class="token punctuation">,</span>
-      method<span class="token punctuation">,</span>
-      timeout<span class="token punctuation">:</span> <span class="token number">120000</span><span class="token punctuation">,</span>
-      params<span class="token punctuation">,</span>
-      headers
-    <span class="token punctuation">}</span>
-    <span class="token keyword">let</span> options <span class="token operator">=</span> <span class="token punctuation">(</span>option as optionsType<span class="token punctuation">)</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>method <span class="token operator">===</span> <span class="token string">'get'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      options<span class="token punctuation">.</span>params <span class="token operator">=</span> params
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'post'</span><span class="token punctuation">,</span> <span class="token string">'put'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      options<span class="token punctuation">.</span>data <span class="token operator">=</span> params
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span>headers<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'content-type'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span>headers<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'content-type'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'application/x-www-form-urlencoded'</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span>options<span class="token punctuation">)</span><span class="token punctuation">.</span>headers <span class="token operator">=</span> headers <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-      
-    <span class="token function">axios</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>res<span class="token punctuation">:</span> resType<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 若不定义接口类型（注释data），此处 会报 ：类型“resType”上不存在属性“data”。</span>
-        <span class="token comment" spellcheck="true">// 导致程序运行不下去</span>
-        <span class="token function">reslove</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token keyword">return</span> promise
-<span class="token punctuation">}</span>
-</code></pre>
-<pre class=" language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// type 2 取得变量的值</span>
-
-<span class="token keyword">interface</span> <span class="token class-name">resLogin</span> <span class="token punctuation">{</span>
-  code<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">,</span>
-  data<span class="token operator">?</span><span class="token punctuation">:</span> object
-<span class="token punctuation">}</span>
-  
- <span class="token keyword">const</span> Login<span class="token punctuation">:</span> React<span class="token punctuation">.</span>FC<span class="token operator">&lt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token punctuation">[</span>username<span class="token punctuation">,</span> setUsername<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
-  <span class="token keyword">const</span> <span class="token punctuation">[</span>password<span class="token punctuation">,</span> setPassword<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
-  
-  <span class="token keyword">let</span> history <span class="token operator">=</span> <span class="token function">useHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">const</span> onFinish <span class="token operator">=</span> async <span class="token punctuation">(</span>values<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Success:'</span><span class="token punctuation">,</span> values<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> <span class="token punctuation">{</span> username<span class="token punctuation">,</span> password <span class="token punctuation">}</span> <span class="token operator">=</span> values
-    <span class="token keyword">let</span> result <span class="token operator">=</span> await <span class="token function">userLogin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> params<span class="token punctuation">:</span> <span class="token punctuation">{</span> username<span class="token punctuation">,</span> password <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> as resLogin
-    
-    <span class="token comment" spellcheck="true">// 若不定义 resLogin 接口 ，此处会报错</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-      history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"/layout"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-     <span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-     
-</code></pre>
-<pre class=" language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// type 3 定义将要赋值的对象</span>
-
-<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
-<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
-
-<span class="token keyword">interface</span> <span class="token class-name">resType</span> <span class="token punctuation">{</span>
-  data<span class="token operator">?</span><span class="token punctuation">:</span> Object
-<span class="token punctuation">}</span>
-
-<span class="token keyword">interface</span> <span class="token class-name">optionsType</span> <span class="token punctuation">{</span>
-  url<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span>
-  method<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span>
-  timeout<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">,</span>
-  params<span class="token punctuation">:</span> object<span class="token punctuation">,</span>
-  data<span class="token operator">?</span><span class="token punctuation">:</span> object<span class="token punctuation">,</span>
-  headers<span class="token operator">?</span><span class="token punctuation">:</span> object
-<span class="token punctuation">}</span>
-
-<span class="token keyword">export</span> <span class="token keyword">const</span> baseApi <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> method <span class="token operator">=</span> <span class="token string">'get'</span><span class="token punctuation">,</span> headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> url <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span> path <span class="token operator">=</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>reslove<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> option <span class="token operator">=</span> <span class="token punctuation">{</span>
-      url<span class="token punctuation">:</span> path<span class="token punctuation">,</span>
-      method<span class="token punctuation">,</span>
-      timeout<span class="token punctuation">:</span> <span class="token number">120000</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">// 类型断言</span>
-    <span class="token keyword">let</span> options <span class="token operator">=</span> option as optionsType
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>method <span class="token operator">===</span> <span class="token string">'get'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      options<span class="token punctuation">.</span>params <span class="token operator">=</span> params
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'post'</span><span class="token punctuation">,</span> <span class="token string">'put'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      options<span class="token punctuation">.</span>data <span class="token operator">=</span> params
-    <span class="token punctuation">}</span>
-    
-    <span class="token comment" spellcheck="true">// 函数参数传入， 尚且不知如何定义类型 </span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span>headers<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'content-type'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span>headers<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'content-type'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'application/x-www-form-urlencoded'</span>
-    <span class="token punctuation">}</span>
-
-    options<span class="token punctuation">.</span>headers <span class="token operator">=</span> headers <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-
-    <span class="token function">axios</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>res<span class="token punctuation">:</span> resType<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token function">reslove</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token keyword">return</span> promise
-<span class="token punctuation">}</span>
-
-<span class="token comment" spellcheck="true">// 补充： promise 存放的将来发生的事情， 在调用此封装函数时 ， </span>
-<span class="token comment" spellcheck="true">// 可使用 async  await 获得promise 成功 (reslove) 失败 (reject) 状态的值 。</span>
-</code></pre>
+                <h4 id="react无状态组件和纯组件"><a href="#react无状态组件和纯组件" class="headerlink" title="react无状态组件和纯组件"></a>react无状态组件和纯组件</h4><p>待续…</p>
 
                 
             </div>
@@ -633,7 +511,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/10/24/typescript-qu-xia-ji-zhi/">http://siberiabar2.github.io/2021/10/24/typescript-qu-xia-ji-zhi/</a>
+                    <a href="http://siberiabar2.github.io/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/">http://siberiabar2.github.io/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -671,8 +549,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/typescript%E5%8F%96%E4%B8%8B%E7%BA%A7%E5%80%BC/">
-                                    <span class="chip bg-color">typescript取下级值</span>
+                                <a href="/tags/react%E6%97%A0%E7%8A%B6%E6%80%81%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BA%AF%E7%BB%84%E4%BB%B6/">
+                                    <span class="chip bg-color">react无状态组件和纯组件</span>
                                 </a>
                             
                         </div>
@@ -843,7 +721,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-10-24T19-41-21',
+        id: '2021-11-02T00-18-03',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -867,7 +745,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun Oct 24 2021 19:41:21 GMT+0800',
+    id: 'Tue Nov 02 2021 00:18:03 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -892,9 +770,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/10/24/typescript-qu-xia-ji-zhi/';
-        this.page.identifier = '/2021/10/24/typescript-qu-xia-ji-zhi/';
-        this.page.title = 'typescript取下级值';
+        this.page.url = 'http://siberiabar2.github.io/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/';
+        this.page.identifier = '/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/';
+        this.page.title = 'react无状态组件和纯组件';
     };
     let disqus_shortname = '';
 
@@ -1212,17 +1090,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/24/reacttypescript-pei-zhi-dai-li-fu-wu-qi/">
+                <a href="/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="reactTypescript配置代理服务器">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="react无状态组件和纯组件">
                         
-                        <span class="card-title">reactTypescript配置代理服务器</span>
+                        <span class="card-title">react无状态组件和纯组件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1232,9 +1111,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1243,11 +1122,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/reactTypescript%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                        <span class="chip bg-color">reactTypescript配置代理服务器</span>
+                    <a href="/tags/react%E6%97%A0%E7%8A%B6%E6%80%81%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BA%AF%E7%BB%84%E4%BB%B6/">
+                        <span class="chip bg-color">react无状态组件和纯组件</span>
                     </a>
                     
                 </div>
@@ -1261,13 +1141,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/24/react-han-shu-zu-jian-lu-you-tiao-zhuan/">
+                <a href="/2021/11/01/han-shu-zu-jian-shi-yong-useref/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="react函数组件路由跳转">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="函数组件使用useRef">
                         
-                        <span class="card-title">react函数组件路由跳转</span>
+                        <span class="card-title">函数组件使用useRef</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1278,7 +1158,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
                             </span>
                         <span class="publish-author">
                             
@@ -1291,8 +1171,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/react%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC/">
-                        <span class="chip bg-color">react函数组件路由跳转</span>
+                    <a href="/tags/%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8useRef/">
+                        <span class="chip bg-color">函数组件使用useRef</span>
                     </a>
                     
                 </div>
