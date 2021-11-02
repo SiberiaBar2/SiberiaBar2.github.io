@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="cra引入文件非全称, 卡尔 · 弗兰兹">
+    <meta name="keywords" content="react基本使用, 卡尔 · 弗兰兹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>cra引入文件非全称 | 卡尔 · 弗兰兹</title>
+    <title>react基本使用 | 卡尔 · 弗兰兹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">cra引入文件非全称</h1>
+                    <h1 class="description center-align post-title">react基本使用</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/cra%E5%BC%95%E5%85%A5%E6%96%87%E4%BB%B6%E9%9D%9E%E5%85%A8%E7%A7%B0/">
-                                <span class="chip bg-color">cra引入文件非全称</span>
+                            <a href="/tags/react%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                                <span class="chip bg-color">react基本使用</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-11-02
                 </div>
                 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    18
+                    185
                 </div>
                 
 
@@ -484,14 +484,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li><p>配置webpack.config.js</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 找到extensions</span>
- extensions<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'.js'</span><span class="token punctuation">,</span> <span class="token string">'.mjs'</span><span class="token punctuation">,</span> <span class="token string">'.jsx'</span><span class="token punctuation">,</span> <span class="token string">'.ts'</span><span class="token punctuation">,</span> <span class="token string">'.tsx'</span><span class="token punctuation">]</span>
-<span class="token comment" spellcheck="true">// 在前面加 .</span>
+                <h4 id="react基本使用"><a href="#react基本使用" class="headerlink" title="react基本使用"></a>react基本使用</h4><pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// 新建文件夹 使用npm init</span>
+<span class="token comment" spellcheck="true">// cnpm i react react-dom</span>
+
+<span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width,</span> <span class="token attr-name">initial-scale</span><span class="token attr-value"><span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+      <span class="token comment" spellcheck="true">// 引入react react-dom</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./node_modules/react/umd/react.development.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./node_modules/react-dom/umd/react-dom.development.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+  <span class="token comment" spellcheck="true">/**
+   * 创建react元素
+   * 参数1 元素名称
+   * 参数2 元素属性
+   * 参数3 元素的子节点
+  */</span>
+  <span class="token keyword">const</span> title <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">'你好 react'</span><span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">/**
+   * 渲染dom元素
+   * 参数1 要渲染的react元素
+   * 参数2 挂载点
+  */</span>
+  ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>title<span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// open in browser 到浏览器即可看到 你好 react</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </code></pre>
-</li>
-</ol>
 
                 
             </div>
@@ -518,7 +548,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/">http://siberiabar2.github.io/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/</a>
+                    <a href="http://siberiabar2.github.io/2021/11/02/react-ji-ben-shi-yong/">http://siberiabar2.github.io/2021/11/02/react-ji-ben-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -556,8 +586,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/cra%E5%BC%95%E5%85%A5%E6%96%87%E4%BB%B6%E9%9D%9E%E5%85%A8%E7%A7%B0/">
-                                    <span class="chip bg-color">cra引入文件非全称</span>
+                                <a href="/tags/react%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                                    <span class="chip bg-color">react基本使用</span>
                                 </a>
                             
                         </div>
@@ -728,7 +758,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-09-29T00-03-52',
+        id: '2021-11-02T23-46-37',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -752,7 +782,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Wed Sep 29 2021 00:03:52 GMT+0800',
+    id: 'Tue Nov 02 2021 23:46:37 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -777,9 +807,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/';
-        this.page.identifier = '/2021/09/29/cra-yin-ru-wen-jian-fei-quan-cheng/';
-        this.page.title = 'cra引入文件非全称';
+        this.page.url = 'http://siberiabar2.github.io/2021/11/02/react-ji-ben-shi-yong/';
+        this.page.identifier = '/2021/11/02/react-ji-ben-shi-yong/';
+        this.page.title = 'react基本使用';
     };
     let disqus_shortname = '';
 
@@ -1097,17 +1127,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/05/mac-cha-kan-ip/">
+                <a href="/2021/11/02/react-ji-ben-shi-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="mac查看ip">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="react基本使用">
                         
-                        <span class="card-title">mac查看ip</span>
+                        <span class="card-title">react基本使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1117,9 +1148,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1128,11 +1159,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mac%E6%9F%A5%E7%9C%8Bip/">
-                        <span class="chip bg-color">mac查看ip</span>
+                    <a href="/tags/react%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                        <span class="chip bg-color">react基本使用</span>
                     </a>
                     
                 </div>
@@ -1146,13 +1178,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/28/cra-zhong-shi-yong-xiang-dui-lu-jing/">
+                <a href="/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="cra中使用相对路径">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="react无状态组件和纯组件">
                         
-                        <span class="card-title">cra中使用相对路径</span>
+                        <span class="card-title">react无状态组件和纯组件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1163,7 +1195,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
                             </span>
                         <span class="publish-author">
                             
@@ -1176,8 +1208,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/cra%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/">
-                        <span class="chip bg-color">cra使用相对路径</span>
+                    <a href="/tags/react%E6%97%A0%E7%8A%B6%E6%80%81%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BA%AF%E7%BB%84%E4%BB%B6/">
+                        <span class="chip bg-color">react无状态组件和纯组件</span>
                     </a>
                     
                 </div>

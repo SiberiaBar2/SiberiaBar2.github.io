@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-11-01T16:18:57.676Z</updated>
+  <updated>2021-11-02T15:49:13.922Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react基本使用</title>
+    <link href="http://siberiabar2.github.io/2021/11/02/react-ji-ben-shi-yong/"/>
+    <id>http://siberiabar2.github.io/2021/11/02/react-ji-ben-shi-yong/</id>
+    <published>2021-11-02T15:46:37.000Z</published>
+    <updated>2021-11-02T15:49:13.922Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;react基本使用&quot;&gt;&lt;a href=&quot;#react基本使用&quot; class=&quot;headerlink&quot; title=&quot;react基本使用&quot;&gt;&lt;/a&gt;react基本使用&lt;/h4&gt;&lt;pre class=&quot; language-jsx&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react基本使用" scheme="http://siberiabar2.github.io/tags/react%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>react无状态组件和纯组件</title>
@@ -459,29 +482,6 @@
     
     
     <category term="node写入文件的几种方式" scheme="http://siberiabar2.github.io/tags/node%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vscode使用git命令行</title>
-    <link href="http://siberiabar2.github.io/2021/10/09/vscode-shi-yong-git-ming-ling-xing/"/>
-    <id>http://siberiabar2.github.io/2021/10/09/vscode-shi-yong-git-ming-ling-xing/</id>
-    <published>2021-10-09T14:51:24.000Z</published>
-    <updated>2021-10-09T14:53:40.034Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;vscode使用git命令行&quot;&gt;&lt;a href=&quot;#vscode使用git命令行&quot; class=&quot;headerlink&quot; title=&quot;vscode使用git命令行&quot;&gt;&lt;/a&gt;vscode使用git命令行&lt;/h4&gt;&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="vscode使用git命令行" scheme="http://siberiabar2.github.io/tags/vscode%E4%BD%BF%E7%94%A8git%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
   </entry>
   
