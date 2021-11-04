@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="转化时间日期格式, KerFrance">
+    <meta name="keywords" content="async和await的返回值, KerFrance">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>转化时间日期格式 | KerFrance</title>
+    <title>async和await的返回值 | KerFrance</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">转化时间日期格式</h1>
+                    <h1 class="description center-align post-title">async和await的返回值</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%BD%AC%E5%8C%96%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F/">
-                                <span class="chip bg-color">转化时间日期格式</span>
+                            <a href="/tags/await%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">
+                                <span class="chip bg-color">await的返回值</span>
                             </a>
                         
                     </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-22
+                    2021-11-04
                 </div>
                 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    115
+                    353
                 </div>
                 
 
@@ -484,28 +484,50 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="转化时间日期格式"><a href="#转化时间日期格式" class="headerlink" title="转化时间日期格式"></a>转化时间日期格式</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * 转化时间日期格式
- * 传入 new Date()
- * 返回值：2021-09-10 10:00:00
- * */</span>
-<span class="token keyword">export</span> <span class="token keyword">const</span> dateFamate <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>val<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> time <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> Y <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> M <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    M <span class="token operator">=</span> M <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> M <span class="token punctuation">:</span> M<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 不够两位补充0</span>
-    <span class="token keyword">let</span> D <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    D <span class="token operator">=</span> D <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> D <span class="token punctuation">:</span> D<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> H <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getHours</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    H <span class="token operator">=</span> H <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> H <span class="token punctuation">:</span> H<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> Mi <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getMinutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Mi <span class="token operator">=</span> Mi <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> Mi <span class="token punctuation">:</span> Mi<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> S <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getSeconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    S <span class="token operator">=</span> S <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> S <span class="token punctuation">:</span> S<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> Y <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> M <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> D <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> H <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> Mi <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> S<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <h4 id="await的返回值"><a href="#await的返回值" class="headerlink" title="await的返回值"></a>await的返回值</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// async和await是在es7中的内容，不过现在主流浏览器都支持</span>
+<span class="token comment" spellcheck="true">// async 加在函数前面，自动返回的是一个 Promise</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> cc <span class="token operator">=</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cc<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// Promise {&lt;fulfilled>: undefined}</span>
+ 
 </code></pre>
+<pre class=" language-js"><code class="language-js">
+  <span class="token keyword">function</span> <span class="token function">nums</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">3</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment" spellcheck="true">// await 是一个操作符， await 后面接 expression ???待续...</span>
+  <span class="token comment" spellcheck="true">// 在函数里面，可以使用 await 调用前面的async定义的函数 ??? 待续...</span>
+  <span class="token comment" spellcheck="true">// 全局环境，直接await 就可以， “局部”函数 里面，函数前面要加 async关键字  。</span>
+  <span class="token comment" spellcheck="true">// 全局是指，全局不需要写async吗？？待定.....</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">nums</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 局部函数前面要加async</span>
+  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">local</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">nums</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'result'</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'local'</span><span class="token punctuation">,</span> <span class="token function">local</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// local △Promise</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js">
+<span class="token comment" spellcheck="true">// async和await是用来处理异步操作的，把异步变为同步的一种方法</span>
+
+<span class="token comment" spellcheck="true">// async声明一个function来表示这个异步函数，await用于等待函数中某个异步操作执行完成。</span>
+
+<span class="token comment" spellcheck="true">// async返回的是一个promise对象，返回值可在promise中的then方法中的第一个回调函数中使用。</span>
+
+<span class="token comment" spellcheck="true">// await只能用于async的内部，await用于在一个异步操作之前，表示要等待这个异步操作的返回值。</span>
+
+<span class="token comment" spellcheck="true">// 如果await得到不是一个promise对象，那么就不会等待这个异步操作。</span>
+
+<span class="token comment" spellcheck="true">// 如果是一个promise对象，await就会等待promise对象的resolve，得到传入resolve的参数，作为返回值。(参数：传入reslove状态 的值)</span>
+</code></pre>
+<p>委婉待续…</p>
 
                 
             </div>
@@ -532,7 +554,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2021/10/22/zhuan-hua-shi-jian-ri-qi-ge-shi/">http://siberiabar2.github.io/2021/10/22/zhuan-hua-shi-jian-ri-qi-ge-shi/</a>
+                    <a href="http://siberiabar2.github.io/2021/11/04/async-he-await-de-fan-hui-zhi/">http://siberiabar2.github.io/2021/11/04/async-he-await-de-fan-hui-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,8 +592,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%BD%AC%E5%8C%96%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F/">
-                                    <span class="chip bg-color">转化时间日期格式</span>
+                                <a href="/tags/await%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">
+                                    <span class="chip bg-color">await的返回值</span>
                                 </a>
                             
                         </div>
@@ -742,7 +764,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-10-22T21-51-49',
+        id: '2021-11-04T23-11-25',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -766,7 +788,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Fri Oct 22 2021 21:51:49 GMT+0800',
+    id: 'Thu Nov 04 2021 23:11:25 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -791,9 +813,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2021/10/22/zhuan-hua-shi-jian-ri-qi-ge-shi/';
-        this.page.identifier = '/2021/10/22/zhuan-hua-shi-jian-ri-qi-ge-shi/';
-        this.page.title = '转化时间日期格式';
+        this.page.url = 'http://siberiabar2.github.io/2021/11/04/async-he-await-de-fan-hui-zhi/';
+        this.page.identifier = '/2021/11/04/async-he-await-de-fan-hui-zhi/';
+        this.page.title = 'async和await的返回值';
     };
     let disqus_shortname = '';
 
@@ -1111,17 +1133,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/24/react-han-shu-zu-jian-lu-you-tiao-zhuan/">
+                <a href="/2021/11/04/async-he-await-de-fan-hui-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="react函数组件路由跳转">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="async和await的返回值">
                         
-                        <span class="card-title">react函数组件路由跳转</span>
+                        <span class="card-title">async和await的返回值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1131,9 +1154,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1142,11 +1165,12 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/react%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC/">
-                        <span class="chip bg-color">react函数组件路由跳转</span>
+                    <a href="/tags/await%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">
+                        <span class="chip bg-color">await的返回值</span>
                     </a>
                     
                 </div>
@@ -1160,13 +1184,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/22/vue-lu-you-chuan-can/">
+                <a href="/2021/11/04/reactjsx/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="vue路由传参">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="ReactJsx">
                         
-                        <span class="card-title">vue路由传参</span>
+                        <span class="card-title">ReactJsx</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1177,7 +1201,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-04
                             </span>
                         <span class="publish-author">
                             
@@ -1190,8 +1214,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/">
-                        <span class="chip bg-color">vue路由传参</span>
+                    <a href="/tags/jsx/">
+                        <span class="chip bg-color">jsx</span>
                     </a>
                     
                 </div>

@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>async和await的返回值</title>
+      <link href="2021/11/04/async-he-await-de-fan-hui-zhi/"/>
+      <url>2021/11/04/async-he-await-de-fan-hui-zhi/</url>
+      
+        <content type="html"><![CDATA[<h4 id="await的返回值"><a href="#await的返回值" class="headerlink" title="await的返回值"></a>await的返回值</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// async和await是在es7中的内容，不过现在主流浏览器都支持</span><span class="token comment" spellcheck="true">// async 加在函数前面，自动返回的是一个 Promise</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">let</span> cc <span class="token operator">=</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cc<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// Promise {&lt;fulfilled>: undefined}</span> </code></pre><pre class=" language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">nums</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">return</span> <span class="token number">3</span>  <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">// await 是一个操作符， await 后面接 expression ???待续...</span>  <span class="token comment" spellcheck="true">// 在函数里面，可以使用 await 调用前面的async定义的函数 ??? 待续...</span>  <span class="token comment" spellcheck="true">// 全局环境，直接await 就可以， “局部”函数 里面，函数前面要加 async关键字  。</span>  <span class="token comment" spellcheck="true">// 全局是指，全局不需要写async吗？？待定.....</span>  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">nums</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 局部函数前面要加async</span>  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">local</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">nums</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'result'</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'local'</span><span class="token punctuation">,</span> <span class="token function">local</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// local △Promise</span></code></pre><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// async和await是用来处理异步操作的，把异步变为同步的一种方法</span><span class="token comment" spellcheck="true">// async声明一个function来表示这个异步函数，await用于等待函数中某个异步操作执行完成。</span><span class="token comment" spellcheck="true">// async返回的是一个promise对象，返回值可在promise中的then方法中的第一个回调函数中使用。</span><span class="token comment" spellcheck="true">// await只能用于async的内部，await用于在一个异步操作之前，表示要等待这个异步操作的返回值。</span><span class="token comment" spellcheck="true">// 如果await得到不是一个promise对象，那么就不会等待这个异步操作。</span><span class="token comment" spellcheck="true">// 如果是一个promise对象，await就会等待promise对象的resolve，得到传入resolve的参数，作为返回值。(参数：传入reslove状态 的值)</span></code></pre><p>委婉待续…</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> await的返回值 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ReactJsx</title>
       <link href="2021/11/04/reactjsx/"/>
       <url>2021/11/04/reactjsx/</url>

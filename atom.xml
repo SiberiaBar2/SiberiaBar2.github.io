@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-11-04T09:47:03.659Z</updated>
+  <updated>2021-11-04T15:34:55.784Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>async和await的返回值</title>
+    <link href="http://siberiabar2.github.io/2021/11/04/async-he-await-de-fan-hui-zhi/"/>
+    <id>http://siberiabar2.github.io/2021/11/04/async-he-await-de-fan-hui-zhi/</id>
+    <published>2021-11-04T15:11:25.000Z</published>
+    <updated>2021-11-04T15:34:55.784Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;await的返回值&quot;&gt;&lt;a href=&quot;#await的返回值&quot; class=&quot;headerlink&quot; title=&quot;await的返回值&quot;&gt;&lt;/a&gt;await的返回值&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="await的返回值" scheme="http://siberiabar2.github.io/tags/await%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>ReactJsx</title>
@@ -459,29 +482,6 @@
     
     
     <category term="node中的path和url模块" scheme="http://siberiabar2.github.io/tags/node%E4%B8%AD%E7%9A%84path%E5%92%8Curl%E6%A8%A1%E5%9D%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>启用nodemon热更新</title>
-    <link href="http://siberiabar2.github.io/2021/10/09/qi-yong-nodemon-re-geng-xin/"/>
-    <id>http://siberiabar2.github.io/2021/10/09/qi-yong-nodemon-re-geng-xin/</id>
-    <published>2021-10-09T15:39:13.000Z</published>
-    <updated>2021-10-09T15:45:21.416Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;启用nodemon热更新&quot;&gt;&lt;a href=&quot;#启用nodemon热更新&quot; class=&quot;headerlink&quot; title=&quot;启用nodemon热更新&quot;&gt;&lt;/a&gt;启用nodemon热更新&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="启用nodemon热更新" scheme="http://siberiabar2.github.io/tags/%E5%90%AF%E7%94%A8nodemon%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
