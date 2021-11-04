@@ -1,34 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>卡尔 · 弗兰兹</title>
+  <title>KerFrance</title>
   
   
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-11-02T15:49:13.922Z</updated>
+  <updated>2021-11-04T09:47:03.659Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
-    <name>卡尔 · 弗兰兹</name>
+    <name>KerFrance</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ReactJsx</title>
+    <link href="http://siberiabar2.github.io/2021/11/04/reactjsx/"/>
+    <id>http://siberiabar2.github.io/2021/11/04/reactjsx/</id>
+    <published>2021-11-04T08:55:17.000Z</published>
+    <updated>2021-11-04T09:47:03.659Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;jsx&quot;&gt;&lt;a href=&quot;#jsx&quot; class=&quot;headerlink&quot; title=&quot;jsx&quot;&gt;&lt;/a&gt;jsx&lt;/h4&gt;&lt;h5 id=&quot;创建元素&quot;&gt;&lt;a href=&quot;#创建元素&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="jsx" scheme="http://siberiabar2.github.io/tags/jsx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>react基本使用</title>
     <link href="http://siberiabar2.github.io/2021/11/02/react-ji-ben-shi-yong/"/>
     <id>http://siberiabar2.github.io/2021/11/02/react-ji-ben-shi-yong/</id>
     <published>2021-11-02T15:46:37.000Z</published>
-    <updated>2021-11-02T15:49:13.922Z</updated>
+    <updated>2021-11-04T08:51:22.447Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h4 id=&quot;react基本使用&quot;&gt;&lt;a href=&quot;#react基本使用&quot; class=&quot;headerlink&quot; title=&quot;react基本使用&quot;&gt;&lt;/a&gt;react基本使用&lt;/h4&gt;&lt;pre class=&quot; language-jsx&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;h4 id=&quot;react基本使用&quot;&gt;&lt;a href=&quot;#react基本使用&quot; class=&quot;headerlink&quot; title=&quot;react基本使用&quot;&gt;&lt;/a&gt;react基本使用&lt;/h4&gt;&lt;pre class=&quot; language-html&quot;&gt;&lt;code</summary>
         
       
     
@@ -44,14 +67,14 @@
     <link href="http://siberiabar2.github.io/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/"/>
     <id>http://siberiabar2.github.io/2021/11/02/react-wu-zhuang-tai-zu-jian-he-chun-zu-jian/</id>
     <published>2021-11-01T16:18:03.000Z</published>
-    <updated>2021-11-01T16:18:57.676Z</updated>
+    <updated>2021-11-04T14:29:41.691Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h4 id=&quot;react无状态组件和纯组件&quot;&gt;&lt;a href=&quot;#react无状态组件和纯组件&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h4 id=&quot;react无状态组件和纯组件&quot;&gt;&lt;a href=&quot;#react无状态组件和纯组件&quot; class=&quot;headerlink&quot; title=&quot;react无状态组件和纯组件&quot;&gt;&lt;/a&gt;react无状态组件和纯组件&lt;/h4&gt;&lt;h5 id=&quot;无状态组件和有状态组件&quot;&gt;&lt;a</summary>
         
       
     
@@ -459,29 +482,6 @@
     
     
     <category term="启用nodemon热更新" scheme="http://siberiabar2.github.io/tags/%E5%90%AF%E7%94%A8nodemon%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node写入文件的几种方式</title>
-    <link href="http://siberiabar2.github.io/2021/10/09/node-xie-ru-wen-jian-de-ji-chong-fang-shi/"/>
-    <id>http://siberiabar2.github.io/2021/10/09/node-xie-ru-wen-jian-de-ji-chong-fang-shi/</id>
-    <published>2021-10-09T15:14:06.000Z</published>
-    <updated>2021-10-09T16:09:09.644Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;node写入文件的几种方式&quot;&gt;&lt;a href=&quot;#node写入文件的几种方式&quot; class=&quot;headerlink&quot; title=&quot;node写入文件的几种方式&quot;&gt;&lt;/a&gt;node写入文件的几种方式&lt;/h4&gt;&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="node写入文件的几种方式" scheme="http://siberiabar2.github.io/tags/node%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"/>
     
   </entry>
   
