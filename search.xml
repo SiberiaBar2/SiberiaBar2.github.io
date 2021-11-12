@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>github下载慢解决</title>
+      <link href="2021/11/12/github-xia-zai-man-jie-jue/"/>
+      <url>2021/11/12/github-xia-zai-man-jie-jue/</url>
+      
+        <content type="html"><![CDATA[<h4 id="github下载慢解决"><a href="#github下载慢解决" class="headerlink" title="github下载慢解决"></a>github下载慢解决</h4><pre class=" language-js"><code class="language-js">谷歌浏览器Github加速插件<span class="token punctuation">.</span>crx 下载百度网盘<span class="token punctuation">:</span>链接：https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>pan<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token operator">/</span>s<span class="token operator">/</span>15sS0nu3vLyKHtNrGbfftgA提取码：be5z<span class="token operator">*</span>或在 我的网盘，最高层级中找到 github下载加速工具安装插件 ： https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>jingyan<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token operator">/</span>article<span class="token operator">/</span>7f766daf63f7bb0000e1d03f<span class="token punctuation">.</span>html资料来源： https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>blog<span class="token punctuation">.</span>csdn<span class="token punctuation">.</span>net<span class="token operator">/</span>qq_33406883<span class="token operator">/</span>article<span class="token operator">/</span>details<span class="token operator">/</span><span class="token number">109284871</span></code></pre><h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><pre class=" language-js"><code class="language-js"><span class="token operator">**</span><span class="token operator">*</span>放弃使用管理员powershell <span class="token punctuation">,</span> 使用Gitbash 执行 hexo命令， 速度比powershell快。</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> github下载慢解决 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>react性能优化</title>
       <link href="2021/11/12/react-xing-neng-you-hua/"/>
       <url>2021/11/12/react-xing-neng-you-hua/</url>
