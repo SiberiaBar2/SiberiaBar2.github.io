@@ -1,20 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>KerFrance</title>
+  <title>KarlFranz</title>
   
   
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-11-15T15:23:29.280Z</updated>
+  <updated>2021-11-16T14:15:36.755Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
-    <name>KerFrance</name>
+    <name>KarlFranz</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>typescript3</title>
+    <link href="http://siberiabar2.github.io/2021/11/16/typescript3/"/>
+    <id>http://siberiabar2.github.io/2021/11/16/typescript3/</id>
+    <published>2021-11-16T12:42:04.000Z</published>
+    <updated>2021-11-16T14:15:36.755Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;typescript&quot;&gt;&lt;a href=&quot;#typescript&quot; class=&quot;headerlink&quot; title=&quot;typescript&quot;&gt;&lt;/a&gt;typescript&lt;/h4&gt;&lt;h4 id=&quot;interface-接口&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="typescript" scheme="http://siberiabar2.github.io/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>typescript2</title>
+    <link href="http://siberiabar2.github.io/2021/11/16/typescript2/"/>
+    <id>http://siberiabar2.github.io/2021/11/16/typescript2/</id>
+    <published>2021-11-16T12:36:55.000Z</published>
+    <updated>2021-11-16T12:48:26.527Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;typescript2&quot;&gt;&lt;a href=&quot;#typescript2&quot; class=&quot;headerlink&quot; title=&quot;typescript2&quot;&gt;&lt;/a&gt;typescript2&lt;/h4&gt;&lt;h5 id=&quot;数组类型注解&quot;&gt;&lt;a href=&quot;#数组类型注解&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="typescript" scheme="http://siberiabar2.github.io/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>typesctipt1</title>
+    <link href="http://siberiabar2.github.io/2021/11/16/typesctipt1/"/>
+    <id>http://siberiabar2.github.io/2021/11/16/typesctipt1/</id>
+    <published>2021-11-16T12:27:07.000Z</published>
+    <updated>2021-11-16T12:36:33.714Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;typesctipt&quot;&gt;&lt;a href=&quot;#typesctipt&quot; class=&quot;headerlink&quot; title=&quot;typesctipt&quot;&gt;&lt;/a&gt;typesctipt&lt;/h4&gt;&lt;h5 id=&quot;基础静态类型和对象静态类型&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="typesctipt" scheme="http://siberiabar2.github.io/tags/typesctipt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js四种数据类型判断</title>
+    <link href="http://siberiabar2.github.io/2021/11/16/js-si-chong-shu-ju-lei-xing-pan-duan/"/>
+    <id>http://siberiabar2.github.io/2021/11/16/js-si-chong-shu-ju-lei-xing-pan-duan/</id>
+    <published>2021-11-16T12:21:37.000Z</published>
+    <updated>2021-11-16T12:56:38.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;js四种数据类型判断&quot;&gt;&lt;a href=&quot;#js四种数据类型判断&quot; class=&quot;headerlink&quot; title=&quot;js四种数据类型判断&quot;&gt;&lt;/a&gt;js四种数据类型判断&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="js四种数据类型判断" scheme="http://siberiabar2.github.io/tags/js%E5%9B%9B%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>PromiseAll与PromiseRace</title>
@@ -386,98 +478,6 @@
     
     
     <category term="antd优化加载组件" scheme="http://siberiabar2.github.io/tags/antd%E4%BC%98%E5%8C%96%E5%8A%A0%E8%BD%BD%E7%BB%84%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>reactTypescript配置代理服务器</title>
-    <link href="http://siberiabar2.github.io/2021/10/24/reacttypescript-pei-zhi-dai-li-fu-wu-qi/"/>
-    <id>http://siberiabar2.github.io/2021/10/24/reacttypescript-pei-zhi-dai-li-fu-wu-qi/</id>
-    <published>2021-10-24T12:20:40.000Z</published>
-    <updated>2021-10-24T12:29:26.816Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;react-Typescript-配置代理服务器&quot;&gt;&lt;a href=&quot;#react-Typescript-配置代理服务器&quot; class=&quot;headerlink&quot; title=&quot;react + Typescript 配置代理服务器&quot;&gt;&lt;/a&gt;react +</summary>
-        
-      
-    
-    
-    
-    
-    <category term="reactTypescript配置代理服务器" scheme="http://siberiabar2.github.io/tags/reactTypescript%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>typescript取下级值</title>
-    <link href="http://siberiabar2.github.io/2021/10/24/typescript-qu-xia-ji-zhi/"/>
-    <id>http://siberiabar2.github.io/2021/10/24/typescript-qu-xia-ji-zhi/</id>
-    <published>2021-10-24T11:41:21.000Z</published>
-    <updated>2021-10-24T12:16:01.079Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;typescript取下级值&quot;&gt;&lt;a href=&quot;#typescript取下级值&quot; class=&quot;headerlink&quot; title=&quot;typescript取下级值&quot;&gt;&lt;/a&gt;typescript取下级值&lt;/h4&gt;&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="typescript取下级值" scheme="http://siberiabar2.github.io/tags/typescript%E5%8F%96%E4%B8%8B%E7%BA%A7%E5%80%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react函数组件路由跳转</title>
-    <link href="http://siberiabar2.github.io/2021/10/24/react-han-shu-zu-jian-lu-you-tiao-zhuan/"/>
-    <id>http://siberiabar2.github.io/2021/10/24/react-han-shu-zu-jian-lu-you-tiao-zhuan/</id>
-    <published>2021-10-24T11:29:26.000Z</published>
-    <updated>2021-10-24T12:38:22.168Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;react函数组件路由跳转&quot;&gt;&lt;a href=&quot;#react函数组件路由跳转&quot; class=&quot;headerlink&quot; title=&quot;react函数组件路由跳转&quot;&gt;&lt;/a&gt;react函数组件路由跳转&lt;/h4&gt;&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react函数组件路由跳转" scheme="http://siberiabar2.github.io/tags/react%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>转化时间日期格式</title>
-    <link href="http://siberiabar2.github.io/2021/10/22/zhuan-hua-shi-jian-ri-qi-ge-shi/"/>
-    <id>http://siberiabar2.github.io/2021/10/22/zhuan-hua-shi-jian-ri-qi-ge-shi/</id>
-    <published>2021-10-22T13:51:49.000Z</published>
-    <updated>2021-10-22T13:54:29.839Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;转化时间日期格式&quot;&gt;&lt;a href=&quot;#转化时间日期格式&quot; class=&quot;headerlink&quot; title=&quot;转化时间日期格式&quot;&gt;&lt;/a&gt;转化时间日期格式&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="转化时间日期格式" scheme="http://siberiabar2.github.io/tags/%E8%BD%AC%E5%8C%96%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F/"/>
     
   </entry>
   
