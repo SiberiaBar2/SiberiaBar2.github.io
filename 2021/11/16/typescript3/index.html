@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    665
+                    835
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -668,6 +668,57 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token keyword">const</span> aote <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Aoteman</span><span class="token punctuation">(</span><span class="token string">'迪迦'</span><span class="token punctuation">)</span>
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>aote<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 迪迦</span>
+</code></pre>
+<h4 id="类的-get-、set-、static-readonly"><a href="#类的-get-、set-、static-readonly" class="headerlink" title="类的 get  、set  、static ,  readonly"></a>类的 get  、set  、static ,  readonly</h4><pre class=" language-typescript"><code class="language-typescript">
+<span class="token comment" spellcheck="true">// 类的get和set</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Niuheng</span> <span class="token punctuation">{</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+  <span class="token keyword">get</span> <span class="token function">sayAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'获得'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">-</span> <span class="token number">10</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">set</span> <span class="token function">sayAge</span><span class="token punctuation">(</span>sayAge<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'sayAge'</span><span class="token punctuation">,</span>sayAge<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> sayAge <span class="token operator">+</span> <span class="token number">5</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> erqiu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Niuheng</span><span class="token punctuation">(</span><span class="token number">23</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 修改时触发set， 再触发get</span>
+erqiu<span class="token punctuation">.</span>sayAge <span class="token operator">=</span> <span class="token number">28</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'erqiu'</span><span class="token punctuation">,</span> erqiu<span class="token punctuation">.</span>sayAge<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 类的静态类型  static</span>
+
+<span class="token keyword">class</span> <span class="token class-name">XiaoJiejie</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">sayLove</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"I Love You"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> jiejie <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XiaoJiejie</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 实例化对象无法访问静态类型</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'jiejie'</span><span class="token punctuation">,</span>jiejie<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// class静态类型直接通过类访问</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'静态类型'</span><span class="token punctuation">,</span>XiaoJiejie<span class="token punctuation">.</span><span class="token function">sayLove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">// 只读属性</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Niuheng</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> readonly _name<span class="token punctuation">:</span> <span class="token keyword">string</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_name <span class="token operator">=</span> name
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> ren <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Niuheng</span><span class="token punctuation">(</span><span class="token string">'牛恒'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 不能修改： 无法分配到 "_name" ，因为它是只读属性。ts(2540)</span>
+<span class="token comment" spellcheck="true">// ren._name = '牛哼'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'ren'</span><span class="token punctuation">,</span> ren<span class="token punctuation">.</span>_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                 
@@ -1559,7 +1610,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">32.7k</span>
+                        class="white-color">33.6k</span>
             
             
             

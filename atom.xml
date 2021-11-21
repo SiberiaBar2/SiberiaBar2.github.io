@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-11-19T16:24:09.773Z</updated>
+  <updated>2021-11-21T11:56:35.615Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ts5泛型</title>
+    <link href="http://siberiabar2.github.io/2021/11/21/ts5-fan-xing/"/>
+    <id>http://siberiabar2.github.io/2021/11/21/ts5-fan-xing/</id>
+    <published>2021-11-21T11:10:34.000Z</published>
+    <updated>2021-11-21T11:56:35.615Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;泛型&quot;&gt;&lt;a href=&quot;#泛型&quot; class=&quot;headerlink&quot; title=&quot;泛型&quot;&gt;&lt;/a&gt;泛型&lt;/h4&gt;&lt;h5 id=&quot;函数中的泛型&quot;&gt;&lt;a href=&quot;#函数中的泛型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ts5泛型" scheme="http://siberiabar2.github.io/tags/ts5%E6%B3%9B%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ts4抽象类</title>
+    <link href="http://siberiabar2.github.io/2021/11/20/ts4-chou-xiang-lei/"/>
+    <id>http://siberiabar2.github.io/2021/11/20/ts4-chou-xiang-lei/</id>
+    <published>2021-11-20T09:06:55.000Z</published>
+    <updated>2021-11-20T10:26:01.498Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;typesctipt抽象类&quot;&gt;&lt;a href=&quot;#typesctipt抽象类&quot; class=&quot;headerlink&quot; title=&quot;typesctipt抽象类&quot;&gt;&lt;/a&gt;typesctipt抽象类&lt;/h4&gt;&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ts4抽象类" scheme="http://siberiabar2.github.io/tags/ts4%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>原型原型链</title>
@@ -44,7 +90,7 @@
     <link href="http://siberiabar2.github.io/2021/11/16/typescript3/"/>
     <id>http://siberiabar2.github.io/2021/11/16/typescript3/</id>
     <published>2021-11-16T12:42:04.000Z</published>
-    <updated>2021-11-16T14:15:36.755Z</updated>
+    <updated>2021-11-20T09:02:11.563Z</updated>
     
     
       
@@ -432,52 +478,6 @@
     
     
     <category term="高阶组件之高亮关键词" scheme="http://siberiabar2.github.io/tags/%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%AB%98%E4%BA%AE%E5%85%B3%E9%94%AE%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>forIN和forOf的区别</title>
-    <link href="http://siberiabar2.github.io/2021/10/31/forin-he-forof-de-qu-bie/"/>
-    <id>http://siberiabar2.github.io/2021/10/31/forin-he-forof-de-qu-bie/</id>
-    <published>2021-10-31T04:10:47.000Z</published>
-    <updated>2021-10-31T04:21:24.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;for-in和for-of的区别&quot;&gt;&lt;a href=&quot;#for-in和for-of的区别&quot; class=&quot;headerlink&quot; title=&quot;for in和for of的区别&quot;&gt;&lt;/a&gt;for in和for of的区别&lt;/h4&gt;&lt;h5 id=&quot;循环对象&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="for in和for of的区别" scheme="http://siberiabar2.github.io/tags/for-in%E5%92%8Cfor-of%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>简单算法</title>
-    <link href="http://siberiabar2.github.io/2021/10/28/jian-dan-suan-fa/"/>
-    <id>http://siberiabar2.github.io/2021/10/28/jian-dan-suan-fa/</id>
-    <published>2021-10-28T01:34:42.000Z</published>
-    <updated>2021-11-19T16:17:05.608Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;简单算法&quot;&gt;&lt;a href=&quot;#简单算法&quot; class=&quot;headerlink&quot; title=&quot;简单算法&quot;&gt;&lt;/a&gt;简单算法&lt;/h4&gt;&lt;h5 id=&quot;传入字符串，返回不重复字符串的最长长度&quot;&gt;&lt;a href=&quot;#传入字符串，返回不重复字符串的最长长度&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="简单算法" scheme="http://siberiabar2.github.io/tags/%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
