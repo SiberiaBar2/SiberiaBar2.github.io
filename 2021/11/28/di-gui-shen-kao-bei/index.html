@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    131
+                    512
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -520,6 +520,106 @@
 
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>copyObj <span class="token operator">===</span> arrObj<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lightCopy <span class="token operator">===</span> arrObj<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+</code></pre>
+<h4 id="九九乘法表-递归"><a href="#九九乘法表-递归" class="headerlink" title="九九乘法表(递归)"></a>九九乘法表(递归)</h4><pre class=" language-typescript"><code class="language-typescript">
+<span class="token keyword">const</span> chengfa <span class="token operator">=</span> <span class="token punctuation">(</span>num<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1111'</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1X1=1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">chengfa</span><span class="token punctuation">(</span>num <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 这里递归会连续调9次</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'牛皮'</span><span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> str <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> num<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 每次递归的for循环都会等待前面的递归函数执行完毕，才执行下面的for循环</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'323232323232'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment" spellcheck="true">// 为什么会等待，函数要执行完毕！</span>
+      str <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">+</span> <span class="token string">'x'</span> <span class="token operator">+</span> num <span class="token operator">+</span> <span class="token string">'='</span> <span class="token operator">+</span> i <span class="token operator">*</span> num <span class="token operator">+</span> <span class="token string">' '</span>  <span class="token comment" spellcheck="true">// 9 会等待8的递归，8 会等待7 ...</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">chengfa</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 1X1=1</span>
+<span class="token comment" spellcheck="true">// 1x2=2 2x2=4 </span>
+<span class="token comment" spellcheck="true">// 1x3=3 2x3=6 3x3=9</span>
+<span class="token comment" spellcheck="true">// 1x4=4 2x4=8 3x4=12 4x4=16</span>
+<span class="token comment" spellcheck="true">// 1x5=5 2x5=10 3x5=15 4x5=20 5x5=25</span>
+<span class="token comment" spellcheck="true">// 1x6=6 2x6=12 3x6=18 4x6=24 5x6=30 6x6=36</span>
+<span class="token comment" spellcheck="true">// 1x7=7 2x7=14 3x7=21 4x7=28 5x7=35 6x7=42 7x7=49</span>
+<span class="token comment" spellcheck="true">// 1x8=8 2x8=16 3x8=24 4x8=32 5x8=40 6x8=48 7x8=56 8x8=64</span>
+<span class="token comment" spellcheck="true">// 1x9=9 2x9=18 3x9=27 4x9=36 5x9=45 6x9=54 7x9=63 8x9=72 9x9=81</span>
+
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1111111</span>
+<span class="token comment" spellcheck="true">// 1X1=1</span>
+<span class="token comment" spellcheck="true">// 牛皮 2</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x2=2 2x2=4 </span>
+<span class="token comment" spellcheck="true">// 牛皮 3</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x3=3 2x3=6 3x3=9 </span>
+<span class="token comment" spellcheck="true">// 牛皮 4</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x4=4 2x4=8 3x4=12 4x4=16         </span>
+<span class="token comment" spellcheck="true">// 牛皮 5</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x5=5 2x5=10 3x5=15 4x5=20 5x5=25 </span>
+<span class="token comment" spellcheck="true">// 牛皮 6</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x6=6 2x6=12 3x6=18 4x6=24 5x6=30 6x6=36</span>
+<span class="token comment" spellcheck="true">// 牛皮 7</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x7=7 2x7=14 3x7=21 4x7=28 5x7=35 6x7=42 7x7=49</span>
+<span class="token comment" spellcheck="true">// 牛皮 8</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x8=8 2x8=16 3x8=24 4x8=32 5x8=40 6x8=48 7x8=56 8x8=64</span>
+<span class="token comment" spellcheck="true">// 牛皮 9</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 323232323232</span>
+<span class="token comment" spellcheck="true">// 1x9=9 2x9=18 3x9=27 4x9=36 5x9=45 6x9=54 7x9=63 8x9=72 9x9=81</span>
+<span class="token comment" spellcheck="true">// undefined</span>
 </code></pre>
 
                 
@@ -1411,7 +1511,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">35.2k</span>
+                        class="white-color">38.7k</span>
             
             
             
