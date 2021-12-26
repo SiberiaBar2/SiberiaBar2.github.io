@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2021-12-19T14:53:56.612Z</updated>
+  <updated>2021-12-26T12:09:48.988Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图床使用</title>
+    <link href="http://siberiabar2.github.io/2021/12/26/tu-chuang-shi-yong/"/>
+    <id>http://siberiabar2.github.io/2021/12/26/tu-chuang-shi-yong/</id>
+    <published>2021-12-26T11:51:47.000Z</published>
+    <updated>2021-12-26T12:09:48.988Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;图床使用&quot;&gt;&lt;a href=&quot;#图床使用&quot; class=&quot;headerlink&quot; title=&quot;图床使用&quot;&gt;&lt;/a&gt;图床使用&lt;/h3&gt;&lt;pre class=&quot; language-tex&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="图床使用" scheme="http://siberiabar2.github.io/tags/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>词法作用域与动态作用域</title>
+    <link href="http://siberiabar2.github.io/2021/12/26/ci-fa-zuo-yong-yu-yu-dong-tai-zuo-yong-yu/"/>
+    <id>http://siberiabar2.github.io/2021/12/26/ci-fa-zuo-yong-yu-yu-dong-tai-zuo-yong-yu/</id>
+    <published>2021-12-26T11:10:48.000Z</published>
+    <updated>2021-12-26T11:24:27.353Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;词法作用域与动态作用域&quot;&gt;&lt;a href=&quot;#词法作用域与动态作用域&quot; class=&quot;headerlink&quot; title=&quot;词法作用域与动态作用域&quot;&gt;&lt;/a&gt;词法作用域与动态作用域&lt;/h3&gt;&lt;h4 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="词法作用域与动态作用域" scheme="http://siberiabar2.github.io/tags/%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%8A%A8%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>闭包</title>
+    <link href="http://siberiabar2.github.io/2021/12/26/bi-bao/"/>
+    <id>http://siberiabar2.github.io/2021/12/26/bi-bao/</id>
+    <published>2021-12-26T10:28:18.000Z</published>
+    <updated>2021-12-26T11:32:05.852Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;闭包&quot;&gt;&lt;a href=&quot;#闭包&quot; class=&quot;headerlink&quot; title=&quot;闭包&quot;&gt;&lt;/a&gt;闭包&lt;/h3&gt;&lt;h4 id=&quot;理论上的闭包&quot;&gt;&lt;a href=&quot;#理论上的闭包&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="闭包" scheme="http://siberiabar2.github.io/tags/%E9%97%AD%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>执行上下文</title>
@@ -404,75 +473,6 @@
     
     
     <category term="js四种数据类型判断" scheme="http://siberiabar2.github.io/tags/js%E5%9B%9B%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PromiseAll与PromiseRace</title>
-    <link href="http://siberiabar2.github.io/2021/11/15/promiseall-yu-promiserace/"/>
-    <id>http://siberiabar2.github.io/2021/11/15/promiseall-yu-promiserace/</id>
-    <published>2021-11-15T15:19:54.000Z</published>
-    <updated>2021-11-15T15:23:29.280Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;PromiseAll与PromiseRace&quot;&gt;&lt;a href=&quot;#PromiseAll与PromiseRace&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="PromiseAll与PromiseRace" scheme="http://siberiabar2.github.io/tags/PromiseAll%E4%B8%8EPromiseRace/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数组map的深浅拷贝问题</title>
-    <link href="http://siberiabar2.github.io/2021/11/15/shu-zu-map-de-shen-qian-kao-bei-wen-ti/"/>
-    <id>http://siberiabar2.github.io/2021/11/15/shu-zu-map-de-shen-qian-kao-bei-wen-ti/</id>
-    <published>2021-11-15T13:32:36.000Z</published>
-    <updated>2021-11-15T13:58:17.075Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;数组map的深浅拷贝问题&quot;&gt;&lt;a href=&quot;#数组map的深浅拷贝问题&quot; class=&quot;headerlink&quot; title=&quot;数组map的深浅拷贝问题&quot;&gt;&lt;/a&gt;数组map的深浅拷贝问题&lt;/h4&gt;&lt;pre class=&quot; language-js&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="数组map的深浅拷贝问题" scheme="http://siberiabar2.github.io/tags/%E6%95%B0%E7%BB%84map%E7%9A%84%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使得ts-node打印不报错</title>
-    <link href="http://siberiabar2.github.io/2021/11/15/shi-de-ts-node-da-yin-bu-bao-cuo/"/>
-    <id>http://siberiabar2.github.io/2021/11/15/shi-de-ts-node-da-yin-bu-bao-cuo/</id>
-    <published>2021-11-15T13:15:04.000Z</published>
-    <updated>2021-11-15T13:17:09.025Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;ts-node打印不报错&quot;&gt;&lt;a href=&quot;#ts-node打印不报错&quot; class=&quot;headerlink&quot; title=&quot;ts-node打印不报错&quot;&gt;&lt;/a&gt;ts-node打印不报错&lt;/h4&gt;&lt;pre class=&quot; language-jsx&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="ts-node打印不报错" scheme="http://siberiabar2.github.io/tags/ts-node%E6%89%93%E5%8D%B0%E4%B8%8D%E6%8A%A5%E9%94%99/"/>
     
   </entry>
   
