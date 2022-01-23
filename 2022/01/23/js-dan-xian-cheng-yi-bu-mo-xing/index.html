@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.4k
+                    4.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    17 分
                 </div>
                 
 
@@ -726,76 +726,76 @@ task1执⾏完毕
 
     这样一来，执行栈中永远都只有一个函数在执行，不会栈溢出。
 </code></pre>
-<h6 id="宏任务微任务"><a href="#宏任务微任务" class="headerlink" title="宏任务微任务"></a>宏任务微任务</h6><pre><code>异步的代码分为宏任务和微任务，微任务先执行，宏任务是javascript最原始的异步任务，
+<h6 id="宏任务微任务"><a href="#宏任务微任务" class="headerlink" title="宏任务微任务"></a>宏任务微任务</h6><pre class=" language-js"><code class="language-js">异步的代码分为宏任务和微任务，微任务先执行，宏任务是javascript最原始的异步任务，
 
 包括setTimeout、setInterVal、AJAX等。
 
 常见宏任务： 
                        浏览器               node
-I/O                    ✅                  ✅
+I<span class="token operator">/</span>O                    ✅                  ✅
 setTimeout             ✅                  ✅
 setInterval            ✅                  ✅
 setImmediate           ❌                  ✅
 requestAnimationFrame  ✅                  ❌   
 
-// requestAnimationFrame 在MDN的定义为，下次⻚⾯重绘前
-// 所执⾏的操作，⽽重绘也是作为宏任务的⼀个步骤来存在的，且该步骤晚于微任务的执⾏
+<span class="token comment" spellcheck="true">// requestAnimationFrame 在MDN的定义为，下次⻚⾯重绘前</span>
+<span class="token comment" spellcheck="true">// 所执⾏的操作，⽽重绘也是作为宏任务的⼀个步骤来存在的，且该步骤晚于微任务的执⾏</span>
 
 微任务：
 
-process.nextTick       ❌                  ✅
+process<span class="token punctuation">.</span>nextTick       ❌                  ✅
 MutationObserver       ✅                  ❌
-Promise.then catch finally  ✅             ✅
+Promise<span class="token punctuation">.</span>then <span class="token keyword">catch</span> <span class="token keyword">finally</span>  ✅             ✅
 
 
 
 
-setTimeout(function() &#123;
-  console.log(&#39;timer1&#39;)
-&#125;, 0)
-requestAnimationFrame(function()&#123;
-  console.log(&#39;UI update&#39;)
-&#125;)
-setTimeout(function() &#123;
-  console.log(&#39;timer2&#39;)
-&#125;, 0)
-new Promise(function executor(resolve) &#123;
-  console.log(&#39;promise 1&#39;)
-resolve()
-  console.log(&#39;promise 2&#39;)
-&#125;).then(function() &#123;
-  console.log(&#39;promise then&#39;)
-&#125;)
-console.log(&#39;end&#39;)
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timer1'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'UI update'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timer2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">executor</span><span class="token punctuation">(</span>resolve<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise 1'</span><span class="token punctuation">)</span>
+<span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise 2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise then'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">)</span>
 
-// promise 1
-// promise 2
-// end
-// promise then
-// timer1
-// timer2
-// UI update
+<span class="token comment" spellcheck="true">// promise 1</span>
+<span class="token comment" spellcheck="true">// promise 2</span>
+<span class="token comment" spellcheck="true">// end</span>
+<span class="token comment" spellcheck="true">// promise then</span>
+<span class="token comment" spellcheck="true">// timer1</span>
+<span class="token comment" spellcheck="true">// timer2</span>
+<span class="token comment" spellcheck="true">// UI update</span>
 
-// promise 1
-// promise 2
-// end
-// promise then
-// UI update
-// timer1
-// timer2
+<span class="token comment" spellcheck="true">// promise 1</span>
+<span class="token comment" spellcheck="true">// promise 2</span>
+<span class="token comment" spellcheck="true">// end</span>
+<span class="token comment" spellcheck="true">// promise then</span>
+<span class="token comment" spellcheck="true">// UI update</span>
+<span class="token comment" spellcheck="true">// timer1</span>
+<span class="token comment" spellcheck="true">// timer2</span>
 
 
 
-document.addEventListener(&#39;click&#39;, function()&#123;
-  Promise.resolve().then(()=&gt; console.log(1));
-  console.log(2);
-&#125;)
-document.addEventListener(&#39;click&#39;, function()&#123;
-  Promise.resolve().then(()=&gt; console.log(3));
-  console.log(4);
-&#125;)
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-// 2，1，4，3
+<span class="token comment" spellcheck="true">// 2，1，4，3</span>
 </code></pre>
 <h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><pre class=" language-js"><code class="language-js">Promise 主要是为了解决异步回调地狱的问题。
 
@@ -2154,7 +2154,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">49.2k</span>
+                        class="white-color">49.1k</span>
             
             
             
