@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2022-02-13T14:56:41.044Z</updated>
+  <updated>2022-03-05T10:58:52.112Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,121 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xss与csrf攻击</title>
+    <link href="http://siberiabar2.github.io/2022/03/05/xss-yu-csrf-gong-ji/"/>
+    <id>http://siberiabar2.github.io/2022/03/05/xss-yu-csrf-gong-ji/</id>
+    <published>2022-03-05T10:54:14.000Z</published>
+    <updated>2022-03-05T10:58:52.112Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="xss与csrf攻击" scheme="http://siberiabar2.github.io/tags/xss%E4%B8%8Ecsrf%E6%94%BB%E5%87%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ts-check</title>
+    <link href="http://siberiabar2.github.io/2022/03/05/ts-check/"/>
+    <id>http://siberiabar2.github.io/2022/03/05/ts-check/</id>
+    <published>2022-03-05T10:52:57.000Z</published>
+    <updated>2022-03-05T10:53:50.704Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ts-check" scheme="http://siberiabar2.github.io/tags/ts-check/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>new和call</title>
+    <link href="http://siberiabar2.github.io/2022/03/05/new-he-call/"/>
+    <id>http://siberiabar2.github.io/2022/03/05/new-he-call/</id>
+    <published>2022-03-05T10:51:21.000Z</published>
+    <updated>2022-03-05T10:51:59.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="new和call" scheme="http://siberiabar2.github.io/tags/new%E5%92%8Ccall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔</title>
+    <link href="http://siberiabar2.github.io/2022/03/05/sui-bi-1/"/>
+    <id>http://siberiabar2.github.io/2022/03/05/sui-bi-1/</id>
+    <published>2022-03-05T10:48:23.000Z</published>
+    <updated>2022-03-05T10:49:42.431Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="http://siberiabar2.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React面试题</title>
+    <link href="http://siberiabar2.github.io/2022/03/05/react-mian-shi-ti/"/>
+    <id>http://siberiabar2.github.io/2022/03/05/react-mian-shi-ti/</id>
+    <published>2022-03-05T10:47:02.000Z</published>
+    <updated>2022-03-05T10:47:52.772Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React面试题" scheme="http://siberiabar2.github.io/tags/React%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>recent_report</title>
@@ -358,121 +473,6 @@
     
     
     <category term="js原生方法" scheme="http://siberiabar2.github.io/tags/js%E5%8E%9F%E7%94%9F%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>211130随笔</title>
-    <link href="http://siberiabar2.github.io/2021/11/30/211130-sui-bi/"/>
-    <id>http://siberiabar2.github.io/2021/11/30/211130-sui-bi/</id>
-    <published>2021-11-30T13:48:19.000Z</published>
-    <updated>2021-11-30T13:57:14.698Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="211130随笔" scheme="http://siberiabar2.github.io/tags/211130%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>typescript进阶2</title>
-    <link href="http://siberiabar2.github.io/2021/11/28/typescript-jin-jie-2/"/>
-    <id>http://siberiabar2.github.io/2021/11/28/typescript-jin-jie-2/</id>
-    <published>2021-11-28T10:09:33.000Z</published>
-    <updated>2021-11-28T11:42:28.706Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="typescript进阶2" scheme="http://siberiabar2.github.io/tags/typescript%E8%BF%9B%E9%98%B62/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>typescript进阶</title>
-    <link href="http://siberiabar2.github.io/2021/11/28/typescript-jin-jie/"/>
-    <id>http://siberiabar2.github.io/2021/11/28/typescript-jin-jie/</id>
-    <published>2021-11-28T08:49:49.000Z</published>
-    <updated>2021-11-28T11:07:37.589Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="typescript进阶" scheme="http://siberiabar2.github.io/tags/typescript%E8%BF%9B%E9%98%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>递归深拷贝</title>
-    <link href="http://siberiabar2.github.io/2021/11/28/di-gui-shen-kao-bei/"/>
-    <id>http://siberiabar2.github.io/2021/11/28/di-gui-shen-kao-bei/</id>
-    <published>2021-11-28T08:35:21.000Z</published>
-    <updated>2022-01-05T14:55:37.563Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="递归深拷贝" scheme="http://siberiabar2.github.io/tags/%E9%80%92%E5%BD%92%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js时间对象</title>
-    <link href="http://siberiabar2.github.io/2021/11/28/js-shi-jian-dui-xiang/"/>
-    <id>http://siberiabar2.github.io/2021/11/28/js-shi-jian-dui-xiang/</id>
-    <published>2021-11-27T17:05:17.000Z</published>
-    <updated>2021-11-27T17:28:45.872Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="js时间对象" scheme="http://siberiabar2.github.io/tags/js%E6%97%B6%E9%97%B4%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
