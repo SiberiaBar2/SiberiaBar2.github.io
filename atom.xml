@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2022-03-24T11:27:09.667Z</updated>
+  <updated>2022-04-30T08:56:14.448Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,121 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>uniapp问题总结</title>
+    <link href="http://siberiabar2.github.io/2022/04/30/uniapp-wen-ti-zong-jie/"/>
+    <id>http://siberiabar2.github.io/2022/04/30/uniapp-wen-ti-zong-jie/</id>
+    <published>2022-04-30T08:52:04.000Z</published>
+    <updated>2022-04-30T08:56:14.448Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="uniapp问题总结" scheme="http://siberiabar2.github.io/tags/uniapp%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>April30总结</title>
+    <link href="http://siberiabar2.github.io/2022/04/30/april30-zong-jie/"/>
+    <id>http://siberiabar2.github.io/2022/04/30/april30-zong-jie/</id>
+    <published>2022-04-30T08:51:17.000Z</published>
+    <updated>2022-04-30T08:58:00.803Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="April30总结" scheme="http://siberiabar2.github.io/tags/April30%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>April28其他总结</title>
+    <link href="http://siberiabar2.github.io/2022/04/30/april28-qi-ta-zong-jie/"/>
+    <id>http://siberiabar2.github.io/2022/04/30/april28-qi-ta-zong-jie/</id>
+    <published>2022-04-30T08:50:22.000Z</published>
+    <updated>2022-04-30T08:58:53.132Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="April28其他总结" scheme="http://siberiabar2.github.io/tags/April28%E5%85%B6%E4%BB%96%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>April28项目总结</title>
+    <link href="http://siberiabar2.github.io/2022/04/30/april28-xiang-mu-zong-jie/"/>
+    <id>http://siberiabar2.github.io/2022/04/30/april28-xiang-mu-zong-jie/</id>
+    <published>2022-04-30T08:48:44.000Z</published>
+    <updated>2022-04-30T09:04:45.032Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="April28项目总结" scheme="http://siberiabar2.github.io/tags/April28%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>momentjs时间转换</title>
+    <link href="http://siberiabar2.github.io/2022/04/30/momentjs-shi-jian-zhuan-huan/"/>
+    <id>http://siberiabar2.github.io/2022/04/30/momentjs-shi-jian-zhuan-huan/</id>
+    <published>2022-04-30T08:47:20.000Z</published>
+    <updated>2022-04-30T09:05:36.512Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="momentjs时间转换" scheme="http://siberiabar2.github.io/tags/momentjs%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>立即获取hook更新的值</title>
@@ -358,121 +473,6 @@
     
     
     <category term="vue面包屑" scheme="http://siberiabar2.github.io/tags/vue%E9%9D%A2%E5%8C%85%E5%B1%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图床使用</title>
-    <link href="http://siberiabar2.github.io/2021/12/26/tu-chuang-shi-yong/"/>
-    <id>http://siberiabar2.github.io/2021/12/26/tu-chuang-shi-yong/</id>
-    <published>2021-12-26T11:51:47.000Z</published>
-    <updated>2021-12-26T12:09:48.988Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="图床使用" scheme="http://siberiabar2.github.io/tags/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>词法作用域与动态作用域</title>
-    <link href="http://siberiabar2.github.io/2021/12/26/ci-fa-zuo-yong-yu-yu-dong-tai-zuo-yong-yu/"/>
-    <id>http://siberiabar2.github.io/2021/12/26/ci-fa-zuo-yong-yu-yu-dong-tai-zuo-yong-yu/</id>
-    <published>2021-12-26T11:10:48.000Z</published>
-    <updated>2021-12-26T11:24:27.353Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="词法作用域与动态作用域" scheme="http://siberiabar2.github.io/tags/%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%8A%A8%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>闭包</title>
-    <link href="http://siberiabar2.github.io/2021/12/26/bi-bao/"/>
-    <id>http://siberiabar2.github.io/2021/12/26/bi-bao/</id>
-    <published>2021-12-26T10:28:18.000Z</published>
-    <updated>2021-12-26T11:32:05.852Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="闭包" scheme="http://siberiabar2.github.io/tags/%E9%97%AD%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>执行上下文</title>
-    <link href="http://siberiabar2.github.io/2021/12/19/zhi-xing-shang-xia-wen/"/>
-    <id>http://siberiabar2.github.io/2021/12/19/zhi-xing-shang-xia-wen/</id>
-    <published>2021-12-19T14:20:10.000Z</published>
-    <updated>2021-12-19T14:53:56.612Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="执行上下文" scheme="http://siberiabar2.github.io/tags/%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>项目总结</title>
-    <link href="http://siberiabar2.github.io/2021/12/18/xiang-mu-zong-jie/"/>
-    <id>http://siberiabar2.github.io/2021/12/18/xiang-mu-zong-jie/</id>
-    <published>2021-12-18T03:18:27.000Z</published>
-    <updated>2021-12-18T03:51:50.074Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="项目总结" scheme="http://siberiabar2.github.io/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
