@@ -547,7 +547,7 @@
                 <span class="token punctuation">}</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                         
-              <span class="token comment" spellcheck="true">// 使用 Promise.all 将 Promise 数组包装成一个 Promise对象</span>
+            <span class="token comment" spellcheck="true">// 使用 Promise.all 将 Promise 数组包装成一个 Promise对象</span>
             <span class="token comment" spellcheck="true">// 将转化后变成正常数组的值存入 redux 、存入 useState</span>
             Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>newList<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
                 console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'Promise.all(newList).then'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>
