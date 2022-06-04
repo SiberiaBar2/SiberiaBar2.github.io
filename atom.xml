@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2022-04-30T08:56:14.448Z</updated>
+  <updated>2022-06-04T14:23:37.113Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>鼠标是否在元素中</title>
+    <link href="http://siberiabar2.github.io/2022/06/04/shu-biao-shi-fou-zai-yuan-su-zhong/"/>
+    <id>http://siberiabar2.github.io/2022/06/04/shu-biao-shi-fou-zai-yuan-su-zhong/</id>
+    <published>2022-06-04T14:23:11.000Z</published>
+    <updated>2022-06-04T14:23:37.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="鼠标是否在元素中" scheme="http://siberiabar2.github.io/tags/%E9%BC%A0%E6%A0%87%E6%98%AF%E5%90%A6%E5%9C%A8%E5%85%83%E7%B4%A0%E4%B8%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>地区联动</title>
+    <link href="http://siberiabar2.github.io/2022/06/04/di-qu-lian-dong/"/>
+    <id>http://siberiabar2.github.io/2022/06/04/di-qu-lian-dong/</id>
+    <published>2022-06-04T14:22:21.000Z</published>
+    <updated>2022-06-04T14:22:50.405Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="地区联动" scheme="http://siberiabar2.github.io/tags/%E5%9C%B0%E5%8C%BA%E8%81%94%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>axios封装new</title>
+    <link href="http://siberiabar2.github.io/2022/06/04/axios-feng-zhuang-new/"/>
+    <id>http://siberiabar2.github.io/2022/06/04/axios-feng-zhuang-new/</id>
+    <published>2022-06-04T14:21:08.000Z</published>
+    <updated>2022-06-04T14:21:57.940Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="axios封装new" scheme="http://siberiabar2.github.io/tags/axios%E5%B0%81%E8%A3%85new/"/>
+    
+  </entry>
   
   <entry>
     <title>uniapp问题总结</title>
@@ -404,75 +473,6 @@
     
     
     <category term="js单线程异步模型" scheme="http://siberiabar2.github.io/tags/js%E5%8D%95%E7%BA%BF%E7%A8%8B%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>密码正则</title>
-    <link href="http://siberiabar2.github.io/2022/01/09/mi-ma-zheng-ze/"/>
-    <id>http://siberiabar2.github.io/2022/01/09/mi-ma-zheng-ze/</id>
-    <published>2022-01-09T08:26:31.000Z</published>
-    <updated>2022-01-09T08:46:18.043Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="密码正则" scheme="http://siberiabar2.github.io/tags/%E5%AF%86%E7%A0%81%E6%AD%A3%E5%88%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue路由跳转引发父组件重渲问题</title>
-    <link href="http://siberiabar2.github.io/2022/01/09/vue-lu-you-tiao-zhuan-yin-fa-fu-zu-jian-chong-xuan-wen-ti/"/>
-    <id>http://siberiabar2.github.io/2022/01/09/vue-lu-you-tiao-zhuan-yin-fa-fu-zu-jian-chong-xuan-wen-ti/</id>
-    <published>2022-01-09T08:02:26.000Z</published>
-    <updated>2022-01-09T08:45:19.529Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="vue路由跳转引发父组件重渲问题" scheme="http://siberiabar2.github.io/tags/vue%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E5%BC%95%E5%8F%91%E7%88%B6%E7%BB%84%E4%BB%B6%E9%87%8D%E6%B8%B2%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue面包屑</title>
-    <link href="http://siberiabar2.github.io/2022/01/09/vue-mian-bao-xie/"/>
-    <id>http://siberiabar2.github.io/2022/01/09/vue-mian-bao-xie/</id>
-    <published>2022-01-09T07:41:17.000Z</published>
-    <updated>2022-01-09T07:53:21.299Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="vue面包屑" scheme="http://siberiabar2.github.io/tags/vue%E9%9D%A2%E5%8C%85%E5%B1%91/"/>
     
   </entry>
   
