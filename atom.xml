@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2022-08-23T02:43:58.190Z</updated>
+  <updated>2022-09-09T07:01:44.963Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -17,18 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>reactFiber学习</title>
+    <link href="http://siberiabar2.github.io/2022/09/09/reactfiber-xue-xi/"/>
+    <id>http://siberiabar2.github.io/2022/09/09/reactfiber-xue-xi/</id>
+    <published>2022-09-09T06:56:43.000Z</published>
+    <updated>2022-09-09T07:01:44.963Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="reactFiber学习" scheme="http://siberiabar2.github.io/tags/reactFiber%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>reactCustomHook</title>
     <link href="http://siberiabar2.github.io/2022/08/23/reactcustomhook/"/>
     <id>http://siberiabar2.github.io/2022/08/23/reactcustomhook/</id>
     <published>2022-08-23T02:43:21.000Z</published>
-    <updated>2022-08-23T02:43:58.190Z</updated>
+    <updated>2022-08-23T02:44:00.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -44,14 +67,14 @@
     <link href="http://siberiabar2.github.io/2022/08/23/august23th-xiang-mu-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/08/23/august23th-xiang-mu-zong-jie/</id>
     <published>2022-08-23T02:41:06.000Z</published>
-    <updated>2022-08-23T02:41:52.264Z</updated>
+    <updated>2022-08-23T02:41:54.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -67,14 +90,14 @@
     <link href="http://siberiabar2.github.io/2022/07/10/july-10th-report/"/>
     <id>http://siberiabar2.github.io/2022/07/10/july-10th-report/</id>
     <published>2022-07-10T12:57:53.000Z</published>
-    <updated>2022-08-23T02:49:08.805Z</updated>
+    <updated>2022-08-23T02:49:10.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -90,14 +113,14 @@
     <link href="http://siberiabar2.github.io/2022/07/04/july4th-xiang-mu-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/07/04/july4th-xiang-mu-zong-jie/</id>
     <published>2022-07-03T23:19:13.000Z</published>
-    <updated>2022-07-10T13:03:45.913Z</updated>
+    <updated>2022-07-10T13:03:46.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -113,14 +136,14 @@
     <link href="http://siberiabar2.github.io/2022/06/30/june30-xiang-mu-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/06/30/june30-xiang-mu-zong-jie/</id>
     <published>2022-06-30T14:33:15.000Z</published>
-    <updated>2022-07-10T13:01:44.969Z</updated>
+    <updated>2022-07-10T13:01:46.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -136,14 +159,14 @@
     <link href="http://siberiabar2.github.io/2022/06/04/shu-biao-shi-fou-zai-yuan-su-zhong/"/>
     <id>http://siberiabar2.github.io/2022/06/04/shu-biao-shi-fou-zai-yuan-su-zhong/</id>
     <published>2022-06-04T14:23:11.000Z</published>
-    <updated>2022-06-04T14:23:37.113Z</updated>
+    <updated>2022-06-04T14:23:38.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -159,14 +182,14 @@
     <link href="http://siberiabar2.github.io/2022/06/04/di-qu-lian-dong/"/>
     <id>http://siberiabar2.github.io/2022/06/04/di-qu-lian-dong/</id>
     <published>2022-06-04T14:22:21.000Z</published>
-    <updated>2022-06-04T14:28:54.633Z</updated>
+    <updated>2022-06-04T14:28:56.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -182,14 +205,14 @@
     <link href="http://siberiabar2.github.io/2022/06/04/axios-feng-zhuang-new/"/>
     <id>http://siberiabar2.github.io/2022/06/04/axios-feng-zhuang-new/</id>
     <published>2022-06-04T14:21:08.000Z</published>
-    <updated>2022-06-04T14:21:57.940Z</updated>
+    <updated>2022-06-04T14:21:58.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -205,14 +228,14 @@
     <link href="http://siberiabar2.github.io/2022/04/30/uniapp-wen-ti-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/04/30/uniapp-wen-ti-zong-jie/</id>
     <published>2022-04-30T08:52:04.000Z</published>
-    <updated>2022-04-30T08:56:14.448Z</updated>
+    <updated>2022-04-30T08:56:16.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -228,14 +251,14 @@
     <link href="http://siberiabar2.github.io/2022/04/30/april30-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/04/30/april30-zong-jie/</id>
     <published>2022-04-30T08:51:17.000Z</published>
-    <updated>2022-04-30T08:58:00.803Z</updated>
+    <updated>2022-04-30T08:58:02.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -251,14 +274,14 @@
     <link href="http://siberiabar2.github.io/2022/04/30/april28-qi-ta-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/04/30/april28-qi-ta-zong-jie/</id>
     <published>2022-04-30T08:50:22.000Z</published>
-    <updated>2022-04-30T08:58:53.132Z</updated>
+    <updated>2022-04-30T08:58:54.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -274,14 +297,14 @@
     <link href="http://siberiabar2.github.io/2022/04/30/april28-xiang-mu-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/04/30/april28-xiang-mu-zong-jie/</id>
     <published>2022-04-30T08:48:44.000Z</published>
-    <updated>2022-04-30T09:04:45.032Z</updated>
+    <updated>2022-04-30T09:04:46.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -297,14 +320,14 @@
     <link href="http://siberiabar2.github.io/2022/04/30/momentjs-shi-jian-zhuan-huan/"/>
     <id>http://siberiabar2.github.io/2022/04/30/momentjs-shi-jian-zhuan-huan/</id>
     <published>2022-04-30T08:47:20.000Z</published>
-    <updated>2022-04-30T09:05:36.512Z</updated>
+    <updated>2022-04-30T09:05:38.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -320,14 +343,14 @@
     <link href="http://siberiabar2.github.io/2022/03/24/li-ji-huo-qu-hook-geng-xin-de-zhi/"/>
     <id>http://siberiabar2.github.io/2022/03/24/li-ji-huo-qu-hook-geng-xin-de-zhi/</id>
     <published>2022-03-24T11:01:37.000Z</published>
-    <updated>2022-03-24T11:27:09.667Z</updated>
+    <updated>2022-03-24T11:27:10.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -343,14 +366,14 @@
     <link href="http://siberiabar2.github.io/2022/03/24/reactless-shen-du-xuan-ze-qi/"/>
     <id>http://siberiabar2.github.io/2022/03/24/reactless-shen-du-xuan-ze-qi/</id>
     <published>2022-03-24T10:59:14.000Z</published>
-    <updated>2022-03-24T10:59:55.402Z</updated>
+    <updated>2022-03-24T10:59:56.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -366,14 +389,14 @@
     <link href="http://siberiabar2.github.io/2022/03/24/react-zhong-yin-ru-less/"/>
     <id>http://siberiabar2.github.io/2022/03/24/react-zhong-yin-ru-less/</id>
     <published>2022-03-24T10:56:43.000Z</published>
-    <updated>2022-03-24T10:58:34.047Z</updated>
+    <updated>2022-03-24T10:58:36.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -389,14 +412,14 @@
     <link href="http://siberiabar2.github.io/2022/03/05/xss-yu-csrf-gong-ji/"/>
     <id>http://siberiabar2.github.io/2022/03/05/xss-yu-csrf-gong-ji/</id>
     <published>2022-03-05T10:54:14.000Z</published>
-    <updated>2022-03-05T10:58:52.112Z</updated>
+    <updated>2022-03-05T10:58:54.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -412,14 +435,14 @@
     <link href="http://siberiabar2.github.io/2022/03/05/ts-check/"/>
     <id>http://siberiabar2.github.io/2022/03/05/ts-check/</id>
     <published>2022-03-05T10:52:57.000Z</published>
-    <updated>2022-03-05T10:53:50.704Z</updated>
+    <updated>2022-03-05T10:53:52.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -435,14 +458,14 @@
     <link href="http://siberiabar2.github.io/2022/03/05/new-he-call/"/>
     <id>http://siberiabar2.github.io/2022/03/05/new-he-call/</id>
     <published>2022-03-05T10:51:21.000Z</published>
-    <updated>2022-03-05T10:51:59.305Z</updated>
+    <updated>2022-03-05T10:52:00.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -450,29 +473,6 @@
     
     
     <category term="new和call" scheme="http://siberiabar2.github.io/tags/new%E5%92%8Ccall/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随笔</title>
-    <link href="http://siberiabar2.github.io/2022/03/05/sui-bi-1/"/>
-    <id>http://siberiabar2.github.io/2022/03/05/sui-bi-1/</id>
-    <published>2022-03-05T10:48:23.000Z</published>
-    <updated>2022-03-05T10:49:42.431Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="随笔" scheme="http://siberiabar2.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
