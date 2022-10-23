@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -863,6 +863,58 @@ type ParsedQuery <span class="token operator">=</span> queryString<span class="t
             <span class="token operator">...</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="useStateStrong"><a href="#useStateStrong" class="headerlink" title="useStateStrong"></a>useStateStrong</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> NUMS <span class="token operator">=</span> <span class="token punctuation">{</span>
+    ZERO<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    ONE<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+type SyncFunc <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span> <span class="token operator">|</span> undefined<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> useStateStrong <span class="token operator">=</span> <span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>initValue<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    type DispatchFunc <span class="token operator">=</span> <span class="token punctuation">(</span>newData<span class="token punctuation">:</span> T<span class="token punctuation">,</span> callF<span class="token operator">?</span><span class="token punctuation">:</span> SyncFunc<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Promise<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">;</span>
+    type ReturnArray <span class="token operator">=</span> <span class="token punctuation">[</span>T<span class="token punctuation">,</span> DispatchFunc<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> ref <span class="token operator">=</span> useRef<span class="token operator">&lt;</span>number<span class="token operator">></span><span class="token punctuation">(</span>NUMS<span class="token punctuation">.</span>ZERO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> callFRef <span class="token operator">=</span> useRef<span class="token operator">&lt;</span><span class="token punctuation">(</span>val<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> setFuncRef <span class="token operator">=</span> useRef<span class="token operator">&lt;</span>DispatchFunc<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 似乎可有可无？ 因为底部 为return的数组 定义了元祖类型</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>initValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ref<span class="token punctuation">.</span>current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ref<span class="token punctuation">.</span>current <span class="token operator">=</span> NUMS<span class="token punctuation">.</span>ONE<span class="token punctuation">;</span>
+        setFuncRef<span class="token punctuation">.</span>current <span class="token operator">=</span> <span class="token punctuation">(</span>newData<span class="token punctuation">:</span> T<span class="token punctuation">,</span> callF<span class="token operator">?</span><span class="token punctuation">:</span> SyncFunc<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            callFRef<span class="token punctuation">.</span>current <span class="token operator">=</span> callF<span class="token punctuation">;</span>
+            <span class="token function">setState</span><span class="token punctuation">(</span>newData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>newData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        callFRef<span class="token punctuation">.</span>current<span class="token operator">?</span><span class="token punctuation">.</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>state<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// eslint-disable-next-line prettier/prettier</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setFuncRef<span class="token punctuation">.</span>current<span class="token punctuation">]</span> <span class="token keyword">as</span> ReturnArray<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> useStateStrong<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// https://juejin.cn/post/7085674288933502984</span>
+</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// use</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> useStateStrong<span class="token operator">&lt;</span>number<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> handelClick <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// setCount(count + 1, (newState: any) => {</span>
+    <span class="token comment" spellcheck="true">// 在该函数体内可以获得最新的值</span>
+    <span class="token comment" spellcheck="true">//     console.warn('syncState', newState);</span>
+    <span class="token comment" spellcheck="true">// });</span>
+    <span class="token comment" spellcheck="true">// 在 .then 内也可以获得最新的值</span>
+    <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>newValue<span class="token punctuation">:</span> number<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'.thenSyncState'</span><span class="token punctuation">,</span> newValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'noSync'</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 
                 
@@ -1745,7 +1797,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">75.7k</span>
+                        class="white-color">76.1k</span>
             
             
             
