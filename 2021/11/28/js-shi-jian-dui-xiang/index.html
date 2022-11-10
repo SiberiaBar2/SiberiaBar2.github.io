@@ -749,8 +749,8 @@ antd 的 DatePicker 的 defaultPickerValue属性可以指定面板时间开始�
     </div>
 
     
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/%5B%E8%A1%A8%E6%83%85%5Ds/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
@@ -760,7 +760,7 @@ antd 的 DatePicker 的 defaultPickerValue属性可以指定面板时间开始�
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<!-- <script src="/libs/gitalk/gitalk.min.js"></script> -->
+<script src="/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '2af6f6f446a783ba5e88',
@@ -768,7 +768,7 @@ antd 的 DatePicker 的 defaultPickerValue属性可以指定面板时间开始�
         repo: 'siberiabar2.github.io',
         owner: 'siberiabar2',
         admin: 'siberiabar2',
-        distractionFreeMode: true,
+        distractionFreeMode: false,
         labels: 'gitalk',
         id: md5(location.pathname),
     });
