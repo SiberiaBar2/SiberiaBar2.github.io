@@ -871,16 +871,17 @@ at <span class="token operator">&lt;</span>anonymous<span class="token operator"
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
+<!-- <script src="/libs/gitalk/gitalk.min.js"></script> -->
 <script>
     let gitalk = new Gitalk({
         clientID: '2af6f6f446a783ba5e88',
         clientSecret: '8cbc6b5915c4e676e4b24f71a76d8c38e9a4ad83',
         repo: 'siberiabar2.github.io',
         owner: 'siberiabar2',
-        admin: "siberiabar2",
-        id: '2021-11-30T21-48-19',
-        distractionFreeMode: false  // Facebook-like distraction free mode
+        admin: 'siberiabar2',
+        distractionFreeMode: true,
+        labels: 'gitalk',
+        id: md5(location.pathname),
     });
 
     gitalk.render('gitalk-container');
