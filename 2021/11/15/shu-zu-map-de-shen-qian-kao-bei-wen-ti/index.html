@@ -1408,7 +1408,7 @@ filter 也会把每个item过一遍，但它必须根据item的某些条件，�
     
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
+                   server="tencent"
                    type="playlist"
                    id="503838841"
                    fixed='true'
@@ -1418,7 +1418,7 @@ filter 也会把每个item过一遍，但它必须根据item的某些条件，�
                    order='random'
                    preload='auto'
                    volume='0.7'
-                   list-folded='false'
+                   list-folded='true'
         >
         </meting-js>
     </div>
@@ -1665,6 +1665,15 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <script type="text/javascript">
+        //只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fz6m/Private-web@1.2/js/sakura/sakura-small.js"><\/script>');
+        }
+    </script>
+        
 
 </body>
 
