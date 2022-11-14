@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2022-11-09T08:24:53.792Z</updated>
+  <updated>2022-11-14T02:22:36.703Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用json-server模拟登录接口</title>
+    <link href="http://siberiabar2.github.io/2022/11/14/shi-yong-json-server-mo-ni-deng-lu-jie-kou/"/>
+    <id>http://siberiabar2.github.io/2022/11/14/shi-yong-json-server-mo-ni-deng-lu-jie-kou/</id>
+    <published>2022-11-14T02:07:58.000Z</published>
+    <updated>2022-11-14T02:22:36.703Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="使用json-server模拟登录接口" scheme="http://siberiabar2.github.io/tags/%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>november-9th</title>
@@ -90,7 +113,7 @@
     <link href="http://siberiabar2.github.io/2022/08/23/reactcustomhook/"/>
     <id>http://siberiabar2.github.io/2022/08/23/reactcustomhook/</id>
     <published>2022-08-23T02:43:21.000Z</published>
-    <updated>2022-09-11T03:01:32.548Z</updated>
+    <updated>2022-11-14T02:16:57.166Z</updated>
     
     
       
@@ -113,7 +136,7 @@
     <link href="http://siberiabar2.github.io/2022/08/23/august23th-xiang-mu-zong-jie/"/>
     <id>http://siberiabar2.github.io/2022/08/23/august23th-xiang-mu-zong-jie/</id>
     <published>2022-08-23T02:41:06.000Z</published>
-    <updated>2022-08-23T02:41:54.000Z</updated>
+    <updated>2022-11-14T02:18:26.093Z</updated>
     
     
       
@@ -450,29 +473,6 @@
     
     
     <category term="react中引入less" scheme="http://siberiabar2.github.io/tags/react%E4%B8%AD%E5%BC%95%E5%85%A5less/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>xss与csrf攻击</title>
-    <link href="http://siberiabar2.github.io/2022/03/05/xss-yu-csrf-gong-ji/"/>
-    <id>http://siberiabar2.github.io/2022/03/05/xss-yu-csrf-gong-ji/</id>
-    <published>2022-03-05T10:54:14.000Z</published>
-    <updated>2022-03-05T10:58:54.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="xss与csrf攻击" scheme="http://siberiabar2.github.io/tags/xss%E4%B8%8Ecsrf%E6%94%BB%E5%87%BB/"/>
     
   </entry>
   

@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -817,7 +817,7 @@ type ParsedQuery <span class="token operator">=</span> queryString<span class="t
 
 <span class="token comment" spellcheck="true">// use  同解构使用</span>
 </code></pre>
-<h3 id="useSyncCallback"><a href="#useSyncCallback" class="headerlink" title="useSyncCallback"></a>useSyncCallback</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">,</span> useCallback<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<h3 id="useSyncCallback-（在回调中获得useState最新的值）"><a href="#useSyncCallback-（在回调中获得useState最新的值）" class="headerlink" title="useSyncCallback （在回调中获得useState最新的值）"></a>useSyncCallback （在回调中获得useState最新的值）</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">,</span> useCallback<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> useSyncCallback <span class="token operator">=</span> <span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>callback<span class="token punctuation">:</span> <span class="token punctuation">(</span>value<span class="token operator">?</span><span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> <span class="token punctuation">[</span>proxyState<span class="token punctuation">,</span> setProxyState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>current<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -864,7 +864,7 @@ type ParsedQuery <span class="token operator">=</span> queryString<span class="t
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="useStateStrong"><a href="#useStateStrong" class="headerlink" title="useStateStrong"></a>useStateStrong</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<h3 id="useStateSync-（同步state-hook）"><a href="#useStateSync-（同步state-hook）" class="headerlink" title="useStateSync （同步state  hook）"></a>useStateSync （同步state  hook）</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> NUMS <span class="token operator">=</span> <span class="token punctuation">{</span>
     ZERO<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
@@ -873,7 +873,7 @@ type ParsedQuery <span class="token operator">=</span> queryString<span class="t
 
 type SyncFunc <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span> <span class="token operator">|</span> undefined<span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> useStateStrong <span class="token operator">=</span> <span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>initValue<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> useStateSync <span class="token operator">=</span> <span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">(</span>initValue<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     type DispatchFunc <span class="token operator">=</span> <span class="token punctuation">(</span>newData<span class="token punctuation">:</span> T<span class="token punctuation">,</span> callF<span class="token operator">?</span><span class="token punctuation">:</span> SyncFunc<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Promise<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">;</span>
     type ReturnArray <span class="token operator">=</span> <span class="token punctuation">[</span>T<span class="token punctuation">,</span> DispatchFunc<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
@@ -896,13 +896,13 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
     <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setFuncRef<span class="token punctuation">.</span>current<span class="token punctuation">]</span> <span class="token keyword">as</span> ReturnArray<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> useStateStrong<span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> useStateSync<span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">// https://juejin.cn/post/7085674288933502984</span>
 </code></pre>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// use</span>
 
-<span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> useStateStrong<span class="token operator">&lt;</span>number<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> useStateSync<span class="token operator">&lt;</span>number<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> handelClick <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// setCount(count + 1, (newState: any) => {</span>
@@ -915,6 +915,49 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'noSync'</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="useMount-（-只执行一次）"><a href="#useMount-（-只执行一次）" class="headerlink" title="useMount （ 只执行一次）"></a>useMount （ 只执行一次）</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 这个hook的作用在于 只执行一次 避免写大量的空数组的effect</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useMount <span class="token operator">=</span> <span class="token punctuation">(</span>callBack<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token function">callBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="useDebounce-（对值进行防抖）"><a href="#useDebounce-（对值进行防抖）" class="headerlink" title="useDebounce （对值进行防抖）"></a>useDebounce （对值进行防抖）</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useEffect<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useDebounce <span class="token operator">=</span> <span class="token operator">&lt;</span>V<span class="token operator">></span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> V<span class="token punctuation">,</span> delay<span class="token punctuation">:</span> number<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>debouncedValue<span class="token punctuation">,</span> setDebouncedValue<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token operator">&lt;</span>V<span class="token operator">></span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 每次在value变化以后设置一个定时器</span>
+    <span class="token keyword">let</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setDebouncedValue</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 每次在上一个的effect执行完后执行</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>delay<span class="token punctuation">,</span> value<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> debouncedValue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class=" language-jsx"><code class="language-jsx">  <span class="token comment" spellcheck="true">// use</span>
+  <span class="token operator">...</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span>
+  
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>param<span class="token punctuation">,</span> setParam<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    personId<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> debouncedParam <span class="token operator">=</span> <span class="token function">useDebounce</span><span class="token punctuation">(</span>param<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 对值进行debounce，只取最后结果</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>api<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/projects?</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>qs<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token function">cleanObject</span><span class="token punctuation">(</span>debouncedParam<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">setList</span><span class="token punctuation">(</span><span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>debouncedParam<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 依赖项不再是频繁变化的 param, 从而在input输入阶段不再发送大量请求，只发送最后一次！</span>
 </code></pre>
 
                 
@@ -1769,7 +1812,7 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">76.4k</span>
+                        class="white-color">76.8k</span>
             
             
             
