@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="reactCustomHook, KarlFranz">
+    <meta name="keywords" content="react-custom-hook-one, KarlFranz">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>reactCustomHook | KarlFranz</title>
+    <title>react-custom-hook-one | KarlFranz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">reactCustomHook</h1>
+                    <h1 class="description center-align post-title">react-custom-hook-one</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/reactCustomHook/">
-                                <span class="chip bg-color">reactCustomHook</span>
+                            <a href="/tags/react-custom-hook-one/">
+                                <span class="chip bg-color">react-custom-hook-one</span>
                             </a>
                         
                     </div>
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.6k
                 </div>
                 
 
@@ -959,6 +959,20 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>debouncedParam<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 依赖项不再是频繁变化的 param, 从而在input输入阶段不再发送大量请求，只发送最后一次！</span>
 </code></pre>
+<h3 id="useMountRef-判断组件处于挂载还是卸载状态"><a href="#useMountRef-判断组件处于挂载还是卸载状态" class="headerlink" title="useMountRef 判断组件处于挂载还是卸载状态"></a>useMountRef 判断组件处于挂载还是卸载状态</h3><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> useEffect<span class="token punctuation">,</span> useRef <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useMountRef <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> mountedRef <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        mountedRef<span class="token punctuation">.</span>current <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            mountedRef<span class="token punctuation">.</span>current <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> mountedRef<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 
                 
             </div>
@@ -985,7 +999,7 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://siberiabar2.github.io/2022/08/23/reactcustomhook/">http://siberiabar2.github.io/2022/08/23/reactcustomhook/</a>
+                    <a href="http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/">http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1023,8 +1037,8 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/reactCustomHook/">
-                                    <span class="chip bg-color">reactCustomHook</span>
+                                <a href="/tags/react-custom-hook-one/">
+                                    <span class="chip bg-color">react-custom-hook-one</span>
                                 </a>
                             
                         </div>
@@ -1216,9 +1230,9 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://siberiabar2.github.io/2022/08/23/reactcustomhook/';
-        this.page.identifier = '/2022/08/23/reactcustomhook/';
-        this.page.title = 'reactCustomHook';
+        this.page.url = 'http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/';
+        this.page.identifier = '/2022/08/23/react-custom-hook-one/';
+        this.page.title = 'react-custom-hook-one';
     };
     let disqus_shortname = '';
 
@@ -1585,13 +1599,13 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/23/august23th-xiang-mu-zong-jie/">
+                <a href="/2022/08/23/august-23th-xiang-mu-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="august23th项目总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="august-23th项目总结">
                         
-                        <span class="card-title">august23th项目总结</span>
+                        <span class="card-title">august-23th项目总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1615,8 +1629,8 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/august%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">august项目总结</span>
+                    <a href="/tags/august-23th%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">august-23th项目总结</span>
                     </a>
                     
                 </div>
@@ -1812,7 +1826,7 @@ type SyncFunc <span class="token operator">=</span> <span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">76.8k</span>
+                        class="white-color">78.1k</span>
             
             
             

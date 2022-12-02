@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2022-11-14T02:22:36.703Z</updated>
+  <updated>2022-12-02T01:47:33.176Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>22-december-2th</title>
+    <link href="http://siberiabar2.github.io/2022/12/02/22-december-2th/"/>
+    <id>http://siberiabar2.github.io/2022/12/02/22-december-2th/</id>
+    <published>2022-12-02T01:47:16.000Z</published>
+    <updated>2022-12-02T01:47:33.176Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="22-december-2th" scheme="http://siberiabar2.github.io/tags/22-december-2th/"/>
+    
+  </entry>
   
   <entry>
     <title>使用json-server模拟登录接口</title>
@@ -109,11 +132,11 @@
   </entry>
   
   <entry>
-    <title>reactCustomHook</title>
-    <link href="http://siberiabar2.github.io/2022/08/23/reactcustomhook/"/>
-    <id>http://siberiabar2.github.io/2022/08/23/reactcustomhook/</id>
+    <title>react-custom-hook-one</title>
+    <link href="http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/"/>
+    <id>http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/</id>
     <published>2022-08-23T02:43:21.000Z</published>
-    <updated>2022-11-14T02:16:57.166Z</updated>
+    <updated>2022-11-26T01:20:28.541Z</updated>
     
     
       
@@ -127,16 +150,16 @@
     
     
     
-    <category term="reactCustomHook" scheme="http://siberiabar2.github.io/tags/reactCustomHook/"/>
+    <category term="react-custom-hook-one" scheme="http://siberiabar2.github.io/tags/react-custom-hook-one/"/>
     
   </entry>
   
   <entry>
-    <title>august23th项目总结</title>
-    <link href="http://siberiabar2.github.io/2022/08/23/august23th-xiang-mu-zong-jie/"/>
-    <id>http://siberiabar2.github.io/2022/08/23/august23th-xiang-mu-zong-jie/</id>
+    <title>august-23th项目总结</title>
+    <link href="http://siberiabar2.github.io/2022/08/23/august-23th-xiang-mu-zong-jie/"/>
+    <id>http://siberiabar2.github.io/2022/08/23/august-23th-xiang-mu-zong-jie/</id>
     <published>2022-08-23T02:41:06.000Z</published>
-    <updated>2022-11-14T02:18:26.093Z</updated>
+    <updated>2022-11-30T01:31:08.588Z</updated>
     
     
       
@@ -150,7 +173,7 @@
     
     
     
-    <category term="august项目总结" scheme="http://siberiabar2.github.io/tags/august%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <category term="august-23th项目总结" scheme="http://siberiabar2.github.io/tags/august-23th%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -450,29 +473,6 @@
     
     
     <category term="reactLess深度选择器" scheme="http://siberiabar2.github.io/tags/reactLess%E6%B7%B1%E5%BA%A6%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react中引入less</title>
-    <link href="http://siberiabar2.github.io/2022/03/24/react-zhong-yin-ru-less/"/>
-    <id>http://siberiabar2.github.io/2022/03/24/react-zhong-yin-ru-less/</id>
-    <published>2022-03-24T10:56:43.000Z</published>
-    <updated>2022-03-24T10:58:36.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react中引入less" scheme="http://siberiabar2.github.io/tags/react%E4%B8%AD%E5%BC%95%E5%85%A5less/"/>
     
   </entry>
   
