@@ -715,32 +715,33 @@ dir<span class="token punctuation">.</span><span class="token operator">></span>
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/%5B%E8%A1%A8%E6%83%85%5Ds/my-gitalk.css">
 
-<div class="card gitalk-card" data-aos="fade-up">
+    
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
-    <div id="gitalk-container" class="card-content"></div>
+    <div id="gitment-content" class="card-content"></div>
 </div>
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
+<script src="/libs/gitment/gitment.js"></script>
 <script>
-    let gitalk = new Gitalk({
-        clientID: '2af6f6f446a783ba5e88',
-        clientSecret: '8cbc6b5915c4e676e4b24f71a76d8c38e9a4ad83',
-        repo: 'siberiabar2.github.io',
-        owner: 'siberiabar2',
-        admin: "siberiabar2",
-        id: '2021-09-12T16-56-40',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
+var gitment = new Gitment({
+    id: 'Sun Sep 12 2021 16:56:40 GMT+0800',
+    owner: 'siberiabar2',
+    repo: 'siberiabar2.github.io',
+    oauth: {
+        client_id: '2af6f6f446a783ba5e88',
+        client_secret: '8cbc6b5915c4e676e4b24f71a76d8c38e9a4ad83'
+    }
+});
 
-    gitalk.render('gitalk-container');
+gitment.render('gitment-content');
 </script>
-    
 
     
 
