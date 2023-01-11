@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2023-01-05T02:29:57.938Z</updated>
+  <updated>2023-01-11T12:46:20.185Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://siberiabar2.github.io/2023/01/05/za-tan/"/>
     <id>http://siberiabar2.github.io/2023/01/05/za-tan/</id>
     <published>2023-01-05T02:29:09.000Z</published>
-    <updated>2023-01-05T02:29:57.938Z</updated>
+    <updated>2023-01-11T12:46:20.185Z</updated>
     
     
       
@@ -33,6 +33,8 @@
       
     
     
+    
+    <category term="杂谈" scheme="http://siberiabar2.github.io/categories/%E6%9D%82%E8%B0%88/"/>
     
     
     <category term="杂谈" scheme="http://siberiabar2.github.io/tags/%E6%9D%82%E8%B0%88/"/>
