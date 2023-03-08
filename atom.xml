@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2023-02-16T07:23:06.674Z</updated>
+  <updated>2023-03-08T11:43:29.420Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>23-march8th</title>
+    <link href="http://siberiabar2.github.io/2023/03/08/23-march8th/"/>
+    <id>http://siberiabar2.github.io/2023/03/08/23-march8th/</id>
+    <published>2023-03-08T09:51:03.000Z</published>
+    <updated>2023-03-08T11:43:29.420Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="date" scheme="http://siberiabar2.github.io/categories/date/"/>
+    
+    
+    <category term="sum up" scheme="http://siberiabar2.github.io/tags/sum-up/"/>
+    
+  </entry>
   
   <entry>
     <title>23-0216</title>
@@ -46,7 +71,7 @@
     <link href="http://siberiabar2.github.io/2023/01/23/za-tan-2/"/>
     <id>http://siberiabar2.github.io/2023/01/23/za-tan-2/</id>
     <published>2023-01-23T01:25:21.000Z</published>
-    <updated>2023-01-23T01:28:44.046Z</updated>
+    <updated>2023-02-16T07:24:05.919Z</updated>
     
     
       
@@ -62,7 +87,7 @@
     <category term="杂谈" scheme="http://siberiabar2.github.io/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-    <category term="杂谈2" scheme="http://siberiabar2.github.io/tags/%E6%9D%82%E8%B0%882/"/>
+    <category term="杂谈" scheme="http://siberiabar2.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
@@ -456,29 +481,6 @@
     
     
     <category term="uniapp问题总结" scheme="http://siberiabar2.github.io/tags/uniapp%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>April30总结</title>
-    <link href="http://siberiabar2.github.io/2022/04/30/april30-zong-jie/"/>
-    <id>http://siberiabar2.github.io/2022/04/30/april30-zong-jie/</id>
-    <published>2022-04-30T08:51:17.000Z</published>
-    <updated>2022-04-30T08:58:02.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="April30总结" scheme="http://siberiabar2.github.io/tags/April30%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
