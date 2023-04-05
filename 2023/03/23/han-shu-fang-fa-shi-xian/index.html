@@ -466,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    442
+                    546
                 </div>
                 
 
@@ -537,7 +537,32 @@
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"getData"</span><span class="token punctuation">,</span> <span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="数据请求发生错误后间隔调用"><a href="#数据请求发生错误后间隔调用" class="headerlink" title="数据请求发生错误后间隔调用"></a>数据请求发生错误后间隔调用</h3><p><img src="https://s3.bmp.ovh/imgs/2023/03/23/fc4ba78d3fb831f6.png"></p>
-<pre class=" language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">queryFn</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h4 id="正确实现"><a href="#正确实现" class="headerlink" title="正确实现"></a>正确实现</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * 
+ * @param {() => boolean} queryfn 会返回 true 或 false
+ * @param {() => Promise&lt;any>} callback 请求数据的方法
+ * time： 重新调用的时间间隔、以1.5倍递增，若去除则每次调用时间一样
+ * queryfn 只能返回boolean， 返回结果不能是Promise
+ */</span>
+
+<span class="token keyword">function</span> <span class="token function">simplePoller</span><span class="token punctuation">(</span>queryfn<span class="token punctuation">,</span> callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> time <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> poll <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"time"</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">queryfn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span>poll<span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    time <span class="token operator">*</span><span class="token operator">=</span> <span class="token number">1.5</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span>poll<span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"deepQuery"</span><span class="token punctuation">,</span> <span class="token function">simplePoller</span><span class="token punctuation">(</span>isOK<span class="token punctuation">,</span> getData<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="非正确实现"><a href="#非正确实现" class="headerlink" title="非正确实现"></a>非正确实现</h4><pre class=" language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">queryFn</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>reslove<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">reslove</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1435,7 +1460,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">84.3k</span>
+                        class="white-color">84.5k</span>
             
             
             
