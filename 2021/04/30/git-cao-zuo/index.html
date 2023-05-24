@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
@@ -495,6 +495,12 @@ git push <span class="token comment" spellcheck="true">// (若从远程上来下
 git checkout  <span class="token comment" spellcheck="true">// 分支名 (已在远程对应的分支上，可使用此命令切换到其他远程分支)</span>
 
 git checkout <span class="token operator">-</span>b <span class="token comment" spellcheck="true">// 分支名 (创建本地分支)</span>
+
+git checkout <span class="token operator">--</span> <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json <span class="token comment" spellcheck="true">// 只回退  package-lock.json 到之前的版本</span>
+
+git checkout  commit 号  <span class="token comment" spellcheck="true">// 回退到指定提交版本（全部文件都回退）</span>
+
+<span class="token comment" spellcheck="true">// 如此，不用get reset — hard 也能回退到指定版本 , 也可以回退指定的文件，不影响其他文件</span>
 
 git branch <span class="token operator">-</span>a <span class="token comment" spellcheck="true">// (查看所有分支，本地and远程)</span>
 
@@ -1401,7 +1407,7 @@ git commit <span class="token operator">--</span>amend <span class="token operat
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">85.6k</span>
+                        class="white-color">86k</span>
             
             
             

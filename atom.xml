@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2023-04-19T13:54:26.532Z</updated>
+  <updated>2023-05-24T07:45:49.274Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="http://siberiabar2.github.io/2023/05/24/she-ji-mo-shi/"/>
+    <id>http://siberiabar2.github.io/2023/05/24/she-ji-mo-shi/</id>
+    <published>2023-05-24T07:31:40.000Z</published>
+    <updated>2023-05-24T07:45:49.274Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="http://siberiabar2.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="http://siberiabar2.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>23-april19th</title>
@@ -460,29 +485,6 @@
     
     
     <category term="鼠标是否在元素中" scheme="http://siberiabar2.github.io/tags/%E9%BC%A0%E6%A0%87%E6%98%AF%E5%90%A6%E5%9C%A8%E5%85%83%E7%B4%A0%E4%B8%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>地区联动</title>
-    <link href="http://siberiabar2.github.io/2022/06/04/di-qu-lian-dong/"/>
-    <id>http://siberiabar2.github.io/2022/06/04/di-qu-lian-dong/</id>
-    <published>2022-06-04T14:22:21.000Z</published>
-    <updated>2022-06-04T14:28:56.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="地区联动" scheme="http://siberiabar2.github.io/tags/%E5%9C%B0%E5%8C%BA%E8%81%94%E5%8A%A8/"/>
     
   </entry>
   
