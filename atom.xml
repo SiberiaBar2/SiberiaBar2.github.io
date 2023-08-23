@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2023-07-13T06:06:39.242Z</updated>
+  <updated>2023-08-23T08:34:01.463Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>23-august-23h</title>
+    <link href="http://siberiabar2.github.io/2023/08/23/23-august-21th/"/>
+    <id>http://siberiabar2.github.io/2023/08/23/23-august-21th/</id>
+    <published>2023-08-23T07:41:39.000Z</published>
+    <updated>2023-08-23T08:34:01.463Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="date" scheme="http://siberiabar2.github.io/tags/date/"/>
+    
+  </entry>
   
   <entry>
     <title>23-july-13th</title>
@@ -455,7 +478,7 @@
     <link href="http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/"/>
     <id>http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/</id>
     <published>2022-08-23T02:43:21.000Z</published>
-    <updated>2023-08-11T06:03:38.022Z</updated>
+    <updated>2023-08-11T06:07:41.889Z</updated>
     
     
       
@@ -470,29 +493,6 @@
     
     
     <category term="react-custom-hook-one" scheme="http://siberiabar2.github.io/tags/react-custom-hook-one/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>august-23th项目总结</title>
-    <link href="http://siberiabar2.github.io/2022/08/23/august-23th-xiang-mu-zong-jie/"/>
-    <id>http://siberiabar2.github.io/2022/08/23/august-23th-xiang-mu-zong-jie/</id>
-    <published>2022-08-23T02:41:06.000Z</published>
-    <updated>2022-11-30T01:31:08.588Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="august-23th项目总结" scheme="http://siberiabar2.github.io/tags/august-23th%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
