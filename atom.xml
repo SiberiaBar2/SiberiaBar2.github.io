@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2023-08-23T08:34:01.463Z</updated>
+  <updated>2023-09-25T06:23:04.330Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sep25th</title>
+    <link href="http://siberiabar2.github.io/2023/09/25/sep25th/"/>
+    <id>http://siberiabar2.github.io/2023/09/25/sep25th/</id>
+    <published>2023-09-25T05:59:02.000Z</published>
+    <updated>2023-09-25T06:23:04.330Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="date" scheme="http://siberiabar2.github.io/categories/date/"/>
+    
+    
+    <category term="date" scheme="http://siberiabar2.github.io/tags/date/"/>
+    
+  </entry>
   
   <entry>
     <title>23-august-23h</title>
@@ -470,29 +495,6 @@
     
     
     <category term="react-fiber学习" scheme="http://siberiabar2.github.io/tags/react-fiber%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react-custom-hook-one</title>
-    <link href="http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/"/>
-    <id>http://siberiabar2.github.io/2022/08/23/react-custom-hook-one/</id>
-    <published>2022-08-23T02:43:21.000Z</published>
-    <updated>2023-08-11T06:07:41.889Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react-custom-hook-one" scheme="http://siberiabar2.github.io/tags/react-custom-hook-one/"/>
     
   </entry>
   
