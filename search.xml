@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>nov11th</title>
+      <link href="2023/11/07/nov11th/"/>
+      <url>2023/11/07/nov11th/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="关于antd-日期组件设置中文不成功"><a href="#关于antd-日期组件设置中文不成功" class="headerlink" title="关于antd 日期组件设置中文不成功"></a>关于antd 日期组件设置中文不成功</h3><pre class=" language-tex"><code class="language-tex">无论是组件自身引入还是 ConfigProvider 配置中文，日期组件显示的还是英文。最终找到了一种解决方案（antd v4）</code></pre><pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> ConfigProvider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span><span class="token keyword">import</span> zhCN <span class="token keyword">from</span> <span class="token string">'antd/es/locale/zh_CN'</span><span class="token punctuation">;</span><span class="token keyword">import</span> moment <span class="token keyword">from</span> <span class="token string">'moment'</span><span class="token punctuation">;</span><span class="token keyword">import</span> <span class="token string">'moment/locale/zh-cn'</span><span class="token punctuation">;</span>moment<span class="token punctuation">.</span><span class="token function">locale</span><span class="token punctuation">(</span><span class="token string">'zh-cn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 需要配合以上moment的三行代码，如此 ，中文配置就生效了</span><span class="token operator">&lt;</span>ConfigProvider  locale<span class="token operator">=</span><span class="token punctuation">{</span>zhCN<span class="token punctuation">}</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ConfigProvider</span><span class="token punctuation">></span></span></code></pre><h3 id="关于antd表格自定义无数据展示空状态时的占位高度"><a href="#关于antd表格自定义无数据展示空状态时的占位高度" class="headerlink" title="关于antd表格自定义无数据展示空状态时的占位高度"></a>关于antd表格自定义无数据展示空状态时的占位高度</h3><pre class=" language-tex"><code class="language-tex">测试提了一个问题，说现在表格无数据时空状态组件展示的高度没有沾满整个表格高度，希望占满整个表格。于是各种样式修改、各种父级元素高度设置为100%终于成了。但是，又引发了其他问题！这样逐层设置为100%会导致页面在不断缩小的情况下出现一个顶部很大的留白。</code></pre><p><img src="https://s3.bmp.ovh/imgs/2023/11/07/81f432138d8adef3.png"></p><p><img src="https://s3.bmp.ovh/imgs/2023/11/07/75e1a4de0ec4a274.png"></p><pre class=" language-tex"><code class="language-tex">审查元素发现这是一个tr元素，高度为0，应该不是用来展示的。于是把这个元素设置为display:none,结果fixed的项和表格title的单元格宽度（cell）又无法对齐了。遂无奈放弃了这种方法。</code></pre><pre class=" language-tex"><code class="language-tex">解决：antd table组件支持配置空状态,设置外部元素的子元素绝对居中即可。</code></pre><pre class=" language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Table</span>           <span class="token attr-name">locale={{</span>  <span class="token attr-name"><span class="token namespace">emptyText:</span></span> <span class="token attr-name">(</span>    <span class="token attr-name">&lt;div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token punctuation">{</span><span class="token punctuation">{</span></span><span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">display:</span></span> <span class="token attr-name">'flex',</span> <span class="token attr-name"><span class="token namespace">justifycontent:</span></span> <span class="token attr-name">'center',</span> <span class="token attr-name"><span class="token namespace">alignitems:</span></span> <span class="token attr-name"><span class="token namespace">height:</span></span> <span class="token attr-name">getoffsetheight()</span> <span class="token attr-name">-</span> <span class="token attr-name">90,</span> <span class="token attr-name">}}</span> <span class="token punctuation">></span></span> <span class="token operator">&lt;</span>empty image<span class="token operator">=</span><span class="token string">"{Empty.PRESENTED_IMAGE_SIMPLE}"</span> description<span class="token operator">=</span><span class="token string">""</span>暂无数据<span class="token string">""</span> <span class="token operator">&lt;</span> div<span class="token operator">></span> <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span> table<span class="token operator">></span> <span class="token operator">&lt;</span> code<span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre><h3 id="合并代码"><a href="#合并代码" class="headerlink" title="合并代码"></a>合并代码</h3><pre class=" language-tex"><code class="language-tex">最近新开了一个项目，大家都有自己独立的分支，这样就需要合并代码。git merge 首次可以成功将其他分支的代码合并过来，后面合并的时候一直报 already uptodate!但两个分支之间确实存在差异！于是使用了git rebase命令合并。git rebase会将将要合并过来的分支代码追次添加到被合并分支，遇到冲突会报错，提示开发者解决冲突，选择保留哪一次的更改，然后git add .git rebase --continue 继续添加剩余代码，遇到冲突继续重复上述步骤，直至添加完毕。值得注意的是，有时 git rebase 也会无法提示冲突所在文件，以至于项目跑起来，页面才报这个错。原因未知。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> date </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> date </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sep25th</title>
       <link href="2023/09/25/sep25th/"/>
       <url>2023/09/25/sep25th/</url>
