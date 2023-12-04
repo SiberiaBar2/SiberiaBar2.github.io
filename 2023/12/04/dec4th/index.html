@@ -714,18 +714,8 @@ git fsck --no-reflog | awk '/dangling commit/ {print $3}' | xargs -L 1 git --no-
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
       
       <span class="token comment" spellcheck="true">// &lt;ContentContainer</span>
-      <span class="token comment" spellcheck="true">//    &lt;RouterView</span>
-      <span class="token comment" spellcheck="true">//      style={{</span>
-      <span class="token comment" spellcheck="true">//        width: '100%',</span>
-      <span class="token comment" spellcheck="true">//        height: '100%'</span>
-      <span class="token comment" spellcheck="true">//      }}</span>
-      <span class="token comment" spellcheck="true">//    /></span>
-      <span class="token comment" spellcheck="true">//   }}</span>
-      <span class="token comment" spellcheck="true">// /></span>
-    <span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+      <span class="token comment" spellcheck="true">//   v-slots={{</span>
+      <span class="token comment" spellcheck="true">//    default: () => &lt;RouterView style="{{" width: '100%', height: '100%' }} > ) } }) &lt; code>&lt;/RouterView></span></code></pre>
 <pre class=" language-tex"><code class="language-tex">以上jsx有两种写法，直接包裹，或者使用v-slots指令，
 
 模版中直接包裹，
@@ -768,7 +758,7 @@ element-plus表格不像antd，
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-table-column</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-table-column</span><span class="token punctuation">></span></span>
 </code></pre>
-<h3 id="jsx"><a href="#jsx" class="headerlink" title="jsx"></a>jsx</h3><pre class=" language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-table</span>
+<h4 id="jsx"><a href="#jsx" class="headerlink" title="jsx"></a>jsx</h4><pre class=" language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-table</span>
   <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
     width<span class="token punctuation">:</span> <span class="token string">'100%'</span><span class="token punctuation">,</span>
     height<span class="token punctuation">:</span> <span class="token string">'450px'</span><span class="token punctuation">,</span>
