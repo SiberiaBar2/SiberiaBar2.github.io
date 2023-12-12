@@ -466,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    594
+                    598
                 </div>
                 
 
@@ -586,6 +586,7 @@
    * request func
    */</span>
   <span class="token keyword">const</span> retry <span class="token operator">=</span> <span class="token punctuation">(</span>config<span class="token operator">?</span><span class="token punctuation">:</span> any<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>retryNum<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>retryNumRef<span class="token punctuation">.</span>value <span class="token operator">&lt;</span> retryNum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       retryNumRef<span class="token punctuation">.</span>value <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
       <span class="token function">getSyncData</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -733,7 +734,7 @@
 </code></pre>
 <pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// use </span>
     <span class="token keyword">const</span> data <span class="token operator">=</span> reactive<span class="token operator">&lt;</span>unkonw<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> run<span class="token punctuation">,</span> loading <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useRequest</span><span class="token punctuation">(</span>evaluateList<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> run<span class="token punctuation">,</span> loading <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useRequest</span><span class="token punctuation">(</span>evaluateList<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
       <span class="token function">success</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
           data<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
           total<span class="token punctuation">.</span>value <span class="token operator">=</span> _<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">'data.data.total'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1549,7 +1550,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">91.7k</span>
+                        class="white-color">91.8k</span>
             
             
             
