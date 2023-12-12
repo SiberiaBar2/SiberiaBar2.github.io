@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2023-12-12T03:21:55.515Z</updated>
+  <updated>2023-12-12T03:38:13.035Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vuehook</title>
+    <link href="http://siberiabar2.github.io/2023/12/12/vuehook/"/>
+    <id>http://siberiabar2.github.io/2023/12/12/vuehook/</id>
+    <published>2023-12-12T03:32:25.000Z</published>
+    <updated>2023-12-12T03:38:13.035Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="http://siberiabar2.github.io/categories/vue/"/>
+    
+    
+    <category term="vue" scheme="http://siberiabar2.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>dec12th</title>
     <link href="http://siberiabar2.github.io/2023/12/12/dec12th/"/>
     <id>http://siberiabar2.github.io/2023/12/12/dec12th/</id>
     <published>2023-12-12T03:16:45.000Z</published>
-    <updated>2023-12-12T03:21:55.515Z</updated>
+    <updated>2023-12-12T03:27:09.918Z</updated>
     
     
       
@@ -478,29 +503,6 @@
     
     
     <category term="22-december-2th" scheme="http://siberiabar2.github.io/tags/22-december-2th/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用json-server模拟登录接口</title>
-    <link href="http://siberiabar2.github.io/2022/11/14/shi-yong-json-server-mo-ni-deng-lu-jie-kou/"/>
-    <id>http://siberiabar2.github.io/2022/11/14/shi-yong-json-server-mo-ni-deng-lu-jie-kou/</id>
-    <published>2022-11-14T02:07:58.000Z</published>
-    <updated>2022-11-14T02:22:36.703Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="使用json-server模拟登录接口" scheme="http://siberiabar2.github.io/tags/%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
