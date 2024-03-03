@@ -6,7 +6,7 @@
   <link href="http://siberiabar2.github.io/atom.xml" rel="self"/>
   
   <link href="http://siberiabar2.github.io/"/>
-  <updated>2024-01-09T08:58:09.830Z</updated>
+  <updated>2024-03-03T13:39:18.486Z</updated>
   <id>http://siberiabar2.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何发布自己的npm包</title>
+    <link href="http://siberiabar2.github.io/2024/03/03/ru-he-fa-bu-zi-ji-de-npm-bao/"/>
+    <id>http://siberiabar2.github.io/2024/03/03/ru-he-fa-bu-zi-ji-de-npm-bao/</id>
+    <published>2024-03-03T13:25:03.000Z</published>
+    <updated>2024-03-03T13:39:18.486Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="npm" scheme="http://siberiabar2.github.io/categories/npm/"/>
+    
+    
+    <category term="npm" scheme="http://siberiabar2.github.io/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>vuehook合集</title>
@@ -480,29 +505,6 @@
     
     
     <category term="组件封装" scheme="http://siberiabar2.github.io/tags/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react-custom-hook-two</title>
-    <link href="http://siberiabar2.github.io/2022/12/07/react-custom-hook-two/"/>
-    <id>http://siberiabar2.github.io/2022/12/07/react-custom-hook-two/</id>
-    <published>2022-12-07T01:59:54.000Z</published>
-    <updated>2022-12-07T02:05:28.515Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react-custom-hook-two" scheme="http://siberiabar2.github.io/tags/react-custom-hook-two/"/>
     
   </entry>
   
